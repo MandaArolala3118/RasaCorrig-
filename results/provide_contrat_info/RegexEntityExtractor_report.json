@@ -1,0 +1,67 @@
+{
+  "nature_contrat": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 29,
+    "confused_with": {}
+  },
+  "date_mise_en_service": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "date_debut": 2
+    }
+  },
+  "effectif": {
+    "precision": 0.5789473684210527,
+    "recall": 1.0,
+    "f1-score": 0.7333333333333334,
+    "support": 11,
+    "confused_with": {}
+  },
+  "date_fin": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "date_debut": 3
+    }
+  },
+  "duree_contrat": {
+    "precision": 0.5882352941176471,
+    "recall": 1.0,
+    "f1-score": 0.7407407407407407,
+    "support": 10,
+    "confused_with": {}
+  },
+  "date_debut": {
+    "precision": 0.3,
+    "recall": 1.0,
+    "f1-score": 0.4615384615384615,
+    "support": 3,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.6235294117647059,
+    "recall": 0.9137931034482759,
+    "f1-score": 0.7412587412587414,
+    "support": 58
+  },
+  "macro avg": {
+    "precision": 0.41119711042311663,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.4892687559354226,
+    "support": 58
+  },
+  "weighted avg": {
+    "precision": 0.7267374826518629,
+    "recall": 0.9137931034482759,
+    "f1-score": 0.7906670596325768,
+    "support": 58
+  },
+  "accuracy": 0.8
+}

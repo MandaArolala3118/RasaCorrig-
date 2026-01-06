@@ -1,0 +1,2993 @@
+[
+  {
+    "text": "détails contrat",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "info_type",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.6645585298538208,
+        "value": "contrat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "demande #67",
+    "entities": [
+      {
+        "start": 9,
+        "end": 11,
+        "value": "67",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "suivi #89",
+    "entities": [
+      {
+        "start": 7,
+        "end": 9,
+        "value": "89",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "suivre DDR #234",
+    "entities": [
+      {
+        "start": 7,
+        "end": 10,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "value": "234",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 7,
+        "end": 10,
+        "confidence_entity": 0.9999324083328247,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "voir DMI #567",
+    "entities": [
+      {
+        "start": 5,
+        "end": 8,
+        "value": "DMI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 10,
+        "end": 13,
+        "value": "567",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 5,
+        "end": 8,
+        "confidence_entity": 0.9999127388000488,
+        "value": "DMI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "statut DRI #890",
+    "entities": [
+      {
+        "start": 7,
+        "end": 10,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "value": "890",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 7,
+        "end": 10,
+        "confidence_entity": 0.9999406337738037,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "avancement DMOE #123",
+    "entities": [
+      {
+        "start": 11,
+        "end": 15,
+        "value": "DMOE",
+        "entity": "type_demande"
+      },
+      {
+        "start": 17,
+        "end": 20,
+        "value": "123",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 11,
+        "end": 15,
+        "confidence_entity": 0.9999213218688965,
+        "value": "DMOE",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrer le processus de validation de la DRI 002",
+    "entities": [
+      {
+        "start": 12,
+        "end": 35,
+        "value": "processus de validation",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 42,
+        "end": 45,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 46,
+        "end": 49,
+        "value": "002",
+        "entity": "id_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 38,
+        "confidence_entity": 0.565579891204834,
+        "value": "processus de validation de",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "type_demande",
+        "start": 42,
+        "end": 45,
+        "confidence_entity": 0.9999370574951172,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 46,
+        "end": 49,
+        "confidence_entity": 0.9999582767486572,
+        "value": "002",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrer processus demande DRI 022 avec Paul Bernard comme validateur et Sophie Durand pour la RH",
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "value": "processus",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 27,
+        "end": 30,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "value": "022",
+        "entity": "id_demande"
+      },
+      {
+        "start": 40,
+        "end": 52,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 73,
+        "end": 86,
+        "value": "Sophie Durand",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 9,
+        "end": 18,
+        "confidence_entity": 0.9978964328765869,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.9994636178016663,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 31,
+        "end": 34,
+        "confidence_entity": 0.9999125003814697,
+        "value": "022",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 40,
+        "end": 52,
+        "confidence_entity": 0.8116640448570251,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 73,
+        "end": 86,
+        "confidence_entity": 0.9815545082092285,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Initier procédure demande de mobilité interne 024 validé par Paul Bernard responsable ressources humaines Marie Martin",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "procédure",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 45,
+        "value": "DMI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 46,
+        "end": 49,
+        "value": "024",
+        "entity": "id_demande"
+      },
+      {
+        "start": 61,
+        "end": 73,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 106,
+        "end": 118,
+        "value": "Marie Martin",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 17,
+        "confidence_entity": 0.9433946013450623,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 45,
+        "confidence_entity": 0.9684014320373535,
+        "value": "DMI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 46,
+        "end": 49,
+        "confidence_entity": 0.9981841444969177,
+        "value": "024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 61,
+        "end": 73,
+        "confidence_entity": 0.8733012080192566,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 106,
+        "end": 118,
+        "confidence_entity": 0.987547755241394,
+        "value": "Marie Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrer processus DRI 072 avec Sophie Durand, Luc Moreau et Pierre Martin RH Jean Rakoto",
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "value": "processus",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 19,
+        "end": 22,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 23,
+        "end": 26,
+        "value": "072",
+        "entity": "id_demande"
+      },
+      {
+        "start": 32,
+        "end": 45,
+        "value": "Sophie Durand",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 47,
+        "end": 57,
+        "value": "Luc Moreau",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 61,
+        "end": 74,
+        "value": "Pierre Martin",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 78,
+        "end": 89,
+        "value": "Jean Rakoto",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 9,
+        "end": 18,
+        "confidence_entity": 0.9981181621551514,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9993513226509094,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.9990229606628418,
+        "value": "072",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 32,
+        "end": 45,
+        "confidence_entity": 0.9128884673118591,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 47,
+        "end": 57,
+        "confidence_entity": 0.6506584286689758,
+        "value": "Luc Moreau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 61,
+        "end": 74,
+        "confidence_entity": 0.5547531247138977,
+        "value": "Pierre Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 78,
+        "end": 89,
+        "confidence_entity": 0.9930765628814697,
+        "value": "Jean Rakoto",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Lancer flux de recrutement DMOE 073 validation Jean Dupont, Marie Martin, Paul Bernard et Sophie Durand responsable ressources humaines ANDRIANINA Manda",
+    "entities": [
+      {
+        "start": 7,
+        "end": 26,
+        "value": "flux de recrutement",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 27,
+        "end": 31,
+        "value": "DMOE",
+        "entity": "type_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "073",
+        "entity": "id_demande"
+      },
+      {
+        "start": 47,
+        "end": 58,
+        "value": "Jean Dupont",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 60,
+        "end": 72,
+        "value": "Marie Martin",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 74,
+        "end": 86,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 90,
+        "end": 103,
+        "value": "Sophie Durand",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 136,
+        "end": 152,
+        "value": "ANDRIANINA Manda",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 7,
+        "end": 26,
+        "confidence_entity": 0.9560773372650146,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 27,
+        "end": 31,
+        "confidence_entity": 0.9989190101623535,
+        "value": "DMOE",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.99919193983078,
+        "value": "073",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 47,
+        "end": 58,
+        "confidence_entity": 0.8874198794364929,
+        "value": "Jean Dupont",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 60,
+        "end": 72,
+        "confidence_entity": 0.7408950328826904,
+        "value": "Marie Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 74,
+        "end": 86,
+        "confidence_entity": 0.8423731327056885,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 90,
+        "end": 103,
+        "confidence_entity": 0.591166079044342,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 136,
+        "end": 152,
+        "confidence_entity": 0.9920527935028076,
+        "value": "ANDRIANINA Manda",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrer processus Circuit validation hiérarchique demande DRI 030 avec Paul Bernard et Sophie Durand RH Luc Moreau",
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "value": "processus",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 19,
+        "end": 50,
+        "value": "Circuit validation hiérarchique",
+        "entity": "nom_flux"
+      },
+      {
+        "start": 59,
+        "end": 62,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 63,
+        "end": 66,
+        "value": "030",
+        "entity": "id_demande"
+      },
+      {
+        "start": 72,
+        "end": 84,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 88,
+        "end": 101,
+        "value": "Sophie Durand",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 105,
+        "end": 115,
+        "value": "Luc Moreau",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 9,
+        "end": 18,
+        "confidence_entity": 0.9986554384231567,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_flux",
+        "start": 19,
+        "end": 50,
+        "confidence_entity": 0.9520720839500427,
+        "value": "Circuit validation hiérarchique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 59,
+        "end": 62,
+        "confidence_entity": 0.9991150498390198,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 63,
+        "end": 66,
+        "confidence_entity": 0.9995697140693665,
+        "value": "030",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 72,
+        "end": 84,
+        "confidence_entity": 0.6419830322265625,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 88,
+        "end": 101,
+        "confidence_entity": 0.7840786576271057,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 105,
+        "end": 115,
+        "confidence_entity": 0.9956632256507874,
+        "value": "Luc Moreau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Lancer flux Test - DSI demande de recrutement interne 034 validateurs Jean Dupont, Marie Martin, Paul Bernard et Sophie Durand RH Luc Moreau",
+    "entities": [
+      {
+        "start": 7,
+        "end": 11,
+        "value": "flux",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 12,
+        "end": 22,
+        "value": "Test - DSI",
+        "entity": "nom_flux"
+      },
+      {
+        "start": 23,
+        "end": 53,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 54,
+        "end": 57,
+        "value": "034",
+        "entity": "id_demande"
+      },
+      {
+        "start": 70,
+        "end": 81,
+        "value": "Jean Dupont",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 83,
+        "end": 95,
+        "value": "Marie Martin",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 97,
+        "end": 109,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 113,
+        "end": 126,
+        "value": "Sophie Durand",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 130,
+        "end": 140,
+        "value": "Luc Moreau",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 7,
+        "end": 11,
+        "confidence_entity": 0.9795497059822083,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_flux",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.9942353367805481,
+        "value": "Test",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "nom_flux",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9503079652786255,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 23,
+        "end": 53,
+        "confidence_entity": 0.687817394733429,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 54,
+        "end": 57,
+        "confidence_entity": 0.9937877655029297,
+        "value": "034",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 70,
+        "end": 81,
+        "confidence_entity": 0.9815381765365601,
+        "value": "Jean Dupont",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 83,
+        "end": 95,
+        "confidence_entity": 0.7394511103630066,
+        "value": "Marie Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 97,
+        "end": 109,
+        "confidence_entity": 0.7056956887245178,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 113,
+        "end": 126,
+        "confidence_entity": 0.5390175580978394,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 130,
+        "end": 140,
+        "confidence_entity": 0.9956796765327454,
+        "value": "Luc Moreau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrer processus demande DDR 041 RH Sophie Durand validateurs Jean Dupont et Marie Martin",
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "value": "processus",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 27,
+        "end": 30,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "value": "041",
+        "entity": "id_demande"
+      },
+      {
+        "start": 38,
+        "end": 51,
+        "value": "Sophie Durand",
+        "entity": "responsable_rh"
+      },
+      {
+        "start": 64,
+        "end": 75,
+        "value": "Jean Dupont",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 79,
+        "end": 91,
+        "value": "Marie Martin",
+        "entity": "nom_validateur"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 9,
+        "end": 18,
+        "confidence_entity": 0.9964035749435425,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.9997296929359436,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 31,
+        "end": 34,
+        "confidence_entity": 0.9997983574867249,
+        "value": "041",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 38,
+        "end": 51,
+        "confidence_entity": 0.9773243069648743,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 64,
+        "end": 75,
+        "confidence_entity": 0.7789390683174133,
+        "value": "Jean Dupont",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 79,
+        "end": 91,
+        "confidence_entity": 0.7210140824317932,
+        "value": "Marie Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Lancer flux Workflow RH 2024 DRI 111 avec Paul Bernard, Sophie Durand et Luc Moreau DRH Pierre Martin",
+    "entities": [
+      {
+        "start": 7,
+        "end": 11,
+        "value": "flux",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 12,
+        "end": 28,
+        "value": "Workflow RH 2024",
+        "entity": "nom_flux"
+      },
+      {
+        "start": 29,
+        "end": 32,
+        "value": "DRI",
+        "entity": "type_demande"
+      },
+      {
+        "start": 33,
+        "end": 36,
+        "value": "111",
+        "entity": "id_demande"
+      },
+      {
+        "start": 42,
+        "end": 54,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 56,
+        "end": 69,
+        "value": "Sophie Durand",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 73,
+        "end": 83,
+        "value": "Luc Moreau",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 88,
+        "end": 101,
+        "value": "Pierre Martin",
+        "entity": "responsable_rh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 7,
+        "end": 11,
+        "confidence_entity": 0.9977381229400635,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_flux",
+        "start": 12,
+        "end": 28,
+        "confidence_entity": 0.6908546090126038,
+        "value": "Workflow RH 2024",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 29,
+        "end": 32,
+        "confidence_entity": 0.9990403056144714,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 33,
+        "end": 36,
+        "confidence_entity": 0.9928616881370544,
+        "value": "111",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 42,
+        "end": 54,
+        "confidence_entity": 0.7375645637512207,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 56,
+        "end": 69,
+        "confidence_entity": 0.7851737141609192,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 73,
+        "end": 83,
+        "confidence_entity": 0.6759665012359619,
+        "value": "Luc Moreau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 88,
+        "end": 101,
+        "confidence_entity": 0.9792338609695435,
+        "value": "Pierre Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux lancer validation DDR identifiant DDR 12352 avec Jean Dupont, Marie Martin, Paul Bernard et Sophie Durand",
+    "entities": [
+      {
+        "start": 15,
+        "end": 25,
+        "value": "validation",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 26,
+        "end": 29,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 42,
+        "end": 51,
+        "value": "DDR 12352",
+        "entity": "id_demande"
+      },
+      {
+        "start": 57,
+        "end": 68,
+        "value": "Jean Dupont",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 70,
+        "end": 82,
+        "value": "Marie Martin",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 84,
+        "end": 96,
+        "value": "Paul Bernard",
+        "entity": "nom_validateur"
+      },
+      {
+        "start": 100,
+        "end": 113,
+        "value": "Sophie Durand",
+        "entity": "nom_validateur"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 15,
+        "end": 25,
+        "confidence_entity": 0.9986377358436584,
+        "value": "validation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 26,
+        "end": 29,
+        "confidence_entity": 0.8711509704589844,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 42,
+        "end": 45,
+        "confidence_entity": 0.46186336874961853,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 46,
+        "end": 51,
+        "confidence_entity": 0.7831035256385803,
+        "value": "12352",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 57,
+        "end": 68,
+        "confidence_entity": 0.9958710074424744,
+        "value": "Jean Dupont",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 70,
+        "end": 82,
+        "confidence_entity": 0.9515866041183472,
+        "value": "Marie Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 84,
+        "end": 96,
+        "confidence_entity": 0.9848524928092957,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 100,
+        "end": 113,
+        "confidence_entity": 0.9968018531799316,
+        "value": "Sophie Durand",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrer un flux DDR avec nom de flux : Circuit DSI",
+    "entities": [
+      {
+        "start": 17,
+        "end": 20,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 40,
+        "end": 51,
+        "value": "Circuit DSI",
+        "entity": "nom_flux"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.5967614054679871,
+        "value": "flux",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 17,
+        "end": 20,
+        "confidence_entity": 0.9990876913070679,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_flux",
+        "start": 40,
+        "end": 51,
+        "confidence_entity": 0.9859382510185242,
+        "value": "Circuit DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je voudrais faire une DDR pour ajouter un nouveau poste",
+    "entities": [
+      {
+        "start": 22,
+        "end": 25,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 31,
+        "end": 38,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.5266889929771423,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 22,
+        "end": 25,
+        "confidence_entity": 0.9993728995323181,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "intention_demande",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.9991239905357361,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Début le 12 décembre 2026",
+    "entities": [
+      {
+        "start": 9,
+        "end": 25,
+        "value": "12 décembre 2026",
+        "entity": "date_debut"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 9,
+        "end": 25,
+        "confidence_entity": 0.958325982093811,
+        "value": "12 décembre 2026",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Du 1er février 2025 au 31 juillet 2025",
+    "entities": [
+      {
+        "start": 3,
+        "end": 19,
+        "value": "1er février 2025",
+        "entity": "date_debut"
+      },
+      {
+        "start": 23,
+        "end": 38,
+        "value": "31 juillet 2025",
+        "entity": "date_fin"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 3,
+        "end": 19,
+        "confidence_entity": 0.3801950216293335,
+        "value": "1er février 2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 23,
+        "end": 38,
+        "confidence_entity": 0.6599735021591187,
+        "value": "31 juillet 2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Commence le vingt janvier 2026",
+    "entities": [
+      {
+        "start": 12,
+        "end": 30,
+        "value": "vingt janvier 2026",
+        "entity": "date_debut"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 12,
+        "end": 30,
+        "confidence_entity": 0.9644820690155029,
+        "value": "vingt janvier 2026",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Début le 12 décembre",
+    "entities": [
+      {
+        "start": 9,
+        "end": 20,
+        "value": "12 décembre",
+        "entity": "date_debut"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 9,
+        "end": 20,
+        "confidence_entity": 0.9907234311103821,
+        "value": "12 décembre",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Commence le 20 mai",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "20 mai",
+        "entity": "date_debut"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9890921115875244,
+        "value": "20 mai",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le contrat est un stage pour une durée de six mois démarrant le premier janvier",
+    "entities": [
+      {
+        "start": 18,
+        "end": 23,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 64,
+        "end": 79,
+        "value": "premier janvier",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 18,
+        "end": 23,
+        "confidence_entity": 0.9994182586669922,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 42,
+        "end": 50,
+        "confidence_entity": 0.9667389988899231,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 64,
+        "end": 79,
+        "confidence_entity": 0.9880641102790833,
+        "value": "premier janvier",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "C'est un CDD qui commence le 15 mars 2026",
+    "entities": [
+      {
+        "start": 9,
+        "end": 12,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 29,
+        "end": 41,
+        "value": "15 mars 2026",
+        "entity": "date_debut"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.9980770349502563,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 29,
+        "end": 41,
+        "confidence_entity": 0.9820576906204224,
+        "value": "15 mars 2026",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Mouvapps (BC - PT)",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "Mouvapps (BC - PT)",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "développeur web DSI basé à 00 siege social encadreur responsable technique",
+    "entities": [
+      {
+        "start": 16,
+        "end": 19,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 27,
+        "end": 42,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nom_poste",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.7123953104019165,
+        "value": "web",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "direction",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.9991199374198914,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 27,
+        "end": 42,
+        "confidence_entity": 0.9777913689613342,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "1 stagiaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "1",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9852418303489685,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 2,
+        "end": 11,
+        "confidence_entity": 0.9644901752471924,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "justifié par augmentation des ventes de 35%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 43,
+        "value": "augmentation des ventes de 35%",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Non applicable (intérim)",
+    "entities": [
+      {
+        "start": 0,
+        "end": 24,
+        "value": "Non applicable (intérim)",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "L'objectif est d'avoir un code de qualité, pour un poids de 30% taux de bugs inférieur à 2%",
+    "entities": [
+      {
+        "start": 15,
+        "end": 41,
+        "value": "d'avoir un code de qualité",
+        "entity": "objectif"
+      },
+      {
+        "start": 60,
+        "end": 62,
+        "value": "30",
+        "entity": "poids"
+      },
+      {
+        "start": 64,
+        "end": 91,
+        "value": "taux de bugs inférieur à 2%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 15,
+        "end": 41,
+        "confidence_entity": 0.8993265628814697,
+        "value": "d'avoir un code de qualité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 60,
+        "end": 62,
+        "confidence_entity": 0.9984936714172363,
+        "value": "30",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 5 : Optimiser la gestion des stocks Poids : 25 % Résultat attendu : Réduire les ruptures de stock de 90%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 44,
+        "value": "Optimiser la gestion des stocks",
+        "entity": "objectif"
+      },
+      {
+        "start": 53,
+        "end": 55,
+        "value": "25",
+        "entity": "poids"
+      },
+      {
+        "start": 77,
+        "end": 113,
+        "value": "Réduire les ruptures de stock de 90%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 44,
+        "confidence_entity": 0.9314359426498413,
+        "value": "Optimiser la gestion des stocks",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 53,
+        "end": 55,
+        "confidence_entity": 0.9994606375694275,
+        "value": "25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 2 : Maintenir la traçabilité des documents Poids : 30 % Résultat attendu : Audit mensuel des dossiers : taux de traçabilité de 100%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 51,
+        "value": "Maintenir la traçabilité des documents",
+        "entity": "objectif"
+      },
+      {
+        "start": 60,
+        "end": 62,
+        "value": "30",
+        "entity": "poids"
+      },
+      {
+        "start": 84,
+        "end": 140,
+        "value": "Audit mensuel des dossiers : taux de traçabilité de 100%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 51,
+        "confidence_entity": 0.6525938510894775,
+        "value": "Maintenir la traçabilité des documents",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 60,
+        "end": 62,
+        "confidence_entity": 0.9994527697563171,
+        "value": "30",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 4 : Améliorer la satisfaction client Poids : 20 % Résultat attendu : Atteindre un score de satisfaction de 90%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 45,
+        "value": "Améliorer la satisfaction client",
+        "entity": "objectif"
+      },
+      {
+        "start": 54,
+        "end": 56,
+        "value": "20",
+        "entity": "poids"
+      },
+      {
+        "start": 78,
+        "end": 119,
+        "value": "Atteindre un score de satisfaction de 90%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 45,
+        "confidence_entity": 0.9620124101638794,
+        "value": "Améliorer la satisfaction client",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 54,
+        "end": 56,
+        "confidence_entity": 0.9996824264526367,
+        "value": "20",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 1:Sortir des résultats d'analyses fiables Poids:30% Résultat attendu:atteindre 100% de fiabilité",
+    "entities": [
+      {
+        "start": 11,
+        "end": 50,
+        "value": "Sortir des résultats d'analyses fiables",
+        "entity": "objectif"
+      },
+      {
+        "start": 57,
+        "end": 59,
+        "value": "30",
+        "entity": "poids"
+      },
+      {
+        "start": 78,
+        "end": 105,
+        "value": "atteindre 100% de fiabilité",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 2:Déclarer tous les produits non-conformes Poids:50% Résultat attendu:100% des produits déclarés",
+    "entities": [
+      {
+        "start": 11,
+        "end": 51,
+        "value": "Déclarer tous les produits non-conformes",
+        "entity": "objectif"
+      },
+      {
+        "start": 58,
+        "end": 60,
+        "value": "50",
+        "entity": "poids"
+      },
+      {
+        "start": 79,
+        "end": 105,
+        "value": "100% des produits déclarés",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 3:Respecter les règles de sécurité Poids:40% Résultat attendu:zéro accident durant le stage",
+    "entities": [
+      {
+        "start": 11,
+        "end": 43,
+        "value": "Respecter les règles de sécurité",
+        "entity": "objectif"
+      },
+      {
+        "start": 50,
+        "end": 52,
+        "value": "40",
+        "entity": "poids"
+      },
+      {
+        "start": 71,
+        "end": 100,
+        "value": "zéro accident durant le stage",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 4:Tester tous les produits Poids:40% Résultat attendu:Ecouler tous les stock",
+    "entities": [
+      {
+        "start": 11,
+        "end": 35,
+        "value": "Tester tous les produits",
+        "entity": "objectif"
+      },
+      {
+        "start": 42,
+        "end": 44,
+        "value": "40",
+        "entity": "poids"
+      },
+      {
+        "start": 63,
+        "end": 85,
+        "value": "Ecouler tous les stock",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 5:Optimiser les processus Poids:25% Résultat attendu:Réduction de 20% des délais",
+    "entities": [
+      {
+        "start": 11,
+        "end": 34,
+        "value": "Optimiser les processus",
+        "entity": "objectif"
+      },
+      {
+        "start": 41,
+        "end": 43,
+        "value": "25",
+        "entity": "poids"
+      },
+      {
+        "start": 62,
+        "end": 89,
+        "value": "Réduction de 20% des délais",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 1:Produire analyses fiables Poids:30% Résultat:100% précision",
+    "entities": [
+      {
+        "start": 11,
+        "end": 36,
+        "value": "Produire analyses fiables",
+        "entity": "objectif"
+      },
+      {
+        "start": 43,
+        "end": 45,
+        "value": "30",
+        "entity": "poids"
+      },
+      {
+        "start": 56,
+        "end": 70,
+        "value": "100% précision",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 2:Respecter sécurité Poids:40% Résultat:0 accident",
+    "entities": [
+      {
+        "start": 11,
+        "end": 29,
+        "value": "Respecter sécurité",
+        "entity": "objectif"
+      },
+      {
+        "start": 36,
+        "end": 38,
+        "value": "40",
+        "entity": "poids"
+      },
+      {
+        "start": 49,
+        "end": 59,
+        "value": "0 accident",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 3:Optimiser stocks Poids:25% Résultat:Réduire coûts 15%",
+    "entities": [
+      {
+        "start": 11,
+        "end": 27,
+        "value": "Optimiser stocks",
+        "entity": "objectif"
+      },
+      {
+        "start": 34,
+        "end": 36,
+        "value": "25",
+        "entity": "poids"
+      },
+      {
+        "start": 47,
+        "end": 64,
+        "value": "Réduire coûts 15%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Objectif 4 : Ameliorer la qualité Poids : 35% Résultat attendu : Taux de defauts inferieur à 2%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 33,
+        "value": "Ameliorer la qualité",
+        "entity": "objectif"
+      },
+      {
+        "start": 42,
+        "end": 44,
+        "value": "35",
+        "entity": "poids"
+      },
+      {
+        "start": 65,
+        "end": 95,
+        "value": "Taux de defauts inferieur à 2%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 33,
+        "confidence_entity": 0.9294206500053406,
+        "value": "Ameliorer la qualité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 42,
+        "end": 44,
+        "confidence_entity": 0.9996535778045654,
+        "value": "35",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif : Maintenir la traçabilité des analyses. Poids : 35 pourcent. Indicateurs pour mesurer les résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+    "entities": [
+      {
+        "start": 11,
+        "end": 48,
+        "value": "Maintenir la traçabilité des analyses",
+        "entity": "objectif"
+      },
+      {
+        "start": 58,
+        "end": 60,
+        "value": "35",
+        "entity": "poids"
+      },
+      {
+        "start": 121,
+        "end": 215,
+        "value": "Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 11,
+        "end": 48,
+        "confidence_entity": 0.6920192837715149,
+        "value": "Maintenir la traçabilité des analyses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 58,
+        "end": 60,
+        "confidence_entity": 0.999478280544281,
+        "value": "35",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif : Déclarer systématiquement tous les produits non conformes détectés Poids : 30 pourcent Indicateurs pour mesurer les résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+    "entities": [
+      {
+        "start": 11,
+        "end": 77,
+        "value": "Déclarer systématiquement tous les produits non conformes détectés",
+        "entity": "objectif"
+      },
+      {
+        "start": 86,
+        "end": 88,
+        "value": "30",
+        "entity": "poids"
+      },
+      {
+        "start": 148,
+        "end": 256,
+        "value": "Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 11,
+        "end": 77,
+        "confidence_entity": 0.8495789766311646,
+        "value": "Déclarer systématiquement tous les produits non conformes détectés",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 86,
+        "end": 88,
+        "confidence_entity": 0.9986593723297119,
+        "value": "30",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Produire des analyses fiables et répétables poids 32% Indicateurs : Tests de répétabilité mensuels, contrôle de la reproductibilité, suivi des cartes de contrôle : coefficient de variation inférieur à 2%",
+    "entities": [
+      {
+        "start": 0,
+        "end": 43,
+        "value": "Produire des analyses fiables et répétables",
+        "entity": "objectif"
+      },
+      {
+        "start": 50,
+        "end": 52,
+        "value": "32",
+        "entity": "poids"
+      },
+      {
+        "start": 68,
+        "end": 203,
+        "value": "Tests de répétabilité mensuels, contrôle de la reproductibilité, suivi des cartes de contrôle : coefficient de variation inférieur à 2%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 43,
+        "confidence_entity": 0.7688119411468506,
+        "value": "Produire des analyses fiables et répétables",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 50,
+        "end": 52,
+        "confidence_entity": 0.9998363256454468,
+        "value": "32",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Gérer efficacement les non-conformités 28 pourcent Indicateurs : Délai de traitement des NC, efficacité des actions correctives, prévention des récurrences : taux de traitement de 100%",
+    "entities": [
+      {
+        "start": 0,
+        "end": 38,
+        "value": "Gérer efficacement les non-conformités",
+        "entity": "objectif"
+      },
+      {
+        "start": 39,
+        "end": 41,
+        "value": "28",
+        "entity": "poids"
+      },
+      {
+        "start": 65,
+        "end": 184,
+        "value": "Délai de traitement des NC, efficacité des actions correctives, prévention des récurrences : taux de traitement de 100%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 38,
+        "confidence_entity": 0.8812929391860962,
+        "value": "Gérer efficacement les non-conformités",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 39,
+        "end": 41,
+        "confidence_entity": 0.9991620779037476,
+        "value": "28",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "garantir la qualité des analyses poids 40% résultat précision de 98%",
+    "entities": [
+      {
+        "start": 0,
+        "end": 32,
+        "value": "garantir la qualité des analyses",
+        "entity": "objectif"
+      },
+      {
+        "start": 39,
+        "end": 41,
+        "value": "40",
+        "entity": "poids"
+      },
+      {
+        "start": 52,
+        "end": 68,
+        "value": "précision de 98%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 32,
+        "confidence_entity": 0.5456206202507019,
+        "value": "Garantir la qualité des analyses",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 39,
+        "end": 41,
+        "confidence_entity": 0.9990102052688599,
+        "value": "40",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajoute l'objectif 3. La description doit indiquer : renforcer la communication interne entre les équipes. Le poids associé est de 18 % et le KPI attendu correspond à 85 % d'amélioration mesurée avant la fin du premier trimestre.",
+    "entities": [
+      {
+        "start": 52,
+        "end": 105,
+        "value": "renforcer la communication interne entre les équipes.",
+        "entity": "objectif"
+      },
+      {
+        "start": 130,
+        "end": 134,
+        "value": "18 %",
+        "entity": "poids"
+      },
+      {
+        "start": 138,
+        "end": 228,
+        "value": "le KPI attendu correspond à 85 % d'amélioration mesurée avant la fin du premier trimestre.",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ajoute objectif 4 avec la description : Atteindre une KPI superieur a l'année derniere avec un poids de 20%, résultats attendus : Augmenter la productivité de 200%",
+    "entities": [
+      {
+        "start": 40,
+        "end": 86,
+        "value": "Atteindre une KPI superieur a l'année derniere",
+        "entity": "objectif"
+      },
+      {
+        "start": 104,
+        "end": 106,
+        "value": "20",
+        "entity": "poids"
+      },
+      {
+        "start": 130,
+        "end": 163,
+        "value": "Augmenter la productivité de 200%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 40,
+        "end": 86,
+        "confidence_entity": 0.8398970365524292,
+        "value": "Atteindre une KPI superieur a l'année derniere",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 104,
+        "end": 106,
+        "confidence_entity": 0.9995136260986328,
+        "value": "20",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ajoute objectif 5 avec la description : Améliorer la satisfaction client avec un poids de 15%, résultats attendus : Atteindre un score de 90%",
+    "entities": [
+      {
+        "start": 40,
+        "end": 72,
+        "value": "Améliorer la satisfaction client",
+        "entity": "objectif"
+      },
+      {
+        "start": 90,
+        "end": 92,
+        "value": "15",
+        "entity": "poids"
+      },
+      {
+        "start": 116,
+        "end": 141,
+        "value": "Atteindre un score de 90%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 40,
+        "end": 72,
+        "confidence_entity": 0.9720683693885803,
+        "value": "Améliorer la satisfaction client",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 90,
+        "end": 92,
+        "confidence_entity": 0.9986097812652588,
+        "value": "15",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter l'objectif 4 : développer les compétences techniques de l'équipe. Poids : 15 % Résultat attendu : formation complétée pour 100 % des employés d'ici 6 mois.",
+    "entities": [
+      {
+        "start": 23,
+        "end": 73,
+        "value": "développer les compétences techniques de l'équipe.",
+        "entity": "objectif"
+      },
+      {
+        "start": 82,
+        "end": 86,
+        "value": "15 %",
+        "entity": "poids"
+      },
+      {
+        "start": 106,
+        "end": 163,
+        "value": "formation complétée pour 100 % des employés d'ici 6 mois.",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Créer l'objectif 6 décrit comme suit : réduire l'empreinte carbone de l'entreprise. Pondération : 12 % Indicateur : diminution de 20 % des émissions CO2 d'ici fin d'année.",
+    "entities": [
+      {
+        "start": 39,
+        "end": 83,
+        "value": "réduire l'empreinte carbone de l'entreprise.",
+        "entity": "objectif"
+      },
+      {
+        "start": 98,
+        "end": 102,
+        "value": "12 %",
+        "entity": "poids"
+      },
+      {
+        "start": 116,
+        "end": 171,
+        "value": "diminution de 20 % des émissions CO2 d'ici fin d'année.",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Ajouter un objectif : garantir la qualité des produits finis. Poids : 30 % Résultat : taux de défauts inférieur à 1 % sur l'année.",
+    "entities": [
+      {
+        "start": 22,
+        "end": 61,
+        "value": "garantir la qualité des produits finis.",
+        "entity": "objectif"
+      },
+      {
+        "start": 70,
+        "end": 74,
+        "value": "30 %",
+        "entity": "poids"
+      },
+      {
+        "start": 86,
+        "end": 130,
+        "value": "taux de défauts inférieur à 1 % sur l'année.",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "poids",
+        "start": 70,
+        "end": 72,
+        "confidence_entity": 0.5172574520111084,
+        "value": "30",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 2 : Améliorer la qualité du code avec comme poids 25 % pour avoir un taux de bugs inférieur à 5%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 41,
+        "value": "Améliorer la qualité du code",
+        "entity": "objectif"
+      },
+      {
+        "start": 59,
+        "end": 61,
+        "value": "25",
+        "entity": "poids"
+      },
+      {
+        "start": 75,
+        "end": 105,
+        "value": "un taux de bugs inférieur à 5%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 41,
+        "confidence_entity": 0.6760027408599854,
+        "value": "Améliorer la qualité du code",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 59,
+        "end": 61,
+        "confidence_entity": 0.9994811415672302,
+        "value": "25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 5 : Documenter le code source avec comme poids 10% pour avoir une documentation complète à 90%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 38,
+        "value": "Documenter le code source",
+        "entity": "objectif"
+      },
+      {
+        "start": 56,
+        "end": 58,
+        "value": "10",
+        "entity": "poids"
+      },
+      {
+        "start": 71,
+        "end": 103,
+        "value": "une documentation complète à 90%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 38,
+        "confidence_entity": 0.7754000425338745,
+        "value": "Documenter le code source",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 56,
+        "end": 58,
+        "confidence_entity": 0.9995532631874084,
+        "value": "10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 1 : Réduire les erreurs de production avec un poids de 35% pour diminuer les incidents de 80%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 46,
+        "value": "Réduire les erreurs de production",
+        "entity": "objectif"
+      },
+      {
+        "start": 64,
+        "end": 66,
+        "value": "35",
+        "entity": "poids"
+      },
+      {
+        "start": 73,
+        "end": 102,
+        "value": "diminuer les incidents de 80%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 46,
+        "confidence_entity": 0.9010339379310608,
+        "value": "Réduire les erreurs de production",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 64,
+        "end": 66,
+        "confidence_entity": 0.999460756778717,
+        "value": "35",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Objectif 2 : Ameliorer la qualitée du code avec comme poids 25 % pour avoir un taux de bug inferieur a 5%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 42,
+        "value": "Ameliorer la qualitée du code",
+        "entity": "objectif"
+      },
+      {
+        "start": 60,
+        "end": 62,
+        "value": "25",
+        "entity": "poids"
+      },
+      {
+        "start": 76,
+        "end": 105,
+        "value": "un taux de bug inferieur a 5%",
+        "entity": "resultat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 13,
+        "end": 42,
+        "confidence_entity": 0.8524898886680603,
+        "value": "Ameliorer la qualitée du code",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "poids",
+        "start": 60,
+        "end": 62,
+        "confidence_entity": 0.9995319843292236,
+        "value": "25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "DDR pour un développeur web en stage de six mois",
+    "entities": [
+      {
+        "start": 12,
+        "end": 27,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nom_poste",
+        "start": 12,
+        "end": 27,
+        "confidence_entity": 0.9837839007377625,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 31,
+        "end": 36,
+        "confidence_entity": 0.49310925602912903,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Valide le recrutement pour moi",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Valide",
+        "entity": "intention_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9998928308486938,
+        "value": "validation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "intention_demande",
+        "start": 10,
+        "end": 21,
+        "confidence_entity": 0.5272425413131714,
+        "value": "recrutement",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Valide le DDR 67890 avec le commentaire suivant : Prêt à être soumis",
+    "entities": [
+      {
+        "start": 10,
+        "end": 13,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 14,
+        "end": 19,
+        "value": "67890",
+        "entity": "id_demande"
+      },
+      {
+        "start": 50,
+        "end": 68,
+        "value": "Prêt à être soumis",
+        "entity": "commentaire"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.8496353030204773,
+        "value": "validation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 10,
+        "end": 13,
+        "confidence_entity": 0.9985780715942383,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "id_demande",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.9997127652168274,
+        "value": "67890",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "commentaire",
+        "start": 50,
+        "end": 68,
+        "confidence_entity": 0.9700020551681519,
+        "value": "Prêt à être soumis",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,6653 @@
+[
+  {
+    "text": "Je voudrais faire une DDR pour ajouter un nouveau poste",
+    "entities": [
+      {
+        "start": 22,
+        "end": 25,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 31,
+        "end": 38,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 22,
+        "end": 25,
+        "confidence_entity": 0.9994295239448547,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "intention_demande",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.9993150234222412,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer une DDR",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 21,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9996150732040405,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.9996980428695679,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter une nouvelle DDR",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 21,
+        "end": 24,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9995405673980713,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.999785840511322,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Enregistrer une DDR",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "Enregistrer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 16,
+        "end": 19,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9987024068832397,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.9997606873512268,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Modifier ma DDR",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Modifier",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9989758729934692,
+        "value": "modifier",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.9997684359550476,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Mettre à jour une demande de recrutement",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "Mettre à jour",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 40,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.793993353843689,
+        "value": "modifier",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 40,
+        "confidence_entity": 0.9669204354286194,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Supprimer ma DDR",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Supprimer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 13,
+        "end": 16,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9991794228553772,
+        "value": "supprimer",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 13,
+        "end": 16,
+        "confidence_entity": 0.9998062252998352,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "nouvelle DDR",
+    "entities": [
+      {
+        "start": 9,
+        "end": 12,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.9997459053993225,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ajouter DDR",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 11,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9998206496238708,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9997995495796204,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "je souhaite ajouter un DDR",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 23,
+        "end": 26,
+        "value": "DDR",
+        "entity": "type_demande"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.999440610408783,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.99958735704422,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9994006156921387,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997389912605286,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9975800514221191,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9993693232536316,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer une DDR pour un développeur web dans la DSI",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 21,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 30,
+        "end": 45,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 54,
+        "end": 57,
+        "value": "DSI",
+        "entity": "direction"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9996548891067505,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.999667763710022,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 30,
+        "end": 45,
+        "confidence_entity": 0.9976227879524231,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 54,
+        "end": 57,
+        "confidence_entity": 0.9981696605682373,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 54,
+        "end": 57,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 27,
+        "end": 29,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 54,
+        "end": 57,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter DDR pour développeur web direction informatique",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 11,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 17,
+        "end": 32,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 33,
+        "end": 55,
+        "value": "direction informatique",
+        "entity": "direction"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9995829463005066,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.999616265296936,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 17,
+        "end": 32,
+        "confidence_entity": 0.9979298114776611,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 33,
+        "end": 55,
+        "confidence_entity": 0.9994027614593506,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je souhaite faire une DDR pour Admin et Dev web à la DSI",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "faire",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 22,
+        "end": 25,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 31,
+        "end": 47,
+        "value": "Admin et Dev web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 53,
+        "end": 56,
+        "value": "DSI",
+        "entity": "direction"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.9991745352745056,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 22,
+        "end": 25,
+        "confidence_entity": 0.999365508556366,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 31,
+        "end": 47,
+        "confidence_entity": 0.9933590292930603,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 53,
+        "end": 56,
+        "confidence_entity": 0.9989290833473206,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 53,
+        "end": 56,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 53,
+        "end": 56,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Créer demande de recrutement webmaster direction IT",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 6,
+        "end": 28,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      },
+      {
+        "start": 29,
+        "end": 38,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 39,
+        "end": 51,
+        "value": "direction IT",
+        "entity": "direction"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9972859621047974,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 6,
+        "end": 28,
+        "confidence_entity": 0.9759265780448914,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9988071918487549,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 39,
+        "end": 51,
+        "confidence_entity": 0.9989404082298279,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9994578957557678,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997040629386902,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9965930581092834,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9967020153999329,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999411106109619,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer une DDR pour un développeur web DSI en CDD",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 21,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 30,
+        "end": 45,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 46,
+        "end": 49,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 53,
+        "end": 56,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9997238516807556,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.9996808767318726,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 30,
+        "end": 45,
+        "confidence_entity": 0.9983938336372375,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 46,
+        "end": 49,
+        "confidence_entity": 0.9991480112075806,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 53,
+        "end": 56,
+        "confidence_entity": 0.9998289346694946,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 46,
+        "end": 49,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 27,
+        "end": 29,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 53,
+        "end": 56,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 46,
+        "end": 49,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter DDR webmaster direction informatique stage",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 11,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 12,
+        "end": 21,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 22,
+        "end": 44,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "value": "stage",
+        "entity": "nature_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9993501305580139,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.999371349811554,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 12,
+        "end": 21,
+        "confidence_entity": 0.999462902545929,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 22,
+        "end": 44,
+        "confidence_entity": 0.9953023195266724,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 50,
+        "confidence_entity": 0.9998093247413635,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 50,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je souhaite faire demande de recrutement Admin et Dev web DSI contrat CDI",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "faire",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 40,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      },
+      {
+        "start": 41,
+        "end": 57,
+        "value": "Admin et Dev web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 70,
+        "end": 73,
+        "value": "CDI",
+        "entity": "nature_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.9975026249885559,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 40,
+        "confidence_entity": 0.9708638191223145,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 41,
+        "end": 57,
+        "confidence_entity": 0.9922903180122375,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "confidence_entity": 0.9997755885124207,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 70,
+        "end": 73,
+        "confidence_entity": 0.9998096823692322,
+        "value": "CDI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 70,
+        "end": 73,
+        "value": "CDI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 Siège Social",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9995809197425842,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997225403785706,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.997001588344574,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9984686970710754,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999319314956665,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9978784322738647,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR développeur web DSI stage basé à 00 siege social",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 51,
+        "end": 66,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9995902180671692,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9995916485786438,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 33,
+        "confidence_entity": 0.9968639612197876,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9995798468589783,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9999184608459473,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "confidence_entity": 0.992771327495575,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 54,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter DDR webmaster direction informatique CDD à 00 Siège Social",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 11,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 12,
+        "end": 21,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 22,
+        "end": 44,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 45,
+        "end": 48,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9994664788246155,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9992515444755554,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 12,
+        "end": 21,
+        "confidence_entity": 0.9994332194328308,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 22,
+        "end": 44,
+        "confidence_entity": 0.9972469806671143,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 48,
+        "confidence_entity": 0.9998531341552734,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "confidence_entity": 0.9970171451568604,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 54,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 48,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je souhaite faire demande de recrutement Admin et Dev web DSI stage situé à 00 siege social",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "faire",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 40,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      },
+      {
+        "start": 41,
+        "end": 57,
+        "value": "Admin et Dev web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 62,
+        "end": 67,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 76,
+        "end": 91,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.9967719912528992,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 40,
+        "confidence_entity": 0.9688016176223755,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 41,
+        "end": 57,
+        "confidence_entity": 0.9924865961074829,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "confidence_entity": 0.999782145023346,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 62,
+        "end": 67,
+        "confidence_entity": 0.9998692274093628,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 76,
+        "end": 91,
+        "confidence_entity": 0.9949618577957153,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 79,
+        "end": 91,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 76,
+        "end": 91,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 62,
+        "end": 67,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 76,
+        "end": 91,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social, pour une durée de six mois",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "entity": "duree_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9995586276054382,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9996938705444336,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9970544576644897,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.998619556427002,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999064207077026,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9929409027099609,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "confidence_entity": 0.9968410730361938,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR développeur web DSI stage 00 Siège Social durée 6 mois",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 66,
+        "end": 72,
+        "value": "6 mois",
+        "entity": "duree_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9996639490127563,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9996849298477173,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 33,
+        "confidence_entity": 0.997687578201294,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9995693564414978,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9998496770858765,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9967769980430603,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 66,
+        "end": 72,
+        "confidence_entity": 0.996914267539978,
+        "value": "6 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 60,
+        "end": 72,
+        "value": "durée 6 mois",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 66,
+        "end": 72,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 47,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter DDR webmaster direction informatique CDD à 00 siege social pour 12 mois",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 11,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 12,
+        "end": 21,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 22,
+        "end": 44,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 45,
+        "end": 48,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 51,
+        "end": 66,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 72,
+        "end": 79,
+        "value": "12 mois",
+        "entity": "duree_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9993900060653687,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9991959929466248,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 12,
+        "end": 21,
+        "confidence_entity": 0.9993795156478882,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 22,
+        "end": 44,
+        "confidence_entity": 0.9976072311401367,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 48,
+        "confidence_entity": 0.9999163150787354,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "confidence_entity": 0.9856970310211182,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 72,
+        "end": 79,
+        "confidence_entity": 0.9897438883781433,
+        "value": "12 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 72,
+        "end": 79,
+        "value": "12 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 54,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 48,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 51,
+        "end": 66,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social, pour une durée de six mois. L'encadreur sera Jean Dupont",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 186,
+        "end": 197,
+        "value": "Jean Dupont",
+        "entity": "nom_encadreur"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9996875524520874,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997369647026062,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.998898983001709,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9984980821609497,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999034404754639,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9933424592018127,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "confidence_entity": 0.9872177243232727,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 186,
+        "end": 197,
+        "confidence_entity": 0.9989320635795593,
+        "value": "Jean Dupont",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR développeur web DSI stage 00 Siège Social 6 mois encadreur Marie Martin",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 60,
+        "end": 66,
+        "value": "6 mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 77,
+        "end": 89,
+        "value": "Marie Martin",
+        "entity": "nom_encadreur"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9997047781944275,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9996745586395264,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 33,
+        "confidence_entity": 0.9982795715332031,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9996119141578674,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9998244643211365,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.99700528383255,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 60,
+        "end": 66,
+        "confidence_entity": 0.9934856295585632,
+        "value": "6 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 77,
+        "end": 89,
+        "confidence_entity": 0.999123752117157,
+        "value": "Marie Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 60,
+        "end": 66,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 47,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter DDR webmaster direction informatique CDD 00 siege social supervisé par Paul Bernard",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 11,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 12,
+        "end": 21,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 22,
+        "end": 44,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 45,
+        "end": 48,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 49,
+        "end": 64,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 79,
+        "end": 91,
+        "value": "Paul Bernard",
+        "entity": "nom_encadreur"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9993314743041992,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 11,
+        "confidence_entity": 0.9992257356643677,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 12,
+        "end": 21,
+        "confidence_entity": 0.9994007349014282,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 22,
+        "end": 44,
+        "confidence_entity": 0.9973623156547546,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 48,
+        "confidence_entity": 0.9998888969421387,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 49,
+        "end": 64,
+        "confidence_entity": 0.993623673915863,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 79,
+        "end": 91,
+        "confidence_entity": 0.9986575841903687,
+        "value": "Paul Bernard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 52,
+        "end": 64,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 49,
+        "end": 64,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 45,
+        "end": 48,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 49,
+        "end": 64,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social, pour une durée de six mois. La mise en service est prévue pour le 01/11/2025",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 207,
+        "end": 217,
+        "value": "01/11/2025",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9996248483657837,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997462630271912,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9971039891242981,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9985018968582153,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999010562896729,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9889401793479919,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "confidence_entity": 0.9855243563652039,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 207,
+        "end": 217,
+        "confidence_entity": 0.9938105940818787,
+        "value": "01/11/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 207,
+        "end": 217,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 207,
+        "end": 217,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 172,
+        "end": 217,
+        "value": "mise en service est prévue pour le 01/11/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 207,
+        "end": 217,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR développeur web DSI stage 00 Siège Social 6 mois début 01/12/2025",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 60,
+        "end": 66,
+        "value": "6 mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 73,
+        "end": 83,
+        "value": "01/12/2025",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9997076392173767,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9995200634002686,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 33,
+        "confidence_entity": 0.9953902959823608,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9996402263641357,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9998733997344971,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.994407057762146,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 60,
+        "end": 66,
+        "confidence_entity": 0.9890567660331726,
+        "value": "6 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 73,
+        "end": 83,
+        "confidence_entity": 0.9437257051467896,
+        "value": "01/12/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 67,
+        "end": 83,
+        "value": "début 01/12/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_debut",
+        "start": 73,
+        "end": 83,
+        "value": "01/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 73,
+        "end": 83,
+        "value": "01/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 67,
+        "end": 83,
+        "value": "début 01/12/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 73,
+        "end": 83,
+        "value": "01/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 60,
+        "end": 66,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 47,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 44,
+        "end": 59,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social. Le motif est remplacement",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 154,
+        "end": 166,
+        "value": "remplacement",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9995936751365662,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997716546058655,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9963930249214172,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9982253909111023,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999369382858276,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9946645498275757,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 154,
+        "end": 166,
+        "confidence_entity": 0.9874604940414429,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR développeur web DSI CDD 00 Siège Social motif remplacement",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 38,
+        "end": 41,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 42,
+        "end": 57,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 64,
+        "end": 76,
+        "value": "remplacement",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9996671676635742,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9996923208236694,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 33,
+        "confidence_entity": 0.9980910420417786,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9994893074035645,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 41,
+        "confidence_entity": 0.9998620748519897,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 42,
+        "end": 57,
+        "confidence_entity": 0.9972527623176575,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 64,
+        "end": 76,
+        "confidence_entity": 0.9957380294799805,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 45,
+        "end": 57,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 42,
+        "end": 57,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 41,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 42,
+        "end": 57,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social. Situation budgétaire budgetisé",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 162,
+        "end": 171,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9995378255844116,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997207522392273,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9960045218467712,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9986194372177124,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9999203681945801,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9946087598800659,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 162,
+        "end": 171,
+        "confidence_entity": 0.9995625615119934,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR développeur web DSI stage budget budgetisé",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 33,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.999685525894165,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9997923970222473,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 33,
+        "confidence_entity": 0.9977139234542847,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9993178844451904,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9999387264251709,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 51,
+        "end": 60,
+        "confidence_entity": 0.9992055296897888,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 38,
+        "end": 43,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 34,
+        "end": 37,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social, pour une durée de six mois. L'encadreur sera Andrianantenaina Esperant RAVELOARIJAONA, qui occupe le poste de responsable technique. La mise en service est prévue pour le 01/11/2025. Le motif est remplacement, avec une situation budgétaire budgetisé",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 68,
+        "end": 90,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 110,
+        "end": 115,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 124,
+        "end": 139,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 186,
+        "end": 226,
+        "value": "Andrianantenaina Esperant RAVELOARIJAONA",
+        "entity": "nom_encadreur"
+      },
+      {
+        "start": 312,
+        "end": 322,
+        "value": "01/11/2025",
+        "entity": "date_mise_en_service"
+      },
+      {
+        "start": 337,
+        "end": 349,
+        "value": "remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 381,
+        "end": 390,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9997383952140808,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9997411370277405,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9990625977516174,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 68,
+        "end": 90,
+        "confidence_entity": 0.9985881447792053,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "confidence_entity": 0.9998782873153687,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "confidence_entity": 0.9929177761077881,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "confidence_entity": 0.987275242805481,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 186,
+        "end": 226,
+        "confidence_entity": 0.980186402797699,
+        "value": "Andrianantenaina Esperant RAVELOARIJAONA",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 312,
+        "end": 322,
+        "confidence_entity": 0.9939591884613037,
+        "value": "01/11/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 337,
+        "end": 349,
+        "confidence_entity": 0.9980940222740173,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 381,
+        "end": 390,
+        "confidence_entity": 0.9996490478515625,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 312,
+        "end": 322,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 312,
+        "end": 322,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 277,
+        "end": 322,
+        "value": "mise en service est prévue pour le 01/11/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 312,
+        "end": 322,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 159,
+        "end": 167,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 127,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 110,
+        "end": 115,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 124,
+        "end": 139,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer une DDR pour un développeur web à la DSI en stage au 00 Siège Social pour 6 mois avec encadreur Jean Martin début 15/11/2025 motif Complément d'effectif budget budgetisé",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 21,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 30,
+        "end": 45,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 51,
+        "end": 54,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 58,
+        "end": 63,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 67,
+        "end": 82,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 88,
+        "end": 94,
+        "value": "6 mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 110,
+        "end": 121,
+        "value": "Jean Martin",
+        "entity": "nom_encadreur"
+      },
+      {
+        "start": 128,
+        "end": 138,
+        "value": "15/11/2025",
+        "entity": "date_mise_en_service"
+      },
+      {
+        "start": 145,
+        "end": 166,
+        "value": "Complément d'effectif",
+        "entity": "motif"
+      },
+      {
+        "start": 174,
+        "end": 183,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9996976852416992,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.99972003698349,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 30,
+        "end": 45,
+        "confidence_entity": 0.9987618923187256,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 51,
+        "end": 54,
+        "confidence_entity": 0.9993959665298462,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 58,
+        "end": 63,
+        "confidence_entity": 0.9994522929191589,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 67,
+        "end": 82,
+        "confidence_entity": 0.9909768104553223,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 88,
+        "end": 94,
+        "confidence_entity": 0.9091947674751282,
+        "value": "6 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 110,
+        "end": 121,
+        "confidence_entity": 0.9944283962249756,
+        "value": "Jean Martin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 128,
+        "end": 138,
+        "confidence_entity": 0.9847649335861206,
+        "value": "15/11/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 145,
+        "end": 166,
+        "confidence_entity": 0.9841092228889465,
+        "value": "Complément d'effectif",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 174,
+        "end": 183,
+        "confidence_entity": 0.9994956254959106,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 122,
+        "end": 138,
+        "value": "début 15/11/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_debut",
+        "start": 128,
+        "end": 138,
+        "value": "15/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 128,
+        "end": 138,
+        "value": "15/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 122,
+        "end": 138,
+        "value": "début 15/11/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 128,
+        "end": 138,
+        "value": "15/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 51,
+        "end": 54,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 88,
+        "end": 94,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 27,
+        "end": 29,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 70,
+        "end": 82,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 67,
+        "end": 82,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 58,
+        "end": 63,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 51,
+        "end": 54,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 67,
+        "end": 82,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 145,
+        "end": 166,
+        "value": "Complément d'effectif",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour ajouter DDR webmaster direction informatique CDD 00 siege social durée 12 mois superviseur Marie Dubois responsable projet mise en service 01/12/2025 remplacement budgetisé justification accélérer développement",
+    "entities": [
+      {
+        "start": 8,
+        "end": 15,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 16,
+        "end": 19,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 20,
+        "end": 29,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 30,
+        "end": 52,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 53,
+        "end": 56,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 57,
+        "end": 72,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 79,
+        "end": 86,
+        "value": "12 mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 99,
+        "end": 111,
+        "value": "Marie Dubois",
+        "entity": "nom_encadreur"
+      },
+      {
+        "start": 147,
+        "end": 157,
+        "value": "01/12/2025",
+        "entity": "date_mise_en_service"
+      },
+      {
+        "start": 158,
+        "end": 170,
+        "value": "remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 171,
+        "end": 180,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.9997370839118958,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.9993579983711243,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 20,
+        "end": 29,
+        "confidence_entity": 0.9994300007820129,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 30,
+        "end": 52,
+        "confidence_entity": 0.99672532081604,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 53,
+        "end": 56,
+        "confidence_entity": 0.9998482465744019,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 57,
+        "end": 72,
+        "confidence_entity": 0.9909417033195496,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 79,
+        "end": 86,
+        "confidence_entity": 0.9823783040046692,
+        "value": "12 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 99,
+        "end": 111,
+        "confidence_entity": 0.9984512329101562,
+        "value": "Marie Dubois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 147,
+        "end": 157,
+        "confidence_entity": 0.9848782420158386,
+        "value": "01/12/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 158,
+        "end": 170,
+        "confidence_entity": 0.9988319277763367,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 171,
+        "end": 180,
+        "confidence_entity": 0.9981510043144226,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 147,
+        "end": 157,
+        "value": "01/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 147,
+        "end": 157,
+        "value": "01/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 131,
+        "end": 157,
+        "value": "mise en service 01/12/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 147,
+        "end": 157,
+        "value": "01/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 73,
+        "end": 86,
+        "value": "durée 12 mois",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 79,
+        "end": 86,
+        "value": "12 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 60,
+        "end": 72,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 57,
+        "end": 72,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 53,
+        "end": 56,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 57,
+        "end": 72,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je souhaite créer demande de recrutement Admin et Dev web DSI contrat stage basé 00 Siège Social six mois encadré par Paul Richard chef technique service 01/11/2025 motif remplacement situation budgetisé pour développement modules internes formation jeune talent",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 18,
+        "end": 40,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      },
+      {
+        "start": 41,
+        "end": 57,
+        "value": "Admin et Dev web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 70,
+        "end": 75,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 81,
+        "end": 96,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 97,
+        "end": 105,
+        "value": "six mois",
+        "entity": "duree_contrat"
+      },
+      {
+        "start": 118,
+        "end": 130,
+        "value": "Paul Richard",
+        "entity": "nom_encadreur"
+      },
+      {
+        "start": 154,
+        "end": 164,
+        "value": "01/11/2025",
+        "entity": "date_mise_en_service"
+      },
+      {
+        "start": 171,
+        "end": 183,
+        "value": "remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 194,
+        "end": 203,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 17,
+        "confidence_entity": 0.9986273050308228,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 18,
+        "end": 40,
+        "confidence_entity": 0.9795556664466858,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 41,
+        "end": 57,
+        "confidence_entity": 0.994586706161499,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "confidence_entity": 0.9997298121452332,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 70,
+        "end": 75,
+        "confidence_entity": 0.9998613595962524,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 81,
+        "end": 96,
+        "confidence_entity": 0.9970121383666992,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 97,
+        "end": 105,
+        "confidence_entity": 0.9759545922279358,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 118,
+        "end": 130,
+        "confidence_entity": 0.9981953501701355,
+        "value": "Paul Richard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 154,
+        "end": 164,
+        "confidence_entity": 0.9833690524101257,
+        "value": "01/11/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 171,
+        "end": 183,
+        "confidence_entity": 0.9976862668991089,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 194,
+        "end": 203,
+        "confidence_entity": 0.9990593791007996,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 154,
+        "end": 164,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 154,
+        "end": 164,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 154,
+        "end": 164,
+        "value": "01/11/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 97,
+        "end": 105,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 84,
+        "end": 96,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 81,
+        "end": 96,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 70,
+        "end": 75,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 58,
+        "end": 61,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 81,
+        "end": 96,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour, je souhaite ajouter un DDR pour un développeur web direction informatique stage 00 siege social 6 mois. La justification est la suivante : renfort équipe",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 44,
+        "end": 59,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 60,
+        "end": 82,
+        "value": "direction informatique",
+        "entity": "direction"
+      },
+      {
+        "start": 83,
+        "end": 88,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 89,
+        "end": 104,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      },
+      {
+        "start": 105,
+        "end": 111,
+        "value": "6 mois",
+        "entity": "duree_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9997137188911438,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9998082518577576,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 44,
+        "end": 59,
+        "confidence_entity": 0.9981389045715332,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 60,
+        "end": 82,
+        "confidence_entity": 0.9978561997413635,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 83,
+        "end": 88,
+        "confidence_entity": 0.9998388290405273,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 89,
+        "end": 104,
+        "confidence_entity": 0.982866108417511,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 105,
+        "end": 111,
+        "confidence_entity": 0.883069634437561,
+        "value": "6 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 105,
+        "end": 111,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 41,
+        "end": 43,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 92,
+        "end": 104,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 89,
+        "end": 104,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 83,
+        "end": 88,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 89,
+        "end": 104,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux créer DDR webmaster DSI CDD 00 Siège Social. Justification : développement nouveaux modules",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 27,
+        "value": "webmaster",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 28,
+        "end": 31,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 36,
+        "end": 51,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.999808132648468,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9996076226234436,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 27,
+        "confidence_entity": 0.9986857771873474,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 28,
+        "end": 31,
+        "confidence_entity": 0.9970449805259705,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9998937845230103,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 36,
+        "end": 51,
+        "confidence_entity": 0.9973195195198059,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 28,
+        "end": 31,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 39,
+        "end": 51,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 36,
+        "end": 51,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 32,
+        "end": 35,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 28,
+        "end": 31,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 36,
+        "end": 51,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ajouter demande de recrutement développeur web direction IT stage siege social. La justification : accélérer le développement tout en formant un jeune talent",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 8,
+        "end": 30,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      },
+      {
+        "start": 31,
+        "end": 46,
+        "value": "développeur web",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 47,
+        "end": 59,
+        "value": "direction IT",
+        "entity": "direction"
+      },
+      {
+        "start": 60,
+        "end": 65,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 66,
+        "end": 78,
+        "value": "siege social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9982128143310547,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 8,
+        "end": 30,
+        "confidence_entity": 0.9763917326927185,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 31,
+        "end": 46,
+        "confidence_entity": 0.9956141710281372,
+        "value": "Administrateur et Developpeur web",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 47,
+        "end": 59,
+        "confidence_entity": 0.9927436113357544,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 60,
+        "end": 65,
+        "confidence_entity": 0.9998432397842407,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 66,
+        "end": 78,
+        "confidence_entity": 0.9470618367195129,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 66,
+        "end": 78,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "justification",
+        "start": 83,
+        "end": 157,
+        "value": "justification : accélérer le développement tout en formant un jeune talent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 60,
+        "end": 65,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 66,
+        "end": 78,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je souhaite ajouter DDR Agent de sécurité DRH CDD AG01 Agence Tanjombato",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 20,
+        "end": 23,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 24,
+        "end": 41,
+        "value": "Agent de sécurité",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 42,
+        "end": 45,
+        "value": "DRH",
+        "entity": "direction"
+      },
+      {
+        "start": 46,
+        "end": 49,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 50,
+        "end": 72,
+        "value": "AG01 Agence Tanjombato",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.9995137453079224,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9993734955787659,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 24,
+        "end": 41,
+        "confidence_entity": 0.9860969185829163,
+        "value": "Agent de sécurité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 42,
+        "end": 45,
+        "confidence_entity": 0.9994218349456787,
+        "value": "DRH",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 46,
+        "end": 49,
+        "confidence_entity": 0.9997908473014832,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 50,
+        "end": 72,
+        "confidence_entity": 0.997220516204834,
+        "value": "AG01 Agence Tanjombato",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 42,
+        "end": 45,
+        "value": "DRH",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 50,
+        "end": 54,
+        "value": "AG01 Agence Tanjombato",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 46,
+        "end": 49,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 42,
+        "end": 45,
+        "value": "DRH",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 50,
+        "end": 72,
+        "value": "AG01 Agence Tanjombato",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 24,
+        "end": 41,
+        "value": "Agent de sécurité",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Créer DDR Manœuvre logistique DLA stage US50 Usine Ambatolampy",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Créer",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 6,
+        "end": 9,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 10,
+        "end": 29,
+        "value": "Manœuvre logistique",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 30,
+        "end": 33,
+        "value": "DLA",
+        "entity": "direction"
+      },
+      {
+        "start": 34,
+        "end": 39,
+        "value": "stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 40,
+        "end": 62,
+        "value": "US50 Usine Ambatolampy",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9992079138755798,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.9988693594932556,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 10,
+        "end": 29,
+        "confidence_entity": 0.9776320457458496,
+        "value": "Manœuvre logistique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 30,
+        "end": 33,
+        "confidence_entity": 0.9923874139785767,
+        "value": "DLA",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 34,
+        "end": 39,
+        "confidence_entity": 0.9995266199111938,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 40,
+        "end": 62,
+        "confidence_entity": 0.9874037504196167,
+        "value": "US50 Usine Ambatolampy",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 30,
+        "end": 33,
+        "value": "DLA",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 40,
+        "end": 44,
+        "value": "US50 Usine Ambatolampy",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 40,
+        "end": 44,
+        "value": "US50 Usine Ambatolampy",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 34,
+        "end": 39,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 30,
+        "end": 33,
+        "value": "DLA",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 40,
+        "end": 62,
+        "value": "US50 Usine Ambatolampy",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 10,
+        "end": 29,
+        "value": "Manœuvre logistique",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 30,
+        "end": 33,
+        "value": "DLA",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Bonjour ajouter demande de recrutement Agent administration direction RH CDI 00 siege social",
+    "entities": [
+      {
+        "start": 8,
+        "end": 15,
+        "value": "ajouter",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 16,
+        "end": 38,
+        "value": "demande de recrutement",
+        "entity": "type_demande"
+      },
+      {
+        "start": 39,
+        "end": 59,
+        "value": "Agent administration",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 60,
+        "end": 72,
+        "value": "direction RH",
+        "entity": "direction"
+      },
+      {
+        "start": 73,
+        "end": 76,
+        "value": "CDI",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 77,
+        "end": 92,
+        "value": "00 siege social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.9981040954589844,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 16,
+        "end": 38,
+        "confidence_entity": 0.9661474227905273,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 39,
+        "end": 59,
+        "confidence_entity": 0.9901956915855408,
+        "value": "Agent administration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 60,
+        "end": 72,
+        "confidence_entity": 0.9953386783599854,
+        "value": "DRH",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 73,
+        "end": 76,
+        "confidence_entity": 0.9999198913574219,
+        "value": "CDI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 77,
+        "end": 92,
+        "confidence_entity": 0.9916577935218811,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 80,
+        "end": 92,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 77,
+        "end": 92,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 73,
+        "end": 76,
+        "value": "CDI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 77,
+        "end": 92,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 39,
+        "end": 59,
+        "value": "Agent administration",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Je veux faire DDR Manœuvre nettoyage DGL journalier AG04 Agence Tuléar",
+    "entities": [
+      {
+        "start": 8,
+        "end": 13,
+        "value": "faire",
+        "entity": "intention_demande"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "DDR",
+        "entity": "type_demande"
+      },
+      {
+        "start": 18,
+        "end": 36,
+        "value": "Manœuvre nettoyage",
+        "entity": "nom_poste"
+      },
+      {
+        "start": 37,
+        "end": 40,
+        "value": "DGL",
+        "entity": "direction"
+      },
+      {
+        "start": 41,
+        "end": 51,
+        "value": "journalier",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 52,
+        "end": 70,
+        "value": "AG04 Agence Tuléar",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "intention_demande",
+        "start": 8,
+        "end": 13,
+        "confidence_entity": 0.9994695782661438,
+        "value": "ajouter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9996256828308105,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 36,
+        "confidence_entity": 0.9989664554595947,
+        "value": "Manœuvre nettoyage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 37,
+        "end": 40,
+        "confidence_entity": 0.9984221458435059,
+        "value": "DGL",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 41,
+        "end": 51,
+        "confidence_entity": 0.9994456171989441,
+        "value": "journalier",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 52,
+        "end": 70,
+        "confidence_entity": 0.9978060126304626,
+        "value": "AG04 Agence Tuléar",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 37,
+        "end": 40,
+        "value": "DGL",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 52,
+        "end": 56,
+        "value": "AG04 Agence Tuléar",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 41,
+        "end": 51,
+        "value": "journalier",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 37,
+        "end": 40,
+        "value": "DGL",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 52,
+        "end": 70,
+        "value": "AG04 Agence Tuléar",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_poste",
+        "start": 18,
+        "end": 36,
+        "value": "Manœuvre nettoyage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

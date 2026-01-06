@@ -1,0 +1,357 @@
+nlu:
+  # ============================================
+  # Intent pour afficher une demande SOUMISE (avec suivi)
+  # ============================================
+  - intent: suivre_demande
+    examples: |
+      - je veux suivre ma demande
+      - où en est ma demande
+      - suivi de ma demande
+      - consulter ma demande
+      - voir l'avancement de ma demande
+      
+      - affiche le [DDR](type_demande) [259](id_demande)
+      - affiche la [DMI](type_demande) [123](id_demande)
+      - montre le [DRI](type_demande) [456](id_demande)
+      - montre la [DMOE](type_demande) [789](id_demande)
+      - voir le [DDR](type_demande) [100](id_demande)
+      - voir la [DMI](type_demande) [200](id_demande)
+      - affiche moi le [DDR](type_demande) [300](id_demande)
+      - affiche moi la [DRI](type_demande) [400](id_demande)
+      - montre moi le [DMOE](type_demande) [500](id_demande)
+      
+      - demande numéro [123](id_demande)
+      - suivi demande [456](id_demande)
+      - [DDR](type_demande) numéro [789](id_demande)
+      - [DMI](type_demande) numéro [234](id_demande)
+      - [DRI](type_demande) numéro [567](id_demande)
+      - [DMOE](type_demande) numéro [890](id_demande)
+      - voir la demande [12](id_demande)
+      - statut de la demande [345](id_demande)
+      - état de ma demande [678](id_demande)
+      - demande #[67](id_demande)
+      - suivi #[89](id_demande)
+      - ma [DDR](type_demande) [123](id_demande)
+      - status [DMI](type_demande) [456](id_demande)
+      - vérifier ma [DRI](type_demande) [999](id_demande)
+      - consulter [DMOE](type_demande) [789](id_demande)
+      
+      - quel est le statut de ma demande
+      - ma demande a-t-elle été traitée
+      - demande en cours [123](id_demande)
+      - historique demande [456](id_demande)
+      - détails de la demande [789](id_demande)
+      - suivre [DDR](type_demande) #[234](id_demande)
+      - voir [DMI](type_demande) #[567](id_demande)
+      - statut [DRI](type_demande) #[890](id_demande)
+      - avancement [DMOE](type_demande) #[123](id_demande)
+      - où en est la [DDR](type_demande) [456](id_demande)
+      - ma demande [DDR](type_demande) est-elle validée
+      - la [DMI](type_demande) [789](id_demande) est traitée
+      - vérifier le statut de [DRI](type_demande) [234](id_demande)
+      - consulter l'état de [DMOE](type_demande) [567](id_demande)
+      - affiche les infos du [DDR](type_demande) [259](id_demande)
+      - affiche les détails du [DMI](type_demande) [100](id_demande)
+      - montre les infos de la [DRI](type_demande) [200](id_demande)
+
+  # ============================================
+  # Intent pour consulter TOUTES mes demandes (créées par moi)
+  # ============================================
+  - intent: demander_liste_demandes
+    examples: |
+      - affiche mes demandes
+      - montre mes demandes
+      - liste de mes demandes
+      - toutes mes demandes
+      - mes demandes en cours
+      - voir mes demandes
+      - affiche toutes mes demandes
+      - montre toutes mes demandes
+      - liste complète de mes demandes
+      - demandes que j'ai créées
+      - demandes que j'ai faites
+      - mes demandes soumises
+      - affiche l'historique de mes demandes
+      - historique demandes
+      - toutes les demandes
+      - liste des demandes
+      - affiche la liste
+      - montre la liste
+      - mes demandes créées
+      - demandes en cours
+      - mes demandes actives
+      - demandes actives
+      - voir toutes les demandes
+      - consulter mes demandes
+      - consulter la liste
+      - affiche mon historique
+      - montre mon historique
+      
+      - affiche mes [DDR](type_demande)
+      - montre mes [DDR](type_demande)
+      - liste de mes [DDR](type_demande)
+      - toutes mes [DDR](type_demande)
+      - mes [DDR](type_demande) en cours
+      - voir mes [DDR](type_demande)
+      - mes demandes de recrutement
+      - affiche mes demandes de recrutement
+      - liste [DDR](type_demande)
+      - historique [DDR](type_demande)
+      - [DDR](type_demande) en cours
+      - [DDR](type_demande) créées
+      - consulter mes [DDR](type_demande)
+      - affiche toutes les [DDR](type_demande)
+      - montre toutes mes [DDR](type_demande)
+      
+      - affiche mes [DMI](type_demande)
+      - montre mes [DMI](type_demande)
+      - liste de mes [DMI](type_demande)
+      - toutes mes [DMI](type_demande)
+      - mes [DMI](type_demande) en cours
+      - voir mes [DMI](type_demande)
+      - mes demandes de mobilité interne
+      - affiche mes demandes de mobilité interne
+      - liste [DMI](type_demande)
+      - historique [DMI](type_demande)
+      - [DMI](type_demande) en cours
+      - [DMI](type_demande) créées
+      - consulter mes [DMI](type_demande)
+      - affiche toutes les [DMI](type_demande)
+      - montre toutes mes [DMI](type_demande)
+      
+      - affiche mes [DRI](type_demande)
+      - montre mes [DRI](type_demande)
+      - liste de mes [DRI](type_demande)
+      - toutes mes [DRI](type_demande)
+      - mes [DRI](type_demande) en cours
+      - voir mes [DRI](type_demande)
+      - mes demandes de réintégration
+      - affiche mes demandes de réintégration
+      - liste [DRI](type_demande)
+      - historique [DRI](type_demande)
+      - [DRI](type_demande) en cours
+      - [DRI](type_demande) créées
+      - consulter mes [DRI](type_demande)
+      - affiche toutes les [DRI](type_demande)
+      - montre toutes mes [DRI](type_demande)
+      
+      - affiche mes [DMOE](type_demande)
+      - montre mes [DMOE](type_demande)
+      - liste de mes [DMOE](type_demande)
+      - toutes mes [DMOE](type_demande)
+      - mes [DMOE](type_demande) en cours
+      - voir mes [DMOE](type_demande)
+      - mes demandes de manœuvre
+      - affiche mes demandes de manœuvre
+      - liste [DMOE](type_demande)
+      - historique [DMOE](type_demande)
+      - [DMOE](type_demande) en cours
+      - [DMOE](type_demande) créées
+      - consulter mes [DMOE](type_demande)
+      - affiche toutes les [DMOE](type_demande)
+      - montre toutes mes [DMOE](type_demande)
+      
+      - j'ai combien de demandes
+      - combien de demandes j'ai créées
+      - combien de [DDR](type_demande) j'ai
+      - combien de [DMI](type_demande) j'ai créées
+      - liste complète
+
+      - montre tout ce que j'ai fait
+      - mes créations
+      - demandes créées par moi
+      - qu'est-ce que j'ai comme demandes
+      - quelles sont mes demandes
+      - voir l'ensemble de mes demandes
+      - toutes les [DDR](type_demande) que j'ai faites
+      - toutes les [DMI](type_demande) que j'ai créées
+      - historique complet
+      - affiche l'historique complet
+      - liste de toutes mes demandes
+      - voir la liste complète
+
+  # ============================================
+  # Intent pour consulter les demandes à traiter/valider
+  # ============================================
+  - intent: demander_liste_a_traiter
+    examples: |
+      - affiche mes demandes à traiter
+      - montre mes demandes à traiter
+      - je veux voir mes demandes à traiter
+      - affiche les demandes à valider
+      - montre les demandes à valider
+      - quelles demandes dois-je valider
+      - liste des demandes en attente
+      - demandes en attente de validation
+      - mes validations en attente
+      - mes demandes en attente
+      - affiche ma file de validation
+      - montre ma file de validation
+      - demandes à approuver
+      - liste des validations
+      - mes tâches de validation
+      - affiche mes tâches
+      - quelles demandes je dois traiter
+      - demandes en cours de validation
+      - file d'attente validation
+      - affiche mes validations
+      - montre mes validations
+      - je dois valider quoi
+      - qu'est-ce que je dois valider
+      - demandes qui attendent ma validation
+      - affiche ce que je dois valider
+      - montre ce que je dois approuver
+      - ma todo list
+      - ma liste de validation
+      - validation en cours
+      - validations en attente
+      
+      - affiche mes [DDR](type_demande) à traiter
+      - montre mes [DDR](type_demande) à valider
+      - mes [DDR](type_demande) en attente
+      - [DDR](type_demande) à valider
+      - liste des [DDR](type_demande) à traiter
+      - demandes de recrutement à valider
+      - affiche les [DDR](type_demande) à traiter
+      - montre les [DDR](type_demande) en attente
+      - [DDR](type_demande) en attente de validation
+      - validations [DDR](type_demande)
+      - [DDR](type_demande) à approuver
+      - demandes [DDR](type_demande) à approuver
+      - j'ai des [DDR](type_demande) à valider
+      - y a-t-il des [DDR](type_demande) en attente
+      - combien de [DDR](type_demande) je dois traiter
+      - affiche validations [DDR](type_demande)
+      
+      - affiche mes [DMI](type_demande) à traiter
+      - montre mes [DMI](type_demande) à valider
+      - mes [DMI](type_demande) en attente
+      - [DMI](type_demande) à valider
+      - liste des [DMI](type_demande) à traiter
+      - demandes de mobilité interne à valider
+      - affiche les [DMI](type_demande) à traiter
+      - montre les [DMI](type_demande) en attente
+      - [DMI](type_demande) en attente de validation
+      - validations [DMI](type_demande)
+      - [DMI](type_demande) à approuver
+      - demandes [DMI](type_demande) à approuver
+      - j'ai des [DMI](type_demande) à valider
+      - y a-t-il des [DMI](type_demande) en attente
+      - combien de [DMI](type_demande) je dois traiter
+      - affiche validations [DMI](type_demande)
+      
+      - affiche mes [DRI](type_demande) à traiter
+      - montre mes [DRI](type_demande) à valider
+      - mes [DRI](type_demande) en attente
+      - [DRI](type_demande) à valider
+      - liste des [DRI](type_demande) à traiter
+      - demandes de réintégration à valider
+      - affiche les [DRI](type_demande) à traiter
+      - montre les [DRI](type_demande) en attente
+      - [DRI](type_demande) en attente de validation
+      - validations [DRI](type_demande)
+      - [DRI](type_demande) à approuver
+      - demandes [DRI](type_demande) à approuver
+      - j'ai des [DRI](type_demande) à valider
+      - y a-t-il des [DRI](type_demande) en attente
+      - combien de [DRI](type_demande) je dois traiter
+      - affiche validations [DRI](type_demande)
+      
+      - affiche mes [DMOE](type_demande) à traiter
+      - montre mes [DMOE](type_demande) à valider
+      - mes [DMOE](type_demande) en attente
+      - [DMOE](type_demande) à valider
+      - liste des [DMOE](type_demande) à traiter
+      - demandes de manœuvre à valider
+      - affiche les [DMOE](type_demande) à traiter
+      - montre les [DMOE](type_demande) en attente
+      - [DMOE](type_demande) en attente de validation
+      - validations [DMOE](type_demande)
+      - [DMOE](type_demande) à approuver
+      - demandes [DMOE](type_demande) à approuver
+      - j'ai des [DMOE](type_demande) à valider
+      - y a-t-il des [DMOE](type_demande) en attente
+      - combien de [DMOE](type_demande) je dois traiter
+      - affiche validations [DMOE](type_demande)
+      
+      - j'ai des demandes à valider
+      - y a-t-il des demandes en attente pour moi
+      - combien de demandes je dois traiter
+      - affiche toutes mes validations
+      - montre toutes les demandes en attente
+      - liste complète des demandes à valider
+      - demandes qui nécessitent mon approbation
+      - affiche les demandes qui attendent
+      - montre moi ce qui attend ma validation
+      - quelles sont mes tâches de validation
+      - file de validation complète
+      - demandes en cours d'approbation
+      - affiche les approbations en attente
+      - montre les approbations en cours
+    
+  # ============================================
+  # Intent pour afficher le formulaire EN COURS (sans ID)
+  # ============================================
+  - intent: afficher_informations
+    examples: |
+      - affiche moi les informations
+      - montre moi les détails
+      - je veux voir les informations
+      - affiche les données
+      - montre les infos
+
+      - montre moi tout
+      - affiche moi le récapitulatif
+      - je veux voir le récap
+      - affiche moi ce que j'ai saisi
+      - montre ce que j'ai rempli
+      - résumé de la demande
+      - affiche le résumé
+      - récapitulatif complet
+      - résumé complet
+      - affiche toutes les informations
+      - affiche toutes les infos
+      - montre moi toutes les données
+      
+      - affiche les [objectifs](info_type)
+      - montre moi les [objectifs](info_type)
+      - je veux voir les [objectifs](info_type)
+      - affiche les [dotations](info_type)
+      - montre les [dotations](info_type)
+      - affiche les [pièces jointes](info_type)
+      - montre moi les [fichiers](info_type)
+      - affiche le [poste](info_type)
+      - montre moi le [poste](info_type)
+      - affiche l'[encadreur](info_type)
+      - montre l'[encadreur](info_type)
+      - affiche la [direction](info_type)
+      - montre la [direction](info_type)
+      - affiche l'[exploitation](info_type)
+      - affiche le [contrat](info_type)
+      - montre le [contrat](info_type)
+      - affiche le [motif](info_type)
+      - montre le [motif](info_type)
+      - affiche la [justification](info_type)
+      - montre la [justification](info_type)
+      
+      - affiche les [objectifs](info_type) et les [dotations](info_type)
+      - montre moi les [objectifs](info_type), [dotations](info_type) et [pièces jointes](info_type)
+      - je veux voir le [poste](info_type) et l'[encadreur](info_type)
+      - affiche la [direction](info_type), l'[exploitation](info_type) et le [motif](info_type)
+      - montre les [objectifs](info_type) et les [fichiers](info_type)
+      - affiche tout sauf les [objectifs](info_type)
+      - montre tout sauf les [pièces jointes](info_type)
+      - affiche uniquement les [objectifs](info_type)
+      - seulement les [dotations](info_type)
+      - juste le [poste](info_type)
+      - affiche moi les infos du [poste](info_type)
+      - détails sur le [contrat](info_type)
+      - informations sur l'[encadreur](info_type)
+      - affiche données du poste
+      - infos organisation
+      - détails contrat
+      - affiche objectifs dotations et fichiers
+      - donne moi le résumé de ma demande
+      - donne moi le récapitulatif de ma demande
+      - donne moi toutes les informations déjà entrées
+      - toutes les informations

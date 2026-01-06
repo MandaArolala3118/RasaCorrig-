@@ -1,0 +1,124 @@
+version: "3.1"
+
+nlu:
+  - intent: validation_recrutement
+    examples: |
+      - Je veux [valider](intention_demande) la demande de recrutement
+      - [Valide](intention_demande) le recrutement pour moi
+      - Lance la [validation](intention_demande) de ma demande
+      - [valide](intention_demande)
+      - Peux-tu lancer la [validation](intention_demande) de ma demande de recrutement
+      - J'aimerais que tu [valides](intention_demande) ma demande de recrutement
+      - Je veux [valider](intention_demande) le [DDR](type_demande) [12345](id_demande), commentaire : [Tout est en ordre](commentaire)
+      - Valide le [DDR](type_demande) [67890](id_demande) avec le commentaire suivant : [Prêt à être soumis](commentaire)
+      - Je souhaite [valider](intention_demande) la demande [DRI](type_demande) numéro [54321](id_demande) car [Les documents sont complets](commentaire)
+      - Peux-tu [valider](intention_demande) le [DMOE](type_demande) [98765](id_demande) puisque [la demande est correcte et conforme](commentaire)
+      - Lance la [validation](intention_demande) pour le [DMI](type_demande) [11223](id_demande)
+      - J'aimerais [valider](intention_demande) la demande [DDR](type_demande) [23456](id_demande) avec comme remarque : [Dossier complet](commentaire)
+      - [Valider](intention_demande) le [DRI](type_demande) [33445](id_demande)
+      - [Validation](intention_demande) du [DMOE](type_demande) [55667](id_demande)
+      - Je souhaite [valider](intention_demande) le [DMI](type_demande) [77889](id_demande)
+      - Peux-tu [valider](intention_demande) le [DDR](type_demande) [99001](id_demande)
+      - J'aimerais [valider](intention_demande) la demande [DRI](type_demande) numéro [22334](id_demande)
+      - Lance la [validation](intention_demande) pour le [DMOE](type_demande) [44556](id_demande)
+      - Je veux lancer une [validation](intention_demande)
+      - Démarre le processus de [validation](intention_demande)
+      - Initie la [validation](intention_demande) de ma demande
+      - Commence la [validation](intention_demande) du [DDR](type_demande)
+      - [Approuver](intention_demande) le [DDR](type_demande) [13579](id_demande), commentaire : [Tout est conforme](commentaire)
+      - Je [valide](intention_demande) la [DRI](type_demande) [24680](id_demande) avec le commentaire : [Aucune anomalie détectée](commentaire)
+      - [Confirmer](intention_demande) la validation du [DMOE](type_demande) [35791](id_demande)
+      - Procède à la [validation](intention_demande) de la demande [DMI](type_demande) [46802](id_demande) car [Le candidat répond aux critères](commentaire)
+      - Je [valide](intention_demande) [DDR](type_demande) [57913](id_demande)
+      - [Valider](intention_demande) [DRI](type_demande) numéro [68024](id_demande) avec le commentaire : [Validation faite après vérification](commentaire)
+      - Effectue la [validation](intention_demande) pour [DMOE](type_demande) [79135](id_demande)
+      - Je veux [approuver](intention_demande) le [DMI](type_demande) [80246](id_demande) puisque [Tout est OK](commentaire)
+      - [Valide](intention_demande) moi le [DDR](type_demande) [91357](id_demande)
+      - Merci de [valider](intention_demande) la [DRI](type_demande) [02468](id_demande), commentaire : [RAS](commentaire)
+      - S'il te plaît, [valide](intention_demande) le [DMOE](type_demande) [13580](id_demande)
+      - Je demande la [validation](intention_demande) du [DMI](type_demande) [24691](id_demande) avec le commentaire : [Profil intéressant](commentaire)
+      - [Accepter](intention_demande) la demande [DDR](type_demande) [35702](id_demande)
+      - Je donne mon [accord](intention_demande) pour le [DRI](type_demande) [46813](id_demande) car [Le dossier est complet](commentaire)
+      - [Autoriser](intention_demande) la validation de la [DMOE](type_demande) [57924](id_demande)
+
+  - intent: inform_validation
+    examples: |
+
+      - Commentaire : [Tout est en ordre](commentaire)
+      - [DRI](type_demande) numéro [54321](id_demande) car [Les documents sont complets](commentaire)
+      - [DMOE](type_demande) [98765](id_demande) puisque [la demande est correcte et conforme](commentaire)
+      - [DMI](type_demande) [11223](id_demande)
+      - Car [Les documents sont complets](commentaire)
+      - C'est le [DDR](type_demande) [23456](id_demande)
+      - L'identifiant est [34567](id_demande)
+      - Le numéro de demande est [45678](id_demande)
+      - [DRI](type_demande) [56789](id_demande) avec le commentaire : [Tout est OK](commentaire)
+      - Voici mon commentaire : [Dossier validé sans réserve](commentaire)
+      - Ma remarque : [Conforme aux exigences](commentaire)
+      - [67890](id_demande)
+      - Type [DMOE](type_demande)
+      - Puisque [Le profil correspond](commentaire)
+      - Parce que [Tous les critères sont remplis](commentaire)
+      - [DMI](type_demande) avec l'ID [78901](id_demande)
+      - La demande [89012](id_demande) de type [DDR](type_demande)
+      - [DDR1215](id_demande)
+      - [DRI6789](id_demande) car [Le dossier est complet](commentaire)
+      - [DMOE2345](id_demande) puisque [la demande est correcte et conforme](commentaire)
+      - [DMI8901](id_demande)
+      - Commentaire : [Profil intéressant](commentaire)
+      - [DDR](type_demande)
+
+  - intent: rejection_recrutement
+    examples: |
+      - je veux que tu [rejete](intention_demande) la demande
+      - [rejete](intention_demande) la demande
+      - [rejeter](intention_demande)
+      - Je veux [rejeter](intention_demande) le [DDR](type_demande) [12345](id_demande), commentaire : [Dossier incomplet](commentaire)
+      - [Refuser](intention_demande) la demande [DRI](type_demande) [23456](id_demande) car [Critères non respectés](commentaire)
+      - Je souhaite [rejeter](intention_demande) le [DMOE](type_demande) [34567](id_demande) puisque [Documents manquants](commentaire)
+      - Peux-tu [refuser](intention_demande) la [DMI](type_demande) numéro [45678](id_demande) avec le commentaire : [Profil inadéquat](commentaire)
+      - [Rejeter](intention_demande) le [DDR](type_demande) [56789](id_demande)
+      - Je [refuse](intention_demande) la demande [DRI](type_demande) [67890](id_demande) car [Non conforme](commentaire)
+      - [Refus](intention_demande) du [DMOE](type_demande) [78901](id_demande)
+      - Lance le [rejet](intention_demande) pour le [DMI](type_demande) [89012](id_demande) puisque [Expérience insuffisante](commentaire)
+      - Je veux [refuser](intention_demande) cette demande
+      - Procède au [rejet](intention_demande) de ma demande
+
+  - synonym: validation
+    examples: |
+      - Valider
+      - valider
+
+      - Validation
+      - valide
+      - Valide
+      - approuver
+      - Approuver
+      - confirmer
+      - Confirmer
+      - accepter
+      - Accepter
+      - accord
+      - Accord
+      - autoriser
+      - Autoriser
+
+  - synonym: rejet
+    examples: |
+      - Rejeter
+      - rejeter
+      - rejet
+      - Rejet
+      - refuser
+      - Refuser
+      - refus
+      - Refus
+      - décliner
+      - Décliner
+      - annuler
+      - Annuler
+
+  
+  - regex: id_demande
+    examples: |
+      - ^(?:DDR|DRI|DMOE|DMI)?\d+$

@@ -1,0 +1,204 @@
+version: "3.1"
+
+nlu:
+  # ==================== UPLOAD DE PIÈCES JOINTES ====================
+  - intent: upload_piece_jointe
+    examples: |
+      - voici le fichier
+      - j'ai joint un document
+      - je vous envoie le fichier
+      - ci-joint le document
+      - voilà la pièce jointe
+      - je joins un fichier
+      - fichier attaché
+      - document en pièce jointe
+      - voici mon fichier
+      - j'uploade le document
+      - fichier joint
+      - pièce jointe
+      - document attaché
+      - je t'envoie un PDF
+      - voici mon CV
+      - fichier en pièce jointe
+      - document ci-joint
+      - pièce jointe ajoutée
+      - j'ajoute un fichier
+      - voici le document demandé
+      - fichier uploadé
+      - document en attachement
+      - je vous transmets le fichier
+      - voilà le document
+      - j'attache un fichier
+      - fichier à joindre
+      - document à uploader
+      - voici la pièce justificative
+      - j'envoie le fichier
+      - fichier inclus
+      - pièce jointe ci-dessous
+      - voici 4 fichier(s)
+      - j'envoie 3 documents
+      - voilà mes fichiers
+      - fichiers joints
+      - documents en pièces jointes
+
+  # ==================== REMPLACEMENT/MODIFICATION D'UNE PIÈCE ====================
+  - intent: Update_piece_jointe
+    examples: |
+      - je veux modifier le fichier eddy_12315.pdf
+      - remplacer la pièce jointe eddy_12315.pdf
+      - changer le document CV_andrianantenanina.doc
+      - mettre à jour le fichier CV_andrianantenanina.doc
+      - modifier la pièce jointe Caneva.png
+      - remplacer ce fichier Caneva.png
+      - je veux changer le document Rapport.csv
+      - actualiser la pièce jointe Rapport.csv
+      - nouveau fichier à la place de Mise en place du plan.jpeg
+      - remplacer Mise en place du plan.jpeg par un autre fichier
+      - modifier le document joint rapport_annuel.pdf
+      - changer la pièce jointe facture_2024.xlsx
+      - remplacer le fichier presentation_client.pptx par ceci
+      - modifier contrat_travail.docx par le nouveau
+      - changer budget_previsionnel.pdf par ce fichier
+      - mettre à jour devis_final.doc avec ceci
+      - remplacer le PDF cahier_charges.pdf
+      - modifier le document photo_profil.jpg par celui-ci
+      - changer le fichier attestation.png par le nouveau
+      - actualiser justificatif_domicile.pdf par ce document
+      - remplacer la pièce releve_bancaire.pdf par ceci
+      - modifier le fichier carte_identite.jpeg par ce PDF
+      - changer planning_hebdo.xlsx avec le nouveau fichier
+      - mettre à jour le document synthese_projet.docx
+      - remplacer note_service.pdf avec ce fichier
+      - modifier la pièce formulaire_adhesion.doc par celui-là
+      - je veux remplacer le fichier ChatGPT par
+      - remplacer ChatGPT par le nouveau
+      - modifier le fichier ChatGPT par ceci
+      - changer ChatGPT par ce document
+      - remplacer le fichier presentation par
+      - modifier memoire par le nouveau fichier
+      - changer rapport par ceci
+      - remplacer le PDF memoire par
+      - modifier l'image ChatGPT par
+      - changer le document presentation par le nouveau
+      - remplacer fichier ChatGPT
+      - modifier fichier presentation
+      - changer document memoire par
+
+  # ==================== SUPPRESSION D'UNE SEULE PIÈCE ====================
+  - intent: suppression_piece_jointe
+    examples: |
+      - supprimer le fichier rapport_mensuel.pdf
+      - enlever la pièce jointe cv_candidat.docx
+      - retirer le document facture_mars.xlsx
+      - effacer le fichier photo_evenement.jpg
+      - supprimer cette pièce jointe contrat_stage.pdf
+      - enlever ce document attestation_emploi.doc
+      - je veux retirer le fichier devis_plomberie.pdf
+      - effacer la pièce jointe justificatif_paiement.png
+      - supprimer ce fichier releve_notes.pdf
+      - retirer la pièce jointe certificat_medical.jpeg
+      - enlever le fichier joint planning_formation.xlsx
+      - effacer ce document liste_participants.csv
+      - retire compte_rendu_reunion.docx
+      - supprime procedure_qualite.pdf
+      - enlève schema_technique.png
+      - efface bon_commande.pdf
+      - je veux supprimer le fichier fiche_paie.pdf
+      - retirer le PDF reglement_interieur.pdf
+      - enlever le document organigramme.pptx
+      - effacer la pièce lettre_motivation.doc
+      - supprimer le document joint bilan_financier.xlsx
+      - retirer la pièce tableau_bord.pdf
+      - supprime le fichier ChatGPT
+      - enlève le document presentation
+      - retire le fichier memoire
+      - efface la pièce jointe rapport
+      - supprimer le fichier presentation
+      - enlever ChatGPT
+      - retirer memoire
+      - effacer rapport
+      - supprime presentation
+      - enlève memoire.pdf
+      - retire le PDF rapport
+      - efface le document ChatGPT
+
+  # ==================== SUPPRESSION DE PLUSIEURS PIÈCES ====================
+  - intent: supprimer_plusieurs_pieces_jointes
+    examples: |
+      - supprimer les fichiers rapport_q1.pdf et rapport_q2.pdf
+      - enlever plusieurs pièces jointes cv_jean.docx et lettre_jean.pdf
+      - retirer quelques documents facture_01.xlsx et facture_02.xlsx
+      - effacer certains fichiers photo1.jpg et photo2.jpg
+      - supprimer plusieurs documents
+      - enlever ces pièces jointes
+      - retirer plusieurs fichiers
+      - effacer ces documents
+      - supprimer certaines pièces jointes
+      - enlever quelques fichiers
+      - retirer ces documents
+      - supprimer les fichiers sélectionnés
+      - effacer contrat_a.pdf et contrat_b.pdf
+      - retirer devis_plombier.pdf, devis_electricien.pdf et devis_peintre.pdf
+      - supprimer planning_janvier.xlsx et planning_fevrier.xlsx
+      - enlever attestation1.png, attestation2.png
+      - supprimer les fichiers bilan_2023.pdf et bilan_2024.pdf
+      - retirer les documents formation_rh.pptx et formation_securite.pptx
+      - effacer les pièces justificatif_a.jpeg et justificatif_b.jpeg
+      - supprimer du rapport_debut.pdf au rapport_fin.pdf
+      - supprimé les fichiers Présentation-ENI-2024-2025-modif (1).docx et Présentation-ENI-2024-2025-modif.docx
+      - enlever les fichiers presentation et memoire
+      - retirer ChatGPT et rapport
+      - effacer les documents presentation1 et presentation2
+      - supprimer les fichiers memoire et rapport
+      - enlever presentation et ChatGPT
+      - retirer les pièces jointes memoire.pdf et rapport.pdf
+      - effacer les fichiers presentation.docx et memoire.docx
+      - supprimer presentation1, presentation2 et rapport
+      - enlever les documents ChatGPT et memoire et rapport
+      - retirer fichiers presentation et memoire
+      - supprimé les fichiers presentations
+      - enlever les presentations
+      - retirer les fichiers presentation
+      - effacer les documents presentations
+      - supprimer les presentations
+      - enlever fichiers presentation
+      - retirer documents presentation
+      - supprime les fichiers presentations
+      - enlève les presentations
+      - retire les fichiers presentation
+
+  # ==================== SUPPRESSION DE TOUTES LES PIÈCES ====================
+  - intent: suppression_toutes_pieces_jointes
+    examples: |
+      - supprimer tous les fichiers
+      - enlever toutes les pièces jointes
+      - effacer tous les documents
+      - retirer tous les fichiers
+      - supprimer toutes les pièces jointes
+      - enlever tous les documents joints
+      - effacer toutes les pièces jointes
+      - supprimer l'ensemble des fichiers
+      - retirer toutes les pièces jointes
+      - tout supprimer
+      - enlever tout
+      - effacer tous les fichiers joints
+      - supprimer toutes les pièces
+      - retirer tous les documents
+      - effacer l'ensemble des fichiers
+      - enlever toutes les pièces
+      - supprimer tous les documents joints
+      - retirer tout
+      - effacer toutes les pièces
+      - supprimer la totalité des fichiers
+      - enlever la totalité des pièces jointes
+      - effacer tous
+      - retirer l'ensemble des fichiers
+      - supprimer tous mes fichiers
+      - enlever tous mes documents
+      - effacer toutes mes pièces jointes
+      - reset des pièces jointes
+      - remettre à zéro les fichiers
+      - tout effacer
+      - supprimer tous
+      - enlever tous
+      - retirer tous

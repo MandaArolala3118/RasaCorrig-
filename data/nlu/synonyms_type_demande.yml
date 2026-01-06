@@ -1,0 +1,23 @@
+version: "3.1"
+
+nlu:
+  - synonym: DDR
+    examples: |
+      - DDR
+      - D D R
+      - demande de remboursement
+
+  - synonym: DMI
+    examples: |
+      - DMI
+      - demande de mobilité interne
+
+  - synonym: DMOE
+    examples: |
+      - DMOE
+      - demande de mobilité opérationnelle externe
+
+  - synonym: DRI
+    examples: |
+      - DRI
+      - demande de recrutement interne

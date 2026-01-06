@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Non applicable (intérim)",
+    "entities": [
+      {
+        "start": 0,
+        "end": 24,
+        "value": "Non applicable (intérim)",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

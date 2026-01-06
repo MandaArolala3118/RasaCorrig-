@@ -1,0 +1,260 @@
+version: "3.1"
+
+nlu:
+  - intent: provide_poste_info
+    examples: |
+      - Je souhaite recruter un [Administrateur et Developpeur web](nom_poste)
+      - Besoin d'un [Administrateur et Developpeur web](nom_poste) pour le projet
+      - Pour le poste [Administrateur et Developpeur web](nom_poste)
+      - Recruter un [Administrateur et Developpeur web](nom_poste) avec expérience
+      - Un [développeur web](nom_poste) pour la DSI
+      - Besoin d'un [webmaster](nom_poste) compétent
+      
+      - Je souhaite ajouter un DDR pour un [développeur web](nom_poste) au sein de la direction informatique
+      - Ajouter un DDR pour un [Administrateur et Developpeur web](nom_poste) dans la DSI
+      - DDR pour un [développeur web](nom_poste) en stage de six mois
+      - Je veux créer une demande pour un [Administrateur et Developpeur web](nom_poste) basé au siège
+      - Demande de recrutement d'un [développeur web](nom_poste) pour la direction informatique
+      
+      - Pour le poste [Adjoint Logistique Agence](nom_poste)
+      - Besoin d'un [Manœuvre logistique](nom_poste) pour l'entrepôt
+      - Recruter un [Directeur Logistique et Approvisionnement](nom_poste)
+      - Ouvrir un recrutement pour [Adjoint Responsable Fabriquant](nom_poste)
+      - Nous avons besoin d'un [Agent administration](nom_poste)
+      - Pour le poste [Aide livreur](nom_poste) en régie locale
+      - Recruter un [Agent de sécurité](nom_poste) pour le site
+      - Besoin d'un [Manœuvre nettoyage](nom_poste) à plein temps
+      - Pour le poste [Manœuvre conditionnement](nom_poste)
+      - Recherche [Manœuvre ficelage](nom_poste) pour la ligne d'emballage
+      - Ajouter un poste [Manœuvre magasin pleins et vides](nom_poste)
+      - Créer le poste [Manœuvre magasin MP](nom_poste)
+      - Recruter [Manœuvre magasin publicitaire](nom_poste) pour la promo
+      - Besoin d'un [Manœuvre laboratoire](nom_poste) avec habilitations
+      - Pour le poste [Manœuvre QHSE](nom_poste)
+      - Recruter un [Agent GMS](nom_poste) pour la force de vente
+      - Besoin d'un [Agent froid](nom_poste) pour la maintenance frigo
+      - Recruter un [Décableur](nom_poste) pour la chaîne technique
+      - Poste à pourvoir : [Agent administration](nom_poste)
+      - Nous voulons créer un poste [ACP FROID](nom_poste) spécialisé
+      - Ouvrir recrutement pour [Manœuvre malterie](nom_poste)
+      - Recherche urgent : [Agent de sécurité](nom_poste)
+      - DDR pour [Manœuvre fabrication](nom_poste)
+      - Besoin d'un [DLA](nom_poste) expérimenté
+      - Pour le poste [Manœuvre magasin vulgarisation](nom_poste)
+      - Recruter [Manœuvre magasin Event](nom_poste)
+
+  # Synonymes améliorés avec priorité
+  - synonym: Administrateur et Developpeur web
+    examples: |
+      - Administrateur et Developpeur web
+      - Administrateur et Développeur web
+      - Admin et Dev web
+      - Admin et Développeur web
+      - Administrateur web
+      - Développeur web
+      - développeur web
+      - Admin Dev web
+      - Admin Dev
+      - Dev web
+      - webmaster
+      - développeur
+      - developpeur
+  
+  - synonym: Adjoint Logistique Agence
+    examples: |
+      - Adjoint Logistique Agence
+      - adjoint logistique agence
+      - adjoint logistique
+      - assistant logistique agence
+      - assistant logistique
+      - logistique agence
+  
+  - synonym: DLA
+    examples: |
+      - Directeur Logistique et Approvisionnement
+      - Direction Logistique et Approvisionnement
+      - DLA
+  
+  - synonym: Manœuvre logistique
+    examples: |
+      - Manœuvre logistique
+      - manoeuvre logistique
+      - manœuvre logistique
+      - manutention logistique
+      - opérateur logistique
+  
+  - synonym: Adjoint Responsable Fabriquant
+    examples: |
+      - Adjoint Responsable Fabriquant
+      - adjoint responsable fabriquant
+      - adjoint fabrication
+      - assistant fabrication
+  
+  - synonym: Manœuvre fabrication
+    examples: |
+      - Manœuvre fabrication
+      - manoeuvre fabrication
+      - manœuvre fabrication
+      - ouvrier fabrication
+      - opérateur fabrication
+  
+  - synonym: Agent administration
+    examples: |
+      - Agent administration
+      - agent admin
+      - administratif
+      - employé administratif
+  
+  - synonym: Aide livreur
+    examples: |
+      - Aide livreur
+      - aide livreur
+      - assistant livreur
+  
+  - synonym: Agent de sécurité
+    examples: |
+      - Agent de sécurité
+      - agent sécurité
+      - agent de securite
+      - vigile
+      - gardien
+  
+  - synonym: Manœuvre nettoyage
+    examples: |
+      - Manœuvre nettoyage
+      - manoeuvre nettoyage
+      - manœuvre nettoyage
+      - agent nettoyage
+      - agent d'entretien
+  
+  - synonym: Manœuvre conditionnement
+    examples: |
+      - Manœuvre conditionnement
+      - manoeuvre conditionnement
+      - manœuvre conditionnement
+      - agent conditionnement
+      - opérateur conditionnement
+  
+  - synonym: Manœuvre ficelage
+    examples: |
+      - Manœuvre ficelage
+      - manoeuvre ficelage
+      - manœuvre ficelage
+      - agent ficelage
+  
+  - synonym: Manœuvre magasin pleins et vides
+    examples: |
+      - Manœuvre magasin pleins et vides
+      - manoeuvre pleins et vides
+      - manœuvre pleins et vides
+      - magasin pleins vides
+      - pleins et vides
+  
+  - synonym: Manœuvre magasin vulgarisation
+    examples: |
+      - Manœuvre magasin vulgarisation
+      - manoeuvre vulgarisation
+      - manœuvre vulgarisation
+      - magasin vulgarisation
+  
+  - synonym: Manœuvre magasin MP
+    examples: |
+      - Manœuvre magasin MP
+      - manoeuvre mp
+      - manœuvre mp
+      - magasin mp
+      - magasin matières premières
+  
+  - synonym: Manœuvre magasin publicitaire
+    examples: |
+      - Manœuvre magasin publicitaire
+      - manoeuvre publicitaire
+      - manœuvre publicitaire
+      - magasin publicitaire
+      - magasin pub
+  
+  - synonym: Manœuvre magasin Event
+    examples: |
+      - Manœuvre magasin Event
+      - manoeuvre event
+      - manœuvre event
+      - magasin event
+      - magasin événement
+  
+  - synonym: Manœuvre malterie
+    examples: |
+      - Manœuvre malterie
+      - manoeuvre malterie
+      - manœuvre malterie
+      - agent malterie
+  
+  - synonym: Agent GMS
+    examples: |
+      - Agent GMS
+      - agent gms
+      - GMS
+      - commercial gms
+  
+  - synonym: Manœuvre laboratoire
+    examples: |
+      - Manœuvre laboratoire
+      - manoeuvre laboratoire
+      - manœuvre laboratoire
+      - agent laboratoire
+      - manoeuvre labo
+  
+  - synonym: Manœuvre QHSE
+    examples: |
+      - Manœuvre QHSE
+      - manoeuvre qhse
+      - manœuvre qhse
+      - agent qhse
+      - QHSE
+  
+  - synonym: ACP FROID
+    examples: |
+      - ACP FROID
+      - acp froid
+      - agent climatisation production
+  
+  - synonym: Agent froid
+    examples: |
+      - Agent froid
+      - agent froid
+      - technicien froid
+      - frigoriste
+  
+  - synonym: Décableur
+    examples: |
+      - Décableur
+      - décableur
+      - decableur
+      - agent décablage
+  
+  # Table de lookup pour reconnaissance prioritaire
+  - lookup: nom_poste
+    examples: |
+      - Administrateur et Developpeur web
+      - Adjoint Logistique Agence
+      - DLA
+      - Manœuvre logistique
+      - Adjoint Responsable Fabriquant
+      - Manœuvre fabrication
+      - Agent administration
+      - Aide livreur
+      - Agent de sécurité
+      - Manœuvre nettoyage
+      - Manœuvre conditionnement
+      - Manœuvre ficelage
+      - Manœuvre magasin pleins et vides
+      - Manœuvre magasin vulgarisation
+      - Manœuvre magasin MP
+      - Manœuvre magasin publicitaire
+      - Manœuvre magasin Event
+      - Manœuvre malterie
+      - Agent GMS
+      - Manœuvre laboratoire
+      - Manœuvre QHSE
+      - ACP FROID
+      - Agent froid
+      - Décableur

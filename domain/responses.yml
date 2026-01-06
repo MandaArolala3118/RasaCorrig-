@@ -1,0 +1,525 @@
+version: "3.1"
+
+responses:
+  # ===== UTTERANCES GÉNÉRALES =====
+  utter_salutation:
+    - text: "Bonjour ! Je suis votre assistant pour la gestion des demandes de recrutement (DDR). Comment puis-je vous aider aujourd'hui ?"
+    - text: "Bonjour ! Bienvenue sur le système de DDR. Que souhaitez-vous faire ?"
+
+  utter_goodbye:
+    - text: "Au revoir ! N'hésitez pas à revenir si vous avez besoin d'aide."
+    - text: "À bientôt ! Bonne continuation."
+
+  utter_default:
+    - text: "Désolé, je n'ai pas bien compris. Pouvez-vous reformuler votre demande ?"
+    - text: "Je ne suis pas sûr de comprendre. Pourriez-vous préciser ce que vous souhaitez faire ?"
+
+  utter_iamabot:
+    - text: "Je suis un assistant virtuel conçu pour vous aider avec vos demandes de recrutement."
+
+  utter_aide:
+    - text: |
+        Voici ce que je peux faire pour vous :
+        📝 **Créer une DDR** : "Je veux créer une demande de recrutement"
+        👀 **Consulter** : "Affiche mes DDR"
+        ✏️ **Modifier** : "Modifier la DDR numéro X"
+        🗑️ **Supprimer** : "Supprimer la demande X"
+  utter_remerciement:
+    - text: "Avec plaisir ! N'hésitez pas si vous avez d'autres questions."
+    - text: "De rien ! Je suis là pour vous aider."
+  # ===== UTTERANCES POUR PERMISSIONS =====
+  utter_non_autoriser_add_ddr:
+    - text: "Désolé, vous n'avez pas les permissions nécessaires pour effectuer un ajout de DDR."
+    - text: "Accès refusé. Vous n'êtes pas autorisé à ajouter une DDR. Veuillez contacter votre administrateur."
+
+  utter_permission_refusee:
+    - text: "❌ Vous n'avez pas les permissions nécessaires pour effectuer cette action."
+
+  utter_permission_accordee:
+    - text: "✅ Permission accordée. Vous pouvez continuer."
+
+  utter_permission_non_autorisee:
+    - text: "Désolé, vous n'avez pas les permissions nécessaires pour effectuer cette action."
+
+  utter_confirmer_suppression:
+    - text: "⚠️ Êtes-vous sûr de vouloir supprimer la DDR n°{ddr_id} ? [Oui,Non](confirmation)"
+
+  # ===== UTTERANCES D'ENREGISTREMENT =====
+  utter_ddr_sauvegardee:
+    - text: "✅ La DDR a été enregistrée avec succès !"
+    - text: "Parfait ! Votre demande de recrutement a été créée et enregistrée."
+
+  utter_ddr_enregistree:
+    - text: "✅ Votre demande de recrutement a été enregistrée avec succès ! Numéro de DDR : {ddr_id}"
+
+  utter_ddr_enregistre_succes:
+    - text: "Votre demande de dotation a été enregistrée avec succès ! 🎉"
+
+  utter_erreur_sauvegarde:
+    - text: "❌ Une erreur s'est produite lors de l'enregistrement. Veuillez réessayer."
+
+  # ===== UTTERANCES D'ANNULATION =====
+  utter_annulation_ajout_ddr:
+    - text: "L'ajout de la DDR a été annulé. Aucune donnée n'a été enregistrée."
+
+  utter_annuler_operation:
+    - text: "Opération en cours annulée. Comment puis-je vous aider ?"
+
+  utter_enregistrement_annule:
+    - text: "❌ Enregistrement annulé. Votre demande n'a pas été sauvegardée."
+
+  utter_form_annule:
+    - text: "Le formulaire a été annulé. Souhaitez-vous recommencer ?"
+
+  utter_message_annulation:
+    - text: "L'opération a été annulée."
+
+  utter_suppression_annulee:
+    - text: "Suppression annulée. La DDR n'a pas été supprimée."
+
+  # ===== UTTERANCES POUR FORMULAIRE form_add_ddr =====
+  utter_ask_form_add_ddr_poste:
+    - text: "Quel est le poste concerné par cette DDR ?"
+
+  utter_ask_form_add_ddr_encadreur:
+    - text: "Qui sera l'encadreur pour ce poste ?"
+
+  utter_ask_form_add_ddr_contrat:
+    - text: "Quel type de contrat souhaitez-vous ? (CDI, CDD, Stage, etc.)"
+
+  utter_ask_form_add_ddr_hierarchie:
+    - text: "Quelle est la hiérarchie organisationnelle pour ce poste ?"
+
+  utter_ask_form_add_ddr_motif:
+    - text: "Quel est le motif budgétaire de cette demande ?"
+
+  utter_ask_form_add_ddr_justification:
+    - text: "Quelle est la justification de cette demande ?"
+
+  utter_ask_form_add_ddr_objectifs:
+    - text: "Quels sont les objectifs associés à ce poste ?"
+
+  utter_ask_form_add_ddr_dotation:
+    - text: "Quelle est la dotation prévue ?"
+
+  utter_ask_form_add_ddr_piece_jointe:
+    - text: "Veuillez joindre les documents nécessaires."
+
+  # ===== UTTERANCES POUR FORMULAIRE form_ddr =====
+  utter_ask_nom_poste:
+    - text: "Quel est le nom du poste que vous souhaitez recruter ?"
+
+  utter_ask_effectif:
+    - text: "Combien de personnes souhaitez-vous recruter pour ce poste ?"
+
+  utter_ask_nature_contrat:
+    - text: "Quelle est la nature du contrat ? (CDI, CDD, Stage, Externalisé, Journalier)"
+
+  utter_ask_date_mise_en_service:
+    - text: "Quelle est la date de mise en service souhaitée ? (format: JJ/MM/AAAA)"
+
+  utter_ask_duree_contrat:
+    - text: "Quelle est la durée du contrat ? (ex: 6 mois, 1 an, indéterminée)"
+
+  utter_ask_direction:
+    - text: "Quelle est la direction concernée ? (ex: DSI, DLA, DRH)"
+
+  utter_ask_exploitation:
+    - text: "Quelle est l'exploitation concernée ? (ex: ANT, TAM, MOA, TLE, DGO)"
+
+  utter_ask_nom_encadreur:
+    - text: "Qui sera l'encadreur/responsable pour ce poste ?"
+
+  utter_ask_motif:
+    - text: "Quel est le motif de cette demande ? (Remplacement, Création, Complément, etc.)"
+
+  utter_ask_situation_budget:
+    - text: "Quelle est la situation budgétaire ? (Budgetisé, Hors budget, Non applicable)"
+
+  utter_ask_justification:
+    - text: "Pouvez-vous justifier cette demande de recrutement ?"
+
+  utter_ask_objectifs_list:
+    - text: "Ajoutez un objectif (ou tapez 'terminer' si vous avez fini)."
+
+  utter_ask_dotations_list:
+    - text: "Ajoutez une dotation (ou tapez 'terminer' si vous avez fini)."
+
+  # ===== UTTERANCES DE DEMANDE D'INFORMATIONS =====
+  utter_demander_poste:
+    - text: "Quel est le poste concerné par cette DDR ?"
+
+  utter_demander_encadreur:
+    - text: "Qui sera l'encadreur pour ce poste ?"
+
+  utter_demander_contrat:
+    - text: "Quel type de contrat souhaitez-vous ? (CDI, CDD, Stage, etc.)"
+
+  utter_demander_hierarchie:
+    - text: "Quelle est la hiérarchie organisationnelle pour ce poste ?"
+
+  utter_demander_motif:
+    - text: "Quel est le motif budgétaire de cette demande ?"
+
+  utter_demander_justification:
+    - text: "Quelle est la justification de cette demande ?"
+
+  utter_demander_objectifs:
+    - text: "Quels sont les objectifs associés à ce poste ?"
+
+  utter_demander_dotation:
+    - text: "Quelle est la dotation prévue ?"
+
+  utter_demander_piece_jointe:
+    - text: "Souhaitez-vous ajouter une pièce jointe ? [Oui,Non](confirmation)"
+
+  utter_demander_confirmation_ajout_ddr:
+    - text: "Pourriez-vous me fournir les informations nécessaires afin que je puisse traiter votre demande de DDR ?"
+
+  utter_demander_intention_avec_infos:
+    - text: "J'ai bien reçu ces informations. Que souhaitez-vous faire de ces données ?"
+
+  # ===== UTTERANCES DE VALIDATION =====
+  utter_poste_valide:
+    - text: "✅ Poste enregistré : {poste}"
+
+  utter_encadreur_valide:
+    - text: "✅ Encadreur enregistré : {nom_encadreur}"
+
+  utter_contrat_valide:
+    - text: "✅ Type de contrat enregistré : {nature_contrat}"
+
+  utter_hierarchie_valide:
+    - text: "✅ Hiérarchie enregistrée : \n - Exploitation : {exploitation}\n - Direction : {direction}"
+
+  utter_motif_valide:
+    - text: "✅ Motif enregistré : {motif}"
+
+  utter_objectifs_valide:
+    - text: "✅ Objectifs enregistrés"
+
+  utter_dotation_valide:
+    - text: "✅ Dotation enregistrée : {dotation}"
+
+  utter_piece_jointe_valide:
+    - text: "✅ Pièce jointe ajoutée avec succès"
+
+  # ===== UTTERANCES D'ERREUR =====
+  utter_erreur_form:
+    - text: "❌ Une erreur s'est produite lors du traitement de votre demande."
+
+  utter_valeur_invalide:
+    - text: "❌ Cette valeur n'est pas valide. Veuillez réessayer."
+
+  utter_date_invalide:
+    - text: "❌ Format de date invalide. Utilisez le format JJ/MM/AAAA"
+
+  utter_nombre_invalide:
+    - text: "❌ Veuillez entrer un nombre valide."
+
+  utter_format_objectif_invalide:
+    - text: "Format incorrect. Respectez la structure : Objectif : X Poids : Y% Indicateurs : Z"
+
+  utter_format_dotation_invalide:
+    - text: "Format incorrect. Respectez la structure : Dotation : X Quantité : Y"
+
+  # ===== UTTERANCES POUR OBJECTIFS ET DOTATIONS =====
+  utter_objectif_ajoute:
+    - text: "✅ Objectif ajouté ! Voulez-vous en ajouter un autre ? [Oui,Non](confirmation)"
+
+  utter_objectifs_termines:
+    - text: "✅ Tous les objectifs ont été enregistrés."
+
+  utter_dotation_ajoutee:
+    - text: "✅ Dotation ajoutée ! Voulez-vous en ajouter une autre ? [Oui,Non](confirmation)"
+
+  utter_dotations_terminees:
+    - text: "✅ Toutes les dotations ont été enregistrées."
+
+  # ===== UTTERANCES POUR PIÈCES JOINTES =====
+  utter_piece_jointe_recue:
+    - text: "✅ Fichier reçu et enregistré : {filename}"
+
+  utter_piece_jointe_erreur:
+    - text: "❌ Erreur lors du téléchargement du fichier. Veuillez réessayer."
+
+  # ===== UTTERANCES DE CONSULTATION =====
+  utter_liste_ddr_vide:
+    - text: "📭 Vous n'avez aucune demande de recrutement pour le moment."
+
+  utter_ddr_non_trouvee:
+    - text: "❌ Désolé, je n'ai pas trouvé de DDR avec cette référence."
+
+  utter_statistiques_ddr:
+    - text: "📊 **Statistiques** : Total : {total}, En attente : {en_attente}, Validées : {validees}"
+
+  # ===== UTTERANCES DE MODIFICATION =====
+  utter_modification_reussie:
+    - text: "✅ La DDR a été modifiée avec succès !"
+
+  utter_demande_id_modification:
+    - text: "Quel est le numéro de la DDR que vous souhaitez modifier ?"
+
+  utter_suppression_reussie:
+    - text: "✅ La DDR a été supprimée avec succès."
+
+  # ===== UTTERANCES DE FIN DE CONVERSATION =====
+  utter_autre_chose:
+    - text: "Puis-je vous aider avec autre chose ?"
+
+  utter_demander_autre_chose:
+    - text: "Puis-je vous aider avec autre chose ?"
+
+  utter_merci:
+    - text: "Merci d'avoir utilisé le système DDR !"
+
+  utter_saluer:
+    - text: "Bonjour ! 👋"
+
+  utter_de_rien:
+    - text: "De rien ! 😊"
+
+  utter_saluer_dans_form:
+    - text: "Bonjour ! Continuons avec votre demande."
+  
+  utter_ask_que_faire:
+    - text: "Que souhaitez-vous faire avec ces données ?"
+  utter_ask_quelle_information:
+    - text: |
+        📋 **Quelle information souhaitez-vous afficher ?**
+        
+        Vous pouvez demander :
+        • **Informations générales** : poste, effectif, contrat, date
+        • **Organisation** : direction, exploitation, encadreur
+        • **Justification** : motif, justification, budget
+        • **Objectifs** : liste des objectifs avec poids
+        • **Dotations** : liste des dotations
+        • **Pièces jointes** : fichiers joints
+        • **Tout** : récapitulatif complet
+        
+        💡 Exemples :
+        - "Affiche les objectifs"
+        - "Montre moi le poste et l'encadreur"
+        - "Affiche tout"
+  # ===== AIDE GÉNÉRALE (géré par action) =====
+  utter_aide_generale:
+    - text: |
+        🤖 **Bienvenue dans l'assistant DDR !**
+        
+        Voici ce que je peux faire pour vous :
+        
+        📝 **Gestion des Demandes de Recrutement (DDR)**
+        
+        ℹ️ **Pour plus d'aide sur une action spécifique**, dites :
+        "Aide pour créer une DDR" ou "Comment ajouter une DDR ?"
+
+  # ===== AIDE POUR AJOUTER UNE DDR =====
+  utter_aide_ajout_ddr:
+    - text: |
+        📋 **Aide pour créer une DDR**
+        
+        Pour créer une demande de recrutement, vous pouvez me donner les informations suivantes :
+        
+        **Informations essentielles** :
+        ✅ Poste recherché (ex: développeur web, agent de sécurité)
+        ✅ Direction (ex: DSI, DRH, direction informatique)
+        ✅ Type de contrat (stage, CDD, CDI, journalier)
+        ✅ Lieu (ex: 00 Siège Social, AG01 Agence Tanjombato)
+        
+        **Informations complémentaires** :
+        • Durée du contrat (ex: 6 mois, 12 mois)
+        • Nom de l'encadreur
+        • Date de mise en service (ex: 01/11/2025)
+        • Motif (remplacement, complément d'effectif)
+        • Situation budgétaire (budgetisé, non budgetisé)
+        • Justification (optionnel)
+        
+        **📌 Exemples de demandes** :
+        
+        🔹 *Simple* :
+        "Je veux créer une DDR pour un développeur web à la DSI"
+        
+        🔹 *Moyenne* :
+        "Ajouter DDR développeur web direction informatique stage au siège social pour 6 mois"
+        
+        🔹 *Complète* :
+        "Je souhaite ajouter une DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social, pour une durée de six mois. L'encadreur sera Jean Dupont. La mise en service est prévue pour le 01/11/2025. Le motif est remplacement, avec une situation budgétaire budgetisé"
+        
+        💬 Vous pouvez commencer maintenant !
+        [Je veux ajouter un DDR](aide_ddr_confirm)
+    - text: |
+        📋 Guide d'ajout d'un DDR
+
+        Pour créer votre Demande de Recrutement, je collecterai les informations suivantes :
+
+        **Informations sur le poste :**
+        - Nom du poste et son identifiant (poste_id)
+        - Effectif requis
+        - Type de contrat (CDI, CDD, Stage, etc.)
+        - Durée (pour les contrats autres que CDI)
+        - Date de mise en service prévue
+
+        **Contexte organisationnel :**
+        - Nom et poste de l'encadreur
+        - Direction et exploitation rattachées
+        - Motif de la demande
+        - Situation budgétaire
+        - Justification détaillée
+
+        **Objectifs SMART (3 à 5 objectifs) :**
+        Chaque objectif doit préciser :
+        - La description de l'objectif
+        - Le poids (total = 100%)
+        - Le résultat attendu
+
+        💡 Je vous guiderai étape par étape. En cas d'oubli, je vous demanderai les informations manquantes.
+
+        Prêt à commencer ?
+        [Je veux ajouter un DDR](aide_ddr_confirm)
+    - text : |
+        🤝 Comment ajouter un DDR ? Je t'explique !
+
+        C'est simple, on va procéder ensemble. Voici ce dont j'aurai besoin :
+
+        **D'abord, parlons du poste :**
+        → Son nom et son identifiant
+        → Combien de personnes tu recrutes
+        → Quel type de contrat (CDI, CDD, Stage...)
+        → La durée si ce n'est pas un CDI
+        → Quand la personne commencera
+
+        **Ensuite, le contexte :**
+        → Qui encadrera cette personne (nom + fonction)
+        → Dans quelle direction et exploitation
+        → Pourquoi tu as besoin de ce recrutement
+        → L'état du budget disponible
+        → Une petite justification pour expliquer tout ça
+
+        **Enfin, les objectifs (entre 3 et 5) :**
+        Pour chaque objectif, tu me donnes :
+        → Ce que tu veux accomplir
+        → Son importance en % (le total doit faire 100%)
+        → Le résultat concret attendu
+
+        Pas d'inquiétude ! Si tu oublies quelque chose, je te le rappellerai. On y va ?
+        [Je veux ajouter un DDR](aide_ddr_confirm)
+    - text: |
+        ✅  Checklist pour créer ton DDR
+
+        **ÉTAPE 1 - Informations poste**
+        □ Nom du poste
+        □ Identifiant du poste (poste_id)
+        □ Effectif souhaité
+        □ Nature du contrat (CDI/CDD/Stage/Alternance)
+        □ Durée du contrat (si non-CDI)
+        □ Date de mise en service
+
+        **ÉTAPE 2 - Encadrement et localisation**
+        □ Nom de l'encadreur
+        □ Poste de l'encadreur
+        □ Direction rattachée
+        □ Exploitation concernée
+
+        **ÉTAPE 3 - Contexte et budget**
+        □ Motif du recrutement
+        □ Situation budgétaire
+        □ Justification de la demande
+
+        **ÉTAPE 4 - Objectifs SMART (3 à 5)**
+        Pour chaque objectif :
+        □ Description de l'objectif
+        □ Poids (en %, total = 100%)
+        □ Résultat attendu mesurable
+
+        🎯 Astuce : Je te poserai les questions une par une. Tu peux aussi tout me donner d'un coup si tu préfères !
+        [Je veux ajouter un DDR](aide_ddr_confirm)
+    - text: |
+        🚀 Prêt à lancer ton DDR ? Let's go !
+
+        On va créer ta demande ensemble, et promis, c'est plus simple qu'un formulaire papier !
+
+        **🎯 Les infos qu'il me faut :**
+
+        **Sur le poste** :
+        - Le nom du poste + son petit ID secret (poste_id)
+        - Combien de super-héros tu recrutes (effectif)
+        - Le type de contrat : CDI pour la vie, CDD pour un temps, Stage pour apprendre...
+        - La durée (sauf si c'est un CDI évidemment)
+        - La date de démarrage (quand ton recrue débarque)
+
+        **L'environnement** :
+        - L'encadreur : qui va coacher cette pépite ?
+        - Direction & exploitation : où ça se passe tout ça ?
+        - Le motif : pourquoi ce recrutement maintenant ?
+        - Le budget : on a les sous ou pas ? 💰
+        - La justif' : le petit speech pour convaincre
+
+        **Les objectifs SMART (entre 3 et 5)** :
+        - Chaque objectif = quoi + poids (%) + résultat attendu
+        - Les poids doivent totaliser 100% (sinon ça bug 😅)
+
+        ✨ **Le truc cool** : Si tu oublies un truc, je te le rappelle. Si tu te trompes, on corrige ensemble. Zéro stress !
+
+        Alors, on commence par quoi ?
+        [Je veux ajouter un DDR](aide_ddr_confirm)
+  # ===== CONFIRMATION D'AIDE =====
+  utter_aide_disponible:
+    - text: "Je suis là pour vous aider ! Que souhaitez-vous savoir ?"
+    - text: "Bien sûr, je peux vous aider. De quoi avez-vous besoin ?"
+
+  utter_aide_non_disponible:
+    - text: "Désolé, je n'ai pas d'aide disponible pour cette action pour le moment. Essayez 'aide générale' ou 'aide pour créer une DDR'."
+
+  # ===== MESSAGES DE GUIDAGE =====
+  utter_demander_precisions_aide:
+    - text: "Pour quelle action avez-vous besoin d'aide ? (créer, modifier, consulter, supprimer une DDR)"
+    - text: "Sur quelle fonctionnalité souhaitez-vous de l'aide ?"
+
+  utter_ask_nom_flux:
+    - text: "Quel flux souhaitez-vous lancer ? (Exemple : flux de recrutement, flux de validation, etc.)"
+    - text: "Veuillez indiquer le nom du flux que vous souhaitez démarrer."
+  utter_ask_id_demande:
+    - text: "Quel est l'identifiant de la demande associée à ce flux ?"
+    - text: "Veuillez indiquer l'identifiant de la demande associée à ce flux."
+  utter_ask_type_demande:
+    - text: "Quel est le type de la demande associée à ce flux ? [DDR, DRI, DMI, DMOE](demande_type_demande)"
+    - text: "Veuillez indiquer le type de la demande associée à ce flux.  [DDR, DRI, DMI, DMOE](demande_type_demande)"
+  utter_non_autoriser_flux:
+    - text: "Désolé, vous n'avez pas les permissions nécessaires pour lancer ce flux de recrutement."
+    - text: "Accès refusé. Vous n'êtes pas autorisé à lancer ce flux de recrutement. Veuillez contacter votre administrateur."
+  utter_flux_creation_forwarded:
+    - text: "📨 Votre demande de création de flux a été transmise avec succès !"
+  
+  #validation recrutement
+  utter_non_autoriser_validation:
+    - text: "Désolé, vous n'avez pas les permissions nécessaires pour valider cette demande de recrutement."
+    - text: "Accès refusé. Vous n'êtes pas autorisé à valider cette demande de recrutement. Veuillez contacter votre administrateur."
+
+  utter_demander_id_demande:
+  - text: "Quel est le numéro de la demande que vous souhaitez consulter ?"
+  - text: "Pouvez-vous me donner le numéro de demande ?"
+  - text: "Merci de me communiquer l'identifiant de votre demande."
+
+  utter_demande_autre_action:
+  - text: "Puis-je vous aider avec autre chose ?"
+  - text: "Souhaitez-vous consulter une autre demande ?"
+  - text: "Y a-t-il autre chose que je puisse faire pour vous ?"
+
+  utter_demande_validee:
+  - text: "La demande a été validée avec succès."
+  - text: "Validation effectuée. La demande a été approuvée."
+  - text: "Demande confirmée et validée."
+
+  utter_demande_rejetee:
+  - text: "La demande a été rejetée."
+  - text: "Demande rejetée avec succès."
+  - text: "La demande a été refusée."
+
+  utter_aucune_demande:
+  - text: "Vous n'avez aucune demande en cours."
+  - text: "Aucune demande trouvée."
+
+  utter_aucune_demande_a_traiter:
+  - text: "Vous n'avez aucune demande à traiter pour le moment."
+  - text: "Aucune demande en attente de votre validation."
+  - text: "Toutes vos demandes sont à jour !"

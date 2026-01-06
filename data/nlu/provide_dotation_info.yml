@@ -1,0 +1,409 @@
+version: "3.1"
+nlu:
+  - intent: provide_dotation_info
+    examples: |
+      - voici les informations sur la dotation
+      - je veux donner les dotations
+      - les dotations concernent les ordinateurs et bureaux
+      - il faut une [blouse](dotation)
+      - j'ai besoin d'un [casque](dotation)
+      - dotation : [ceinture lombaire](dotation)
+      - [combinaison](dotation) nécessaire
+      - prévoir un [gilet](dotation)
+      - il faut des [bottes](dotation)
+      - [casquette](dotation) requise
+      - besoin de [chaussures](dotation)
+      - [gants](dotation) obligatoires
+      - [imperméables](dotation) pour le terrain
+      - [accès public](dotation)
+      - inscription à l'[annuaire listing](dotation)
+      - [BO](dotation)
+      - besoin de [GED](dotation)
+      - accès [GEEP](dotation)
+      - [GSM](dotation) professionnel
+      - [Intranet - Avance](dotation)
+      - [Intranet - TDB](dotation)
+      - [Intranet - SAGE](dotation)
+      - [Mouvapps (BC - PT)](dotation)
+      - [CMV](dotation)
+      - [ordinateur de bureau](dotation)
+      - [ordinateur portable](dotation)
+      - [quota impression](dotation)
+      - [Qlik Sense](dotation)
+      - [Rennaissance](dotation)
+      - [session windows](dotation)
+      - [smartphone](dotation)
+      - [téléphone fixe](dotation)
+      - [bureau](dotation)
+      - [chaise](dotation)
+      - [clé bleue](dotation)
+      - [moto](dotation)
+      - [véhicule de service](dotation)
+      - [ajout annuaire](dotation)
+      - [assurance](dotation)
+      - [badge](dotation)
+      - [fiche de poste](dotation)
+      - [organigramme](dotation)
+      - [planning d'intégration](dotation)
+      - [pouvoir de signature](dotation)
+      - [lettre d'engagement](dotation)
+      - il me faut un [PC portable](dotation:ordinateur portable)
+      - besoin d'un [laptop](dotation:ordinateur portable)
+      - j'ai besoin d'un [téléphone](dotation:smartphone)
+      - il faut un [mobile](dotation:smartphone)
+      - prévoir un [portable](dotation:smartphone)
+      - [téléphone portable](dotation:smartphone)
+      - [fixe](dotation:téléphone fixe)
+      - un [poste fixe](dotation:téléphone fixe)
+      - [PC fixe](dotation:ordinateur de bureau)
+      - [ordinateur fixe](dotation:ordinateur de bureau)
+      - [voiture de service](dotation:véhicule de service)
+      - [véhicule](dotation:véhicule de service)
+      - [voiture](dotation:véhicule de service)
+      - [EPI](dotation:blouse)
+      - équipement de protection
+      - [chaussures de sécurité](dotation:chaussures)
+      - [bottines](dotation:botte)
+      - [gant de protection](dotation:gants)
+      - [imperméable](dotation:imperméables)
+      - [vêtement de pluie](dotation:imperméables)
+      - accès au [back office](dotation:BO)
+      - [GED documentaire](dotation:GED)
+      - [gestion documentaire](dotation:GED)
+      - [téléphone GSM](dotation:GSM)
+      - un [GSM pro](dotation:GSM)
+      - accès [intranet](dotation:Intranet - Avance)
+      - [passe](dotation:badge)
+      - [carte d'accès](dotation:badge)
+      - [badge d'accès](dotation:badge)
+      - [siège](dotation:chaise)
+      - [fauteuil](dotation:chaise)
+      - [espace de travail](dotation:bureau)
+      - [poste de travail](dotation:bureau)
+      - [clef bleue](dotation:clé bleue)
+      - [deux roues](dotation:moto)
+      - [scooter](dotation:moto)
+      - [contrat d'assurance](dotation:assurance)
+      - [délégation de signature](dotation:pouvoir de signature)
+      - [procuration](dotation:pouvoir de signature)
+      - les dotations sont : [ordinateur portable](dotation), [smartphone](dotation) et [badge](dotation)
+      - il faut prévoir [chaussures de sécurité](dotation:chaussures), [casque](dotation) et [gants](dotation)
+      - dotations informatiques : [PC](dotation:ordinateur portable), [téléphone](dotation:smartphone), [session windows](dotation)
+      - pour les EPI : [blouse](dotation), [gants](dotation), [bottes](dotation)
+      - matériel : [bureau](dotation), [chaise](dotation), [téléphone fixe](dotation:téléphone fixe)
+      - véhicule : [voiture de service](dotation:véhicule de service) ou [moto](dotation)
+  - intent: supprimmer_dotation
+    examples: |
+      - supprime la dotation smartphone
+      - retire le badge d'accès
+      - enlève l'ordinateur portable
+      - efface la carte restaurant
+      - supprime le véhicule de fonction
+      - retire la dotation téléphone
+      - enlève le PC fixe
+      - je veux supprimer la tablette
+      - peux-tu retirer le laptop
+      - efface la dotation bureau
+      - supprime le matériel informatique
+      - retire l'écran supplémentaire
+      - enlève la souris et le clavier
+      - supprime la dotation parking
+      - retire le pass transport
+      - efface le smartphone professionnel
+      - supprime la ligne téléphonique
+      - retire la dotation équipement
+      - enlève le moniteur
+      - supprime la carte essence
+      - retire la dotation mobilier
+      - efface l'iPhone
+      - supprime le MacBook
+      - retire la dotation logiciel
+      - enlève l'imprimante
+      - supprime la dotation fournitures
+      - retire le casque audio
+      - efface la webcam
+      - supprime la dotation accessoires
+      - retire le chargeur
+  - intent: supprimer_tous_dotations
+    examples: |
+      - supprime toutes les dotations
+      - efface toutes les dotations
+      - retire toutes les dotations
+      - enlève toutes les dotations
+      - supprime toutes mes dotations
+      - efface toutes mes dotations
+      - retire toutes mes dotations
+      - enlève toutes mes dotations
+      - supprime tout les équipements
+      - efface tous les équipements
+      - retire tous les matériels
+      - enlève tout le matériel
+      - supprime l'ensemble des dotations
+      - efface l'ensemble des dotations
+      - supprime la totalité des dotations
+      - efface la totalité des dotations
+      - je veux tout supprimer les dotations
+      - peux-tu tout effacer les dotations
+      - enlève toutes mes dotations demandées
+      - retire toutes mes demandes de dotation
+      - supprime toutes mes demandes d'équipement
+      - efface toutes les dotations demandées
+      - reset les dotations
+      - remets les dotations à zéro
+      - vide la liste des dotations
+      - supprime chaque dotation
+      - efface la liste complète des dotations
+      - retire absolument toutes les dotations
+      - supprime toutes les dotations sans exception
+      - efface définitivement toutes les dotations
+      - supprime toutes les dotations une par une
+      - retire l'intégralité des dotations
+      - enlève tous les équipements de dotation
+      - supprime tous les matériels de dotation
+      - efface tous les outils de dotation
+      - retire toutes les fournitures de dotation
+      - annule toutes les dotations
+      - réinitialise les dotations
+      - vide les dotations
+      - supprime tout équipement demandé
+      - efface toutes les demandes
+      - retire tous les équipements demandés
+      - supprime tous dotations
+      - efface tous dotations
+      - retire tous dotations
+      - enlève tous dotations
+      
+  - intent: supprimer_dotation_multiple
+    examples: |
+      - supprime le smartphone et l'ordinateur
+      - retire le badge et la carte
+      - enlève le téléphone, le PC et la tablette
+      - efface le véhicule et le parking
+      - supprime le laptop et l'écran
+      - retire la souris et le clavier
+      - enlève le smartphone et le chargeur
+      - supprime le badge, la carte et le pass
+      - efface l'ordinateur et les accessoires
+      - retire le téléphone et la ligne fixe
+      - supprime le matériel informatique et le mobilier
+      - enlève le PC, l'écran et l'imprimante
+      - efface la tablette et le casque
+      - supprime les dotations smartphone et ordinateur
+      - retire les équipements badge et carte
+      - enlève dotation téléphone et véhicule
+      - supprime le laptop, la souris et le clavier
+      - retire smartphone et badge
+      - efface ordinateur et écran
+      - supprime PC fixe et portable
+      - enlève badge d'accès et carte restaurant
+      - retire véhicule de fonction et carte essence
+      - supprime iPhone et MacBook
+      - efface moniteur et webcam
+      - retire imprimante et scanner
+      - supprime casque audio et microphone
+      - enlève chargeur et câbles
+      - efface fournitures et accessoires
+      - retire logiciels et licences
+      - supprime équipements bureautiques
+
+  - intent: modifier_dotation
+    examples: |
+      - modifie le smartphone par une tablette
+      - remplace l'ordinateur portable par un PC fixe
+      - change le badge par une carte
+      - remplace la dotation téléphone par un smartphone
+      - modifie le PC par un MacBook
+      - change l'écran 24 pouces par un 27 pouces
+      - remplace le véhicule essence par un électrique
+      - modifie la souris filaire par une sans fil
+      - change le clavier AZERTY par un QWERTY
+      - remplace la carte restaurant par des tickets
+      - modifie l'iPhone par un Samsung
+      - change le laptop par une tablette
+      - remplace la dotation parking par un pass transport
+      - modifie le téléphone fixe par une ligne mobile
+      - change l'imprimante laser par une jet d'encre
+      - remplace le casque USB par un Bluetooth
+      - modifie la webcam HD par une 4K
+      - change le moniteur par un ultrawide
+      - remplace le bureau standard par un bureau assis-debout
+      - modifie la chaise par un siège ergonomique
+      - change la dotation matériel par des fournitures
+      - remplace l'équipement informatique par du mobilier
+      - modifie le smartphone par un téléphone basique
+      - change l'ordinateur par une tablette Surface
+      - remplace le badge magnétique par un badge NFC
+      - modifie la carte essence par une carte multi-services
+      - change le pass parking par un abonnement transport
+      - remplace la ligne fixe par un forfait mobile
+      - modifie l'écran simple par un double écran
+      - change les accessoires basiques par des accessoires premium
+      - je veux remplacer le smartphone par une tablette
+      - peux-tu modifier l'ordinateur en MacBook
+      - change-moi le badge par une carte d'accès
+      - remplace le téléphone par un smartphone s'il te plaît
+      - modifie la dotation PC par un portable
+      - change l'équipement bureau par du matériel ergonomique
+      - remplace mon véhicule par un modèle électrique
+      - modifie mes accessoires informatiques
+      - change la configuration de mon poste de travail
+      - remplace le matériel standard par du premium
+  - synonym: ordinateur portable
+    examples: |
+      - PC portable
+      - laptop
+      - portable
+      - notebook
+      - PC
+      - ordi portable
+
+  - synonym: ordinateur de bureau
+    examples: |
+      - PC fixe
+      - PC de bureau
+      - ordinateur fixe
+      - poste fixe
+      - tour
+
+  - synonym: smartphone
+    examples: |
+      - téléphone
+      - mobile
+
+      - téléphone portable
+      - GSM
+      - tel
+
+  - synonym: téléphone fixe
+    examples: |
+      - fixe
+      - poste fixe
+      - téléphone de bureau
+      - ligne fixe
+
+  - synonym: véhicule de service
+    examples: |
+      - voiture de service
+      - véhicule
+      - voiture
+      - auto
+      - automobile de service
+
+  - synonym: chaussures
+    examples: |
+      - chaussures de sécurité
+      - souliers
+      - chaussures de travail
+
+  - synonym: botte
+    examples: |
+      - bottes
+      - bottines
+      - bottes de sécurité
+
+  - synonym: gants
+    examples: |
+      - gant
+      - gant de protection
+      - gants de travail
+      - gants de sécurité
+
+  - synonym: imperméables
+    examples: |
+      - imperméable
+      - vêtement de pluie
+      - k-way
+      - parka
+
+  - synonym: BO
+    examples: |
+      - back office
+      - backoffice
+
+  - synonym: GED
+    examples: |
+      - gestion documentaire
+      - GED documentaire
+      - gestionnaire de documents
+
+  - synonym: badge
+    examples: |
+      - passe
+      - carte d'accès
+      - badge d'accès
+      - carte badge
+
+  - synonym: chaise
+    examples: |
+      - fauteuil
+      - fauteuil de bureau
+
+  - synonym: bureau
+    examples: |
+      - espace de travail
+      - poste de travail
+      - desk
+
+  - synonym: clé bleue
+    examples: |
+      - clef bleue
+
+  - synonym: moto
+    examples: |
+      - deux roues
+      - scooter
+      - motocyclette
+
+  - synonym: assurance
+    examples: |
+      - contrat d'assurance
+      - couverture assurance
+
+  - synonym: pouvoir de signature
+    examples: |
+      - délégation de signature
+      - procuration
+      - signature autorisée
+  - lookup: dotation
+    examples: |
+      - Casque
+      - Ceinture lombaire
+      - Combinaison
+      - Gilet
+      - Botte
+      - Casquette
+      - Chaussures
+      - Gants
+      - Imperméables
+      - Accès public
+      - Annuaire listing
+      - BO
+      - GED
+      - GEEP
+      - GSM
+      - Intranet - Avance
+      - Intranet - TDB
+      - Intranet - SAGE
+      - Mouvapps (BC - PT)
+      - CMV
+      - Ordinateur de bureau
+      - Ordinateur portable
+      - Quota impression
+      - Qlik Sense
+      - Rennaissance
+      - Session windows
+      - Smartphone
+      - Téléphone fixe
+      - Bureau
+      - Chaise
+      - Clé bleue
+      - Moto
+      - Véhicule de service
+      - Ajout annuaire
+      - Assurance
+      - Badge
+      - Fiche de poste
+      - Organigramme
+      - Planning d'intégration
+      - Pouvoir de signature
+      - Lettre d'engagement

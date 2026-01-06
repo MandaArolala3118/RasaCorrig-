@@ -1,0 +1,61 @@
+version: "3.1"
+
+rules:
+- rule: Suivre une demande avec ID
+  steps:
+  - intent: suivre_demande
+    entities:
+    - id_demande: "123"
+  - action: action_afficher_statut_demande
+  - action: utter_demande_autre_action
+
+- rule: Suivre une demande par type et ID
+  steps:
+  - intent: suivre_demande
+    entities:
+    - type_demande: "DDR"
+    - id_demande: "456"
+  - action: action_afficher_statut_demande
+  - action: utter_demande_autre_action
+
+- rule: Suivre demande sans ID fourni
+  steps:
+  - intent: suivre_demande
+  - action: utter_demander_id_demande
+  - action: utter_demande_autre_action
+
+- rule: Inform avec ID demande
+  steps:
+  - intent: inform
+    entities:
+    - id_demande: "789"
+  - action: action_afficher_statut_demande
+  - action: utter_demande_autre_action
+
+- rule: Consulter liste de mes demandes
+  steps:
+  - intent: demander_liste_demandes
+  - action: action_afficher_liste_demandes
+  - action: utter_demande_autre_action
+
+- rule: Consulter liste par type de demande
+  steps:
+  - intent: demander_liste_demandes
+    entities:
+    - type_demande: "DMI"
+  - action: action_afficher_liste_demandes
+  - action: utter_demande_autre_action
+
+- rule: Consulter demandes à traiter
+  steps:
+  - intent: demander_liste_a_traiter
+  - action: action_afficher_demandes_a_traiter
+  - action: utter_demande_autre_action
+
+- rule: Consulter demandes à traiter par type
+  steps:
+  - intent: demander_liste_a_traiter
+    entities:
+    - type_demande: "DRI"
+  - action: action_afficher_demandes_a_traiter
+  - action: utter_demande_autre_action

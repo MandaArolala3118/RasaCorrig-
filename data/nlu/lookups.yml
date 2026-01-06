@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+  - lookup: nom_validateur
+    examples: |
+      - Paul Bernard
+      - Sophie Durand
+      - Luc Moreau
+      - Pierre Martin
+      - Jean Rakoto
+      - ANDRIANINA Manda
+      - Marie Martin
+      - Fidy Tantely Ramanana
+
+  - lookup: responsable_rh
+    examples: |
+      - ANDRIANINA Manda
+      - Marie Martin
+      - Sophie Durand
+      - Fidy Tantely Ramanana
+      - Manda Arolala Andrianina
+      - Manda Andrianina
+
+  - lookup: nom_flux
+    examples: |
+      - DSI work flow
+      - DSI workflow
+      - Flux123
+      - workflow RH
+      - procédure de recrutement
+      - DRI flow
+
+  - lookup: nom_encadreur
+    examples: |
+      - Jean Dupont
+      - Marie Martin
+      - Paul Bernard
+      - Sophie Durand
+      - Luc Moreau
+      - Pierre Martin
+      - Jean Rakoto
+      - ANDRIANINA Manda
+      - Esperant Andrianantenaina
+      - Mamy RAKOTONDRABE
+      - Sophie RAVALISON
+      - Haja RANDRIANARISOA
+      - Fidy RAKOTOMANGA
+      - Tantely ANDRIANASOLO

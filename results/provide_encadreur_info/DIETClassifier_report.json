@@ -1,0 +1,35 @@
+{
+  "nom_encadreur": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 87,
+    "confused_with": {}
+  },
+  "poste_encadreur": {
+    "precision": 0.8181818181818182,
+    "recall": 1.0,
+    "f1-score": 0.9,
+    "support": 9,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9795918367346939,
+    "recall": 1.0,
+    "f1-score": 0.9896907216494846,
+    "support": 96
+  },
+  "macro avg": {
+    "precision": 0.9090909090909092,
+    "recall": 1.0,
+    "f1-score": 0.95,
+    "support": 96
+  },
+  "weighted avg": {
+    "precision": 0.9829545454545454,
+    "recall": 1.0,
+    "f1-score": 0.990625,
+    "support": 96
+  },
+  "accuracy": 0.9907407407407407
+}

@@ -1,0 +1,86 @@
+version: "3.1"
+
+nlu:
+  - intent: confirm
+    examples: |
+      - oui
+      - oui je confirme
+      - d'accord
+      - ok
+      - valider
+      - confirmer
+      - c'est bon
+      - parfait
+      - yes
+      - accepter
+      - je valide
+      - go
+      - enregistrer
+      - sauvegarder
+      - correct
+      - oui c'est ça
+      - exactement
+      - tout à fait
+      - c'est exact
+      - précisément
+      - affirmatif
+      - correct
+      - en effet
+      - absolument
+      - certainement
+
+  - intent: refus
+    examples: |
+      - non
+      - non merci
+      - pas maintenant
+      - annuler
+      - je refuse
+      - ne pas enregistrer
+      - abandonner
+      - arrêter
+      - stop
+      - cancel
+      - ça ne va pas
+      - ce n'est pas bon
+      - annuler
+      - annuler l'opération
+      - annuler tout
+      - arrêter
+      - stop
+      - quitter
+      - sortir
+      - revenir en arrière
+      - retour
+      - cancel
+      - abandon
+      - laisser tomber
+      - j'arrête
+
+  - intent: salutation
+    examples: |
+      - bonjour
+      - salut
+      - hello
+      - coucou
+      - bonsoir
+      - hey
+      - hi
+      - yo
+      - bonne journée
+      - good morning
+
+
+  - intent: remerciement
+    examples: |
+      - merci
+      - merci beaucoup
+      - merci bien
+      - super merci
+      - je te remercie
+      - je vous remercie
+      - thanks
+      - thank you
+      - c'est gentil
+      - merci pour ton aide
+      - merci pour votre aide

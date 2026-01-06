@@ -1,0 +1,223 @@
+{
+  "nom_poste": {
+    "precision": 0.9941520467836257,
+    "recall": 1.0,
+    "f1-score": 0.9970674486803519,
+    "support": 170,
+    "confused_with": {}
+  },
+  "poids": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 121,
+    "confused_with": {}
+  },
+  "date_fin": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "action_type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 27,
+    "confused_with": {}
+  },
+  "intention_demande": {
+    "precision": 0.9794238683127572,
+    "recall": 1.0,
+    "f1-score": 0.9896049896049895,
+    "support": 238,
+    "confused_with": {}
+  },
+  "nom_flux": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 105,
+    "confused_with": {}
+  },
+  "duree_contrat": {
+    "precision": 0.9333333333333333,
+    "recall": 1.0,
+    "f1-score": 0.9655172413793104,
+    "support": 28,
+    "confused_with": {}
+  },
+  "commentaire": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 106,
+    "confused_with": {}
+  },
+  "action_demandee": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 25,
+    "confused_with": {}
+  },
+  "nom_validateur": {
+    "precision": 1.0,
+    "recall": 0.9627329192546584,
+    "f1-score": 0.9810126582278481,
+    "support": 483,
+    "confused_with": {
+      "responsable_rh": 18
+    }
+  },
+  "id_demande": {
+    "precision": 1.0,
+    "recall": 0.9606741573033708,
+    "f1-score": 0.9799426934097422,
+    "support": 178,
+    "confused_with": {
+      "type_demande": 1
+    }
+  },
+  "poste_encadreur": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "motif": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 67,
+    "confused_with": {}
+  },
+  "situation_budget": {
+    "precision": 1.0,
+    "recall": 0.9333333333333333,
+    "f1-score": 0.9655172413793104,
+    "support": 45,
+    "confused_with": {}
+  },
+  "responsable_rh": {
+    "precision": 0.8656716417910447,
+    "recall": 1.0,
+    "f1-score": 0.928,
+    "support": 116,
+    "confused_with": {}
+  },
+  "nature_contrat": {
+    "precision": 0.9534883720930233,
+    "recall": 1.0,
+    "f1-score": 0.9761904761904763,
+    "support": 41,
+    "confused_with": {}
+  },
+  "effectif": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "date_debut": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 16,
+    "confused_with": {
+      "date_mise_en_service": 16
+    }
+  },
+  "type_demande": {
+    "precision": 0.9973821989528796,
+    "recall": 1.0,
+    "f1-score": 0.998689384010485,
+    "support": 381,
+    "confused_with": {}
+  },
+  "dotation": {
+    "precision": 1.0,
+    "recall": 0.9831460674157303,
+    "f1-score": 0.9915014164305949,
+    "support": 178,
+    "confused_with": {}
+  },
+  "direction": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 148,
+    "confused_with": {}
+  },
+  "resultat": {
+    "precision": 1.0,
+    "recall": 0.7660753880266076,
+    "f1-score": 0.8675455116133083,
+    "support": 902,
+    "confused_with": {}
+  },
+  "justification": {
+    "precision": 1.0,
+    "recall": 0.994061757719715,
+    "f1-score": 0.9970220369267422,
+    "support": 842,
+    "confused_with": {}
+  },
+  "exploitation": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 253,
+    "confused_with": {}
+  },
+  "nom_encadreur": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 142,
+    "confused_with": {}
+  },
+  "info_type": {
+    "precision": 0.9772727272727273,
+    "recall": 1.0,
+    "f1-score": 0.9885057471264368,
+    "support": 43,
+    "confused_with": {}
+  },
+  "objectif": {
+    "precision": 1.0,
+    "recall": 0.9095238095238095,
+    "f1-score": 0.9526184538653367,
+    "support": 630,
+    "confused_with": {}
+  },
+  "date_mise_en_service": {
+    "precision": 0.627906976744186,
+    "recall": 1.0,
+    "f1-score": 0.7714285714285715,
+    "support": 27,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9908964971304176,
+    "recall": 0.9379917572124391,
+    "f1-score": 0.9637186026368972,
+    "support": 5338
+  },
+  "macro avg": {
+    "precision": 0.9403082559029848,
+    "recall": 0.943522797916719,
+    "f1-score": 0.9393766008090878,
+    "support": 5338
+  },
+  "weighted avg": {
+    "precision": 0.9900209496242839,
+    "recall": 0.9379917572124391,
+    "f1-score": 0.9606911744146793,
+    "support": 5338
+  },
+  "accuracy": 0.9735866543095458
+}

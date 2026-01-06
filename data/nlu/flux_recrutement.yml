@@ -1,0 +1,271 @@
+version: "3.1"
+
+nlu:
+  - intent: lancer_flux_recrutement
+    examples: |
+
+      - [Validation rapide](nom_flux)
+
+      - Le flux s'appelle [Workflow standard](nom_flux)
+      - C'est le flux [Validation niveau 2](nom_flux)
+      - Le nom du flux : [Flux_Test_123](nom_flux)
+      
+      - Je veux lancer le [flux de recrutement](intention_demande) pour la demande [DDR](type_demande) [001](id_demande)
+      - Démarrer le [processus de validation](intention_demande) de la [DRI](type_demande) [002](id_demande)
+      - Lancer [flux](intention_demande) [DMOE](type_demande) [003](id_demande)
+      - Initier la [procédure de recrutement](intention_demande) [demande de mobilité interne](type_demande:DMI) [004](id_demande)
+      - Je veux lancer un [flux de recrutement](intention_demande) avec comme id [1315](id_demande)
+      - Je veux lancer un [flux](intention_demande) [DRI](type_demande) avec comme id [1316](id_demande)
+      - Lancer un [flux de validation](intention_demande) pour [DDR](type_demande) [1234](id_demande)
+      - Démarrer [flux](intention_demande) [DMOE](type_demande) [12345](id_demande)
+      - Initier [processus](intention_demande) [DMI](type_demande) [010](id_demande)
+      
+      - Je souhaite lancer le [flux](intention_demande) [Validation RH Standard](nom_flux) pour [DRI](type_demande) [005](id_demande)
+      - Démarrer [processus](intention_demande) [Circuit validation hiérarchique](nom_flux) demande [DMOE](type_demande) [006](id_demande)
+      - Lancer [flux de recrutement](intention_demande) [Approbation directeur](nom_flux) [DMI](type_demande) [007](id_demande)
+      - Initier [procédure](intention_demande) [Validation rapide](nom_flux) pour la [demande de recrutement](type_demande:DDR) [008](id_demande)
+      - Je veux lancer un [flux de recrutement](intention_demande) [DRI](type_demande) avec comme id [1315](id_demande), le nom de flux : [Flux DSI test](nom_flux)
+      - Je veux lancer un [flux](intention_demande) [DMOE](type_demande) avec comme id [1317](id_demande), le nom de flux : [Test - DSI](nom_flux)
+      - Lancer le [flux](intention_demande) [DSI work flow](nom_flux) pour la demande [DMI](type_demande) [12345](id_demande)
+      - Démarrer le [flux](intention_demande) nommé [Flux de Manda](nom_flux) avec l'id [DDR](type_demande) [1307](id_demande)
+      - Je veux lancer un [flux de recrutement](intention_demande) [Flux123](nom_flux) [DRI](type_demande) id [1234](id_demande)
+      - Démarrer [flux de validation](intention_demande) [Circuit RH](nom_flux) [DMOE](type_demande) [5678](id_demande)
+      - Lancer [flux](intention_demande) [Workflow RH 2024](nom_flux) pour [DMI](type_demande) [9876](id_demande)
+      - Initier [processus](intention_demande) [Circuit-Validation-V2](nom_flux) demande [DDR](type_demande) [4321](id_demande)
+      
+      - Je veux lancer le [flux](intention_demande) pour [DMI](type_demande) [009](id_demande) avec [Jean Dupont](nom_validateur) comme validateur
+      - Démarrer [processus de validation](intention_demande) demande [DDR](type_demande) [010](id_demande) validateur [Marie Martin](nom_validateur)
+      - Lancer [flux de recrutement](intention_demande) [DRI](type_demande) [011](id_demande) pour validation par [Paul Bernard](nom_validateur)
+      - Initier [procédure](intention_demande) [demande de mobilité externe](type_demande:DMOE) [012](id_demande) avec approbation de [Sophie Durand](nom_validateur)
+      - validation par le directeur [Pierre Martin](nom_validateur)
+      - approuvé par le manager [Luc Moreau](nom_validateur)
+      - validé par [Jean Rakoto](nom_validateur)
+      - avec validateur [ANDRIANINA Manda Arolala](nom_validateur)
+      
+      - Je veux lancer le [flux](intention_demande) pour [DMI](type_demande) [013](id_demande) avec [Jean Dupont](responsable_rh) comme responsable RH
+      - Démarrer [processus de validation](intention_demande) demande [DDR](type_demande) [014](id_demande) responsable RH [Marie Martin](responsable_rh)
+      - Lancer [flux de recrutement](intention_demande) [DRI](type_demande) [015](id_demande) RH [Paul Bernard](responsable_rh)
+      - Initier [procédure](intention_demande) [demande de mobilité externe](type_demande:DMOE) [016](id_demande) avec responsable ressources humaines [Sophie Durand](responsable_rh)
+      - responsable ressources humaines [Haja Razafy](responsable_rh)
+      - DRH [Toky Ramanana](responsable_rh)
+      - gestionnaire RH [Fidy Andrianina](responsable_rh)
+      - coordinateur RH [Tantely Rakoto](responsable_rh)
+      - chargé RH [Mamy Rabe](responsable_rh)
+      - responsable RH [Manda Arolala Andrianina](responsable_rh)
+      - RH [Jean Pierre Marie Rakoto](responsable_rh)
+      - DRH [Nirina Faharisoa Rasolofo](responsable_rh)
+      - gestionnaire RH [Tahina Aimée Randrianasolo](responsable_rh)
+      
+      - Je souhaite lancer le [flux](intention_demande) [DMI](type_demande) [017](id_demande) validateurs [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - Démarrer [processus](intention_demande) pour demande [DDR](type_demande) [018](id_demande) avec [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - Lancer [flux de recrutement](intention_demande) [DRI](type_demande) [019](id_demande) validation par [Jean Dupont](nom_validateur) puis [Marie Martin](nom_validateur)
+      - Initier [procédure de validation](intention_demande) [demande de mobilité externe](type_demande:DMOE) [020](id_demande) validé par [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      
+      - Je veux lancer le [flux](intention_demande) [DDR](type_demande) [041](id_demande) avec les validateurs [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur) et [Paul Bernard](nom_validateur)
+      - Démarrer [processus](intention_demande) demande [DRI](type_demande) [042](id_demande) validateurs [Sophie Durand](nom_validateur), [Luc Moreau](nom_validateur) et [Pierre Martin](nom_validateur)
+      - Lancer [flux de recrutement](intention_demande) [DMOE](type_demande) [043](id_demande) validation [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur) et [RAKOTO Haja](nom_validateur)
+      - Initier [procédure](intention_demande) [DMI](type_demande) [044](id_demande) avec [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur)
+      
+      - Je veux lancer le [flux](intention_demande) [DDR](type_demande) [051](id_demande) validateurs [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - Démarrer [processus](intention_demande) [DRI](type_demande) [052](id_demande) avec [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur) et [ANDRIANINA Manda](nom_validateur)
+      - Lancer [flux de recrutement](intention_demande) [DMOE](type_demande) [053](id_demande) validation par [RAKOTO Haja](nom_validateur), [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur) et [Jean Dupont](nom_validateur)
+      
+      - Je veux lancer le [flux](intention_demande) [DMI](type_demande) [061](id_demande) avec les validateurs [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur) et [Luc Moreau](nom_validateur)
+      - Démarrer [processus](intention_demande) demande [DDR](type_demande) [062](id_demande) validateurs [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur), [RAKOTO Haja](nom_validateur) et [RASOLOFO Nirina](nom_validateur)
+      - Lancer [flux de recrutement](intention_demande) [DRI](type_demande) [063](id_demande) validation [RANDRIANASOLO Tahina](nom_validateur), [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      
+      - Je veux lancer le [flux](intention_demande) [DDR](type_demande) [021](id_demande) validateur [Jean Dupont](nom_validateur) responsable RH [Marie Martin](responsable_rh)
+      - Démarrer [processus](intention_demande) demande [DRI](type_demande) [022](id_demande) avec [Paul Bernard](nom_validateur) comme validateur et [Sophie Durand](responsable_rh) pour la RH
+      - Lancer [flux de recrutement](intention_demande) [DMOE](type_demande) [023](id_demande) validation [Jean Dupont](nom_validateur) RH [Luc Moreau](responsable_rh)
+      - Initier [procédure](intention_demande) [demande de mobilité interne](type_demande:DMI) [024](id_demande) validé par [Paul Bernard](nom_validateur) responsable ressources humaines [Marie Martin](responsable_rh)
+      - validation [Pierre Rakoto](nom_validateur) et DRH [Haja Andrianina](responsable_rh)
+      - approuvé par [Jean Martin](nom_validateur) avec gestionnaire RH [Fidy Rabe](responsable_rh)
+      
+      - Je veux lancer le [flux](intention_demande) [DDR](type_demande) [071](id_demande) validateurs [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur) responsable RH [Paul Bernard](responsable_rh)
+      - Démarrer [processus](intention_demande) [DRI](type_demande) [072](id_demande) avec [Sophie Durand](nom_validateur), [Luc Moreau](nom_validateur) et [Pierre Martin](nom_validateur) RH [Jean Rakoto](responsable_rh)
+      - Lancer [flux de recrutement](intention_demande) [DMOE](type_demande) [073](id_demande) validation [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur) responsable ressources humaines [ANDRIANINA Manda](responsable_rh)
+      - Initier [procédure](intention_demande) [DMI](type_demande) [074](id_demande) validé par [RAKOTO Haja](nom_validateur), [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur), [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur) DRH [Haja Razafy](responsable_rh)
+      
+      - Je veux lancer le [flux](intention_demande) [Validation RH Standard](nom_flux) pour [DDR](type_demande) [025](id_demande) avec [Jean Dupont](nom_validateur) comme validateur
+      - Démarrer [processus](intention_demande) [Circuit validation hiérarchique](nom_flux) demande [DRI](type_demande) [026](id_demande) validateurs [Marie Martin](nom_validateur) et [Paul Bernard](nom_validateur)
+      - Lancer [flux de recrutement](intention_demande) [Test - DSI](nom_flux) [DMOE](type_demande) [027](id_demande) validation [Sophie Durand](nom_validateur)
+      - Initier [procédure](intention_demande) [DSI work flow](nom_flux) [demande de mobilité interne](type_demande:DMI) [028](id_demande) avec [Luc Moreau](nom_validateur), [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - Lancer [flux](intention_demande) [Flux de Manda](nom_flux) [DDR](type_demande) [081](id_demande) validateurs [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur), [Luc Moreau](nom_validateur) et [Pierre Martin](nom_validateur)
+      - Démarrer [processus](intention_demande) [Flux123](nom_flux) [DRI](type_demande) [082](id_demande) avec [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur), [RAKOTO Haja](nom_validateur), [RASOLOFO Nirina](nom_validateur) et [RANDRIANASOLO Tahina](nom_validateur)
+      
+      - Je veux lancer le [flux](intention_demande) [Validation RH Standard](nom_flux) [DDR](type_demande) [029](id_demande) validateur [Jean Dupont](nom_validateur) responsable RH [Marie Martin](responsable_rh)
+      - Démarrer [processus](intention_demande) [Circuit validation hiérarchique](nom_flux) demande [DRI](type_demande) [030](id_demande) avec [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur) RH [Luc Moreau](responsable_rh)
+      - Lancer [flux de recrutement](intention_demande) [Test - DSI](nom_flux) [DMOE](type_demande) [031](id_demande) validation [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur) et [Paul Bernard](nom_validateur) responsable ressources humaines [Sophie Durand](responsable_rh)
+      - Initier [procédure](intention_demande) [DSI work flow](nom_flux) [DMI](type_demande) [091](id_demande) validé par [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur) et [ANDRIANINA Manda](nom_validateur) DRH [RAKOTO Haja](responsable_rh)
+      - Lancer [flux](intention_demande) [Flux de Manda](nom_flux) [DDR](type_demande) [092](id_demande) validation [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur), [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur) et [Paul Bernard](nom_validateur) gestionnaire RH [Toky Ramanana](responsable_rh)
+      
+      - Bonjour, je souhaite lancer le [flux de recrutement](intention_demande) [Validation RH Standard](nom_flux) pour la demande [DMI](type_demande) [032](id_demande). Les validateurs seront [Jean Dupont](nom_validateur) en tant que directeur et [Marie Martin](nom_validateur) en tant que manager. Le responsable RH sera [Paul Bernard](responsable_rh)
+      
+      - Je veux démarrer le [processus de validation](intention_demande) [Circuit validation hiérarchique](nom_flux) pour [DDR](type_demande) [033](id_demande) avec validation successive par [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur) et [Luc Moreau](nom_validateur) et responsable RH [Jean Rakoto](responsable_rh)
+      
+      - Lancer [flux](intention_demande) [Test - DSI](nom_flux) [demande de recrutement interne](type_demande:DRI) [034](id_demande) validateurs [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur) RH [Luc Moreau](responsable_rh)
+      
+      - Bonjour, initier [procédure de recrutement](intention_demande) [DSI work flow](nom_flux) pour [DMOE](type_demande) [035](id_demande) validation [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur), [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur) et [Jean Rakoto](nom_validateur) responsable ressources humaines [ANDRIANINA Manda](responsable_rh)
+      
+      - Je souhaite lancer le [flux](intention_demande) [Flux de Manda](nom_flux) [DMI](type_demande) [101](id_demande) avec les validateurs [RAKOTO Haja](nom_validateur), [RASOLOFO Nirina](nom_validateur) et [RANDRIANASOLO Tahina](nom_validateur) et comme responsable RH [Haja Razafy](responsable_rh)
+      
+      - Je voudrais démarrer la [validation](intention_demande) de [DMI](type_demande) [036](id_demande)
+      - Lancer la [procédure](intention_demande) pour demande [DDR](type_demande) [037](id_demande) validateur [Jean Dupont](nom_validateur)
+      - Peux-tu lancer le [flux](intention_demande) [DRI](type_demande) [038](id_demande) ?
+      - Initier [processus de validation](intention_demande) [Flux123](nom_flux) [demande de mobilité externe](type_demande:DMOE) [039](id_demande) [Marie Martin](nom_validateur)
+      - Lancer [flux](intention_demande) [DMI](type_demande) [040](id_demande) avec responsable RH [Paul Bernard](responsable_rh)
+      - Démarrer [processus](intention_demande) demande [DDR](type_demande) [041](id_demande) RH [Sophie Durand](responsable_rh) validateurs [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - Lancer [flux](intention_demande) [Workflow RH 2024](nom_flux) [DRI](type_demande) [111](id_demande) avec [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur) et [Luc Moreau](nom_validateur) DRH [Pierre Martin](responsable_rh)
+      
+      - Lancer [flux](intention_demande) [DRI](type_demande) [DRI12345](id_demande) validateur [Paul Bernard](nom_validateur)
+      - Démarrer [processus](intention_demande) pour la demande [DMOE](type_demande) [DMOE-12346](id_demande)
+      - Je veux initier [flux de recrutement](intention_demande) [DMI](type_demande) numéro [12347](id_demande)
+      - Lancer [validation](intention_demande) [demande de recrutement](type_demande:DDR) [ddr12348](id_demande) validateurs [Sophie Durand](nom_validateur) et [Jean Dupont](nom_validateur)
+      - Démarrer [flux](intention_demande) [DRI](type_demande) [DRI_12349](id_demande)
+      - Lancer [processus](intention_demande) demande [DMOE](type_demande) [dmoe-12350](id_demande) validateurs [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - Initier [flux](intention_demande) pour [DMI](type_demande) [12351](id_demande)
+      - Je veux lancer [validation](intention_demande) [DDR](type_demande) identifiant [DDR 12352](id_demande) avec [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - Lancer [flux](intention_demande) [DRI](type_demande) [dri12353](id_demande)
+      - Démarrer [processus](intention_demande) [DMOE](type_demande) [DMOE12354](id_demande) validateurs [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur) et [RAKOTO Haja](nom_validateur)
+      
+      - Je veux lancer un flux [DMI](type_demande) avec le nom de flux [Validation Standard](nom_flux)
+      - Démarrer un flux [DDR](type_demande) avec nom de flux : [Circuit DSI](nom_flux)
+      - Le nom de flux est [Test - DSI](nom_flux) pour [DRI](type_demande)
+      - nom du flux : [DSI work flow](nom_flux) [DMOE](type_demande)
+      - avec le nom du flux [Flux de Manda](nom_flux) [DMI](type_demande)
+      - flux appelé [Flux123](nom_flux) [DDR](type_demande)
+      - flux nommé [Workflow RH 2024](nom_flux) [DRI](type_demande)
+      - le flux s'appelle [Circuit-Validation-V2](nom_flux) [DMOE](type_demande)
+      - nom de flux [Mon flux perso](nom_flux) [DMI](type_demande)
+
+  - intent: inform
+    examples: |
+
+      - [Jean Dupont](nom_validateur)
+      - [Marie Martin](nom_validateur)
+      - [Paul Bernard](nom_validateur)
+      - [Sophie Durand](nom_validateur)
+      - [Luc Moreau](nom_validateur)
+      - [Pierre Martin](nom_validateur)
+      - [Jean Rakoto](nom_validateur)
+      - validateur [Paul Bernard](nom_validateur)
+      - validateurs [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - [ANDRIANINA Manda Arolala](nom_validateur)
+      - [RAKOTO Haja Marie](nom_validateur)
+      - [RASOLOFO Nirina Faharisoa](nom_validateur)
+      - [RANDRIANASOLO Tahina Aimée](nom_validateur)
+      - [ANDRIANINA Manda](nom_validateur), [RAKOTO Haja](nom_validateur) et [RASOLOFO Nirina](nom_validateur)
+      - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur) et [RAKOTO Haja](nom_validateur)
+      - RH [Sophie Durand](responsable_rh)
+      - responsable RH [Haja Razafy](responsable_rh)
+      - Responsable RH [Manda Arolala Andrianina](responsable_rh)
+      - Responsable RH [Jean Pierre Rakoto](responsable_rh)
+      - RH [Fidy Tantely Ramanana](responsable_rh)
+      - DRH [Haja Marie Razafindrazaka](responsable_rh)
+      - gestionnaire RH [Toky Miora Andriamampionona](responsable_rh)
+      - responsable ressources humaines [Nirina Faharisoa Rasolofo](responsable_rh)
+      - coordinateur RH [Tahina Aimée Randrianasolo](responsable_rh)
+      - chargé RH [Voahirana Lalao Rakotondrazaka](responsable_rh)
+      - [ANDRIAMAMPIONONA Toky Miora](responsable_rh)
+      - [RAKOTO Jean Pierre Marie](responsable_rh)
+      - [DDR](type_demande) [123123](id_demande)
+      - [1307](id_demande)
+
+      - [DRI](type_demande) [12346](id_demande)
+      - [DMOE](type_demande) [12347](id_demande)
+      - [DMI](type_demande) [12348](id_demande)
+      - [DDR](type_demande) [1313](id_demande). Le nom de flux est [Test 4](nom_flux). Le responsable RH : [Rakotoharisoa Maminiaina Lucas Feliace](responsable_rh).
+      
+      - [Jean Dupont](nom_validateur)
+      - [Marie Martin](nom_validateur)
+      - [Paul Bernard](nom_validateur)
+      - [Sophie Durand](nom_validateur)
+      - [Luc Moreau](nom_validateur)
+      - [Pierre Martin](nom_validateur)
+      - [Jean Rakoto](nom_validateur)
+      - [ANDRIANINA Manda Arolala](nom_validateur)
+      - [RAKOTO Haja Marie](nom_validateur)
+      - [RASOLOFO Nirina Faharisoa](nom_validateur)
+      - [RANDRIANASOLO Tahina Aimée](nom_validateur)
+      - [Manda Arolala](nom_validateur)
+      - [Esperant Andrianantenaina](nom_validateur)
+      
+      - validateur [Paul Bernard](nom_validateur)
+      - le validateur [Jean Dupont](nom_validateur)
+      - le validateur est [Marie Martin](nom_validateur)
+      - c'est [Sophie Durand](nom_validateur) le validateur
+      - [Luc Moreau](nom_validateur) comme validateur
+      - avec [Pierre Martin](nom_validateur) comme validateur
+      - par le validateur [Jean Rakoto](nom_validateur)
+      
+      - validé par [Jean Dupont](nom_validateur)
+      - validation par [Marie Martin](nom_validateur)
+      - approuvé par [Paul Bernard](nom_validateur)
+      - pour validation par [Sophie Durand](nom_validateur)
+      - avec validation de [Luc Moreau](nom_validateur)
+      - avec approbation de [Pierre Martin](nom_validateur)
+      - par [Jean Rakoto](nom_validateur)
+      
+      - [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - validateurs [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - les validateurs sont [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur)
+      - avec [Jean Rakoto](nom_validateur) et [ANDRIANINA Manda](nom_validateur)
+      - validé par [RAKOTO Haja](nom_validateur) et [RASOLOFO Nirina](nom_validateur)
+      - validation par [Jean Dupont](nom_validateur) puis [Marie Martin](nom_validateur)
+      - [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur) comme validateurs
+      
+      - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur) et [Paul Bernard](nom_validateur)
+      - validateurs [Sophie Durand](nom_validateur), [Luc Moreau](nom_validateur) et [Pierre Martin](nom_validateur)
+      - les validateurs : [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur) et [RAKOTO Haja](nom_validateur)
+      - avec [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur) et [Jean Dupont](nom_validateur)
+      - validation [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      
+      - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
+      - validateurs [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur) et [ANDRIANINA Manda](nom_validateur)
+      - les validateurs sont [RAKOTO Haja](nom_validateur), [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur) et [Jean Dupont](nom_validateur)
+      
+      - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur) et [Luc Moreau](nom_validateur)
+      - validateurs [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur), [RAKOTO Haja](nom_validateur) et [RASOLOFO Nirina](nom_validateur)
+      
+      - Oui, [Jean Dupont](nom_validateur)
+      - C'est [Marie Martin](nom_validateur)
+      - [Paul Bernard](nom_validateur)
+      - Les validateurs sont [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
+      - Ce sera [Sophie Durand](nom_validateur)
+      - Ça sera validé par [Luc Moreau](nom_validateur)
+
+      - RH [Sophie Durand](responsable_rh)
+      - responsable RH [Haja Razafy](responsable_rh)
+  - synonym: lancer
+    examples: |
+      - démarrer
+
+      - commencer
+      - débuter
+      - activer
+      - déclencher
+      - start
+      - lance
+      - démarre
+      - initie
+      - commence
+      - active
+      - déclenche
+      - enclencher
+      - entamer
+      - engager
+      - amorcer
+
+  - synonym: flux
+    examples: |
+      - flux de recrutement
+      - processus de validation
+      - circuit de validation
+      - procédure de recrutement
+      - processus
+      - validation
+      - procédure
+      - circuit
+      - workflow

@@ -1,0 +1,34 @@
+[
+  {
+    "text": "1 stagiaire",
+    "intent": "provide_hierarchie_organisation",
+    "intent_prediction": {
+      "name": "provide_contrat_info",
+      "confidence": 0.9650301933288574
+    }
+  },
+  {
+    "text": "réduire les délais",
+    "intent": "provide_objectifs",
+    "intent_prediction": {
+      "name": "provide_justification",
+      "confidence": 0.23098041117191315
+    }
+  },
+  {
+    "text": "DMI 11223",
+    "intent": "inform_validation",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.956106424331665
+    }
+  },
+  {
+    "text": "67890",
+    "intent": "inform_validation",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.9531753063201904
+    }
+  }
+]

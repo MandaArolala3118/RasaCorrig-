@@ -1,0 +1,362 @@
+version: "3.1"
+
+nlu:
+  # ==================== INTENT PROVIDE_OBJECTIFS (VERSION OPTIMISÉE) ====================
+  - intent: provide_objectifs
+    examples: |
+      # ========== SECTION 1 : PHRASES DE CONTEXTE ==========
+      
+      # Phrases introductives
+      - Je veux ajouter des objectifs
+      - Ajouter des objectifs
+      - Créer des objectifs
+      - Ajouter un objectif
+      - Nouvel objectif
+      - Voici les objectifs
+      - Les objectifs du poste sont les suivants
+      - Les objectifs du stage sont
+      - Concernant les objectifs
+      - Pour les objectifs
+      
+      # Contexte "règles de sécurité"
+      - Les objectifs sont de respecter les règles de sécurité
+      - respecter les règles de sécurité avec un poids de 40 %
+      - respecter les règles de sécurité tout au long du stage
+      - assurer le respect des règles de sécurité
+      - garantir la sécurité au travail
+      - veiller au respect des règles de sécurité
+      - suivre les procédures de sécurité
+      - maintenir un environnement sécurisé
+      - appliquer les consignes de sécurité
+      - se conformer aux normes de sécurité
+      
+      # Contexte "laboratoire"
+      - sortir des résultats d'analyses fiables
+      - assurer le suivi de la DLUO des réactifs
+      - maintenir les équipements du laboratoire
+      - déclarer tous les produits non-conformes
+      - effectuer le suivi métrologique
+      - contrôler la conformité des équipements
+      - garantir la fiabilité des analyses
+      - maintenir la traçabilité des résultats
+      
+      # Verbes d'action typiques des objectifs
+      - atteindre un taux de fiabilité de 100 %
+      - obtenir une précision de 98 %
+      - maintenir un niveau de qualité élevé
+      - garantir zéro accident
+      - assurer la conformité totale
+      - optimiser les processus
+      - améliorer la productivité
+      - réduire les délais
+      - augmenter la satisfaction
+      
+      - L'objectif est [d'avoir une logiciel fiable et performent](objectif), pour une poids de [20](poids)% afin de [garantir la performence de tous les logiciel deja existant dans notre departement](resultat)
+      
+      - L'objectif est [d'avoir une application stable et rapide](objectif), pour un poids de [25](poids)% afin de [garantir une expérience utilisateur optimale](resultat)
+      
+      - L'objectif est [d'avoir un système de gestion efficace](objectif), pour une poids de [30](poids)% afin d'[optimiser les processus internes](resultat)
+      
+      - L'objectif est [d'être un leader sur le marché](objectif), pour un poids de [35](poids)% afin de [dominer la concurrence](resultat)
+      
+      - L'objectif est [d'assurer la qualité des produits](objectif), pour le poids de [20](poids)% afin de [maintenir la satisfaction client](resultat)
+      
+      # Format avec "pour que" au lieu de "afin de"
+      - L'objectif est [d'avoir une infrastructure robuste](objectif), pour un poids de [30](poids)% pour que [le système soit disponible 99.9% du temps](resultat)
+      
+      - L'objectif est [d'être reconnu comme expert](objectif), pour une poids de [15](poids)% pour que [notre réputation soit renforcée](resultat)
+      
+      # Format avec "en vue de"
+      - L'objectif est [d'avoir une équipe performante](objectif), pour un poids de [20](poids)% en vue de [livrer les projets dans les délais](resultat)
+      
+      - L'objectif est [d'assurer la conformité réglementaire](objectif), pour une poids de [25](poids)% en vue d'[éviter toute sanction](resultat)
+      
+      # Format sans connecteur explicite (résultat direct)
+      - L'objectif est [d'avoir un code de qualité](objectif), pour un poids de [30](poids)% [taux de bugs inférieur à 2%](resultat)
+      
+      - L'objectif est [de former les employés](objectif), pour une poids de [15](poids)% [100% de complétion des formations](resultat)
+      
+      # Format avec fautes de frappe courantes
+      - L'objectif est [d'avoir une logiciel fiable et performent](objectif), pour une poids de [20](poids)% afin de [garantir la performence](resultat)
+      
+      - L'objectif est [d'etre un leader](objectif), pour un poid de [25](poids)% afin de [dominer le marché](resultat)
+      
+      - L'objectif et [d'assurer la qualitée](objectif), pour une poids de [30](poids)% affin d'[améliorer la satisfaction](resultat)
+      
+      # Format ultra-compact
+      - L'objectif est [d'avoir logiciel fiable](objectif), pour [20](poids)% [garantir performence](resultat)
+      
+      - L'objectif est [d'être leader](objectif), pour [30](poids)% [dominer marché](resultat)
+      
+      # Variantes avec "L'objectif consiste à"
+      - L'objectif consiste [à avoir une infrastructure moderne](objectif), pour un poids de [25](poids)% afin de [réduire les coûts de maintenance](resultat)
+      
+      - L'objectif consiste [à être conforme aux normes ISO](objectif), pour une poids de [20](poids)% afin de [garantir la qualité](resultat)
+      
+      # Variantes avec "Mon objectif est"
+      - Mon objectif est [d'avoir une équipe soudée](objectif), pour un poids de [15](poids)% afin d'[améliorer la collaboration](resultat)
+      
+      - Mon objectif est [de garantir la sécurité](objectif), pour une poids de [30](poids)% afin d'[éliminer les risques](resultat)
+      
+      # ========== SECTION 2 : FORMATS AVEC NUMÉROTATION EXPLICITE (NOUVEAU) ==========
+      
+      # Format "Objectif N : [description] Poids : X% Résultat attendu : [résultat]"
+      - Objectif 1 : [Sortir des résultats d'analyses fiables tout au long du stage](objectif) Poids : [30](poids) % Résultat attendu : [Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage](resultat)
+      
+      - Objectif 2 : [Déclarer tous les produits non-conformes tout au long du stage](objectif) Poids : [50](poids) % Résultat attendu : [en s'assurant que 100 % des produits non-conformes soient déclarés durant toute la période du stage](resultat)
+      
+      - Objectif 3 : [Respecter les règles de sécurité tout au long du stage](objectif) Poids : [40](poids) % Résultat attendu : [en veillant à ne provoquer aucun accident ou presque accident durant toute la période du stage](resultat)
+      
+      - Objectif 4 : [Tester tous les produits](objectif) Poids : [40](poids) % Résultat attendu : [Ecouler tous les stock](resultat)
+      
+      - Objectif 5 : [Optimiser la gestion des stocks](objectif) Poids : [25](poids) % Résultat attendu : [Réduire les ruptures de stock de 90%](resultat)
+      
+      - Objectif 1 : [Garantir la qualité des analyses](objectif) Poids : [35](poids)% Résultat attendu : [Contrôle qualité interne quotidien : précision de 98% minimum](resultat)
+      
+      - Objectif 2 : [Maintenir la traçabilité des documents](objectif) Poids : [30](poids) % Résultat attendu : [Audit mensuel des dossiers : taux de traçabilité de 100%](resultat)
+      
+      - Objectif 3 : [Former les nouveaux employés](objectif) Poids : [15](poids)% Résultat attendu : [100% des formations complétées dans les 3 mois](resultat)
+      
+      - Objectif 4 : [Améliorer la satisfaction client](objectif) Poids : [20](poids) % Résultat attendu : [Atteindre un score de satisfaction de 90%](resultat)
+      
+      - Objectif 6 : [Réduire les coûts opérationnels](objectif) Poids : [18](poids)% Résultat attendu : [Diminution de 15% des dépenses annuelles](resultat)
+      
+      # Format sans espace après les deux-points
+      - Objectif 1:[Sortir des résultats d'analyses fiables](objectif) Poids:[30](poids)% Résultat attendu:[atteindre 100% de fiabilité](resultat)
+      
+      - Objectif 2:[Déclarer tous les produits non-conformes](objectif) Poids:[50](poids)% Résultat attendu:[100% des produits déclarés](resultat)
+      
+      - Objectif 3:[Respecter les règles de sécurité](objectif) Poids:[40](poids)% Résultat attendu:[zéro accident durant le stage](resultat)
+      
+      - Objectif 4:[Tester tous les produits](objectif) Poids:[40](poids)% Résultat attendu:[Ecouler tous les stock](resultat)
+      
+      - Objectif 5:[Optimiser les processus](objectif) Poids:[25](poids)% Résultat attendu:[Réduction de 20% des délais](resultat)
+      
+      # Format avec "Résultats attendus" (pluriel)
+      - Objectif 1 : [Produire des analyses fiables](objectif) Poids : [30](poids) % Résultats attendus : [Précision de 100% sur toute la période](resultat)
+      
+      - Objectif 2 : [Assurer la conformité](objectif) Poids : [25](poids)% Résultats attendus : [100% de conformité aux normes ISO](resultat)
+      
+      # Format très compact
+      - Objectif 1:[Produire analyses fiables](objectif) Poids:[30](poids)% Résultat:[100% précision](resultat)
+      
+      - Objectif 2:[Respecter sécurité](objectif) Poids:[40](poids)% Résultat:[0 accident](resultat)
+      
+      - Objectif 3:[Optimiser stocks](objectif) Poids:[25](poids)% Résultat:[Réduire coûts 15%](resultat)
+      
+      # ========== SECTION 3 : FORMATS AVEC FAUTES DE FRAPPE (NOUVEAU) ==========
+      
+      - Objectif 1 : [Tester tous les produits](objectif) Poids : [40](poids) % Résultat attendu : [Ecouler trous les stock](resultat)
+      
+      - Objectif 2 : [Respecter les regles de securité](objectif) Poids : [30](poids)% Résultat attendu : [0 acident durant le stage](resultat)
+      
+      - Objectif 3 : [Maintenir la tracabilité](objectif) Poids : [25](poids) % Résultat attendu : [100% de conformité documentair](resultat)
+      
+      - Objectif 4 : [Ameliorer la qualité](objectif) Poids : [35](poids)% Résultat attendu : [Taux de defauts inferieur à 2%](resultat)
+      
+      - Objectif 5 : [Garantir la fiabilté des analyses](objectif) Poids : [30](poids) % Résultat attendu : [Precison de 98% minimun](resultat)
+      
+      # ========== SECTION 4 : FORMATS CLASSIQUES (SANS NUMÉRO) ==========
+      
+      # Format : "Objectif : X Poids : Y% Indicateurs : Z"
+      - Objectif : [Sortir des résultats d'analyses fiables tout au long du stage](objectif) Poids : [30](poids) % Indicateurs pour mesurer les résultats attendus : [Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage](resultat)
+      
+      - Objectif : [Sortir des résultats d'analyses fiables tout au long du stage](objectif). Poids : [30](poids) %. Indicateurs pour mesurer les résultats attendus : [Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage](resultat).
+      
+      - Objectif : [Assurer la conformité des équipements](objectif) Poids : [25](poids)% Indicateurs pour mesurer les résultats attendus : [Vérification métrologique trimestrielle, calibration annuelle : obtenir 100% de conformité sur toute la durée](resultat)
+      
+      - Objectif : [Maintenir la traçabilité des analyses](objectif). Poids : [35](poids) pourcent. Indicateurs pour mesurer les résultats attendus : [Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%](resultat)
+      
+      - Objectif : [Garantir la qualité des analyses](objectif) Poids : [40](poids)% Indicateurs pour mesurer les résultats attendus : [Contrôle qualité interne quotidien, suivi des écarts, actions correctives : précision de 98% minimum](resultat)
+      
+      - Objectif : [Respecter les règles de sécurité](objectif) Poids : [20](poids) pourcent Indicateurs pour mesurer les résultats attendus : [Inspections sécurité hebdomadaires, port des EPI, respect des procédures : 0 accident durant le stage](resultat)
+      
+      - Objectif : [Participer aux activités 5S](objectif) poids [20](poids) pourcent Indicateurs pour mesurer les résultats attendus : [Audits 5S mensuels, respect des standards de rangement et propreté : réalisation à 100 pourcent](resultat)
+      
+      - Objectif : [Déclarer systématiquement tous les produits non conformes détectés](objectif) Poids : [30](poids) pourcent Indicateurs pour mesurer les résultats attendus : [Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%](resultat)
+      
+      # ========== SECTION 5 : FORMATS COMPACTS ==========
+      
+      - [Conformité des réactifs](objectif) [30](poids) pourcent Indicateurs : [Inventaire mensuel, contrôle des dates de péremption, suivi des conditions de stockage : atteindre 100 pourcent](resultat)
+      
+      - [Produire des analyses fiables et répétables](objectif) poids [32](poids)% Indicateurs : [Tests de répétabilité mensuels, contrôle de la reproductibilité, suivi des cartes de contrôle : coefficient de variation inférieur à 2%](resultat)
+      
+      - [Gérer efficacement les non-conformités](objectif) [28](poids) pourcent Indicateurs : [Délai de traitement des NC, efficacité des actions correctives, prévention des récurrences : taux de traitement de 100%](resultat)
+      
+      - [Maintenir environnement sécurisé](objectif) [20](poids)% Indicateurs : [Inspections hebdomadaires, analyse des risques, formation sécurité : zéro incident](resultat)
+      
+      - [Assurer traçabilité documentaire](objectif) poids [35](poids) Indicateurs : [Audit mensuel, complétude des dossiers, archivage conforme : 100% conformité documentaire](resultat)
+      
+      # ========== SECTION 6 : FORMATS SANS "Objectif :" ==========
+      
+      - [Sortir des résultats d'analyses fiables tout au long du stage](objectif) Poids : [30](poids) % Indicateurs pour mesurer les résultats attendus : [Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage](resultat)
+      
+      - [Produire des analyses fiables](objectif) poids [30](poids) Indicateurs pour mesurer les résultats attendus : [Suivi des contrôles internes, validation par le responsable qualité : précision de 100 pourcent](resultat)
+      
+      - [Conformité des réactifs](objectif) [30](poids) pourcent Indicateurs : [Inventaire mensuel, contrôle des dates de péremption : atteindre 100 pourcent](resultat)
+      
+      - [Optimiser la gestion des stocks de consommables](objectif) [24](poids)% Indicateurs : [Inventaire mensuel, taux de rotation, prévision des besoins : zéro rupture de stock](resultat)
+      
+      - [Développer compétences techniques](objectif) [19](poids) pourcent Indicateurs pour mesurer les résultats attendus : [Heures de formation suivies, évaluations des acquis : validation de 3 nouvelles techniques](resultat)
+      
+      # ========== SECTION 7 : FORMATS ULTRA-COMPACTS ==========
+      
+      - [produire des analyses fiables](objectif) [30](poids) [100 pourcent de précision](resultat)
+      
+      - [produire des analyses fiables](objectif) à [30](poids) avec [précision de 100 pourcent](resultat)
+      
+      - objectif [produire des analyses fiables](objectif) poids [30](poids) résultat [précision de 100 pourcent](resultat)
+      
+      - [garantir la qualité des analyses](objectif) poids [40](poids)% résultat [précision de 98%](resultat)
+      
+      - [respecter les règles de sécurité](objectif) à [20](poids) pourcent viser [0 accident](resultat)
+      
+      - [participer aux activités 5S](objectif) poids [20](poids) pourcent [réalisation à 100 pourcent](resultat)
+      
+      - [réduire les délais de traitement](objectif) [25](poids) pourcent [délai moyen de 48 heures](resultat)
+      
+      - [former les nouveaux employés](objectif) [15](poids) pourcent [taux de complétion de 100 pourcent](resultat)
+      
+      - [augmenter la satisfaction client](objectif) pondéré [20](poids) pourcent [score de satisfaction de 90 pourcent](resultat)
+      
+      - [améliorer la qualité des produits](objectif) [35](poids) pourcent [taux de défauts inférieur à 2 pourcent](resultat)
+      
+      # ========== SECTION 8 : FORMAT NARRATIF ==========
+      
+      - L'objectif fixé consiste à [respecter les règles de sécurité tout au long du stage](objectif) (poids : [20](poids)), afin de [garantir 0 accident ou quasi-accident durant toute la période du stage](resultat).
+      
+      - L'objectif fixé consiste à [sortir des résultats fiables tout au long du stage](objectif) (poids : [30](poids)), afin d'[atteindre 100% de fiabilité durant toute la période du stage](resultat).
+      
+      - L'objectif fixé consiste à [assurer la conformité des équipements tout au long du stage](objectif) (poids : [25](poids)), afin d'[obtenir 100% de conformité durant toute la période du stage](resultat).
+      
+      - L'objectif est de [maîtriser l'utilisation des outils informatiques pendant le stage](objectif), avec un poids de [15](poids), afin de [réaliser correctement toutes les tâches informatiques assignées](resultat)
+      
+      - L'objectif est de [sortir des résultats d'analyses fiables tout au long du stage](objectif), avec un poids de [30](poids), afin d'[atteindre 100% de fiabilité durant toute la période](resultat)
+      
+      - L'objectif est de [respecter strictement les règles de sécurité](objectif), avec un poids de [20](poids), afin d'[atteindre zéro accident durant le stage](resultat)
+      
+      # ========== SECTION 9 : VARIANTES DE POIDS ==========
+      
+      - [30](poids) pourcent [produire des analyses fiables](objectif) [précision de 100 pourcent](resultat)
+      - objectif [produire des analyses fiables](objectif) [30](poids) pourcent [précision 100 pourcent](resultat)
+      - Avec un poids de [30](poids), l'objectif est de [sortir des résultats fiables](objectif) afin d'[atteindre 100% de fiabilité](resultat)
+      - Avec [35](poids)%, l'objectif est de [maintenir la traçabilité](objectif) afin de [garantir 100% de traçabilité](resultat)
+      
+      # ========== SECTION 10 : FORMATS CONVERSATIONNELS ==========
+      
+      - [améliorer la qualité des processus](objectif) c'est [25](poids) pourcent Indicateurs pour mesurer les résultats attendus : [Suivi des KPI qualité, actions d'amélioration continue : 98% de conformité](resultat)
+      
+      - on a comme objectif [réduire les délais de traitement](objectif) ça pèse [30](poids) pourcent Indicateurs : [Mesure des temps de cycle, optimisation des flux : moins de 48h en moyenne](resultat)
+      
+      - pour [garantir qualité analyses](objectif) on vise [40](poids) pourcent avec [contrôle quotidien interne, suivi rigoureux écarts : précision maintenue à 98% minimum](resultat)
+      
+      - [sécurité au travail](objectif) doit être [20](poids)% donc [inspections hebdomadaires obligatoires, port systématique EPI : objectif zéro accident](resultat)
+      
+      - on doit [produire des analyses fiables](objectif) c'est [30](poids) pourcent et on mesure ça avec [contrôles internes réguliers, validation du responsable : précision de 100 pourcent](resultat)
+      
+      - faut [respecter la sécurité](objectif) ça représente [20](poids)% on vérifie avec [inspections hebdomadaires, port obligatoire des EPI : zéro accident](resultat)
+      
+      # ========== SECTION 11 : AVEC TYPES DE CONTRAT ==========
+      
+      - L'objectif fixé consiste à [respecter les règles de sécurité tout au long du CDD](objectif) (poids : [20](poids)), afin de [garantir 0 accident ou quasi-accident durant toute la période du contrat](resultat).
+      
+      - [produire des analyses fiables durant le CDD](objectif) [30](poids) [100 pourcent de précision sur toute la durée du CDD](resultat)
+      
+      - [respecter les règles de sécurité tout au long du stage](objectif) à [20](poids) pourcent viser [0 accident durant le stage](resultat)
+      
+      - Objectif : [Sortir des résultats d'analyses fiables tout au long du CDD](objectif) Poids : [30](poids) % Indicateurs pour mesurer les résultats attendus : [Indicateur métrologie des équipements du laboratoire : atteindre 100 % de fiabilité durant le CDD](resultat)
+      
+      # ========== SECTION 12 : FORMAT "AJOUTER OBJECTIF N" ==========
+      
+      - Ajoute l'objectif 3. La description doit indiquer : [renforcer la communication interne entre les équipes.](objectif) Le poids associé est de [18 %](poids) et [le KPI attendu correspond à 85 % d'amélioration mesurée avant la fin du premier trimestre.](resultat)
+      
+      - ajoute objectif 4 avec la description : [Atteindre une KPI superieur a l'année derniere](objectif) avec un poids de [20](poids)%, résultats attendus : [Augmenter la productivité de 200%](resultat)
+      
+      - ajoute objectif 3 avec la description : [Respecter les délais de livraison](objectif) poids [25](poids)% résultats attendus : [Livrer 100% des commandes à temps](resultat)
+      
+      - ajoute objectif 5 avec la description : [Améliorer la satisfaction client](objectif) avec un poids de [15](poids)%, résultats attendus : [Atteindre un score de 90%](resultat)
+      
+      - ajoute objectif 2 avec la description : [Réduire les coûts opérationnels](objectif) poids de [30](poids) pourcent résultats attendus : [Diminution de 15% des dépenses](resultat)
+      
+      - ajoute objectif 1 avec la description : [Former les nouveaux employés](objectif) avec un poids de [10](poids)% résultats attendus : [100% des formations complétées](resultat)
+      
+      - Ajouter l'objectif 4 : [développer les compétences techniques de l'équipe.](objectif) Poids : [15 %](poids) Résultat attendu : [formation complétée pour 100 % des employés d'ici 6 mois.](resultat)
+      
+      - Créer l'objectif 6 décrit comme suit : [réduire l'empreinte carbone de l'entreprise.](objectif) Pondération : [12 %](poids) Indicateur : [diminution de 20 % des émissions CO2 d'ici fin d'année.](resultat)
+      
+      - je veux ajouter un objectif, le 3, c'est [renforcer la communication interne](objectif) avec un poids de [18](poids) pourcent et [85 % d'amélioration au premier trimestre](resultat)
+      
+      - ajoute moi l'objectif 2 stp, description [optimiser la gestion des stocks](objectif) ça pèse [22](poids)% et on vise [15 % de réduction des coûts](resultat)
+      
+      - objectif 3 [renforcer communication interne](objectif) [18](poids)% [85% amélioration](resultat)
+      
+      - Ajouter un objectif : [garantir la qualité des produits finis.](objectif) Poids : [30 %](poids) Résultat : [taux de défauts inférieur à 1 % sur l'année.](resultat)
+      # ========== SECTION 13 : FORMAT "AVEC COMME" (NOUVEAU) ==========
+
+      # Format : "Objectif N : X avec comme poids Y% pour avoir Z"
+      - Objectif 1 : [Identifier les bugs dans les applications actuelles](objectif) avec comme poids [20](poids)% pour avoir [une application fonctionnelle et performante](resultat)
+
+      - Objectif 2 : [Améliorer la qualité du code](objectif) avec comme poids [25](poids) % pour avoir [un taux de bugs inférieur à 5%](resultat)
+
+      - Objectif 3 : [Former les développeurs](objectif) avec comme poids [15](poids)% pour avoir [100% de l'équipe formée](resultat)
+
+      - Objectif 4 : [Optimiser les performances](objectif) avec comme poids [30](poids) % pour avoir [un temps de réponse inférieur à 2 secondes](resultat)
+
+      - Objectif 5 : [Documenter le code source](objectif) avec comme poids [10](poids)% pour avoir [une documentation complète à 90%](resultat)
+
+      # Format : "Objectif N : X avec un poids de Y% pour Z"
+      - Objectif 1 : [Réduire les erreurs de production](objectif) avec un poids de [35](poids)% pour [diminuer les incidents de 80%](resultat)
+
+      - Objectif 2 : [Mettre en place des tests automatisés](objectif) avec un poids de [20](poids) % pour [couvrir 100% du code critique](resultat)
+
+      - Objectif 3 : [Améliorer la sécurité](objectif) avec un poids de [30](poids)% pour [éliminer toutes les vulnérabilités critiques](resultat)
+
+      # Format sans "pour avoir" (directement le résultat)
+      - Objectif 1 : [Moderniser l'infrastructure](objectif) avec comme poids [25](poids)% [migration complète vers le cloud d'ici 6 mois](resultat)
+
+      - Objectif 2 : [Renforcer la collaboration](objectif) avec comme poids [15](poids) % [85% de satisfaction mesurée au premier trimestre](resultat)
+
+      # Format avec fautes de frappe (pour robustesse)
+      - Objectif 1 : [Identifier les bug dans les application actuelle](objectif) avec comme poids [20](poids)% pour avoir [une application fonctionnelle et perfoment](resultat)
+
+      - Objectif 2 : [Ameliorer la qualitée du code](objectif) avec comme poids [25](poids) % pour avoir [un taux de bug inferieur a 5%](resultat)
+
+      # Format très compact
+      - Objectif 1 : [Corriger bugs](objectif) avec comme poids [20](poids)% [application stable](resultat)
+
+      - Objectif 2 : [Optimiser code](objectif) avec comme poids [30](poids)% [performances améliorées](resultat)
+
+      # Format avec "afin de" au lieu de "pour avoir"
+      - Objectif 1 : [Identifier les bugs critiques](objectif) avec comme poids [20](poids)% afin de [garantir zéro défaut majeur](resultat)
+
+      - Objectif 2 : [Déployer en continu](objectif) avec comme poids [25](poids) % afin d'[atteindre 10 releases par mois](resultat)
+  
+      - L'objectif est [d'avoir une logiciel fiable et performent](objectif), pour une poids de [20](poids)% afin de [garantir la performence de tous les logiciel deja existant dans notre departement](resultat)
+  # ==================== REGEX POUR POIDS (OPTIMISÉE) ====================
+  - regex: poids
+    examples: |
+      # Capture du nombre avec ou sans espace après ":"
+      - \bPoids\s*:?\s*(\d{1,3})\s*(?:%|pourcent|pour cent)?\b
+      - \bpoids\s*:?\s*(\d{1,3})\s*(?:%|pourcent|pour cent)?\b
+      - \b(\d{1,3})\s*(?:%|pourcent|pour cent)\b
+      - pondér[eé]\s*(?:à|de)?\s*(\d{1,3})
+      - représente\s*(\d{1,3})\s*(?:%|pourcent)
+      - avec\s*un\s*poids\s*de\s*(\d{1,3})
+      - ça\s*pèse\s*(\d{1,3})
+      - c'est\s*(\d{1,3})\s*(?:%|pourcent)
+      
+  # ==================== REGEX POUR OBJECTIF (NOUVEAU) ====================
+  - regex: objectif
+    examples: |
+      - \bObjectif\s*\d+\s*:?\s*(.+?)(?=\s+Poids|$)
+      - \bobjectif\s*\d+\s*:?\s*(.+?)(?=\s+poids|$)
+      
+  # ==================== REGEX POUR RÉSULTAT (NOUVEAU) ====================
+  - regex: resultat
+    examples: |
+      - \bRésultat(?:s)?\s+attendu(?:s)?\s*:?\s*(.+)$
+      - \brésultat(?:s)?\s+attendu(?:s)?\s*:?\s*(.+)$
+      - \bRésultat\s*:?\s*(.+)$
+      - \brésultat\s*:?\s*(.+)$
+      - \bIndicateur(?:s)?\s*:?\s*(.+)$
+      - \bindicateur(?:s)?\s*:?\s*(.+)$

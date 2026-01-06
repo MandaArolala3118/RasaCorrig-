@@ -1,0 +1,144 @@
+# ========== STORIES ==========
+version: "3.1"
+stories:
+  - story: Lancement de flux avec permission autorisée et informations complètes
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: true
+      - intent: confirm
+      - action: action_soumettre_flux_recrutement
+
+  - story: Lancement de flux avec informations incomplètes puis complétées
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: false
+      - intent: inform
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: true
+      - intent: confirm
+      - action: action_soumettre_flux_recrutement
+
+  - story: Lancement de flux annulé après refus utilisateur
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: true
+      - intent: refus
+      - action: utter_annuler_operation
+
+  - story: Lancement de flux avec permission non autorisée
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: false
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: utter_non_autoriser_flux
+
+  - story: Lancement de flux avec plusieurs étapes de complétion
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: false
+      - intent: inform
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: false
+      - intent: inform
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: true
+      - intent: confirm
+      - action: action_soumettre_flux_recrutement
+
+  - story: Lancement de flux avec informations partiellement complétées puis annulé
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: false
+      - intent: inform
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: true
+      - intent: refus
+      - action: utter_annuler_operation
+
+  - story: Lancement de flux avec inform_validation au lieu de inform
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: false
+      - intent: inform_validation
+      - action: action_verify_if_all_information_flux_is_complet
+      - slot_was_set:
+          - verify_flux: true
+      - intent: confirm
+      - action: action_soumettre_flux_recrutement

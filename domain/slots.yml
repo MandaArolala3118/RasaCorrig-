@@ -1,0 +1,449 @@
+version: "3.1"
+
+slots:
+  add_ddr_is_complet:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  
+  type_demande:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: type_demande
+
+  intention_demande:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: intention_demande
+
+  username:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  role:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  matricule:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: matricule
+
+  permission:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  demandeur:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: demandeur
+
+  responsable_rh:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: responsable_rh
+
+  poste_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  nom_poste:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nom_poste
+
+  effectif:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: effectif
+
+  nombre_postes:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nombre_postes
+
+  nom_encadreur:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nom_encadreur
+
+  poste_encadreur:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  nature_contrat:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: nature_contrat
+
+  duree_contrat:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: duree_contrat
+        conditions:
+          - active_loop: form_add_ddr
+
+  date_mise_en_service:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date_mise_en_service
+
+  date_debut:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date_debut
+
+  date_fin:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date_fin
+
+  direction:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: direction
+
+  direction_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  exploitation:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: exploitation
+
+  exploitation_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  motif:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: motif
+
+  motif_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  situation_budget:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: situation_budget
+
+  situation_budget_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  justification:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: justification
+        intent: identification_demande
+      - type: from_entity
+        entity: justification
+        intent: provide_justification
+      - type: from_text
+        intent: provide_justification
+        conditions:
+          - active_loop: form_add_ddr
+            requested_slot: justification
+
+  is_complet_objectifs:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  
+  objectifs_list:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  missing_fields_list:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  objectif:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: objectif
+
+  poids:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: poids
+
+  resultat_attendu:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: resultat_attendu
+
+  dotations_list:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: dotations_list
+
+  categorie_dotation:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: categorie_dotation
+
+  dotation:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: dotation
+  
+  dotation_complete:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+  
+  dotation_option:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: dotation_option
+
+  dotation_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  piece_jointes:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: piece_jointes
+
+  piece_jointe:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: piece_jointe
+
+  nom_fichier:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nom_fichier
+
+  type_fichier:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: type_fichier
+
+  requested_slot:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  info_types_a_afficher:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+      
+  action_demandee:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: action_demandee
+        
+  action_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: action_type
+
+  nom_flux:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nom_flux
+
+  id_demande:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: id_demande
+  nom_validateur:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nom_validateur
+  nom_validateur_list:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+      
+  nom_flux_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+      
+  responsable_rh_username:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+  verify_flux:
+    type: bool
+    mappings:
+      - type: custom
+  validateurs_details:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  verification_add_flux:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  
+  flux_propose:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+  flux_creation_requested:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+      
+  flux_desordonne_propose:
+    type: any
+    mappings:
+      - type: custom
+  
+  verification_flux_desordonne:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+  commentaire:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: commentaire
+  verify_validation:
+    type: bool
+    mappings:
+      - type: custom
+  verify_rejection:
+    type: bool
+    mappings:
+      - type: custom
+  ajout_ddr_intent:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  validation_intent:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  rejection_intent:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  lancement_flux_intent:
+    type: bool
+    influence_conversation: false
+    mappings:
+      - type: custom

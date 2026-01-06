@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel 3D Cylindrique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            perspective: 1200px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .shadow {
+            position: absolute;
+            width: 600px;
+            height: 100px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 30%, transparent 70%);
+            border-radius: 50%;
+            bottom: 15%;
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        .carousel {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            transform-style: preserve-3d;
+            animation: rotate 20s infinite linear;
+            transform: rotateX(-5deg);
+        }
+
+        .carousel.paused {
+            animation-play-state: paused;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(-5deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(-5deg) rotateY(360deg);
+            }
+        }
+
+        .carousel-item {
+            position: absolute;
+            width: 350px;
+            height: 250px;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Positionnement des 5 images autour du cylindre */
+        .carousel-item:nth-child(1) {
+            transform: rotateY(0deg) translateZ(320px);
+            background-image: url("image 7.png");
+        }
+
+        .carousel-item:nth-child(2) {
+            transform: rotateY(72deg) translateZ(320px);
+            background-image: url("image 8.png");
+        }
+
+        .carousel-item:nth-child(3) {
+            transform: rotateY(144deg) translateZ(320px);
+            background-image: url("image 9.png");
+        }
+
+        .carousel-item:nth-child(4) {
+            transform: rotateY(216deg) translateZ(320px);
+            background-image: url("image 10.png");
+        }
+
+        .carousel-item:nth-child(5) {
+            transform: rotateY(288deg) translateZ(320px);
+            background-image: url("image 11.png");
+        }
+
+        .carousel-item .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .carousel-item h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-item p {
+            font-size: 16px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 50px;
+            display: none;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        button {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .title {
+            position: fixed;
+            top: 50px;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .instructions {
+            position: fixed;
+            top: 100px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shadow"></div>
+        <div class="carousel" id="carousel">
+            <div class="carousel-item">
+            </div>
+            <div class="carousel-item">
+            </div>
+            <div class="carousel-item">
+            </div>
+            <div class="carousel-item">
+            </div>
+            <div class="carousel-item">
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn">← Précédent</button>
+        <button id="playPauseBtn">⏸ Pause</button>
+        <button id="nextBtn">Suivant →</button>
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let rotation = 0;
+        let isPaused = false;
+        let isDragging = false;
+        let startX = 0;
+        let currentRotation = 0;
+
+        // Gestion du bouton Play/Pause
+        playPauseBtn.addEventListener('click', () => {
+            isPaused = !isPaused;
+            if (isPaused) {
+                carousel.classList.add('paused');
+                playPauseBtn.textContent = '▶ Play';
+            } else {
+                carousel.classList.remove('paused');
+                playPauseBtn.textContent = '⏸ Pause';
+            }
+        });
+
+        // Navigation manuelle
+        prevBtn.addEventListener('click', () => {
+            rotation -= 72; // 360/5 = 72 degrés par image
+            updateRotation();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            rotation += 72;
+            updateRotation();
+        });
+
+        function updateRotation() {
+            carousel.style.animation = 'none';
+            carousel.style.transform = `rotateX(-5deg) rotateY(${rotation}deg)`;
+            
+            setTimeout(() => {
+                if (!isPaused) {
+                    carousel.style.animation = 'rotate 20s infinite linear';
+                    carousel.style.animationDelay = `-${(rotation % 360) / 360 * 20}s`;
+                }
+            }, 500);
+        }
+
+        // Interaction tactile et souris
+        carousel.addEventListener('mousedown', startDrag);
+        carousel.addEventListener('touchstart', startDrag);
+
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('touchmove', drag);
+
+        document.addEventListener('mouseup', endDrag);
+        document.addEventListener('touchend', endDrag);
+
+        function startDrag(e) {
+            isDragging = true;
+            startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+            currentRotation = rotation;
+            carousel.classList.add('paused');
+        }
+
+        function drag(e) {
+            if (!isDragging) return;
+            
+            const currentX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+            const diff = currentX - startX;
+            rotation = currentRotation + diff * 0.5;
+            
+            carousel.style.animation = 'none';
+            carousel.style.transform = `rotateX(-5deg) rotateY(${rotation}deg)`;
+        }
+
+        function endDrag() {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            if (!isPaused) {
+                carousel.classList.remove('paused');
+                carousel.style.animation = 'rotate 20s infinite linear';
+                carousel.style.animationDelay = `-${(rotation % 360) / 360 * 20}s`;
+            }
+        }
+
+        // Pause au survol
+        carousel.addEventListener('mouseenter', () => {
+            if (!isPaused) {
+                carousel.style.animationPlayState = 'paused';
+            }
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            if (!isPaused) {
+                carousel.style.animationPlayState = 'running';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+version: "3.1"
+
+nlu:
+  - regex: id_demande
+    examples: |
+      # require an explicit prefix (#, ID, or 'num') to avoid matching plain numbers like '20' or '2026'
+      - \b#\d{2,6}\b
+      - \bID\s*[:#]?\s*\d{2,6}\b
+      - \bnum(?:ero|éro)?\s*(?:de\s*)?\d{2,6}\b
+
+  - regex: date_mise_en_service
+    examples: |
+      # more precise: allow optional 'le' or surrounding words; match full day+month+year when present
+      - \b(?:le\s+)?\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}\b
+      - \b(?:le\s+)?\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}\b
+      - \b(?:le\s+)?\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
+      - \b(?:en\s+)?(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
+
+  - regex: effectif
+    examples: |
+      # capture quantities like '2 personne', '3 personnes', 'pour 2 postes', etc.
+      - \b\d+\s*(?:personne|personnes|poste|postes|pers|collaborateur|collaborateurs)\b
+      - \bpour\s+\d+\s*(?:personne|personnes|poste|postes)\b

@@ -1,0 +1,35 @@
+{
+  "situation_budget": {
+    "precision": 1.0,
+    "recall": 0.15384615384615385,
+    "f1-score": 0.2666666666666667,
+    "support": 39,
+    "confused_with": {}
+  },
+  "motif": {
+    "precision": 1.0,
+    "recall": 0.9152542372881356,
+    "f1-score": 0.9557522123893806,
+    "support": 59,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.6122448979591837,
+    "f1-score": 0.759493670886076,
+    "support": 98
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.5345501955671448,
+    "f1-score": 0.6112094395280236,
+    "support": 98
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.6122448979591837,
+    "f1-score": 0.6815242911323822,
+    "support": 98
+  },
+  "accuracy": 0.8115942028985508
+}

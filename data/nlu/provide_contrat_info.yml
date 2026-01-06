@@ -1,0 +1,145 @@
+version: "3.1"
+
+nlu:
+  - intent: provide_contrat_info
+    examples: |
+
+      - [un](effectif) [stagiaire](nature_contrat)
+
+      - [1](effectif) [stagiaire](nature_contrat)
+      - [3](effectif) [stagiaires](nature_contrat)
+
+      - Mise en service le [15 janvier 2025](date_mise_en_service)
+      - Démarrage le [premier mars 2026](date_mise_en_service)
+      - Début le [12 décembre 2026](date_debut)
+      - Fin le [31 décembre 2025](date_fin)
+      - Du [1er février 2025](date_debut) au [31 juillet 2025](date_fin)
+      - Mise en service [25 avril 2025](date_mise_en_service)
+      - Commence le [vingt janvier 2026](date_debut)
+      
+      - Mise en service le [15 janvier](date_mise_en_service)
+      - Démarrage le [premier mars](date_mise_en_service)
+      - Début le [12 décembre](date_debut)
+      - Fin le [31 décembre](date_fin)
+      - Mise en service [premier avril](date_mise_en_service)
+      - Commence le [20 mai](date_debut)
+
+      - Le contrat est un [stage](nature_contrat) pour une durée de six mois démarrant le [premier janvier](date_mise_en_service)
+      - C'est un [CDD](nature_contrat) qui commence le [15 mars 2026](date_debut)
+      - On cherche [un](effectif) développeur en [CDI](nature_contrat) dès le [premier février](date_mise_en_service)
+      - Mise en service prévue le [12 décembre](date_mise_en_service)
+
+  - lookup: nature_contrat
+    examples: |
+      - CDI
+      - CDD
+      - Stage
+      - stage
+      - externalisé
+      - journalier
+
+  - synonym: CDI
+    examples: |
+      - contrat à durée indéterminée
+      - contrat permanent
+      - embauche en CDI
+      - poste permanent
+      - contrat fixe
+      - cdi
+      - CDI
+
+  - synonym: CDD
+    examples: |
+      - contrat à durée déterminée
+      - contrat à terme
+      - CDD renouvelable
+      - cdd
+      - CDD
+
+  - synonym: Stage
+    examples: |
+      - stage conventionné
+      - stage en entreprise
+      - stage pratique
+      - stagiaire
+      - stagiaires
+      - stage de fin d'études
+      - stage professionnel
+      - stage
+      - Stage
+      - un stage
+      - le stage
+
+  - synonym: externalisé
+    examples: |
+      - contrat externalisé
+      - freelance
+      - prestataire externe
+      - consultant externe
+      - indépendant
+      - externalisation
+      - sous-traitance
+      - prestataire
+      - consultant
+
+  - synonym: journalier
+    examples: |
+      - travailleur journalier
+      - emploi journalier
+      - contrat journalier
+      - main d oeuvre journalière
+      - journée
+      - à la journée
+      - travail à la journée
+
+  # ============================================================
+  # REGEX PATTERNS AMÉLIORÉS
+  # ============================================================
+
+  - regex: effectif
+    examples: |
+      - (?i)effectif\s*[:=]?\s*([1-9]\d*)
+      - (?i)nombre\s*(?:de)?\s*[:=]?\s*([1-9]\d*)
+      - \b([1-9]\d*)\s*(?:personnes?|postes?|employés?|collaborateurs?|stagiaires?|consultants?|prestataires?|travailleurs?)\b
+      - \b(un|une)\b(?=\s+(?:personne|poste|employé|stagiaire|développeur|consultant))
+      - \b(deux|trois|quatre|cinq|six|sept|huit|neuf|dix)\s*(?:personnes?|postes?|employés?)
+
+  - regex: date_mise_en_service
+    examples: |
+      - (?i)(?:mise\s+en\s+service|démarrage|début)\s*(?:est)?\s*(?:prévue?)?\s*(?:pour)?\s*(?:le\s+)?(\d{1,2}[/-]\d{1,2}[/-]\d{4})
+      - \b(0?[1-9]|[12][0-9]|3[01])[/-](0?[1-9]|1[0-2])[/-](\d{4})\b
+      - \b(\d{4})-(0?[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])\b
+      
+      - (?i)\b(\d{1,2}|premier|1er)\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(\d{4})\b
+      - (?i)\b(deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt|vingt-cinq|trente)\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
+      
+      - (?i)\b(\d{1,2}|premier|1er)\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\b(?!\s+\d{4})
+      - (?i)\b(deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingt|vingt-cinq|trente)\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b(?!\s+\d{4})
+
+  - regex: duree_contrat
+    examples: |
+      - (?i)(?:pour\s+)?(?:une\s+)?durée\s+de\s+(\d+)\s*(mois|an|ans|année|années)
+      - (?i)durée\s*(?:du\s+contrat)?\s*[:=]?\s*(\d+)\s*(mois|an|ans|année|années)
+      - \b(\d+)\s*(mois|an|ans|année|années)\b
+      - \b(six|douze|trois|quatre|cinq|sept|huit|neuf|dix|onze)\s+(mois|an|ans|année|années)\b
+      - \b(une?)\s*(an|année)\b
+
+  - regex: date_debut
+    examples: |
+      - (?i)(?:date\s+de\s+)?début\s*[:=]?\s*(?:le\s+)?(\d{1,2}[/-]\d{1,2}[/-]\d{4})
+      - (?i)(?:commence|débute|à\s+partir\s+du)\s*[:=]?\s*(?:le\s+)?(\d{1,2}[/-]\d{1,2}[/-]\d{4})
+      - \b(0?[1-9]|[12][0-9]|3[01])[/-](0?[1-9]|1[0-2])[/-](\d{4})\b
+      
+      - (?i)\b(\d{1,2}|premier|1er)\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(\d{4})\b
+      
+      - (?i)\b(\d{1,2}|premier|1er)\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\b(?!\s+\d{4})
+
+  - regex: date_fin
+    examples: |
+      - (?i)(?:date\s+de\s+)?fin\s*[:=]?\s*(?:le\s+)?(\d{1,2}[/-]\d{1,2}[/-]\d{4})
+      - (?i)(?:se\s+termine|jusqu'au|au)\s*[:=]?\s*(?:le\s+)?(\d{1,2}[/-]\d{1,2}[/-]\d{4})
+      - \b(0?[1-9]|[12][0-9]|3[01])[/-](0?[1-9]|1[0-2])[/-](\d{4})\b
+      
+      - (?i)\b(\d{1,2}|premier|1er)\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+(\d{4})\b
+      
+      - (?i)\b(\d{1,2}|premier|1er)\s+(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\b(?!\s+\d{4})

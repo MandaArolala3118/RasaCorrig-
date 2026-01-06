@@ -1,0 +1,82 @@
+# ========== RULES ==========
+version: "3.1"
+
+rules:
+  - rule: Flux lancement après vérification permission (false)
+    condition:
+      - slot_was_set:
+          - permission: false
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande : "DDR"
+    steps:
+      - action: utter_non_autoriser_flux
+
+
+  - rule: Vérification complétude flux après inform (sans proposition active)
+    condition:
+      - slot_was_set:
+          - permission: true
+          - role: "ERM"
+          - intention_demande: "flux"
+          - verify_flux: false
+          - lancement_flux_intent: true
+          - type_demande : "DDR"
+      - active_loop: null
+    steps:
+      - or:
+        - intent: inform
+        - intent: inform_validation
+        - intent: lancer_flux_recrutement
+      - action: action_verify_if_all_information_flux_is_complet
+
+  - rule: Annuler lancement de flux après demande de confirmation
+    condition:
+      - slot_was_set:
+          - verify_flux: true
+          - role: "ERM"
+          - intention_demande: "flux"
+          - lancement_flux_intent: true
+          - type_demande : "DDR"
+    steps:
+      - action: action_verify_if_all_information_flux_is_complet
+      - intent: refus
+      - action: utter_annuler_operation
+
+  - rule: Soumettre flux de recrutement après demande de confirmation
+    condition:
+      - slot_was_set:
+          - verify_flux: true
+          - role: "ERM"
+          - intention_demande: "flux"
+          - lancement_flux_intent: true
+          - type_demande : "DDR"
+    steps:
+      - action: action_verify_if_all_information_flux_is_complet
+      - intent: confirm
+      - action: action_soumettre_flux_recrutement
+
+  - rule: Lancement de flux initial
+    steps:
+      - intent: lancer_flux_recrutement
+        entities:
+          - intention_demande: "flux"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - intention_demande: "flux"
+          - role: "ERM"
+          - lancement_flux_intent: true
+          - type_demande : "DDR"
+      - action: action_verify_if_all_information_flux_is_complet
+    wait_for_user_input: false
+
+  - rule: Réinitialiser le contexte avant lancement de flux
+    condition:
+      - slot_was_set:
+          - intention_demande: "flux"
+          - type_demande : "DDR"
+    steps:
+      - action: action_verifier_permission
+    wait_for_user_input: false

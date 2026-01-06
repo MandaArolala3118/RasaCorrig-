@@ -1,0 +1,59 @@
+version: "3.1"
+
+nlu:
+  # ===== DEMANDE D'AIDE GÉNÉRALE =====
+  - intent: demande_aide_generale
+    examples: |
+      - aide
+      - help
+      - j'ai besoin d'aide
+      - peux-tu m'aider
+      - comment ça marche
+      - que peux-tu faire
+      - qu'est-ce que tu peux faire
+      - quelles sont tes fonctionnalités
+      - aide générale
+      - aide moi
+      - besoin d'aide
+      - je ne sais pas quoi faire
+      - comment utiliser
+      - guide
+      - menu
+      - fonctionnalités
+      - que faire
+      - comment faire
+      - explique moi
+      - je suis perdu
+      - commence
+      - démarrer
+
+  # ===== DEMANDE D'AIDE POUR UNE ACTION SPÉCIFIQUE =====
+  - intent: demande_aide_action
+    examples: |
+      - aide pour [ajouter](action_type) une [DDR](action_demandee)
+      - comment [créer](action_type) une [DMOE](action_demandee)
+      - aide [création](action_type) [DDR](action_demandee)
+      - comment faire pour [ajouter](action_type) une [DMI](action_demandee)
+      - explique comment [ajouter](action_type) une [DDR](action_demandee)
+      - [ajouter](action_type) [DRI](action_demandee) comment faire
+      - procédure pour [créer](action_type) une [DRI](action_demandee)
+      - étapes pour [ajouter](action_type) [DRI](action_demandee)
+      - guide [création](action_type) [DDR](action_demandee)
+      - aide [ajout](action_type) [DDR](action_demandee)
+      - comment [enregistrer](action_type) une [DMI](action_demandee)
+      - aide pour [faire](action_type) une [DMI](action_demandee)
+      - comment [soumettre](action_type) une [DMI](action_demandee)
+      - aide [modification](action_type) [DMI](action_demandee)
+      - comment [modifier](action_type) une [DMI](action_demandee)
+      - aide pour [changer](action_type) une [DDR](action_demandee)
+      - procédure [modification](action_type)
+      - aide [suppression](action_type) [DDR](action_demandee)
+      - comment [supprimer](action_type) une [DRI](action_demandee)
+      - aide [consultation](action_type) [DDR](action_demandee)
+      - comment [voir](action_type) mes [DDR](action_demandee)
+      - comment [consulter](action_type) les demandes
+      - aide pour [lister](action_type) les [DRI](action_demandee)
+      - aide détaillée [ajout](action_type) [DMOE](action_demandee)
+      - je veux de l'aide pour [créer](action_type) [DMOE](action_demandee)
+      - besoin d'aide [création](action_type) [DMOE](action_demandee)
+      - explique [ajout](action_type) [DDR](action_demandee)

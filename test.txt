@@ -1,0 +1,167 @@
+classDiagram
+    class MpUser {
+        +String Username
+        +String Role
+        +Boolean ERM
+        +Boolean EA
+        +Boolean EV
+        +Boolean MOE
+    }
+    
+    class UserDetails {
+        +int Id
+        +String FullName
+        +String Email
+        +String Poste
+        +String Login
+        +String Matricule
+    }
+    
+    class MpDemande {
+        +int IdDdr
+        +String NatureContrat
+        +String Duree
+        +int Effectif
+        +String Encadreur
+        +Date DateMiseEnService
+        +String Justification
+        +String Demandeur
+        +String ResponsableRh
+        +int PosteId
+        +int DirectionId
+        +int ExploitationId
+        +String PosteEncadreur
+        +String PieceJointes
+        +int MotifId
+        +int SituationBudgetId
+        +int StatutId
+        +int StatutTraitementId
+        +String CommentaireStatut
+        +int UserId
+        +String InformationsPlus
+        +String Username
+    }
+    
+    class MpDirection {
+        +int IdDir
+        +String NomDirection
+        +String Type
+    }
+    
+    class MpPoste {
+        +int IdPoste
+        +String NomPoste
+        +String Type
+    }
+    
+    class MpExploitation {
+        +int IdExp
+        +String NomExploitation
+    }
+    
+    class MpMotifDemande {
+        +int IdMotif
+        +String Motif
+    }
+    
+    class MpSituationBudget {
+        +int IdSb
+        +String SituationBudget
+        +String Type
+    }
+    
+    class MpStatut {
+        +int IdStatut
+        +String Statut
+    }
+    
+    class MpStatutTraitement {
+        +int IdStatutTraitement
+        +String NomStatut
+    }
+    
+    class MpObjectifDemande {
+        +int IdOd
+        +String Objectif
+        +int Poids
+        +String ResultatAttendu
+        +int MpDemandeId
+    }
+    
+    class MpDotationListe {
+        +int IdDotation
+        +String DotationOption
+        +int CategorieDotationId
+        +String NomCategorie
+        +Boolean Checked
+    }
+    
+    class MpLiaisonDdrdotation {
+        +int IdLiaisonDemande
+        +int DemandeId
+        +int DotationId
+    }
+    
+    class MpFluxMouvement {
+        +int IdFlux
+        +String NomFlux
+        +int DirectionId
+        +int NomFluxId
+        +String NomFluxMouvement
+        +String V1
+        +String V2
+        +String V3
+        +String V4
+        +String V5
+        +String TypeFlux
+    }
+    
+    class MpFluxTache {
+        +int IdTache
+        +String Commentaire
+        +String DateValidation
+        +String Validateur
+        +String NomValidateur
+        +Boolean Validation
+        +Boolean Etat
+        +int DemandeId
+        +int FluxId
+        +Object ValidateurDetails
+    }
+    
+    class MpComplementDdr {
+        +int IdComp
+        +Date Date
+        +String Commentaire
+        +int DemandeId
+    }
+
+    %% Relations principales
+    MpUser "1" -- "0..*" MpDemande : crée (UserId) >
+    MpDemande "1" -- "1" MpDirection : DirectionId >
+    MpDemande "1" -- "1" MpPoste : PosteId >
+    MpDemande "1" -- "1" MpExploitation : ExploitationId >
+    MpDemande "1" -- "1" MpMotifDemande : MotifId >
+    MpDemande "1" -- "1" MpSituationBudget : SituationBudgetId >
+    MpDemande "1" -- "1" MpStatut : StatutId >
+    MpDemande "1" -- "0..1" MpStatutTraitement : StatutTraitementId >
+    
+    MpDemande "1" -- "3..5" MpObjectifDemande : contient >
+    MpDemande "1" -- "1..*" MpLiaisonDdrdotation : liée à >
+    MpLiaisonDdrdotation "1" -- "1" MpDotationListe : DotationId >
+    
+    MpDemande "0..1" -- "0..*" MpFluxTache : processus validation >
+    MpFluxTache "1" -- "1" MpFluxMouvement : FluxId >
+    MpFluxTache "1" -- "1" MpUser : Validateur >
+    
+    MpDemande "1" -- "0..*" MpComplementDdr : compléments >
+    
+    MpFluxMouvement "1" -- "1" MpDirection : rattaché à >
+
+    %% Notes et contraintes
+    note for MpUser "RG1: ERM OU EV (au moins un)\nRG2: Si validateur → EV=true\nRG12: Seul ERM peut créer flux"
+    note for MpDemande "RG3-8: Composition obligatoire\nRG9: CDI sans Duree\nPieceJointes: au moins 1 fichier"
+    note for MpObjectifDemande "RG10: Min 3, Max 5 objectifs\nSomme des Poids = 100%"
+    note for MpLiaisonDdrdotation "RG11: Au moins 1 dotation"
+    note for MpFluxMouvement "RG13: V1 à V5 (1 à 5 niveaux)\nRG14: Validation séquentielle"
+    note for MpFluxTache "RG15-18: Validation par EV\nTous doivent valider (Validation=true)\nRG19-23: Notifications emails"

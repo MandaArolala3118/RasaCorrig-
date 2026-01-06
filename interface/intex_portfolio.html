@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globe Web avec Ciel Étoilé</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Jura', sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        /* Couche d'étoiles en arrière-plan */
+        #sky {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            animation: twinkle linear infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Canvas Three.js par-dessus */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: block;
+        }
+
+        /* Overlay noir pour la transition */
+        #blackOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            z-index: 4;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        #blackOverlay.active {
+            opacity: 1;
+        }
+
+        /* Texte de bienvenue */
+        #welcome {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%; 
+            padding: 50px;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+            background: #11111133;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1s forwards;
+            box-shadow: rgba(255, 255, 255, 0.377) 0px 0px 5px 5px;
+            min-height: 40vh;
+            height: auto;
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        #welcome.fadeOut {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+
+        #welcome .content-welcome p {
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        #welcome .content-welcome .legende {
+            color: white;
+            font-size: 1.25rem;
+            font-weight:bolder;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        #welcome .content-welcome{
+            display: flex;
+            flex-direction: column;   
+            justify-content: center; 
+            align-items: center; 
+            gap: 5vh; 
+        }
+        
+        #welcome .content-welcome .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-shadow: rgba(255, 255, 255, 0.377) 0px 0px 5px 5px;
+            color: white;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+            background: rgba(17,17,17,0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            cursor: pointer;
+            font-size: 1.25rem;
+            font-weight: bolder;
+            width: 250px;
+            transition: all 0.3s ease;
+        }
+
+        #welcome .content-welcome .btn i {
+            position: absolute;
+            right: 10px;
+            font-size: 1.25rem;
+        }
+
+        #welcome .content-welcome .btn:hover {
+            box-shadow: 0 0 15px rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+            background: rgba(197, 197, 197, 0.555);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                             0 0 40px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
+                             0 0 60px rgba(255, 255, 255, 0.5),
+                             0 0 80px rgba(255, 255, 255, 0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fond étoilé -->
+    <div id="sky"></div>
+
+    <!-- Overlay noir -->
+    <div id="blackOverlay"></div>
+
+    <!-- Texte de bienvenue -->
+    <div id="welcome">
+        <div class="content-welcome">
+            <p>WELCOME INTO MY WORD</p>
+            <span class="legende">< Success is hard to achieve, but not impossible. /></span>
+            <button class="btn" id="redirection_about_me">
+                <span>Discover it</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Script pour les étoiles -->
+    <script>
+        const sky = document.getElementById('sky');
+        const starCount = 200;
+        let stars = [];
+
+        // Créer les étoiles
+        function createStars() {
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 1.5 + 0.5;
+                const duration = Math.random() * 3 + 2;
+                const delay = Math.random() * 3;
+                
+                star.style.left = x + '%';
+                star.style.top = y + '%';
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.animationDuration = duration + 's';
+                star.style.animationDelay = delay + 's';
+                
+                sky.appendChild(star);
+                
+                stars.push({
+                    element: star,
+                    x: x,
+                    y: y,
+                    vx: -(Math.random() * 0.03 + 0.01),
+                    vy: (Math.random() - 0.5) * 0.005
+                });
+            }
+        }
+
+        // Animer le mouvement des étoiles
+        function animateStars() {
+            stars.forEach(star => {
+                star.x += star.vx;
+                star.y += star.vy;
+                
+                if (star.x < -5) {
+                    star.x = 105;
+                    star.y = Math.random() * 100;
+                }
+                
+                if (star.y <= 0 || star.y >= 100) {
+                    star.vy *= -1;
+                    star.y = Math.max(0, Math.min(100, star.y));
+                }
+                
+                star.element.style.left = star.x + '%';
+                star.element.style.top = star.y + '%';
+            });
+            
+            requestAnimationFrame(animateStars);
+        }
+
+        createStars();
+        animateStars();
+    </script>
+
+    <!-- Three.js avec import map -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+        const techs = [
+            'HTML5', 'CSS3', 'JS', 'TS', 'React', 'Vue', 'Angular', 
+            'Node', 'Next.js', 'Vite', 'Three.js', 'Tailwind', 'Sass', 
+            'Docker', 'GraphQL', 'Svelte', 'Astro', 'Express',
+            'MongoDB', 'PostgreSQL', 'Firebase', 'Rust', 'Go', 'PHP'
+        ];
+
+        // --- Scène ---
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 50; // Position initiale loin pour le zoom
+
+        const button = document.getElementById('redirection_about_me');
+        const welcomeDiv = document.getElementById('welcome');
+        const blackOverlay = document.getElementById('blackOverlay');
+
+        const renderer = new THREE.WebGLRenderer({ 
+            antialias: true,
+            alpha: true
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setClearColor(0x000000, 0); // Fond transparent
+        renderer.toneMapping = THREE.ReinhardToneMapping;
+        document.body.appendChild(renderer.domElement);
+
+        // Animation de zoom au chargement
+        let zoomProgress = 0;
+        const zoomDuration = 3000; // 3 secondes
+        const startTime = Date.now();
+        const startZ = 50;
+        const endZ = 12;
+
+        function animateZoom() {
+            const elapsed = Date.now() - startTime;
+            zoomProgress = Math.min(elapsed / zoomDuration, 1);
+            
+            // Easing function (ease-out)
+            const eased = 1 - Math.pow(1 - zoomProgress, 3);
+            
+            camera.position.z = startZ - (startZ - endZ) * eased;
+            
+            if (zoomProgress < 1) {
+                requestAnimationFrame(animateZoom);
+            }
+        }
+        
+        animateZoom();
+
+        // --- POST-PROCESSING (L'EFFET DE BRILLANCE) ---
+        const renderScene = new RenderPass(scene, camera);
+        
+        const bloomPass = new UnrealBloomPass(
+            new THREE.Vector2(window.innerWidth, window.innerHeight), 
+            1.5,
+            0.4,
+            0.1
+        );
+
+        const composer = new EffectComposer(renderer);
+        composer.addPass(renderScene);
+        composer.addPass(bloomPass);
+
+        // --- Objets ---
+        const globeGroup = new THREE.Group();
+        const linesGroup = new THREE.Group();
+        scene.add(globeGroup, linesGroup);
+
+        // 1. Structure de lignes
+        const wireGeo = new THREE.SphereGeometry(4.8, 24, 24);
+        const wireMat = new THREE.MeshBasicMaterial({
+            color: 0xffffff,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.2
+        });
+        linesGroup.add(new THREE.Mesh(wireGeo, wireMat));
+
+        // 2. Particules de lumière
+        const particlesGeo = new THREE.BufferGeometry();
+        const particlesCount = 200;
+        const posArray = new Float32Array(particlesCount * 3);
+        for(let i=0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 20;
+        }
+        particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        const particlesMat = new THREE.PointsMaterial({ size: 0.05, color: 0xffffff });
+        const particles = new THREE.Points(particlesGeo, particlesMat);
+        scene.add(particles);
+
+        // 3. Textes
+        function createTextTexture(text) {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = 512; canvas.height = 128;
+            context.fillStyle = 'white';
+            context.font = 'Bold 80px Arial';
+            context.textAlign = 'center';
+            context.fillText(text, 256, 64);
+            return new THREE.CanvasTexture(canvas);
+        }
+
+        techs.forEach((tech, i) => {
+            const phi = Math.acos(-1 + (2 * i) / techs.length);
+            const theta = Math.sqrt(techs.length * Math.PI) * phi;
+            const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ 
+                map: createTextTexture(tech),
+                color: 0xffffff
+            }));
+            sprite.position.set(5 * Math.sin(phi) * Math.cos(theta), 5 * Math.sin(phi) * Math.sin(theta), 5 * Math.cos(phi));
+            sprite.scale.set(2, 0.5, 1);
+            globeGroup.add(sprite);
+        });
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        // Variables pour l'animation de transition
+        let isTransitioning = false;
+        let transitionStartTime = 0;
+        const transitionDuration = 3000; // 3 secondes pour entrer dans le globe
+        const fadeToBlackDelay = 2000; // Commence à foncer après 2 secondes
+        const transitionStartZ = 12;
+        const transitionEndZ = -5; // Entre dans le globe
+
+        // --- Animation ---
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Animation de transition vers le globe
+            if (isTransitioning) {
+                const elapsed = Date.now() - transitionStartTime;
+                const progress = Math.min(elapsed / transitionDuration, 1);
+                
+                // Easing function (ease-in pour accélération)
+                const eased = Math.pow(progress, 2);
+                
+                // Zoom vers l'intérieur du globe
+                camera.position.z = transitionStartZ + (transitionEndZ - transitionStartZ) * eased;
+                
+                // Désactive les contrôles pendant la transition
+                controls.enabled = false;
+                
+                // Active le fondu au noir après le délai
+                if (elapsed > fadeToBlackDelay) {
+                    blackOverlay.classList.add('active');
+                }
+                
+                // Redirection à la fin
+                if (progress >= 1) {
+                    setTimeout(() => {
+                        window.location.href = 'about_me.html';
+                    }, 500);
+                }
+            } else {
+                globeGroup.rotation.y += 0.002;
+                linesGroup.rotation.y -= 0.004;
+                linesGroup.rotation.z += 0.001;
+                particles.rotation.y += 0.0005;
+                controls.update();
+            }
+
+            composer.render();
+        }
+
+        // Gestion du clic sur le bouton
+        button.addEventListener('click', () => {
+            if (!isTransitioning) {
+                isTransitioning = true;
+                transitionStartTime = Date.now();
+                
+                // Fait disparaître le texte
+                welcomeDiv.classList.add('fadeOut');
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            composer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>

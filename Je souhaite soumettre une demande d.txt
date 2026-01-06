@@ -1,0 +1,60 @@
+Je souhaite soumettre une demande d’ajout de DDR avec les informations suivantes : Poste : Stagiaire Développement Direction : Direction des Systèmes d’Information (DSI) Nature du contrat (add DDR) : Stage conventionné Exploitation : Siège Social Durée : 6 mois (du 01/11/2025 au 30/04/2026) Effectif : 1 Encadreur : Andrianantenaina Esperant RAVELOARIJAONA Poste de l’encadreur : Responsable Applicatif Et Développement Date de mise en service : 01/11/2025 Motif : Remplacement Situation budgétaire : Budgetisé Situation Justification : Ce renfort permettra d’accélérer le développement des modules internes tout en formant un jeune talent dans le cadre de notre politique d’ouverture aux stagiaires. Demandeur : Manda Arolala ANDRIANINA 
+
+Bonjour, je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siege social, pour une durée de six mois.
+L'encadreur sera Andrianantenaina , qui occupe le poste de responsable technique. La mise en service est prévue pour le 01/11/2025.
+Le motif est remplacement, avec une situation budgétaire budgetisé.
+La justification est la suivante : Ce renfort permettra d’accélérer le développement des modules internes tout en formant un jeune talent.
+Je souhaite un smartphone, un ordinateur portable, un badge, un accès public et une fiche de poste.
+Objectif 1 : Sortir des résultats d’analyses fiables tout au long du stage. Poids : 10 % Indicateurs pour mesurer les résultats attendus : Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage.
+
+l'objectif 2 est de Déclarer tous les produits non-conformes tout au long du stage, avec un poids de 50 %, en s’assurant que 100 % des produits non-conformes soient déclarés durant toute la période du stage
+
+
+l'objectif 3 est de Respecter les règles de sécurité tout au long du stage, avec un poids de 20 %, en veillant à ne provoquer aucun accident ou presque accident durant toute la période du stage.
+
+ajoute objectif 4: Atteindre une KPI superieur a l'année derniere avec un poids de 20%, résultats attendus : Augmenter le productiviter de 200%
+Bonjour, je souhaite ajouter un DDR pour [un](effectif) [développeur web]{"entity": "poste", "value": "Administrateur et Developpeur web"} dans la direction [informatique]{"entity": "direction", "value": "Administrateur et Developpeur web"}. Le contrat est  [un](effectif) [stage]{"entity": "nature_contrat_add_ddr", "value": "Stage"}, basé à [Antananarivo](exploitation), pour une durée de [six](duree) mois.
+L'encadreur sera [Andrianantenaina Esperant RAVELOARIJAONA](encadreur), qui occupe le poste de [responsable technique](poste_encadreur). La mise en service est prévue pour le [01/11/2025](date_mise_en_service).
+Le motif est  [projet temporaire](motif), avec une situation budgétaire [budget validé](situation_budget).
+La justification est la suivante : [Ce renfort permettra daccélérer le développement des modules internes tout en formant un jeune talent](justification)
+Le demandeur est [Manda Arolala ANDRIANINA](demandeur).
+
+
+Bonjour, je souhaite ajouter un DDR pour [un](effectif) [développeur web]{"entity": "poste", "value": "Administrateur et Developpeur web"} dans la direction [informatique]{"entity": "direction", "value": "Administrateur et Developpeur web"}. Le contrat est [un](effectif) [stage]{"entity": "nature_contrat_add_ddr", "value": "Stage"}, basé à [Antananarivo](exploitation), pour une durée de motif [six](duree) mois. L'encadreur sera [Andrianantenaina Esperant RAVELOARIJAONA](encadreur), qui occupe le poste de [responsable technique](poste_encadreur). La mise en service est prévue pour le [01/11/2025](date_mise_en_service). Le motif est [projet temporaire](motif), avec une situation budgétaire [budget validé](situation_budget). La justification est la suivante : [Ce renfort permettra daccélérer le développement des modules internes tout en formant un jeune talent](justification). Le demandeur est [Manda Arolala ANDRIANINA](demandeur).
+
+
+data/nlu.yml
+
+Objectif 1 : Sortir des résultats d’analyses fiables tout au long du stage. Poids : 30 % Indicateurs pour mesurer les résultats attendus : Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage.
+
+l'objectif 2 est de Déclarer tous les produits non-conformes tout au long du stage, avec un poids de 30 %, en s’assurant que 100 % des produits non-conformes soient déclarés durant toute la période du stage
+
+
+l'objectif 3 est de Respecter les règles de sécurité tout au long du stage, avec un poids de 40 %, en veillant à ne provoquer aucun accident ou presque accident durant toute la période du stage.
+
+effectif : 1 -
+motif : renfort
+situation budgetaire : budgetisé
+direction: DIN
+justification : Suite départ en congé de maternité du Mlle 002086 laborantin Us50, le labo demande un stagiaire pour les épauler juste durant cette absence (un ex stagiaire du labo est prêt à revenir avec son intérêt pour finaliser sa mémoire de fin d'étude Master II) -
+encadreur : Tianarivo RABENJAMINA
+poste : ACP froid
+
+Je souhaite ajouter un DDR pour un développeur web dans la direction informatique. Le contrat est un stage, basé à 00 siège social, pour une durée de six mois. L'encadreur sera Andrianantenaina Esperant RAVELOARIJAONA, qui occupe le poste de responsable technique. La mise en service est prévue pour le 01/11/2025. Le motif est remplacement, avec une situation budgétaire budgétisée. Objectif 1 : Sortir des résultats d'analyses fiables tout au long du stage. Poids : 30 % Indicateurs pour mesurer les résultats attendus : Indicateur métrologie des équipements du laboratoire, suivi de la DLUO des réactifs : atteindre 100 % de fiabilité durant toute la période du stage. L'objectif 2 est de Déclarer tous les produits non-conformes tout au long du stage, avec un poids de 30 %, en s'assurant que 100 % des produits non-conformes soient déclarés durant toute la période du stage. L'objectif 3 est de Respecter les règles de sécurité tout au long du stage, avec un poids de 40 %, en veillant à ne provoquer aucun accident ou presque accident durant toute la période du stage. La justification est la suivante : Ce renfort permettra d’accélérer le développement des modules internes tout en formant un jeune talent.
+Je souhaite un smartphone, un ordinateur portable, un badge, un accès public et une fiche de poste. pour le poste développeur web
+
+
+
+je veux ajouter un DDR avec comme dotation
+1. BO
+2. Accès public
+3. Ordinateur portable
+4. Smartphone
+5. Badge
+6. Fiche de poste
+
+supprimer le BO
+
+supprime image (1).png et Présentation-ENI-2024-2025-modif (1).docx
+
+modifie l'image  image (1).png en ce fichier

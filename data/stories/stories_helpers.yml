@@ -1,0 +1,15 @@
+version: "3.1"
+
+# ============================================
+# STORIES - Pour les flux conversationnels complexes uniquement
+# ============================================
+stories:
+  - story: aide generale
+    steps:
+      - intent: demande_aide_generale
+      - action: action_aide_generale
+
+  - story: aide specifique action
+    steps:
+      - intent: demande_aide_action
+      - action: action_fournir_aide_action

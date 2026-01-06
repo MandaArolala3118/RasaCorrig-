@@ -1,0 +1,287 @@
+version: "3.1"
+
+stories:
+  - story: modifier un objectif depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: modifier_objectif
+      - action: action_modifier_objectif
+  
+  - story: modifier plusieurs objectifs depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: modifier_objectifs_multiples
+      - action: action_modifier_multiple_objectifs
+  
+  - story: supprimer un objectif depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_objectif
+      - action: action_supprimer_objectif
+  
+  - story: supprimer plusieurs objectifs depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_objectifs_multiples
+      - action: action_supprimer_objectifs_multiples
+  
+  - story: supprimer tous les objectifs depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_tous_objectifs
+      - action: action_supprimer_tous_objectifs
+  
+  - story: modifier un objectif (hors contexte)
+    steps:
+      - intent: modifier_objectif
+      - action: action_modifier_objectif
+  
+  - story: modifier plusieurs objectifs (hors contexte)
+    steps:
+      - intent: modifier_objectifs_multiples
+      - action: action_modifier_multiple_objectifs
+  
+  - story: supprimer un objectif unique (hors contexte)
+    steps:
+      - intent: supprimer_objectif
+      - action: action_supprimer_objectif
+  
+  - story: supprimer plusieurs objectifs (hors contexte)
+    steps:
+      - intent: supprimer_objectifs_multiples
+      - action: action_supprimer_objectifs_multiples
+  
+  - story: supprimer tous les objectifs (hors contexte)
+    steps:
+      - intent: supprimer_tous_objectifs
+      - action: action_supprimer_tous_objectifs
+  
+  # ==================== GESTION DES PIÈCES JOINTES ====================
+  - story: modifier une pièce jointe depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: Update_piece_jointe
+      - action: action_remplacer_piece_jointe
+  
+  - story: supprimer une pièce jointe depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: suppression_piece_jointe
+      - action: action_supprimer_piece_jointe
+  
+  - story: supprimer plusieurs pièces jointes depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_plusieurs_pieces_jointes
+      - action: action_supprimer_pieces_jointes_multiples
+  
+  - story: supprimer toutes les pièces jointes depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: suppression_toutes_pieces_jointes
+      - action: action_supprimer_toutes_pieces_jointes
+  
+  - story: modifier une pièce jointe (hors contexte)
+    steps:
+      - intent: Update_piece_jointe
+      - action: action_remplacer_piece_jointe
+  
+  - story: supprimer une pièce jointe (hors contexte)
+    steps:
+      - intent: suppression_piece_jointe
+      - action: action_supprimer_piece_jointe
+  
+  - story: supprimer plusieurs pièces jointes (hors contexte)
+    steps:
+      - intent: supprimer_plusieurs_pieces_jointes
+      - action: action_supprimer_pieces_jointes_multiples
+  
+  - story: supprimer toutes les pièces jointes (hors contexte)
+    steps:
+      - intent: suppression_toutes_pieces_jointes
+      - action: action_supprimer_toutes_pieces_jointes
+  # stories.yml
+
+# ✅ CORRECTION : Story contextuelle après "utter_ask_que_faire"
+  - story: supprimer plusieurs pièces jointes - réponse avec noms
+    steps:
+      - action: action_supprimer_pieces_jointes_multiples
+      - intent: supprimer_plusieurs_pieces_jointes
+      - action: action_supprimer_pieces_jointes_multiples
+
+  # Si l'utilisateur donne directement les noms après la question
+  - story: supprimer plusieurs pièces jointes - suite directe
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_plusieurs_pieces_jointes
+      - action: action_supprimer_pieces_jointes_multiples
+      - intent: supprimer_plusieurs_pieces_jointes  # L'utilisateur répond
+      - action: action_supprimer_pieces_jointes_multiples
+  
+  # ==================== GESTION DES DOTATIONS ====================
+  - story: modifier une dotation depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: modifier_dotation
+      - action: action_remplacer_dotation
+  
+  - story: supprimer une dotation depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimmer_dotation
+      - action: action_supprimer_dotation
+  
+  - story: supprimer plusieurs dotations depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_dotation_multiple
+      - action: action_supprimer_dotations_multiples
+  
+  - story: supprimer toutes les dotations depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_tous_dotations
+      - action: action_supprimer_toutes_dotations
+  
+  - story: modifier une dotation (hors contexte)
+    steps:
+      - intent: modifier_dotation
+      - action: action_remplacer_dotation
+  
+  - story: supprimer une dotation (hors contexte)
+    steps:
+      - intent: supprimmer_dotation
+      - action: action_supprimer_dotation
+  
+  - story: supprimer plusieurs dotations (hors contexte)
+    steps:
+      - intent: supprimer_dotation_multiple
+      - action: action_supprimer_dotations_multiples
+  
+  - story: supprimer toutes les dotations (hors contexte)
+    steps:
+      - intent: supprimer_tous_dotations
+      - action: action_supprimer_toutes_dotations
+  
+  - story: supprimer plusieurs dotations - réponse avec noms
+    steps:
+      - action: action_supprimer_dotations_multiples
+      - intent: supprimer_dotation_multiple
+      - action: action_supprimer_dotations_multiples
+
+  - story: supprimer plusieurs dotations - suite directe
+    steps:
+      - action: utter_ask_que_faire
+      - intent: supprimer_dotation_multiple
+      - action: action_supprimer_dotations_multiples
+    # ==================== AFFICHAGE D'INFORMATIONS ====================
+  - story: afficher informations sans précision
+    steps:
+      - intent: afficher_informations
+      - action: action_afficher_informations
+  
+  - story: afficher informations depuis que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: afficher_informations
+      - action: action_afficher_informations
+  
+  # ==================== VALIDATION ADD_DDR - Permission false - ====================
+  
+  - story: Validation provide_poste_info hors contexte
+    steps:
+      - intent: provide_poste_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation provide_encadreur_info add_ddr - Permission false -
+    steps:
+      - intent: provide_encadreur_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation provide_contrat_info add_ddr - Permission false -
+    steps:
+      - intent: provide_contrat_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation provide_hierarchie_organisation add_ddr - Permission false -
+    steps:
+      - intent: provide_hierarchie_organisation
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation provide_justification add_ddr- Permission false -
+    steps:
+      - intent: provide_justification
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation provide_objectifs add_ddr - Permission false -
+    steps:
+      - intent: provide_objectifs
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation provide_dotation_info add_ddr - Permission false -
+    steps:
+      - intent: provide_dotation_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+
+  - story: Validation upload_piece_jointe add_ddr - Permission false -
+    steps:
+      - intent: upload_piece_jointe
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire
+  - story: Validation provide_motif_budget add_ddr - Permission false -
+    steps:
+      - intent: provide_motif_budget
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - slot_was_set:
+          - type_demande: null
+      - slot_was_set:
+          - intention_demande: null
+      - action: utter_ask_que_faire

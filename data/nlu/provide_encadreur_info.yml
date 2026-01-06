@@ -1,0 +1,65 @@
+version: "3.1"
+
+nlu:
+  # ========================================
+  # INTENT: provide_encadreur_info
+  # ========================================
+  - intent: provide_encadreur_info
+    examples: |
+      - l'encadreur sera [Jean Dupont](nom_encadreur)
+      - encadré par [Marie Martin](nom_encadreur)
+      - Encadré par [Marie Martin](nom_encadreur)
+      - sous la supervision de [Pierre Bernard](nom_encadreur)
+      - avec comme encadreur [Paul Lefevre](nom_encadreur)
+      - responsable : [Sophie Moreau](nom_encadreur)
+      - sous la responsabilité de [Camille Roux](nom_encadreur)
+      - tuteur [Émilie Girard](nom_encadreur)
+      - maître de stage [Marc André](nom_encadreur)
+      - encadreur [Mamy RAKOTONDRABE](nom_encadreur)
+      - encadreur [Sophie RAVALISON](nom_encadreur)
+      - encadreur [Haja RANDRIANARISOA](nom_encadreur)
+      - encadreur [Fidy RAKOTOMANGA](nom_encadreur)
+      - encadreur [Tantely ANDRIANASOLO](nom_encadreur)
+      - encadreur [Toky RABEMANANJARA](nom_encadreur)
+      - encadreur [Andrianantenaina Esperant RAVELOARIJAONA](nom_encadreur)
+      - L'encadreur sera [Andrianantenaina Esperant RAVELOARIJAONA](nom_encadreur), qui occupe le poste de [responsable technique](poste_encadreur)
+      - L'encadreur sera [Rakoto ANDRIAMANANTSOA](nom_encadreur)
+      - sous la supervision de [Jean Claude RASOLOFO](nom_encadreur)
+      - Le superviseur est [Nirina RAZAFINDRAKOTO](nom_encadreur)
+      - avec [Lanto RAKOTOMALALA](nom_encadreur) comme encadreur
+      - tuteur sera [Faly RANDRIAMAMPIONONA](nom_encadreur)
+      - encadré par [Zo RAMANANJATO](nom_encadreur)
+      - Encadré par [Zo RAMANANJATO](nom_encadreur)
+      - encadre par [Harinirina RAKOTOARISOA](nom_encadreur)
+      - sous la direction de [Nantenaina RAZAFIMAHATRATRA](nom_encadreur)
+      - responsable : [Miora RAHARISON](nom_encadreur)
+      - sous [Rija RAKOTONIRINA](nom_encadreur)
+      - avec comme responsable [Hery RAKOTOZAFY](nom_encadreur)
+      - manager [Tiana RATSIMANDRESY](nom_encadreur)
+      - pour le CDD encadré par [Jean Dupont](nom_encadreur)
+      - stage sous la supervision de [Pierre Bernard](nom_encadreur)
+      - CDI encadré par [Marie Martin](nom_encadreur)
+      - freelance sous [Alexandre Garcia](nom_encadreur)
+      - contrat externalisé avec [Paul Lefevre](nom_encadreur)
+      - le manager sera [Julie Simon](nom_encadreur)
+      - supervisé par [RAKOTONDRABE Mamy](nom_encadreur)
+      - avec [RAVALISON Sophie](nom_encadreur)
+      - encadreur [Jean Dupont](nom_encadreur) de la direction IT
+      - avec [Marie Martin](nom_encadreur) du service RH
+      - l'encadreur [Jean RAKOTO](nom_encadreur) qui occupe le poste de [chef de projet](poste_encadreur)
+      - sous [Marie RAZAFY](nom_encadreur) du département RH
+      - avec [Paul RANDRIAMANANA](nom_encadreur) comme superviseur technique
+      - L'encadreur est [Anja Andrianina RASOAMANANA](nom_encadreur) - [Stagiaire Magasinier Matières Premières](poste_encadreur)
+      - L'encadreur est [Andrinaina Manda Arolala](nom_encadreur) - [Stagiaire en developpement](poste_encadreur)
+      - encadré par [Manda ARolala Andrianina](nom_encadreur)
+      - Encadré par [Manda ARolala Andrianina](nom_encadreur)
+      - encadreur [Manda ARolala](nom_encadreur)
+      - sous [Andrianina Manda](nom_encadreur)
+      - avec [ARolala Manda Andrianina](nom_encadreur)
+      - superviseur [Manda A. Andrianina](nom_encadreur)
+      - tuteur [Andrianina ARolala](nom_encadreur)
+      - responsable [Manda Andrianina](nom_encadreur)
+      - encadré par [Jean Pierre RAKOTO](nom_encadreur)
+      - Encadré par [Marie Sophie RAZAFY](nom_encadreur)
+      - avec [Paul Albert RANDRIANASOLO](nom_encadreur)
+      - sous [Hery Fidy RAKOTONIRINA](nom_encadreur)

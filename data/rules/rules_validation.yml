@@ -1,0 +1,198 @@
+version: "3.1"
+
+rules:
+#========= VALIDATION RECRUTEMENT ==========
+  
+  # Permission refusée
+  - rule: Permission refusée pour validation
+    condition:
+      - slot_was_set:
+          - intention_demande: "validation"
+          - permission: false
+    steps:
+      - action: utter_non_autoriser_validation
+
+  # Confirmer la validation
+  - rule: Soumettre validation après confirmation
+    condition:
+      - slot_was_set:
+          - verify_validation: true
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - intention_demande: "validation"
+      - slot_was_set:
+          - validation_intent: true
+    steps:
+      - intent: confirm
+      - action: action_soumettre_validation_recrutement
+
+  # Annuler la validation
+  - rule: Annuler validation après refus
+    condition:
+      - slot_was_set:
+          - verify_validation: true
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - intention_demande: "validation"
+      - slot_was_set:
+          - validation_intent: true
+    steps:
+      - intent: refus
+      - action: utter_annuler_operation
+
+#========= REJET RECRUTEMENT ==========
+  
+  # Permission refusée
+  - rule: Permission refusée pour rejet
+    condition:
+      - slot_was_set:
+          - intention_demande: "rejet"
+          - permission: false
+    steps:
+      - action: utter_non_autoriser_validation
+
+  # Confirmer le rejet
+  - rule: Soumettre rejet après confirmation
+    condition:
+      - slot_was_set:
+          - verify_rejection: true
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - intention_demande: "rejet"
+      - slot_was_set:
+          - rejection_intent: true
+    steps:
+      - intent: confirm
+      - action: action_soumettre_rejet_recrutement
+
+  # Annuler le rejet
+  - rule: Annuler rejet après refus
+    condition:
+      - slot_was_set:
+          - verify_rejection: true
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - intention_demande: "rejet"
+      - slot_was_set:
+          - rejection_intent: true
+    steps:
+      - intent: refus
+      - action: utter_annuler_operation
+
+#========= RULES COMMUNS VALIDATION/REJET ==========
+  
+  # ✅ Complétion progressive - VALIDATION
+  - rule: Complétion informations validation
+    condition:
+      - slot_was_set:
+          - permission: true
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - verify_validation: false
+      - slot_was_set:
+          - intention_demande: "validation"
+      - slot_was_set:
+          - validation_intent: true
+      - active_loop: null
+    steps:
+      - or:
+        - intent: inform_validation
+        - intent: inform
+        - intent: validation_recrutement
+      - action: action_verify_if_all_information_validation_is_complet
+    wait_for_user_input: false
+
+  # ✅ Complétion progressive - REJET
+  - rule: Complétion informations rejet
+    condition:
+      - slot_was_set:
+          - permission: true
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - verify_rejection: false
+      - slot_was_set:
+          - intention_demande: "rejet"
+      - slot_was_set:
+          - rejection_intent: true
+      - active_loop: null
+    steps:
+      - or:
+        - intent: inform_validation
+        - intent: inform
+        - intent: rejection_recrutement
+      - action: action_verify_if_all_information_rejection_is_complet
+    wait_for_user_input: false
+
+  # Lancement initial validation
+  - rule: Lancement validation initial
+    steps:
+      - intent: validation_recrutement
+        entities:
+          - intention_demande: "validation"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+      - slot_was_set:
+          - intention_demande: "validation"
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - validation_intent: true
+      - slot_was_set:
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_validation_is_complet
+    wait_for_user_input: false
+
+  # Lancement initial rejet
+  - rule: Lancement rejet initial
+    steps:
+      - intent: rejection_recrutement
+        entities:
+          - intention_demande: "rejet"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+      - slot_was_set:
+          - intention_demande: "rejet"
+      - slot_was_set:
+          - role: "EV"
+      - slot_was_set:
+          - rejection_intent: true
+      - slot_was_set:
+          - type_demande: "DDR"
+      - action: action_verify_if_all_information_rejection_is_complet
+    wait_for_user_input: false
+    
+  - rule: Demander confirmation validation
+    condition:
+    - slot_was_set:
+        - verify_validation: true
+    - slot_was_set:
+        - role: "EV"
+    - slot_was_set:
+        - intention_demande: "validation"
+    - slot_was_set:
+        - validation_intent: true
+    steps:
+    - action: action_demander_confirmation_validation
+    wait_for_user_input: true 
+
+  - rule: Demander confirmation rejection
+    condition:
+    - slot_was_set:
+        - verify_rejection: true      
+    - slot_was_set:
+        - role: "EV"
+    - slot_was_set:
+        - intention_demande: "rejet"
+    - slot_was_set:
+        - rejection_intent: true      
+    steps:
+    - action: action_demander_confirmation_rejet
+    wait_for_user_input: true

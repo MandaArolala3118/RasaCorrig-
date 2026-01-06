@@ -1,0 +1,69 @@
+version: "3.1"
+
+entities:
+  # Entités de base
+  - type_demande
+  - intention_demande
+  - username
+  - role
+  - matricule
+  - permission
+  - demandeur
+  - responsable_rh
+  - id_demande
+  
+  # Entités liées au poste
+  - poste_id
+  - nom_poste
+  - nom_encadreur
+  - poste_encadreur
+  - effectif
+  - nombre_postes
+  
+  # Entités liées au contrat
+  - nature_contrat
+  - duree_contrat
+  - date_mise_en_service
+  - date_debut
+  - date_fin
+  
+  # Entités hiérarchiques
+  - direction
+  - direction_id
+  - exploitation
+  - exploitation_id
+  
+  # Entités de motif et budget
+  - motif
+  - motif_id
+  - situation_budget
+  - situation_budget_id
+  - justification
+  - raison_demande
+  
+  # Entités liées aux objectifs
+  - objectifs_list
+  - objectif
+  - poids
+  - resultat_attendu
+  
+  # Entités liées aux dotations
+  - dotations_list
+  - categorie_dotation
+  - dotation
+  - dotation_option
+  - dotation_id
+  
+  # Entités liées aux pièces jointes
+  - piece_jointes
+  - piece_jointe
+  - nom_fichier
+  - type_fichier
+  
+  # Entités d'action et affichage
+  - info_type
+  - action_type
+  - action_demandee
+  
+  #validation recrutement
+  - commentaire

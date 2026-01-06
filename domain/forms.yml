@@ -1,0 +1,23 @@
+version: "3.1"
+
+forms:
+  form_add_ddr:
+    required_slots:
+      - nature_contrat
+      - duree_contrat
+      - nom_poste
+      - effectif
+      - direction
+      - exploitation
+      - nom_encadreur
+      - date_mise_en_service
+      - motif
+      - situation_budget
+      - justification
+
+  lancer_flux_form:
+    required_slots:
+      - type_demande
+      - id_demande
+      - nom_flux
+      - responsable_rh

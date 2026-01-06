@@ -1,0 +1,186 @@
+version: "3.1"
+stories:
+#========== VALIDATION RECRUTEMENT ==========
+  - story: Validation avec permission autorisée et informations complètes
+    steps:
+      - intent: validation_recrutement
+        entities:
+          - intention_demande: "validation"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "validation"
+          - validation_intent: true
+      - action: action_verify_if_all_information_validation_is_complet 
+      - slot_was_set:
+          - verify_validation: true
+      - intent: confirm
+      - action: action_soumettre_validation_recrutement
+
+  - story: Validation avec informations incomplètes puis complétées
+    steps:
+      - intent: validation_recrutement
+        entities:
+          - intention_demande: "validation"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "validation"
+          - validation_intent: true
+      - action: action_verify_if_all_information_validation_is_complet  
+      - slot_was_set:
+          - verify_validation: false
+      - intent: inform
+      - action: action_verify_if_all_information_validation_is_complet  
+      - slot_was_set:
+          - verify_validation: true
+      - intent: confirm
+      - action: action_soumettre_validation_recrutement
+
+  - story: Validation annulée après refus utilisateur
+    steps:
+      - intent: validation_recrutement
+        entities:
+          - intention_demande: "validation"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "validation"
+          - validation_intent: true
+      - action: action_verify_if_all_information_validation_is_complet 
+      - slot_was_set:
+          - verify_validation: true
+      - intent: refus
+      - action: utter_annuler_operation
+
+  - story: Validation avec permission non autorisée
+    steps:
+      - intent: validation_recrutement
+        entities:
+          - intention_demande: "validation"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: false
+          - intention_demande: "validation"
+      - action: utter_non_autoriser_validation
+
+#========== REJET RECRUTEMENT ==========
+  - story: Rejet avec permission autorisée et informations complètes
+    steps:
+      - intent: rejection_recrutement
+        entities:
+          - intention_demande: "rejet"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "rejet"
+          - rejection_intent: true
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: true
+      - intent: confirm
+      - action: action_soumettre_rejet_recrutement
+
+  - story: Rejet avec informations incomplètes puis complétées
+    steps:
+      - intent: rejection_recrutement
+        entities:
+          - intention_demande: "rejet"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "rejet"
+          - rejection_intent: true
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: false
+      - intent: inform
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: true
+      - intent: confirm
+      - action: action_soumettre_rejet_recrutement
+
+  - story: Rejet annulé après refus utilisateur
+    steps:
+      - intent: rejection_recrutement
+        entities:
+          - intention_demande: "rejet"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "rejet"
+          - rejection_intent: true
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: true
+      - intent: refus
+      - action: utter_annuler_operation
+
+  - story: Rejet avec permission non autorisée
+    steps:
+      - intent: rejection_recrutement
+        entities:
+          - intention_demande: "rejet"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: false
+          - intention_demande: "rejet"
+      - action: utter_non_autoriser_validation
+
+#========== SCENARIOS DE COMPLETION PROGRESSIVE ==========
+  - story: Validation avec plusieurs étapes de complétion
+    steps:
+      - intent: validation_recrutement
+        entities:
+          - intention_demande: "validation"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "validation"
+          - validation_intent: true
+      - action: action_verify_if_all_information_validation_is_complet  
+      - slot_was_set:
+          - verify_validation: false
+      - intent: inform
+      - action: action_verify_if_all_information_validation_is_complet  
+      - slot_was_set:
+          - verify_validation: false
+      - intent: inform
+      - action: action_verify_if_all_information_validation_is_complet  
+      - slot_was_set:
+          - verify_validation: true
+      - intent: confirm
+      - action: action_soumettre_validation_recrutement
+
+  - story: Rejet avec plusieurs étapes de complétion
+    steps:
+      - intent: rejection_recrutement
+        entities:
+          - intention_demande: "rejet"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+          - role: "EV"
+          - intention_demande: "rejet"
+          - rejection_intent: true
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: false
+      - intent: inform
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: false
+      - intent: inform
+      - action: action_verify_if_all_information_rejection_is_complet  
+      - slot_was_set:
+          - verify_rejection: true
+      - intent: confirm
+      - action: action_soumettre_rejet_recrutement

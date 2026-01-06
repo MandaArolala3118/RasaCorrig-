@@ -1,0 +1,275 @@
+version: "3.1"
+
+nlu:
+  - intent: provide_motif_budget
+    examples: |
+      - Le motif est [Remplacement](motif)
+      - motif: [Remplacement](motif), situation budgétaire: [Budgetisé](situation_budget)
+      - Le motif de la demande: [Support du service](motif)
+      - Le motif est [Remplacement](motif) suite à un départ à la retraite
+      - Il s'agit d'une [Création de poste](motif) pour renforcer l'équipe commerciale
+      - Besoin urgent de [Support du service](motif) pour faire face à un pic d'activité
+      - Recrutement dans le cadre du [Programme pépinière](motif) pour jeunes talents
+      - Demande liée à la [Relation école](motif) (stage/alternance)
+      - Poste temporaire en [Intérim](motif) pour remplacement maladie
+      - [Complément d'effectif](motif) nécessaire pour absorber une surcharge de travail
+      - [Restructuration](motif) : réaffectation et ouverture de postes
+      
+      - c'est un [Remplacement](motif)
+      - il s'agit d'un [Programme étoiles montantes](motif)
+      - pour [Création de poste](motif)
+      - [Remplacement](motif) temporaire
+      - [Programme étoiles montantes](motif) d'équipe
+      - motif [Intérim](motif)
+      
+      - situation budgétaire: [Budgetisé](situation_budget)
+      - c'est [budgétisé](situation_budget)
+      - c'est [budgetisé](situation_budget)
+      - poste [budgétisé](situation_budget)
+      - [budgetisé](situation_budget)
+      - c'est [hors budget](situation_budget)
+      - [hors budget](situation_budget)
+      - non [budgétisé](situation_budget)
+      - pas [budgétisé](situation_budget)
+      - la situation budgétaire est [budgétisée](situation_budget)
+      - avec une situation budgétaire [budgétisée](situation_budget)
+      - situation budgétaire [budgétisée](situation_budget)
+      - le poste est [budgétisé](situation_budget)
+      - budget [validé](situation_budget)
+      - budget [approuvé](situation_budget)
+      - [Non applicable (intérim)](situation_budget)
+      - [non applicable](situation_budget)
+      
+      - motif: [Remplacement](motif) situation budgetaire: [Budgetisé](situation_budget)
+      - motif: [Création de poste](motif) situation budgetaire: [Hors budget](situation_budget)
+      - [Création de poste](motif), situation budgétaire : [Budgetisé](situation_budget)
+      - Le motif est [Remplacement](motif) et c'est [budgétisé](situation_budget)
+      - [Remplacement](motif) avec [budget validé](situation_budget)
+      - [Remplacement](motif) [hors budget](situation_budget)
+      - c'est un [Remplacement](motif) qui est [budgétisé](situation_budget)
+      - [Création de poste](motif) [budgetisée](situation_budget)
+      
+      - Le motif est [Remplacement](motif). La justification : Ce renfort permettra d'améliorer
+      - motif: [Création de poste](motif). Ce renfort temporaire aidera l'équipe
+      - [Remplacement](motif) nécessaire. Le renfort apportera une expertise
+      - motif [Intérim](motif) pour un remplacement court terme
+      - Le motif est [Remplacement](motif), avec une situation budgétaire [budgétisée](situation_budget)
+      - [Remplacement](motif), situation [budgétisée](situation_budget), justifié par l'augmentation de la charge
+      
+      - motif [remplacement](motif) budgétisé
+      - [REMPLACEMENT](motif) [BUDGETISE](situation_budget)
+      - [Remplacement](motif) - [Budgétisé](situation_budget)
+      - [Remplacement](motif) / [Budgétisé](situation_budget)
+
+  # ==================== SYNONYMES ====================
+  - synonym: Programme étoiles montantes
+    examples: |
+      - Programme étoiles montantes
+      - programme étoiles montantes
+      - programme etoiles montantes
+      - étoiles montantes
+      - etoiles montantes
+      - high potential
+      - talents prometteurs
+      - futurs leaders
+      - top talents
+      - employés à fort potentiel
+      - employes a fort potentiel
+      - développement de leaders
+      - developpement de leaders
+      - programme leadership
+      - jeunes leaders
+
+  - synonym: Restructuration
+    examples: |
+      - Restructuration
+      - restructuration
+      - réorganisation
+      - reorganisation
+      - changement de structure
+      - réaménagement interne
+      - reamenagement interne
+      - réaffectation du personnel
+      - reaffectation du personnel
+      - remaniement
+      - fusion de services
+      - redéploiement
+      - redeploiement
+      - réorganisation interne
+      - reorganisation interne
+      - reconfiguration du service
+
+  - synonym: Support du service
+    examples: |
+      - Support du service
+      - support du service
+      - appui au service
+      - soutien de l'équipe
+      - soutien de l'equipe
+      - assistance au service
+      - aide au département
+      - aide au departement
+      - support administratif
+      - aide à la direction
+      - aide a la direction
+      - support technique
+
+
+  - synonym: Remplacement
+    examples: |
+      - Remplacement
+      - remplacement
+      - remplacer
+      - remplacé
+      - substitution
+      - intérim
+      - interim
+
+  # ==================== SYNONYME: Budgetisé ====================
+  # Normalise toutes les variantes vers "Budgetisé" (valeur exacte attendue par le backend)
+  - synonym: Budgetisé
+    examples: |
+      - Budgetisé
+      - Budgétisé
+      - budgetisé
+      - budgétisé
+      - budgetise
+      - budgetisee
+      - budgetisée
+      - budgétisée
+      - BUDGETISE
+      - BUDGETISÉ
+      - poste budgétisé
+      - poste budgetisé
+      - poste budgetise
+      - budgeté
+      - budgete
+      - sur budget
+      - inclus dans le budget
+      - dans le plan budgétaire
+      - dans le plan budgetaire
+      - prévu au budget
+      - prevu au budget
+      - prévu dans le budget
+      - prevu dans le budget
+      - poste planifié
+      - poste planifie
+      - planifié dans le budget
+      - planifie dans le budget
+      - approuvé budgétairement
+      - approuve budgetairement
+      - poste validé dans le budget
+      - poste valide dans le budget
+      - budget validé
+      - budget valide
+      - budget approuvé
+      - budget approuve
+      - budget confirmé
+      - budget confirme
+      - budget disponible
+      - budget alloué
+      - budget alloue
+      - budget réservé
+      - budget reserve
+      - budget provisionné
+      - budget provisionne
+      - avec budget
+      - budget ok
+      - budget OK
+
+  # ==================== SYNONYME: Hors budget ====================
+  # Normalise toutes les variantes vers "Hors budget" (valeur exacte attendue par le backend)
+  - synonym: Hors budget
+    examples: |
+      - Hors budget
+      - hors budget
+      - HORS BUDGET
+      - hors-budget
+      - non budgétisé
+      - non budgetisé
+      - non budgetise
+      - pas budgétisé
+      - pas budgetisé
+      - pas budgetise
+      - hors plan
+      - pas prévu au budget
+      - pas prevu au budget
+      - non prévu dans le budget
+      - non prevu dans le budget
+      - non inclus dans le budget
+      - pas dans le budget
+      - ajout non budgétisé
+      - ajout non budgetisé
+      - ajout non budgetise
+      - extra budgétaire
+      - extra budgetaire
+      - attente de budget
+      - budget en attente
+      - sans budget
+      - budget non alloué
+      - budget non alloue
+
+  # ==================== SYNONYME: Non applicable (intérim) ====================
+  # Normalise toutes les variantes vers "Non applicable (intérim)" (valeur exacte attendue par le backend)
+  - synonym: Non applicable (intérim)
+    examples: |
+      - Non applicable (intérim)
+      - Non applicable (interim)
+      - non applicable (intérim)
+      - non applicable (interim)
+      - non applicable
+      - Non applicable
+      - NON APPLICABLE
+      - n/a
+      - na
+      - N/A
+      - NA
+      - pas concerné par le budget
+      - pas concerne par le budget
+      - situation intérimaire
+      - situation interimaire
+      - pas de budget pour interim
+      - pas de budget pour intérim
+
+  # ==================== REGEX PATTERNS ====================
+  - regex: motif_explicit
+    examples: |
+      - (?i)(?:le|la|l')\s*motif\s+(?:est|de\s+(?:la\s+)?demande\s+(?:est|:))?\s*:?\s*(remplacement|création\s+de\s+poste|complément\s+d'effectif|relation\s+école|programme\s+pépinière|programme\s+étoiles\s+montantes|restructuration|support\s+du\s+service|intérim|interim)
+      - (?i)motif\s*:?\s*(remplacement|création\s+de\s+poste|complément\s+d'effectif|relation\s+école|programme\s+pépinière|programme\s+étoiles\s+montantes|restructuration|support\s+du\s+service|intérim|interim)
+      - (?i)c'est\s+un\s+(remplacement|intérim|interim)
+      - (?i)il\s+s'agit\s+d'un[e]?\s+(remplacement|création\s+de\s+poste)
+
+  - regex: situation_budget_explicit
+    examples: |
+      - (?i)situation\s+budg[ée]taire\s*(?:est|:)?\s*(budg[ée]tis[ée]e?|hors\s+budget|non\s+applicable)
+      - (?i)(?:poste|budget)\s+(budg[ée]tis[ée]e?|valid[ée]e?|approuv[ée]e?)
+      - (?i)c'est\s+(budg[ée]tis[ée]e?|hors\s+budget)
+      - (?i)(hors\s+budget|non\s+budg[ée]tis[ée]e?)
+      - (?i)avec\s+une\s+situation\s+budg[ée]taire\s+(budg[ée]tis[ée]e?)
+
+  - regex: justification_explicit
+    examples: |
+      - (?i)justifi[ée]e?\s+(?:par|est|:)\s+(.{20,})
+      - (?i)motiv[ée]e?\s+par\s+(.{20,})
+      - (?i)(?:car|parce\s+que|à\s+cause\s+de)\s+(.{20,})
+      - (?i)la\s+raison\s+(?:est|c'est)\s+(.{20,})
+      - (?i)(?:afin\s+de|pour|dans\s+le\s+but\s+de)\s+(.{20,})
+
+  # ==================== LOOKUP TABLES (Valeurs EXACTES uniquement) ====================
+  - lookup: motif
+    examples: |
+      - Remplacement
+      - Création de poste
+      - Complément d'effectif
+      - Relation école
+      - Programme pépinière
+      - Programme étoiles montantes
+      - Restructuration
+      - Support du service
+
+  # IMPORTANT: Ces 3 valeurs DOIVENT correspondre EXACTEMENT aux valeurs en base de données
+  - lookup: situation_budget
+    examples: |
+      - Budgetisé
+      - Hors budget
+      - Non applicable (intérim)

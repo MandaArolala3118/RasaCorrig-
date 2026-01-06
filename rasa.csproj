@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="**/*.yml" />
+    <None Include="**/*.py" />
+    <None Include="**/*.md" />
+    <None Include="**/*.ps1" />
+    <None Include="requirements.txt" />
+    <None Include="**/*.json" />
+  </ItemGroup>
+
+  <Target Name="Build">
+    <!-- Ne rien faire lors du build -->
+  </Target>
+</Project>

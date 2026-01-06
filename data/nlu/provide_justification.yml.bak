@@ -1,0 +1,133 @@
+version: "3.1"
+
+nlu:
+  - intent: provide_justification
+    examples: |
+      # ========== JUSTIFICATIONS COURTES (15-100 caractères) ==========
+      - justifié par [surcharge de travail](justification)
+      - car [manque de personnel](justification)
+      - pour [renforcer l'équipe](justification)
+      - à cause de [pic d'activité](justification)
+      - motivé par [besoin urgent](justification)
+      - la raison est [congé maternité](justification)
+      - c'est dû à [départ en retraite](justification)
+      - pour [formation d'un stagiaire](justification)
+      - afin de [gérer la surcharge](justification)
+      - parce que [projet important](justification)
+      - vu [augmentation des clients](justification)
+      - suite à [démission imprévue](justification)
+      - [besoin temporaire de renfort](justification)
+      - [remplacement congé maladie](justification)
+      - [surcroît d'activité saisonnier](justification)
+      
+      # ========== JUSTIFICATIONS MOYENNES (100-300 caractères) ==========
+      - justifié par [augmentation de 40% du volume de commandes nécessitant un renfort temporaire](justification)
+      - motivé par [le développement d'un nouveau module critique qui demande des compétences spécifiques](justification)
+      - car [l'équipe est surchargée avec trois projets simultanés et nous risquons de prendre du retard](justification)
+      - pour [assurer la continuité du service pendant l'absence de deux collaborateurs en congé parental](justification)
+      - à cause de [l'ouverture d'une nouvelle agence qui nécessite un accompagnement renforcé sur place](justification)
+      - la raison est [la mise en place d'un nouveau système ERP qui demande une expertise technique pointue](justification)
+      - afin de [répondre à l'augmentation de la demande client suite à l'obtention d'un contrat majeur](justification)
+      - parce que [nous devons former un junior tout en maintenant la productivité de l'équipe actuelle](justification)
+      - suite à [la croissance rapide de l'activité qui a doublé le nombre de dossiers à traiter mensuellement](justification)
+      - motivé par [besoin de personnel supplémentaire pour gérer la transformation digitale en cours](justification)
+      
+      # ========== JUSTIFICATIONS LONGUES / PARAGRAPHES (300-1000 caractères) ==========
+      - justification complète [Suite à l'obtention d'un contrat majeur avec un client stratégique représentant 25% de notre chiffre d'affaires prévisionnel, l'équipe commerciale doit être renforcée pour assurer un suivi personnalisé et maintenir la qualité de service tout en développant de nouvelles opportunités sur ce segment de marché](justification)
+      
+      - raison détaillée [La mise en place d'un nouveau système ERP nécessite des compétences techniques pointues que notre équipe actuelle ne possède pas. Ce projet critique impacte l'ensemble de nos processus métier et doit être livré dans les six mois. Le recrutement d'un expert permettra de piloter cette transformation tout en formant nos équipes internes](justification)
+      
+      - explication [Le départ simultané de trois collaborateurs expérimentés en l'espace de deux mois crée un vide de compétences qui menace la continuité opérationnelle de notre département. Nous avons identifié des risques majeurs sur la livraison des projets en cours et la satisfaction client. Un renforcement immédiat est nécessaire pour éviter tout impact négatif](justification)
+      
+      - motivé par [Développement des modules critiques de notre application phare qui nécessite des compétences en développement web moderne (React, Node.js). Ce renfort permettra d'accélérer le développement tout en formant une ressource junior en parallèle, garantissant ainsi la pérennité des compétences dans l'équipe](justification)
+      
+      - justifié par [Ce renfort permettra d'accélérer le développement des modules internes stratégiques tout en formant un jeune talent sur nos technologies propriétaires. L'objectif est de réduire notre time-to-market de 30% sur nos nouvelles fonctionnalités tout en assurant une montée en compétences progressive de nos équipes](justification)
+      
+      - La justification est [Corriger les retards accumulés sur les projets en cours](justification)
+      # ========== PATTERNS AVEC MARQUEURS FORTS ==========
+      - justifié par [augmentation des ventes de 35%](justification)
+      - Justifier par [le besoin de correction des bug dans les applications actuelles](justification)
+      - avec justification [besoin urgent de ressources supplémentaires pour gérer la complexité croissante](justification)
+      - motivé par [surcharge de travail temporaire suite à un départ non anticipé](justification)
+      - expliqué par [Expansion géographique nécessitant un support local renforcé](justification)
+      - la justification est [Lancement d'un nouveau produit demandant des ressources dédiées](justification)
+      
+      # ========== PATTERNS "CAR" / "PARCE QUE" ==========
+      - parce que [l'équipe actuelle ne peut plus absorber la charge](justification)
+      - car [nous avons besoin de compétences spécialisées rapidement](justification)
+      - à cause de [l'augmentation constante des demandes clients](justification)
+      - c'est à cause de [la surcharge critique du département](justification)
+      - c'est dû à [l'ouverture de deux nouvelles agences](justification)
+      
+      # ========== PATTERNS "VU QUE" / "ÉTANT DONNÉ" ==========
+      - vu que [les projets se multiplient sans arrêt](justification)
+      - étant donné que [nous devons respecter des délais contractuels stricts](justification)
+      - compte tenu de [la croissance de 50% de notre activité](justification)
+      - vu [le doublement du nombre de clients en six mois](justification)
+      
+      # ========== PATTERNS "LA RAISON" / "LE MOTIF" ==========
+      - la raison est [besoin urgent de compétences en data science](justification)
+      - pour la raison suivante [remplacement d'un salarié en longue maladie](justification)
+      - le motif est [augmentation significative du volume de travail](justification)
+      - pour le motif [formation d'une nouvelle équipe projet](justification)
+      
+      # ========== PATTERNS "POUR" / "AFIN DE" ==========
+      - pour répondre à [l'augmentation de 60% de la demande](justification)
+      - afin de gérer [la charge de travail qui a triplé](justification)
+      - dans le but de [renforcer significativement l'équipe](justification)
+      - pour faire face à [un pic d'activité exceptionnel](justification)
+      - afin d'assurer [la continuité du service critique](justification)
+      - pour pallier [le manque d'effectif urgent](justification)
+      - visant à [améliorer drastiquement la productivité](justification)
+      
+      # ========== PATTERNS "SUITE À" / "RÉSULTANT DE" ==========
+      - impacté par [forte croissance imprévue du chiffre d'affaires](justification)
+      - suite à [l'acquisition stratégique de nouveaux clients](justification)
+      - résultant de [l'expansion rapide de nos activités](justification)
+      - conséquence de [la restructuration majeure de l'organisation](justification)
+      - lié à [la digitalisation complète de nos processus](justification)
+      
+      # ========== PATTERNS "DANS LE CADRE DE" ==========
+      - dans le cadre de [lancement d'un nouveau produit innovant](justification)
+      - pour le projet [transformation digitale de l'entreprise](justification)
+      - concernant [migration complète du système informatique](justification)
+      - relatif à [ouverture de trois nouvelles agences](justification)
+      - pour l'initiative [amélioration continue de la qualité](justification)
+      
+      # ========== PATTERNS DE REMPLACEMENT ==========
+      - remplacement de [collaborateur clé en congé parental](justification)
+      - suite au départ de [deux commerciaux seniors expérimentés](justification)
+      - pour compenser [l'absence prolongée du manager](justification)
+      - durant [la période critique de transition managériale](justification)
+      - pendant [le congé sabbatique du responsable d'équipe](justification)
+      
+      # ========== PATTERNS DE CONTRAINTE ==========
+      - contraint par [délais très serrés du projet stratégique](justification)
+      - obligé car [nouvelle norme réglementaire à respecter](justification)
+      - imposé par [exigence contractuelle stricte du client](justification)
+      - nécessité de [conformité urgente aux nouvelles lois](justification)
+      - en raison de [contraintes budgétaires enfin levées](justification)
+      
+      # ========== PATTERNS D'OBJECTIF ==========
+      - objectif [doubler la capacité de production rapidement](justification)
+      - but [améliorer significativement le service client](justification)
+      - vise à [réduire de 40% les délais de traitement](justification)
+      - pour atteindre [les objectifs ambitieux du trimestre](justification)
+      - dans l'optique de [développer agressivement de nouveaux marchés](justification)
+      
+      # ========== PATTERNS AVEC CHIFFRES ==========
+      - car [augmentation de 40% du volume de commandes](justification)
+      - vu [croissance de 25% de l'activité mensuelle](justification)
+      - suite à [doublement du nombre de clients actifs](justification)
+      - avec [réduction de 30% des effectifs l'année dernière](justification)
+      - motivé par [multiplication par 3 du chiffre d'affaires](justification)
+      
+      # ========== PATTERNS IMPLICITES (sans marqueur fort) ==========
+      - [Ce renfort permettra d'accélérer significativement le développement](justification)
+      - [Le remplacement sera bénéfique pour toute l'équipe](justification)
+      - [Cette personne apportera un renfort significatif et stratégique](justification)
+      - [Un renfort temporaire indispensable pour soutenir le service](justification)
+      - [L'équipe a un besoin critique d'un soutien supplémentaire](justification)
+      - [Pour améliorer drastiquement la performance globale](justification)
+      - [Nécessaire pour maintenir notre niveau de service](justification)
+      - [Indispensable pour respecter nos engagements clients](justification)

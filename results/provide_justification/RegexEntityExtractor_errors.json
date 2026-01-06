@@ -1,0 +1,2397 @@
+[
+  {
+    "text": "justifié par surcharge de travail",
+    "entities": [
+      {
+        "start": 13,
+        "end": 33,
+        "value": "surcharge de travail",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 33,
+        "confidence_entity": 0.9087916016578674,
+        "value": "surcharge de travail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 33,
+        "value": "justifié par surcharge de travail",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "car manque de personnel",
+    "entities": [
+      {
+        "start": 4,
+        "end": 23,
+        "value": "manque de personnel",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 4,
+        "end": 23,
+        "confidence_entity": 0.9988999366760254,
+        "value": "manque de personnel",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour renforcer l'équipe",
+    "entities": [
+      {
+        "start": 5,
+        "end": 23,
+        "value": "renforcer l'équipe",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 5,
+        "end": 23,
+        "confidence_entity": 0.9916850328445435,
+        "value": "renforcer l'équipe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "à cause de pic d'activité",
+    "entities": [
+      {
+        "start": 11,
+        "end": 25,
+        "value": "pic d'activité",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 25,
+        "confidence_entity": 0.8952632546424866,
+        "value": "pic d'activité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "motivé par besoin urgent",
+    "entities": [
+      {
+        "start": 11,
+        "end": 24,
+        "value": "besoin urgent",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9849056601524353,
+        "value": "besoin urgent",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "la raison est congé maternité",
+    "entities": [
+      {
+        "start": 14,
+        "end": 29,
+        "value": "congé maternité",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 14,
+        "end": 29,
+        "confidence_entity": 0.9977630376815796,
+        "value": "congé maternité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est dû à départ en retraite",
+    "entities": [
+      {
+        "start": 11,
+        "end": 29,
+        "value": "départ en retraite",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 29,
+        "confidence_entity": 0.9863112568855286,
+        "value": "départ en retraite",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour formation d'un stagiaire",
+    "entities": [
+      {
+        "start": 5,
+        "end": 29,
+        "value": "formation d'un stagiaire",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 5,
+        "end": 29,
+        "confidence_entity": 0.9914911389350891,
+        "value": "formation d'un stagiaire",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 17,
+        "end": 19,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "afin de gérer la surcharge",
+    "entities": [
+      {
+        "start": 8,
+        "end": 26,
+        "value": "gérer la surcharge",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 26,
+        "confidence_entity": 0.9027724862098694,
+        "value": "gérer la surcharge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "parce que projet important",
+    "entities": [
+      {
+        "start": 10,
+        "end": 26,
+        "value": "projet important",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 10,
+        "end": 26,
+        "confidence_entity": 0.9983966946601868,
+        "value": "projet important",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "vu augmentation des clients",
+    "entities": [
+      {
+        "start": 3,
+        "end": 27,
+        "value": "augmentation des clients",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 3,
+        "end": 27,
+        "confidence_entity": 0.9981471300125122,
+        "value": "augmentation des clients",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "suite à démission imprévue",
+    "entities": [
+      {
+        "start": 8,
+        "end": 26,
+        "value": "démission imprévue",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 26,
+        "confidence_entity": 0.9980173110961914,
+        "value": "démission imprévue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "besoin temporaire de renfort",
+    "entities": [
+      {
+        "start": 0,
+        "end": 28,
+        "value": "besoin temporaire de renfort",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 28,
+        "confidence_entity": 0.990868330001831,
+        "value": "besoin temporaire de renfort",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "remplacement congé maladie",
+    "entities": [
+      {
+        "start": 0,
+        "end": 26,
+        "value": "remplacement congé maladie",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 26,
+        "confidence_entity": 0.9529033303260803,
+        "value": "remplacement congé maladie",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "surcroît d'activité saisonnier",
+    "entities": [
+      {
+        "start": 0,
+        "end": 30,
+        "value": "surcroît d'activité saisonnier",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 30,
+        "confidence_entity": 0.9990129470825195,
+        "value": "surcroît d'activité saisonnier",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "justifié par augmentation de 40% du volume de commandes nécessitant un renfort temporaire",
+    "entities": [
+      {
+        "start": 13,
+        "end": 89,
+        "value": "augmentation de 40% du volume de commandes nécessitant un renfort temporaire",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 31,
+        "confidence_entity": 0.9855924248695374,
+        "value": "augmentation de 40",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 33,
+        "end": 89,
+        "confidence_entity": 0.7972859740257263,
+        "value": "du volume de commandes nécessitant un renfort temporaire",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 89,
+        "value": "justifié par augmentation de 40% du volume de commandes nécessitant un renfort temporaire",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "motivé par le développement d'un nouveau module critique qui demande des compétences spécifiques",
+    "entities": [
+      {
+        "start": 11,
+        "end": 96,
+        "value": "le développement d'un nouveau module critique qui demande des compétences spécifiques",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 96,
+        "confidence_entity": 0.9981991648674011,
+        "value": "le développement d'un nouveau module critique qui demande des compétences spécifiques",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "car l'équipe est surchargée avec trois projets simultanés et nous risquons de prendre du retard",
+    "entities": [
+      {
+        "start": 4,
+        "end": 95,
+        "value": "l'équipe est surchargée avec trois projets simultanés et nous risquons de prendre du retard",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 4,
+        "end": 95,
+        "confidence_entity": 0.9929539561271667,
+        "value": "l'équipe est surchargée avec trois projets simultanés et nous risquons de prendre du retard",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour assurer la continuité du service pendant l'absence de deux collaborateurs en congé parental",
+    "entities": [
+      {
+        "start": 5,
+        "end": 96,
+        "value": "assurer la continuité du service pendant l'absence de deux collaborateurs en congé parental",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 5,
+        "end": 96,
+        "confidence_entity": 0.9911028146743774,
+        "value": "assurer la continuité du service pendant l'absence de deux collaborateurs en congé parental",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "à cause de l'ouverture d'une nouvelle agence qui nécessite un accompagnement renforcé sur place",
+    "entities": [
+      {
+        "start": 11,
+        "end": 95,
+        "value": "l'ouverture d'une nouvelle agence qui nécessite un accompagnement renforcé sur place",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 95,
+        "confidence_entity": 0.9819164872169495,
+        "value": "l'ouverture d'une nouvelle agence qui nécessite un accompagnement renforcé sur place",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "la raison est la mise en place d'un nouveau système ERP qui demande une expertise technique pointue",
+    "entities": [
+      {
+        "start": 14,
+        "end": 99,
+        "value": "la mise en place d'un nouveau système ERP qui demande une expertise technique pointue",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 14,
+        "end": 99,
+        "confidence_entity": 0.981726348400116,
+        "value": "la mise en place d'un nouveau système ERP qui demande une expertise technique pointue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "afin de répondre à l'augmentation de la demande client suite à l'obtention d'un contrat majeur",
+    "entities": [
+      {
+        "start": 8,
+        "end": 94,
+        "value": "répondre à l'augmentation de la demande client suite à l'obtention d'un contrat majeur",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 94,
+        "confidence_entity": 0.9808324575424194,
+        "value": "répondre à l'augmentation de la demande client suite à l'obtention d'un contrat majeur",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "parce que nous devons former un junior tout en maintenant la productivité de l'équipe actuelle",
+    "entities": [
+      {
+        "start": 10,
+        "end": 94,
+        "value": "nous devons former un junior tout en maintenant la productivité de l'équipe actuelle",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 10,
+        "end": 94,
+        "confidence_entity": 0.9987198114395142,
+        "value": "nous devons former un junior tout en maintenant la productivité de l'équipe actuelle",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "suite à la croissance rapide de l'activité qui a doublé le nombre de dossiers à traiter mensuellement",
+    "entities": [
+      {
+        "start": 8,
+        "end": 101,
+        "value": "la croissance rapide de l'activité qui a doublé le nombre de dossiers à traiter mensuellement",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 101,
+        "confidence_entity": 0.9970412850379944,
+        "value": "la croissance rapide de l'activité qui a doublé le nombre de dossiers à traiter mensuellement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "motivé par besoin de personnel supplémentaire pour gérer la transformation digitale en cours",
+    "entities": [
+      {
+        "start": 11,
+        "end": 92,
+        "value": "besoin de personnel supplémentaire pour gérer la transformation digitale en cours",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 92,
+        "confidence_entity": 0.9945541620254517,
+        "value": "besoin de personnel supplémentaire pour gérer la transformation digitale en cours",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "justification complète Suite à l'obtention d'un contrat majeur avec un client stratégique représentant 25% de notre chiffre d'affaires prévisionnel, l'équipe commerciale doit être renforcée pour assurer un suivi personnalisé et maintenir la qualité de service tout en développant de nouvelles opportunités sur ce segment de marché",
+    "entities": [
+      {
+        "start": 23,
+        "end": 330,
+        "value": "Suite à l'obtention d'un contrat majeur avec un client stratégique représentant 25% de notre chiffre d'affaires prévisionnel, l'équipe commerciale doit être renforcée pour assurer un suivi personnalisé et maintenir la qualité de service tout en développant de nouvelles opportunités sur ce segment de marché",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 23,
+        "end": 105,
+        "confidence_entity": 0.9967781901359558,
+        "value": "Suite à l'obtention d'un contrat majeur avec un client stratégique représentant 25",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 107,
+        "end": 147,
+        "confidence_entity": 0.9984487295150757,
+        "value": "de notre chiffre d'affaires prévisionnel",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 149,
+        "end": 330,
+        "confidence_entity": 0.9988366961479187,
+        "value": "l'équipe commerciale doit être renforcée pour assurer un suivi personnalisé et maintenir la qualité de service tout en développant de nouvelles opportunités sur ce segment de marché",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "raison détaillée La mise en place d'un nouveau système ERP nécessite des compétences techniques pointues que notre équipe actuelle ne possède pas. Ce projet critique impacte l'ensemble de nos processus métier et doit être livré dans les six mois. Le recrutement d'un expert permettra de piloter cette transformation tout en formant nos équipes internes",
+    "entities": [
+      {
+        "start": 17,
+        "end": 352,
+        "value": "La mise en place d'un nouveau système ERP nécessite des compétences techniques pointues que notre équipe actuelle ne possède pas. Ce projet critique impacte l'ensemble de nos processus métier et doit être livré dans les six mois. Le recrutement d'un expert permettra de piloter cette transformation tout en formant nos équipes internes",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 17,
+        "end": 145,
+        "confidence_entity": 0.997732400894165,
+        "value": "La mise en place d'un nouveau système ERP nécessite des compétences techniques pointues que notre équipe actuelle ne possède pas",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 147,
+        "end": 245,
+        "confidence_entity": 0.9987443685531616,
+        "value": "Ce projet critique impacte l'ensemble de nos processus métier et doit être livré dans les six mois",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 247,
+        "end": 352,
+        "confidence_entity": 0.9945710301399231,
+        "value": "Le recrutement d'un expert permettra de piloter cette transformation tout en formant nos équipes internes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 237,
+        "end": 245,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "explication Le départ simultané de trois collaborateurs expérimentés en l'espace de deux mois crée un vide de compétences qui menace la continuité opérationnelle de notre département. Nous avons identifié des risques majeurs sur la livraison des projets en cours et la satisfaction client. Un renforcement immédiat est nécessaire pour éviter tout impact négatif",
+    "entities": [
+      {
+        "start": 12,
+        "end": 361,
+        "value": "Le départ simultané de trois collaborateurs expérimentés en l'espace de deux mois crée un vide de compétences qui menace la continuité opérationnelle de notre département. Nous avons identifié des risques majeurs sur la livraison des projets en cours et la satisfaction client. Un renforcement immédiat est nécessaire pour éviter tout impact négatif",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 12,
+        "end": 182,
+        "confidence_entity": 0.9947020411491394,
+        "value": "Le départ simultané de trois collaborateurs expérimentés en l'espace de deux mois crée un vide de compétences qui menace la continuité opérationnelle de notre département",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 184,
+        "end": 288,
+        "confidence_entity": 0.9988436698913574,
+        "value": "Nous avons identifié des risques majeurs sur la livraison des projets en cours et la satisfaction client",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 290,
+        "end": 361,
+        "confidence_entity": 0.9994550347328186,
+        "value": "Un renforcement immédiat est nécessaire pour éviter tout impact négatif",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "motivé par Développement des modules critiques de notre application phare qui nécessite des compétences en développement web moderne (React, Node.js). Ce renfort permettra d'accélérer le développement tout en formant une ressource junior en parallèle, garantissant ainsi la pérennité des compétences dans l'équipe",
+    "entities": [
+      {
+        "start": 11,
+        "end": 313,
+        "value": "Développement des modules critiques de notre application phare qui nécessite des compétences en développement web moderne (React, Node.js). Ce renfort permettra d'accélérer le développement tout en formant une ressource junior en parallèle, garantissant ainsi la pérennité des compétences dans l'équipe",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 132,
+        "confidence_entity": 0.9489084482192993,
+        "value": "Développement des modules critiques de notre application phare qui nécessite des compétences en développement web moderne",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 134,
+        "end": 139,
+        "confidence_entity": 0.9992280006408691,
+        "value": "React",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 141,
+        "end": 148,
+        "confidence_entity": 0.9997143149375916,
+        "value": "Node.js",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 151,
+        "end": 250,
+        "confidence_entity": 0.9995809197425842,
+        "value": "Ce renfort permettra d'accélérer le développement tout en formant une ressource junior en parallèle",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 252,
+        "end": 313,
+        "confidence_entity": 0.9969724416732788,
+        "value": "garantissant ainsi la pérennité des compétences dans l'équipe",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "justifié par Ce renfort permettra d'accélérer le développement des modules internes stratégiques tout en formant un jeune talent sur nos technologies propriétaires. L'objectif est de réduire notre time-to-market de 30% sur nos nouvelles fonctionnalités tout en assurant une montée en compétences progressive de nos équipes",
+    "entities": [
+      {
+        "start": 13,
+        "end": 322,
+        "value": "Ce renfort permettra d'accélérer le développement des modules internes stratégiques tout en formant un jeune talent sur nos technologies propriétaires. L'objectif est de réduire notre time-to-market de 30% sur nos nouvelles fonctionnalités tout en assurant une montée en compétences progressive de nos équipes",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 163,
+        "confidence_entity": 0.9535588622093201,
+        "value": "Ce renfort permettra d'accélérer le développement des modules internes stratégiques tout en formant un jeune talent sur nos technologies propriétaires",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 165,
+        "end": 217,
+        "confidence_entity": 0.9931129813194275,
+        "value": "L'objectif est de réduire notre time-to-market de 30",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 219,
+        "end": 322,
+        "confidence_entity": 0.9987576007843018,
+        "value": "sur nos nouvelles fonctionnalités tout en assurant une montée en compétences progressive de nos équipes",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 322,
+        "value": "justifié par Ce renfort permettra d'accélérer le développement des modules internes stratégiques tout en formant un jeune talent sur nos technologies propriétaires. L'objectif est de réduire notre time-to-market de 30% sur nos nouvelles fonctionnalités tout en assurant une montée en compétences progressive de nos équipes",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "justifié par augmentation des ventes de 35%",
+    "entities": [
+      {
+        "start": 13,
+        "end": 43,
+        "value": "augmentation des ventes de 35%",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 43,
+        "value": "justifié par augmentation des ventes de 35%",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "avec justification besoin urgent de ressources supplémentaires pour gérer la complexité croissante",
+    "entities": [
+      {
+        "start": 19,
+        "end": 98,
+        "value": "besoin urgent de ressources supplémentaires pour gérer la complexité croissante",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 19,
+        "end": 98,
+        "confidence_entity": 0.9995006322860718,
+        "value": "besoin urgent de ressources supplémentaires pour gérer la complexité croissante",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "motivé par surcharge de travail temporaire suite à un départ non anticipé",
+    "entities": [
+      {
+        "start": 11,
+        "end": 73,
+        "value": "surcharge de travail temporaire suite à un départ non anticipé",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 73,
+        "confidence_entity": 0.9943494200706482,
+        "value": "surcharge de travail temporaire suite à un départ non anticipé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "expliqué par Expansion géographique nécessitant un support local renforcé",
+    "entities": [
+      {
+        "start": 13,
+        "end": 73,
+        "value": "Expansion géographique nécessitant un support local renforcé",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 73,
+        "confidence_entity": 0.9976792931556702,
+        "value": "Expansion géographique nécessitant un support local renforcé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "la justification est Lancement d'un nouveau produit demandant des ressources dédiées",
+    "entities": [
+      {
+        "start": 21,
+        "end": 84,
+        "value": "Lancement d'un nouveau produit demandant des ressources dédiées",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 21,
+        "end": 84,
+        "confidence_entity": 0.9989354014396667,
+        "value": "Lancement d'un nouveau produit demandant des ressources dédiées",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "parce que l'équipe actuelle ne peut plus absorber la charge",
+    "entities": [
+      {
+        "start": 10,
+        "end": 59,
+        "value": "l'équipe actuelle ne peut plus absorber la charge",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 10,
+        "end": 59,
+        "confidence_entity": 0.9947023987770081,
+        "value": "l'équipe actuelle ne peut plus absorber la charge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "car nous avons besoin de compétences spécialisées rapidement",
+    "entities": [
+      {
+        "start": 4,
+        "end": 60,
+        "value": "nous avons besoin de compétences spécialisées rapidement",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 4,
+        "end": 60,
+        "confidence_entity": 0.9933114051818848,
+        "value": "nous avons besoin de compétences spécialisées rapidement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "à cause de l'augmentation constante des demandes clients",
+    "entities": [
+      {
+        "start": 11,
+        "end": 56,
+        "value": "l'augmentation constante des demandes clients",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 56,
+        "confidence_entity": 0.9907963275909424,
+        "value": "l'augmentation constante des demandes clients",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est à cause de la surcharge critique du département",
+    "entities": [
+      {
+        "start": 17,
+        "end": 53,
+        "value": "la surcharge critique du département",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 17,
+        "end": 53,
+        "confidence_entity": 0.9944310784339905,
+        "value": "la surcharge critique du département",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est dû à l'ouverture de deux nouvelles agences",
+    "entities": [
+      {
+        "start": 11,
+        "end": 48,
+        "value": "l'ouverture de deux nouvelles agences",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 48,
+        "confidence_entity": 0.9967591166496277,
+        "value": "l'ouverture de deux nouvelles agences",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "vu que les projets se multiplient sans arrêt",
+    "entities": [
+      {
+        "start": 7,
+        "end": 44,
+        "value": "les projets se multiplient sans arrêt",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 7,
+        "end": 44,
+        "confidence_entity": 0.9990955591201782,
+        "value": "les projets se multiplient sans arrêt",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "étant donné que nous devons respecter des délais contractuels stricts",
+    "entities": [
+      {
+        "start": 16,
+        "end": 69,
+        "value": "nous devons respecter des délais contractuels stricts",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 16,
+        "end": 69,
+        "confidence_entity": 0.9979937076568604,
+        "value": "nous devons respecter des délais contractuels stricts",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "compte tenu de la croissance de 50% de notre activité",
+    "entities": [
+      {
+        "start": 15,
+        "end": 53,
+        "value": "la croissance de 50% de notre activité",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 34,
+        "confidence_entity": 0.9990167617797852,
+        "value": "la croissance de 50",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 36,
+        "end": 53,
+        "confidence_entity": 0.9940382242202759,
+        "value": "de notre activité",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "vu le doublement du nombre de clients en six mois",
+    "entities": [
+      {
+        "start": 3,
+        "end": 49,
+        "value": "le doublement du nombre de clients en six mois",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 3,
+        "end": 49,
+        "confidence_entity": 0.9956165552139282,
+        "value": "le doublement du nombre de clients en six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 41,
+        "end": 49,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "la raison est besoin urgent de compétences en data science",
+    "entities": [
+      {
+        "start": 14,
+        "end": 58,
+        "value": "besoin urgent de compétences en data science",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 14,
+        "end": 58,
+        "confidence_entity": 0.9950802326202393,
+        "value": "besoin urgent de compétences en data science",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour la raison suivante remplacement d'un salarié en longue maladie",
+    "entities": [
+      {
+        "start": 24,
+        "end": 67,
+        "value": "remplacement d'un salarié en longue maladie",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 24,
+        "end": 67,
+        "confidence_entity": 0.8755642175674438,
+        "value": "remplacement d'un salarié en longue maladie",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "le motif est augmentation significative du volume de travail",
+    "entities": [
+      {
+        "start": 13,
+        "end": 60,
+        "value": "augmentation significative du volume de travail",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 60,
+        "confidence_entity": 0.9973493814468384,
+        "value": "augmentation significative du volume de travail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour le motif formation d'une nouvelle équipe projet",
+    "entities": [
+      {
+        "start": 14,
+        "end": 52,
+        "value": "formation d'une nouvelle équipe projet",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 14,
+        "end": 52,
+        "confidence_entity": 0.9913923740386963,
+        "value": "formation d'une nouvelle équipe projet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour répondre à l'augmentation de 60% de la demande",
+    "entities": [
+      {
+        "start": 16,
+        "end": 51,
+        "value": "l'augmentation de 60% de la demande",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 16,
+        "end": 36,
+        "confidence_entity": 0.9879790544509888,
+        "value": "l'augmentation de 60",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 38,
+        "end": 51,
+        "confidence_entity": 0.9755536317825317,
+        "value": "de la demande",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "afin de gérer la charge de travail qui a triplé",
+    "entities": [
+      {
+        "start": 14,
+        "end": 47,
+        "value": "la charge de travail qui a triplé",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 14,
+        "end": 47,
+        "confidence_entity": 0.9963778853416443,
+        "value": "la charge de travail qui a triplé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dans le but de renforcer significativement l'équipe",
+    "entities": [
+      {
+        "start": 15,
+        "end": 51,
+        "value": "renforcer significativement l'équipe",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 51,
+        "confidence_entity": 0.9939975738525391,
+        "value": "renforcer significativement l'équipe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour faire face à un pic d'activité exceptionnel",
+    "entities": [
+      {
+        "start": 18,
+        "end": 48,
+        "value": "un pic d'activité exceptionnel",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 18,
+        "end": 48,
+        "confidence_entity": 0.986348032951355,
+        "value": "un pic d'activité exceptionnel",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "afin d'assurer la continuité du service critique",
+    "entities": [
+      {
+        "start": 15,
+        "end": 48,
+        "value": "la continuité du service critique",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 48,
+        "confidence_entity": 0.9057233929634094,
+        "value": "la continuité du service critique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour pallier le manque d'effectif urgent",
+    "entities": [
+      {
+        "start": 13,
+        "end": 40,
+        "value": "le manque d'effectif urgent",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 40,
+        "confidence_entity": 0.9984601736068726,
+        "value": "le manque d'effectif urgent",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "visant à améliorer drastiquement la productivité",
+    "entities": [
+      {
+        "start": 9,
+        "end": 48,
+        "value": "améliorer drastiquement la productivité",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 9,
+        "end": 48,
+        "confidence_entity": 0.987280011177063,
+        "value": "améliorer drastiquement la productivité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "impacté par forte croissance imprévue du chiffre d'affaires",
+    "entities": [
+      {
+        "start": 12,
+        "end": 59,
+        "value": "forte croissance imprévue du chiffre d'affaires",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 12,
+        "end": 59,
+        "confidence_entity": 0.9995806813240051,
+        "value": "forte croissance imprévue du chiffre d'affaires",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "suite à l'acquisition stratégique de nouveaux clients",
+    "entities": [
+      {
+        "start": 8,
+        "end": 53,
+        "value": "l'acquisition stratégique de nouveaux clients",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 53,
+        "confidence_entity": 0.9985058307647705,
+        "value": "l'acquisition stratégique de nouveaux clients",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "résultant de l'expansion rapide de nos activités",
+    "entities": [
+      {
+        "start": 13,
+        "end": 48,
+        "value": "l'expansion rapide de nos activités",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 48,
+        "confidence_entity": 0.9919911026954651,
+        "value": "l'expansion rapide de nos activités",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "conséquence de la restructuration majeure de l'organisation",
+    "entities": [
+      {
+        "start": 15,
+        "end": 59,
+        "value": "la restructuration majeure de l'organisation",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 59,
+        "confidence_entity": 0.9980335831642151,
+        "value": "la restructuration majeure de l'organisation",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "lié à la digitalisation complète de nos processus",
+    "entities": [
+      {
+        "start": 6,
+        "end": 49,
+        "value": "la digitalisation complète de nos processus",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 6,
+        "end": 49,
+        "confidence_entity": 0.9960765242576599,
+        "value": "la digitalisation complète de nos processus",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dans le cadre de lancement d'un nouveau produit innovant",
+    "entities": [
+      {
+        "start": 17,
+        "end": 56,
+        "value": "lancement d'un nouveau produit innovant",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 17,
+        "end": 56,
+        "confidence_entity": 0.9984326958656311,
+        "value": "lancement d'un nouveau produit innovant",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour le projet transformation digitale de l'entreprise",
+    "entities": [
+      {
+        "start": 15,
+        "end": 54,
+        "value": "transformation digitale de l'entreprise",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 54,
+        "confidence_entity": 0.9952713847160339,
+        "value": "transformation digitale de l'entreprise",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "concernant migration complète du système informatique",
+    "entities": [
+      {
+        "start": 11,
+        "end": 53,
+        "value": "migration complète du système informatique",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 53,
+        "confidence_entity": 0.9967852830886841,
+        "value": "migration complète du système informatique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "relatif à ouverture de trois nouvelles agences",
+    "entities": [
+      {
+        "start": 10,
+        "end": 46,
+        "value": "ouverture de trois nouvelles agences",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 10,
+        "end": 46,
+        "confidence_entity": 0.9943268895149231,
+        "value": "ouverture de trois nouvelles agences",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour l'initiative amélioration continue de la qualité",
+    "entities": [
+      {
+        "start": 18,
+        "end": 53,
+        "value": "amélioration continue de la qualité",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 18,
+        "end": 53,
+        "confidence_entity": 0.9913796186447144,
+        "value": "amélioration continue de la qualité",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "remplacement de collaborateur clé en congé parental",
+    "entities": [
+      {
+        "start": 16,
+        "end": 51,
+        "value": "collaborateur clé en congé parental",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 16,
+        "end": 51,
+        "confidence_entity": 0.9872181415557861,
+        "value": "collaborateur clé en congé parental",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "suite au départ de deux commerciaux seniors expérimentés",
+    "entities": [
+      {
+        "start": 19,
+        "end": 56,
+        "value": "deux commerciaux seniors expérimentés",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 19,
+        "end": 56,
+        "confidence_entity": 0.9979782700538635,
+        "value": "deux commerciaux seniors expérimentés",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour compenser l'absence prolongée du manager",
+    "entities": [
+      {
+        "start": 15,
+        "end": 45,
+        "value": "l'absence prolongée du manager",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 45,
+        "confidence_entity": 0.99801105260849,
+        "value": "l'absence prolongée du manager",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "durant la période critique de transition managériale",
+    "entities": [
+      {
+        "start": 7,
+        "end": 52,
+        "value": "la période critique de transition managériale",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 7,
+        "end": 52,
+        "confidence_entity": 0.8489405512809753,
+        "value": "la période critique de transition managériale",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pendant le congé sabbatique du responsable d'équipe",
+    "entities": [
+      {
+        "start": 8,
+        "end": 51,
+        "value": "le congé sabbatique du responsable d'équipe",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 51,
+        "confidence_entity": 0.9976668357849121,
+        "value": "le congé sabbatique du responsable d'équipe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "contraint par délais très serrés du projet stratégique",
+    "entities": [
+      {
+        "start": 14,
+        "end": 54,
+        "value": "délais très serrés du projet stratégique",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 14,
+        "end": 54,
+        "confidence_entity": 0.985486626625061,
+        "value": "délais très serrés du projet stratégique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "obligé car nouvelle norme réglementaire à respecter",
+    "entities": [
+      {
+        "start": 11,
+        "end": 51,
+        "value": "nouvelle norme réglementaire à respecter",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 51,
+        "confidence_entity": 0.9759497046470642,
+        "value": "nouvelle norme réglementaire à respecter",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "imposé par exigence contractuelle stricte du client",
+    "entities": [
+      {
+        "start": 11,
+        "end": 51,
+        "value": "exigence contractuelle stricte du client",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 51,
+        "confidence_entity": 0.998893678188324,
+        "value": "exigence contractuelle stricte du client",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "nécessité de conformité urgente aux nouvelles lois",
+    "entities": [
+      {
+        "start": 13,
+        "end": 50,
+        "value": "conformité urgente aux nouvelles lois",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 50,
+        "confidence_entity": 0.9957329630851746,
+        "value": "conformité urgente aux nouvelles lois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "en raison de contraintes budgétaires enfin levées",
+    "entities": [
+      {
+        "start": 13,
+        "end": 49,
+        "value": "contraintes budgétaires enfin levées",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 13,
+        "end": 49,
+        "confidence_entity": 0.9943481087684631,
+        "value": "contraintes budgétaires enfin levées",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "objectif doubler la capacité de production rapidement",
+    "entities": [
+      {
+        "start": 9,
+        "end": 53,
+        "value": "doubler la capacité de production rapidement",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 9,
+        "end": 53,
+        "confidence_entity": 0.9983859062194824,
+        "value": "doubler la capacité de production rapidement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "but améliorer significativement le service client",
+    "entities": [
+      {
+        "start": 4,
+        "end": 49,
+        "value": "améliorer significativement le service client",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 4,
+        "end": 49,
+        "confidence_entity": 0.9866210222244263,
+        "value": "améliorer significativement le service client",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "vise à réduire de 40% les délais de traitement",
+    "entities": [
+      {
+        "start": 7,
+        "end": 46,
+        "value": "réduire de 40% les délais de traitement",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 7,
+        "end": 20,
+        "confidence_entity": 0.9642482995986938,
+        "value": "réduire de 40",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 22,
+        "end": 46,
+        "confidence_entity": 0.998304009437561,
+        "value": "les délais de traitement",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "pour atteindre les objectifs ambitieux du trimestre",
+    "entities": [
+      {
+        "start": 15,
+        "end": 51,
+        "value": "les objectifs ambitieux du trimestre",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 15,
+        "end": 51,
+        "confidence_entity": 0.9985003471374512,
+        "value": "les objectifs ambitieux du trimestre",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dans l'optique de développer agressivement de nouveaux marchés",
+    "entities": [
+      {
+        "start": 18,
+        "end": 62,
+        "value": "développer agressivement de nouveaux marchés",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 18,
+        "end": 62,
+        "confidence_entity": 0.9954902529716492,
+        "value": "développer agressivement de nouveaux marchés",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "car augmentation de 40% du volume de commandes",
+    "entities": [
+      {
+        "start": 4,
+        "end": 46,
+        "value": "augmentation de 40% du volume de commandes",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 4,
+        "end": 22,
+        "confidence_entity": 0.9945449829101562,
+        "value": "augmentation de 40",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 24,
+        "end": 46,
+        "confidence_entity": 0.998078465461731,
+        "value": "du volume de commandes",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "vu croissance de 25% de l'activité mensuelle",
+    "entities": [
+      {
+        "start": 3,
+        "end": 44,
+        "value": "croissance de 25% de l'activité mensuelle",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 3,
+        "end": 19,
+        "confidence_entity": 0.6532167196273804,
+        "value": "croissance de 25",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 21,
+        "end": 44,
+        "confidence_entity": 0.9989915490150452,
+        "value": "de l'activité mensuelle",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "suite à doublement du nombre de clients actifs",
+    "entities": [
+      {
+        "start": 8,
+        "end": 46,
+        "value": "doublement du nombre de clients actifs",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 8,
+        "end": 46,
+        "confidence_entity": 0.9890087246894836,
+        "value": "doublement du nombre de clients actifs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "avec réduction de 30% des effectifs l'année dernière",
+    "entities": [
+      {
+        "start": 5,
+        "end": 52,
+        "value": "réduction de 30% des effectifs l'année dernière",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 5,
+        "end": 20,
+        "confidence_entity": 0.9993360638618469,
+        "value": "réduction de 30",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "justification",
+        "start": 22,
+        "end": 52,
+        "confidence_entity": 0.9998965263366699,
+        "value": "des effectifs l'année dernière",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "motivé par multiplication par 3 du chiffre d'affaires",
+    "entities": [
+      {
+        "start": 11,
+        "end": 53,
+        "value": "multiplication par 3 du chiffre d'affaires",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 11,
+        "end": 53,
+        "confidence_entity": 0.9991136193275452,
+        "value": "multiplication par 3 du chiffre d'affaires",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Ce renfort permettra d'accélérer significativement le développement",
+    "entities": [
+      {
+        "start": 0,
+        "end": 67,
+        "value": "Ce renfort permettra d'accélérer significativement le développement",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 67,
+        "confidence_entity": 0.991820216178894,
+        "value": "Ce renfort permettra d'accélérer significativement le développement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le remplacement sera bénéfique pour toute l'équipe",
+    "entities": [
+      {
+        "start": 0,
+        "end": 50,
+        "value": "Le remplacement sera bénéfique pour toute l'équipe",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 50,
+        "confidence_entity": 0.9927856922149658,
+        "value": "Le remplacement sera bénéfique pour toute l'équipe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Cette personne apportera un renfort significatif et stratégique",
+    "entities": [
+      {
+        "start": 0,
+        "end": 63,
+        "value": "Cette personne apportera un renfort significatif et stratégique",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 63,
+        "confidence_entity": 0.9910206198692322,
+        "value": "Cette personne apportera un renfort significatif et stratégique",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Un renfort temporaire indispensable pour soutenir le service",
+    "entities": [
+      {
+        "start": 0,
+        "end": 60,
+        "value": "Un renfort temporaire indispensable pour soutenir le service",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 60,
+        "confidence_entity": 0.972515881061554,
+        "value": "Un renfort temporaire indispensable pour soutenir le service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "L'équipe a un besoin critique d'un soutien supplémentaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 57,
+        "value": "L'équipe a un besoin critique d'un soutien supplémentaire",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 57,
+        "confidence_entity": 0.9945648908615112,
+        "value": "L'équipe a un besoin critique d'un soutien supplémentaire",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pour améliorer drastiquement la performance globale",
+    "entities": [
+      {
+        "start": 0,
+        "end": 51,
+        "value": "Pour améliorer drastiquement la performance globale",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 51,
+        "confidence_entity": 0.9149078726768494,
+        "value": "Pour améliorer drastiquement la performance globale",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Nécessaire pour maintenir notre niveau de service",
+    "entities": [
+      {
+        "start": 0,
+        "end": 49,
+        "value": "Nécessaire pour maintenir notre niveau de service",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 49,
+        "confidence_entity": 0.9825834631919861,
+        "value": "Nécessaire pour maintenir notre niveau de service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Indispensable pour respecter nos engagements clients",
+    "entities": [
+      {
+        "start": 0,
+        "end": 52,
+        "value": "Indispensable pour respecter nos engagements clients",
+        "entity": "justification"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "justification",
+        "start": 0,
+        "end": 52,
+        "confidence_entity": 0.9965969920158386,
+        "value": "Indispensable pour respecter nos engagements clients",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

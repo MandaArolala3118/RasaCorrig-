@@ -1,0 +1,18 @@
+# Action server
+
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+  verify_ssl: false 
+# Tracker store (optionnel - PostgreSQL recommandé)
+# tracker_store:
+#   type: sql
+#   dialect: postgresql
+#   url: postgresql://user:password@localhost:5432/rasa_tracker
+#   db: rasa_tracker
+
+# Event broker (optionnel - RabbitMQ pour production)
+# event_broker:
+#   type: pika
+#   url: localhost
+#   username: guest
+#   password: guest

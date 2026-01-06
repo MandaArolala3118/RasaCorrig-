@@ -1,0 +1,12 @@
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\bin\Debug\net8.0\rasa.deps.json
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\bin\Debug\net8.0\rasa.dll
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\bin\Debug\net8.0\rasa.pdb
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.AssemblyInfoInputs.cache
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.AssemblyInfo.cs
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.csproj.CoreCompileInputs.cache
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.sourcelink.json
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.dll
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\refint\rasa.dll
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\rasa.pdb
+D:\Projet MouvPerso\mouvperso\mouvperso\Rasa4\obj\Debug\net8.0\ref\rasa.dll

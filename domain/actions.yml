@@ -1,0 +1,77 @@
+version: "3.1"
+
+actions:
+  # Actions de vérification des données
+  - verification_poste
+  - verification_encadreur
+  - verification_contrat
+  - verification_hierarchie
+  - verification_motif
+  - verification_justification
+  - verification_objectif
+  - verification_dotation
+  - verification_piece_jointe
+  
+  # Actions de validation de formulaires
+  - validate_form_add_ddr
+  
+  # Actions de soumission et traitement
+  - action_submit_form_add_ddr
+  - action_traiter_ddr
+  
+  # Actions de collecte et validation
+  - action_collect_objectifs
+  - action_validate_slots
+  - verify_if_all_information_is_complet_add_ddr
+  - action_verifier_permission
+  - action_confirmer_enregistrement_ddr
+  
+  # Actions de modification d'objectifs
+  - action_modifier_objectif
+  - action_modifier_multiple_objectifs
+  - action_supprimer_objectifs_multiples
+  - action_supprimer_objectif
+  - action_supprimer_tous_objectifs
+  
+  # Actions de gestion des pièces jointes
+  - action_supprimer_piece_jointe
+  - action_supprimer_pieces_jointes_multiples
+  - action_supprimer_toutes_pieces_jointes
+  - action_remplacer_piece_jointe
+  
+  # Actions de gestion des dotations
+  - action_supprimer_dotation
+  - action_supprimer_dotations_multiples
+  - action_supprimer_toutes_dotations
+  - action_remplacer_dotation
+  
+  # Actions d'affichage et d'aide
+  - action_afficher_informations
+  - action_aide_generale
+  - action_fournir_aide_action
+  
+  - action_extract_dotations_secours 
+  #flux
+  - action_verify_if_all_information_flux_is_complet
+  - action_soumettre_flux_recrutement
+  - action_demander_confirmation_flux
+  - action_reset_slots_before_flux
+  - action_handle_flux_creation_confirmation
+  - action_reset_flux_proposal
+  - utter_flux_creation_forwarded
+  - action_handle_flux_desordonne_confirmation  
+  #validation recrutement
+  - action_verify_if_all_information_validation_is_complet
+  - action_demander_confirmation_validation
+  - action_soumettre_validation_recrutement
+  - action_demander_confirmation_rejet
+  - action_soumettre_rejet_recrutement
+  - action_verify_if_all_information_rejection_is_complet
+  - action_verify_information_based_on_intention
+  #consultation de demande
+  - action_afficher_statut_demande
+  - action_afficher_liste_demandes
+  - action_afficher_demandes_a_traiter
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

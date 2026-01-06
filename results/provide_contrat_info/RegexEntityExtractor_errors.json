@@ -1,0 +1,962 @@
+[
+  {
+    "text": "2 personnes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "2",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9993793964385986,
+        "value": "2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 11,
+        "value": "2 personnes",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Besoin de 5 personnes",
+    "entities": [
+      {
+        "start": 10,
+        "end": 11,
+        "value": "5",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "effectif",
+        "start": 10,
+        "end": 11,
+        "confidence_entity": 0.9995723366737366,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 10,
+        "end": 21,
+        "value": "5 personnes",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "1 stagiaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "1",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9991546869277954,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 11,
+        "value": "1 stagiaire",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "pour 2 postes",
+    "entities": [
+      {
+        "start": 5,
+        "end": 6,
+        "value": "2",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "effectif",
+        "start": 5,
+        "end": 6,
+        "confidence_entity": 0.9992585778236389,
+        "value": "2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 5,
+        "end": 13,
+        "value": "2 postes",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "effectif : 10",
+    "entities": [
+      {
+        "start": 11,
+        "end": 13,
+        "value": "10",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "effectif",
+        "start": 11,
+        "end": 13,
+        "confidence_entity": 0.9987577199935913,
+        "value": "10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 13,
+        "value": "effectif : 10",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Mise en service le 15/01/2025",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "15/01/2025",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 19,
+        "end": 29,
+        "confidence_entity": 0.9820713400840759,
+        "value": "15/01/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 19,
+        "end": 29,
+        "value": "15/01/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 19,
+        "end": 29,
+        "value": "15/01/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 0,
+        "end": 29,
+        "value": "Mise en service le 15/01/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 19,
+        "end": 29,
+        "value": "15/01/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Démarrage le 01/03/2025",
+    "entities": [
+      {
+        "start": 13,
+        "end": 23,
+        "value": "01/03/2025",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_mise_en_service",
+        "start": 13,
+        "end": 23,
+        "confidence_entity": 0.9848091006278992,
+        "value": "01/03/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 13,
+        "end": 23,
+        "value": "01/03/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 13,
+        "end": 23,
+        "value": "01/03/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 0,
+        "end": 23,
+        "value": "Démarrage le 01/03/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 13,
+        "end": 23,
+        "value": "01/03/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Début le 01/02/2025",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "01/02/2025",
+        "entity": "date_debut"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_debut",
+        "start": 9,
+        "end": 19,
+        "confidence_entity": 0.7307255268096924,
+        "value": "01/02/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 0,
+        "end": 19,
+        "value": "Début le 01/02/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_debut",
+        "start": 9,
+        "end": 19,
+        "value": "01/02/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 9,
+        "end": 19,
+        "value": "01/02/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 0,
+        "end": 19,
+        "value": "Début le 01/02/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 9,
+        "end": 19,
+        "value": "01/02/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Fin le 31/12/2025",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "31/12/2025",
+        "entity": "date_fin"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_fin",
+        "start": 7,
+        "end": 17,
+        "confidence_entity": 0.9447945952415466,
+        "value": "31/12/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 7,
+        "end": 17,
+        "value": "31/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 0,
+        "end": 17,
+        "value": "Fin le 31/12/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_fin",
+        "start": 7,
+        "end": 17,
+        "value": "31/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 7,
+        "end": 17,
+        "value": "31/12/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Du 01/02/2025 au 31/07/2025",
+    "entities": [
+      {
+        "start": 3,
+        "end": 13,
+        "value": "01/02/2025",
+        "entity": "date_debut"
+      },
+      {
+        "start": 17,
+        "end": 27,
+        "value": "31/07/2025",
+        "entity": "date_fin"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "date_debut",
+        "start": 3,
+        "end": 13,
+        "confidence_entity": 0.9080093502998352,
+        "value": "01/02/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 17,
+        "end": 27,
+        "confidence_entity": 0.9403320550918579,
+        "value": "31/07/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 3,
+        "end": 13,
+        "value": "01/02/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 17,
+        "end": 27,
+        "value": "31/07/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 14,
+        "end": 27,
+        "value": "au 31/07/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_fin",
+        "start": 3,
+        "end": 13,
+        "value": "01/02/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 17,
+        "end": 27,
+        "value": "31/07/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 3,
+        "end": 13,
+        "value": "01/02/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 17,
+        "end": 27,
+        "value": "31/07/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Durée : 6 mois",
+    "entities": [
+      {
+        "start": 8,
+        "end": 14,
+        "value": "6 mois",
+        "entity": "duree_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "duree_contrat",
+        "start": 8,
+        "end": 14,
+        "confidence_entity": 0.998917818069458,
+        "value": "6 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 0,
+        "end": 14,
+        "value": "Durée : 6 mois",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 8,
+        "end": 14,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Pour une durée de 12 mois",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "12 mois",
+        "entity": "duree_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "duree_contrat",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.998706579208374,
+        "value": "12 mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 0,
+        "end": 25,
+        "value": "Pour une durée de 12 mois",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 18,
+        "end": 25,
+        "value": "12 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "CDD pour 3 personnes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "CDD",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 9,
+        "end": 10,
+        "value": "3",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9998887777328491,
+        "value": "CDD",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 9,
+        "end": 10,
+        "confidence_entity": 0.9990424513816833,
+        "value": "3",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 9,
+        "end": 20,
+        "value": "3 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 0,
+        "end": 3,
+        "value": "CDD",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le contrat est un Stage pour 1 personne",
+    "entities": [
+      {
+        "start": 18,
+        "end": 23,
+        "value": "Stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 29,
+        "end": 30,
+        "value": "1",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 18,
+        "end": 23,
+        "confidence_entity": 0.9998962879180908,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 29,
+        "end": 30,
+        "confidence_entity": 0.9986942410469055,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 29,
+        "end": 39,
+        "value": "1 personne",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 18,
+        "end": 23,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "CDI effectif 4",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "CDI",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 13,
+        "end": 14,
+        "value": "4",
+        "entity": "effectif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.999932050704956,
+        "value": "CDI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 13,
+        "end": 14,
+        "confidence_entity": 0.996489942073822,
+        "value": "4",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 4,
+        "end": 14,
+        "value": "effectif 4",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 0,
+        "end": 3,
+        "value": "CDI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Stage du 01/03/2025 au 31/05/2025",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Stage",
+        "entity": "nature_contrat"
+      },
+      {
+        "start": 9,
+        "end": 19,
+        "value": "01/03/2025",
+        "entity": "date_debut"
+      },
+      {
+        "start": 23,
+        "end": 33,
+        "value": "31/05/2025",
+        "entity": "date_fin"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9993113279342651,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 9,
+        "end": 19,
+        "confidence_entity": 0.8974184393882751,
+        "value": "01/03/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 23,
+        "end": 33,
+        "confidence_entity": 0.9365737438201904,
+        "value": "31/05/2025",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 9,
+        "end": 19,
+        "value": "01/03/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 23,
+        "end": 33,
+        "value": "31/05/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 20,
+        "end": 33,
+        "value": "au 31/05/2025",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "date_fin",
+        "start": 9,
+        "end": 19,
+        "value": "01/03/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 23,
+        "end": 33,
+        "value": "31/05/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 9,
+        "end": 19,
+        "value": "01/03/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 23,
+        "end": 33,
+        "value": "31/05/2025",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 0,
+        "end": 5,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le contrat est un stage pour une durée de six mois",
+    "entities": [
+      {
+        "start": 18,
+        "end": 23,
+        "value": "stage",
+        "entity": "nature_contrat"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nature_contrat",
+        "start": 18,
+        "end": 23,
+        "confidence_entity": 0.9998865127563477,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 42,
+        "end": 50,
+        "confidence_entity": 0.8313777446746826,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 42,
+        "end": 50,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 18,
+        "end": 23,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

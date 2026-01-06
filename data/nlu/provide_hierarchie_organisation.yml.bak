@@ -1,0 +1,931 @@
+version: "3.1"
+
+nlu:
+  # ============================================
+  # INTENT: provide_hierarchie_organisation
+  # ============================================
+  - intent: provide_hierarchie_organisation
+    examples: |
+      # Direction - exemples originaux
+      - dans la [direction informatique](direction)
+      - pour la [direction IT](direction)
+      - à la [DSI](direction)
+      - au sein de la [DRH](direction)
+      - rattaché à la [direction logistique](direction)
+      - [direction des systèmes d'information](direction)
+      - [direction des ressources humaines](direction)
+      - [direction de l'innovation](direction)
+      - dans la [direction des systèmes d'information](direction)
+      - pour la [direction RH](direction)
+      - à la [direction commerciale](direction)
+      - [DSI](direction)
+      - [DRH](direction)
+      - [DIN](direction)
+      - [DAF](direction)
+      - [DLA](direction)
+      - [informatique](direction)
+      - [RH](direction)
+      - [logistique](direction)
+      - [commercial](direction)
+      - [finance](direction)
+      - [marketing](direction)
+      - [innovation](direction)
+      - la [DSI](direction)
+      - pour la [direction informatique](direction)
+      - direction: [DRH](direction)
+      - direction: [DIN](direction)
+      - pour la [direction logistique](direction)
+      
+      # Exploitation - exemples originaux
+      - [AG01](exploitation)
+      - [AG04](exploitation)
+      - [AG05](exploitation)
+      - [US50](exploitation)
+      - pour l'exploitation [00 Siège Social](exploitation)
+      - à l'exploitation [AG01 Agence Tanjombato](exploitation)
+      - à [Tuléar](exploitation)
+      - je suis rattaché à la [direction communication](direction)
+      - direction: [DIN](direction) exploitation: [US50](exploitation)
+      
+      # NOUVEAUX: Exploitation avec contexte complet
+      - basé à [00 Siège Social](exploitation)
+      - basé au [00 Siège Social](exploitation)
+      - basé à [00 siege social](exploitation)
+      - basé au [00 siege social](exploitation)
+      - situé à [00 Siège Social](exploitation)
+      - situé au [00 Siège Social](exploitation)
+      - localisé à [00 Siège Social](exploitation)
+      - localisé au [00 Siège Social](exploitation)
+      - au [00 Siège Social](exploitation)
+      - à [00 Siège Social](exploitation)
+      - [00 Siège Social](exploitation)
+      - [00 siege social](exploitation)
+      - [Siège Social](exploitation)
+      - [siege social](exploitation)
+      - [siege](exploitation)
+      - exploitation [00 Siège Social](exploitation)
+      - exploitation [00 siege social](exploitation)
+      - lieu: [00 Siège Social](exploitation)
+      - lieu: [00 siege social](exploitation)
+      - site: [00 Siège Social](exploitation)
+      - site: [00 siege social](exploitation)
+      
+      # NOUVEAUX: Avec d'autres exploitations en contexte
+      - basé à [AG01 Agence Tanjombato](exploitation)
+      - basé à [AG04 Agence Tuléar](exploitation)
+      - basé à [AG05 Agence Fianarantsoa](exploitation)
+      - basé à [US50 Usine Ambatolampy](exploitation)
+      - basé à [US02 Usine Antsirabe](exploitation)
+      - situé à [AG01 Agence Tanjombato](exploitation)
+      - situé à [AG04 Agence Tuléar](exploitation)
+      - localisé à [US50 Usine Ambatolampy](exploitation)
+      - au [US50 Usine Ambatolampy](exploitation)
+      - à [AG01 Agence Tanjombato](exploitation)
+      - exploitation [AG01 Agence Tanjombato](exploitation)
+      - lieu: [AG04 Agence Tuléar](exploitation)
+      - site: [US50 Usine Ambatolampy](exploitation)
+      
+      # NOUVEAUX: Dans des phrases complètes (DDR)
+      - DDR pour un développeur basé à [00 Siège Social](exploitation)
+      - demande pour un agent basé à [00 siege social](exploitation)
+      - stage basé à [00 Siège Social](exploitation)
+      - CDD basé au [00 Siège Social](exploitation)
+      - poste basé à [00 siege social](exploitation)
+      - recrutement basé au [00 Siège Social](exploitation)
+      - développeur basé à [00 siege social](exploitation)
+      - stagiaire basé à [00 Siège Social](exploitation)
+      - agent situé au [00 Siège Social](exploitation)
+      - manœuvre localisé à [00 siege social](exploitation)
+      
+      # NOUVEAUX: Avec direction ET exploitation
+      - [DSI](direction) basé à [00 Siège Social](exploitation)
+      - [direction informatique](direction) basé à [00 siege social](exploitation)
+      - dans la [DSI](direction) basé à [00 Siège Social](exploitation)
+      - pour la [direction informatique](direction) basé au [00 siege social](exploitation)
+      - [DRH](direction) au [00 Siège Social](exploitation)
+      - [direction RH](direction) situé à [00 siege social](exploitation)
+      - à la [DSI](direction) localisé au [00 Siège Social](exploitation)
+      
+      # NOUVEAUX: Phrases très longues (comme votre cas)
+      - DDR pour un développeur web dans la [direction informatique](direction) stage basé à [00 siege social](exploitation)
+      - développeur dans la [DSI](direction) contrat stage basé à [00 Siège Social](exploitation) durée six mois
+      - agent [direction RH](direction) CDD basé au [00 siege social](exploitation) pour trois mois
+      - manœuvre [direction logistique](direction) stage localisé à [00 Siège Social](exploitation)
+      - développeur web [DSI](direction) basé à [00 siege social](exploitation) encadreur responsable technique
+      
+      # Nature de contrat - exemples originaux
+      - [CDD](nature_contrat)
+      - [CDI](nature_contrat)
+      - [Stage](nature_contrat)
+      - [stage](nature_contrat)
+      - [externalisé](nature_contrat)
+      - [journalier](nature_contrat)
+      - un [CDD](nature_contrat)
+      - une [Stage](nature_contrat)
+      - un [stage](nature_contrat)
+      - un [CDI](nature_contrat)
+      - Le contrat est un [CDD](nature_contrat)
+      - Le contrat est un [CDI](nature_contrat)
+      - Le contrat est un [Stage](nature_contrat)
+      - Le contrat est un [stage](nature_contrat)
+      - Le contrat est [externalisé](nature_contrat)
+      - Le contrat est de type [journalier](nature_contrat)
+      - C'est un contrat [CDD](nature_contrat)
+      - Type de contrat : [CDI](nature_contrat)
+      - Nature du contrat : [Stage](nature_contrat)
+      - contrat : [CDD](nature_contrat)
+      - un contrat de type [Stage](nature_contrat)
+      - en [Stage](nature_contrat)
+      - en [CDD](nature_contrat)
+      
+      # Effectif - exemples originaux
+      - [2](effectif) personnes
+      - Besoin de [5](effectif) personnes
+      - [1](effectif) stagiaire
+      - pour [2](effectif) postes
+      - effectif : [10](effectif)
+      - [un](effectif) poste
+      - [une](effectif) personne
+      - pour [un](effectif) développeur
+      
+      # Dates - exemples originaux
+      - Mise en service le [15/01/2025](date_mise_en_service)
+      - Démarrage le [01/03/2025](date_mise_en_service)
+      - Début le [01/02/2025](date_debut)
+      - Fin le [31/12/2025](date_fin)
+      - Du [01/02/2025](date_debut) au [31/07/2025](date_fin)
+      - Durée : [6 mois](duree_contrat)
+      - Pour une durée de [12 mois](duree_contrat)
+      - pour une durée de [six mois](duree_contrat)
+      - [3 mois](duree_contrat)
+      
+      # Phrases complètes - originaux améliorés
+      - [CDD](nature_contrat) pour [3](effectif) personnes
+      - Le contrat est un [Stage](nature_contrat) pour [1](effectif) personne
+      - Le contrat est un [stage](nature_contrat) pour une durée de [six mois](duree_contrat)
+      - [CDI](nature_contrat) effectif [4](effectif)
+      - [Stage](nature_contrat) du [01/03/2025](date_debut) au [31/05/2025](date_fin)
+      - contrat [Stage](nature_contrat) de [6 mois](duree_contrat)
+      - [CDD](nature_contrat) renouvelable de [6 mois](duree_contrat)
+      - ajouter un DDR pour un développeur dans la [direction informatique](direction)
+      - DDR pour un développeur web dans la [DSI](direction)
+      - pour un développeur dans la [direction informatique](direction) le contrat est un stage
+      - je souhaite ajouter un DDR dans la [direction informatique](direction)
+      - demande pour la [direction informatique](direction)
+      - rattaché à la [direction informatique](direction)
+      - basé dans la [direction informatique](direction)
+      - au sein de la [DSI](direction)
+      - pour la [direction des systèmes d'information](direction)
+      - dans la [direction RH](direction)
+      - pour la [DRH](direction)
+      - à la [direction commerciale](direction)
+      - rattaché à la [DAF](direction)
+
+  # SYNONYMES (inchangés mais je rajoute des variantes pour 00 Siège Social)
+  - synonym: DSI
+    examples: |
+      - DSI
+      - Directeur des Systèmes d'Information
+      - Directrice des Systèmes d'Information
+      - Directeur des Systemes d'Information
+      - Directrice des Systemes d'Information
+      - Direction des Systèmes d'Information
+      - Direction des Systemes d'Information
+      - Direction DSI
+      - Directeur SI
+      - Directrice SI
+      - Direction SI
+      - Directeur informatique
+      - Directrice informatique
+      - Direction informatique
+      - informatique
+      - Systemes d'Information
+      - Systèmes d'Information
+      - SI
+      - Service informatique
+      - Département informatique
+      - Departement informatique
+      - Département SI
+      - Departement SI
+      - Service SI
+      - responsable informatique
+      - responsable SI
+      - IT
+      - Direction IT
+      - Directeur IT
+      - Directrice IT
+      - technologies de l'information
+      - technologie de l'information
+      - info
+      - sys info
+      - systeme info
+
+  - synonym: DRH
+    examples: |
+      - DRH
+      - Directeur des Ressources Humaines
+      - Directrice des Ressources Humaines
+      - Direction des Ressources Humaines
+      - Directeur RH
+      - Directrice RH
+      - Direction RH
+      - Direction DRH
+      - RH
+      - Ressources Humaines
+      - Service RH
+      - Service des Ressources Humaines
+      - Département RH
+      - Departement RH
+      - Département des Ressources Humaines
+      - Departement des Ressources Humaines
+      - responsable RH
+      - responsable des Ressources Humaines
+      - chef du personnel
+      - gestion des ressources humaines
+      - HR
+      - Human Resources
+      - personnel
+      - service personnel
+
+  - synonym: DMA
+    examples: |
+      - DMA
+      - Directeur Marketing et Administration
+      - Directrice Marketing et Administration
+      - Directeur du Marketing et de l'Administration
+      - Directrice du Marketing et de l'Administration
+      - Direction Marketing et Administration
+      - Directeur Marketing
+      - Directrice Marketing
+      - Direction Marketing
+      - direction DMA
+      - Direction Administration
+      - Marketing et Administration
+      - Marketing
+      - Administration
+      - Service Marketing
+      - Département Marketing
+      - Departement Marketing
+      - Service Administration
+      - Département Administration
+      - Departement Administration
+      - responsable Marketing
+      - responsable Administration
+      - chef du Marketing
+      - Direction Marketing et Admin
+      - Directeur Marcom
+      - Directrice Marcom
+      - marcom
+      - mkt
+      - admin
+
+  - synonym: DGL
+    examples: |
+      - DGL
+      - Directeur Général de Logistique
+      - Directrice Générale de Logistique
+      - Directeur General de Logistique
+      - Directrice Generale de Logistique
+      - Direction Générale de Logistique
+      - Direction Generale de Logistique
+      - direction Générale de Logistique
+      - direction Generale de Logistique
+      - direction DGL
+      - Directeur Logistique
+      - Directrice Logistique
+      - Direction Logistique
+      - Logistique
+      - Service Logistique
+      - Département Logistique
+      - Departement Logistique
+      - responsable Logistique
+      - chef Logistique
+      - responsable de la Logistique
+      - Direction de la Logistique
+      - Directeur de la Logistique
+      - Directrice de la Logistique
+      - logi
+      - log
+
+  - synonym: DAF
+    examples: |
+      - DAF
+      - Directeur Administratif et Financier
+      - Directrice Administrative et Financière
+      - Directrice Administrative et Financiere
+      - Directeur Financier
+      - Directrice Financière
+      - Directrice Financiere
+      - Direction Administratif et Financier
+      - Direction Administrative et Financière
+      - Direction Administrative et Financiere
+      - direction DAF
+      - Directeur Administratif
+      - Directrice Administrative
+      - Direction Financière
+      - Direction Financiere
+      - Administratif et Financier
+      - Administratif
+      - Finance
+      - Finances
+      - Direction Finance
+      - Directeur Finance
+      - Directrice Finance
+      - Service Financier
+      - Service Finance
+      - Département Financier
+      - Departement Financier
+      - Département Finance
+      - Departement Finance
+      - responsable Financier
+      - responsable Finance
+      - CFO
+      - Contrôle de gestion
+      - Controle de gestion
+      - comptabilité
+      - comptabilite
+      - compta
+      - controle gestion
+      - contrôle gestion
+      - admin finance
+      - administratif financier
+
+  - synonym: DIN
+    examples: |
+      - DIN
+      - Directeur de l'Innovation
+      - Directrice de l'Innovation
+      - Direction de l'Innovation
+      - Directeur Innovation
+      - Directrice Innovation
+      - Direction Innovation
+      - Direction DIN
+      - Innovation
+      - Service Innovation
+      - Département Innovation
+      - Departement Innovation
+      - responsable Innovation
+      - chef de l'Innovation
+      - R&D
+      - RD
+      - Recherche et Développement
+      - Recherche et Developpement
+      - Direction R&D
+      - Directeur R&D
+      - Directrice R&D
+      - Pôle Innovation
+      - Pole Innovation
+      - recherche
+      - developpement
+      - développement
+      - innov
+      - R & D
+
+  - synonym: DCM
+    examples: |
+      - DCM
+      - Directeur de la Communication
+      - Directrice de la Communication
+      - Direction de la Communication
+      - Directeur Communication
+      - Directrice Communication
+      - Direction Communication
+      - Direction DCM
+      - Communication
+      - Service Communication
+      - Département Communication
+      - Departement Communication
+      - responsable Communication
+      - chef de la Communication
+      - Dircom
+      - Relations publiques
+      - RP
+      - Communication corporate
+      - Communication interne
+      - Communication externe
+      - com
+      - comm
+      - relations presse
+      - rel publiques
+
+  - synonym: DCO
+    examples: |
+      - DCO
+      - Directeur Commercial
+      - Directrice Commerciale
+      - Direction Commerciale
+      - Directeur des Ventes
+      - Directrice des Ventes
+      - Direction des Ventes
+      - Direction DCO
+      - Commercial
+      - Ventes
+      - Service Commercial
+      - Service Ventes
+      - Département Commercial
+      - Departement Commercial
+      - Département Ventes
+      - Departement Ventes
+      - responsable Commercial
+      - responsable Ventes
+      - chef des Ventes
+      - Développement Commercial
+      - Developpement Commercial
+      - Business Development
+      - Sales
+      - Force de vente
+      - com
+      - vente
+      - business dev
+      - dev commercial
+
+  - synonym: DLA
+    examples: |
+      - DLA
+      - Directeur Logistique et Approvisionnement
+      - Directrice Logistique et Approvisionnement
+      - Direction Logistique et Approvisionnement
+      - Direction DLA
+      - Directeur Approvisionnement
+      - Directrice Approvisionnement
+      - Direction Approvisionnement
+      - Logistique et Approvisionnement
+      - Approvisionnement
+      - Service Logistique et Approvisionnement
+      - Département Logistique et Approvisionnement
+      - Departement Logistique et Approvisionnement
+      - responsable Logistique et Approvisionnement
+      - responsable Approvisionnement
+      - Supply Chain
+      - Chaîne logistique
+      - Chaine logistique
+      - Achats et Approvisionnement
+      - Direction Supply Chain
+      - supply
+      - appro
+      - achats
+      - chaine d'appro
+      
+  # AMÉLIORATION CRITIQUE: Plus de variantes pour 00 Siège Social
+  - synonym: 00 Siège Social
+    examples: |
+      - 00 Siège Social
+      - 00 Siege Social
+      - 00 siège social
+      - 00 siege social
+      - Siège Social
+      - Siege Social
+      - siège social
+      - siege social
+      - 00
+      - siège
+      - siege
+      - Siège
+      - Siege
+      - le siège
+      - le siege
+      - au siège
+      - au siege
+      - à siège
+      - à siege
+      - SS
+      - headquarter
+      - HQ
+      - central
+      - bureau central
+      - site central
+      - 00 ss
+      - 00 SS
+      
+  - synonym: AG01 Agence Tanjombato
+    examples: |
+      - AG01 Agence Tanjombato
+      - AG01 Agence tanjombato
+      - AG01 agence Tanjombato
+      - Agence Tanjombato
+      - agence Tanjombato
+      - agence tanjombato
+      - AG01
+      - ag01
+      - Tanjombato
+      - tanjombato
+      - Tanjo
+      - tanjo
+      - agence tanjo
+      - AG 01
+      - AG-01
+      
+  - synonym: AG04 Agence Tuléar
+    examples: |
+      - AG04 Agence Tuléar
+      - AG04 Agence Tulear
+      - AG04 Agence tuléar
+      - AG04 Agence tulear
+      - Agence Tuléar
+      - Agence Tulear
+      - agence Tuléar
+      - agence Tulear
+      - agence tuléar
+      - agence tulear
+      - AG04
+      - ag04
+      - Tuléar
+      - Tulear
+      - tuléar
+      - tulear
+      - Toliara
+      - toliara
+      - AG 04
+      - AG-04
+      
+  - synonym: AG05 Agence Fianarantsoa
+    examples: |
+      - AG05 Agence Fianarantsoa
+      - AG05 Agence fianarantsoa
+      - AG05 agence Fianarantsoa
+      - Agence Fianarantsoa
+      - agence Fianarantsoa
+      - agence fianarantsoa
+      - AG05
+      - ag05
+      - Fianarantsoa
+      - fianarantsoa
+      - Fianar
+      - fianar
+      - Fianarantso
+      - agence fianar
+      - AG 05
+      - AG-05
+      
+  - synonym: AG06 Agence Ihosy
+    examples: |
+      - AG06 Agence Ihosy
+      - AG06 Agence ihosy
+      - AG06 agence Ihosy
+      - Agence Ihosy
+      - agence Ihosy
+      - agence ihosy
+      - AG06
+      - ag06
+      - Ihosy
+      - ihosy
+      - AG 06
+      - AG-06
+      
+  - synonym: AG07 Agence Majunga
+    examples: |
+      - AG07 Agence Majunga
+      - AG07 Agence Mahajanga
+      - AG07 Agence majunga
+      - AG07 Agence mahajanga
+      - Agence Majunga
+      - Agence Mahajanga
+      - agence Majunga
+      - agence Mahajanga
+      - agence majunga
+      - agence mahajanga
+      - AG07
+      - ag07
+      - Majunga
+      - Mahajanga
+      - majunga
+      - mahajanga
+      - AG 07
+      - AG-07
+      
+  - synonym: AG08 Agence Manakara
+    examples: |
+      - AG08 Agence Manakara
+      - AG08 Agence manakara
+      - AG08 agence Manakara
+      - Agence Manakara
+      - agence Manakara
+      - agence manakara
+      - AG08
+      - ag08
+      - Manakara
+      - manakara
+      - AG 08
+      - AG-08
+      
+  - synonym: AG09 Agence Tamatave
+    examples: |
+      - AG09 Agence Tamatave
+      - AG09 Agence Toamasina
+      - AG09 Agence tamatave
+      - AG09 Agence toamasina
+      - Agence Tamatave
+      - Agence Toamasina
+      - agence Tamatave
+      - agence Toamasina
+      - agence tamatave
+      - agence toamasina
+      - AG09
+      - ag09
+      - Tamatave
+      - Toamasina
+      - tamatave
+      - toamasina
+      - Tama
+      - tama
+      - AG 09
+      - AG-09
+      
+  - synonym: AG11 Agence Andranomahery
+    examples: |
+      - AG11 Agence Andranomahery
+      - AG11 Agence andranomahery
+      - AG11 agence Andranomahery
+      - Agence Andranomahery
+      - agence Andranomahery
+      - agence andranomahery
+      - AG11
+      - ag11
+      - Andranomahery
+      - andranomahery
+      - Andrano
+      - andrano
+      - AG 11
+      - AG-11
+      
+  - synonym: AG12 Agence Antsirabe
+    examples: |
+      - AG12 Agence Antsirabe
+      - AG12 Agence antsirabe
+      - AG12 agence Antsirabe
+      - Agence Antsirabe
+      - agence Antsirabe
+      - agence antsirabe
+      - AG12
+      - ag12
+      - agence antsi
+      - AG 12
+      - AG-12
+      
+  - synonym: AG18 Agence Ambanja
+    examples: |
+      - AG18 Agence Ambanja
+      - AG18 Agence ambanja
+      - AG18 agence Ambanja
+      - Agence Ambanja
+      - agence Ambanja
+      - agence ambanja
+      - AG18
+      - ag18
+      - Ambanja
+      - ambanja
+      - AG 18
+      - AG-18
+      
+  - synonym: AG19 Agence Sambava
+    examples: |
+      - AG19 Agence Sambava
+      - AG19 Agence sambava
+      - AG19 agence Sambava
+      - Agence Sambava
+      - agence Sambava
+      - agence sambava
+      - AG19
+      - ag19
+      - Sambava
+      - sambava
+      - AG 19
+      - AG-19
+      
+  - synonym: AG21 Agence Nosy Be
+    examples: |
+      - AG21 Agence Nosy Be
+      - AG21 Agence Nosybe
+      - AG21 Agence nosy be
+      - AG21 Agence nosybe
+      - Agence Nosy Be
+      - Agence Nosybe
+      - agence Nosy Be
+      - agence Nosybe
+      - agence nosy be
+      - agence nosybe
+      - AG21
+      - ag21
+      - Nosy Be
+      - Nosybe
+      - nosy be
+      - nosybe
+      - Nosy
+      - nosy
+      - AG 21
+      - AG-21
+      
+  - synonym: AG23 Agence Morondava
+    examples: |
+      - AG23 Agence Morondava
+      - AG23 Agence morondava
+      - AG23 agence Morondava
+      - Agence Morondava
+      - agence Morondava
+      - agence morondava
+      - AG23
+      - ag23
+      - Morondava
+      - morondava
+      - Morond
+      - morond
+      - AG 23
+      - AG-23
+      
+  - synonym: AG24 Agence Fort dauphin
+    examples: |
+      - AG24 Agence Fort dauphin
+      - AG24 Agence Fort Dauphin
+      - AG24 Agence fort dauphin
+      - AG24 Agence Tolagnaro
+      - AG24 Agence tolagnaro
+      - Agence Fort dauphin
+      - Agence Fort Dauphin
+      - agence Fort dauphin
+      - agence Fort Dauphin
+      - agence fort dauphin
+      - agence Tolagnaro
+      - agence tolagnaro
+      - AG24
+      - ag24
+      - Fort dauphin
+      - Fort Dauphin
+      - fort dauphin
+      - Tolagnaro
+      - tolagnaro
+      - Fort-Dauphin
+      - AG 24
+      - AG-24
+      
+  - synonym: US02 Usine Antsirabe
+    examples: |
+      - US02 Usine Antsirabe
+      - US02 Usine antsirabe
+      - US02 usine Antsirabe
+      - Usine Antsirabe
+      - usine Antsirabe
+      - usine antsirabe
+      - US02
+      - us02
+      - US 02
+      - US-02
+      - usine antsi
+      - Usine Antsi
+      
+  - synonym: US03 Usine Diego
+    examples: |
+      - US03 Usine Diego
+      - US03 Usine diego
+      - US03 Usine Antsiranana
+      - US03 Usine antsiranana
+      - US03 usine Diego
+      - Usine Diego
+      - usine Diego
+      - usine diego
+      - Usine Antsiranana
+      - usine Antsiranana
+      - usine antsiranana
+      - US03
+      - us03
+      - US 03
+      - US-03
+      - Diego Suarez
+      - diego suarez
+      - Diego-Suarez
+      
+  - synonym: US50 Usine Ambatolampy
+    examples: |
+      - US50 Usine Ambatolampy
+      - US50 Usine ambatolampy
+      - US50 usine Ambatolampy
+      - Usine Ambatolampy
+      - usine Ambatolampy
+      - usine ambatolampy
+      - US50
+      - us50
+      - Us50
+      - US 50
+      - US-50
+      - Ambatolampy
+      - ambatolampy
+      - Ambato
+      - ambato
+      
+  - synonym: US65 Usine Andranovelona
+    examples: |
+      - US65 Usine Andranovelona
+      - US65 Usine andranovelona
+      - US65 usine Andranovelona
+      - Usine Andranovelona
+      - usine Andranovelona
+      - usine andranovelona
+      - US65
+      - us65
+      - US 65
+      - US-65
+      - Andranovelona
+      - andranovelona
+      
+  - synonym: US68 Malto Antsirabe
+    examples: |
+      - US68 Malto Antsirabe
+      - US68 Malto antsirabe
+      - US68 malto Antsirabe
+      - Malto Antsirabe
+      - malto Antsirabe
+      - malto antsirabe
+      - US68
+      - us68
+      - US 68
+      - US-68
+      - Malto
+      - malto
+      
+  - synonym: Logistique Antsirabe
+    examples: |
+      - Logistique Antsirabe
+      - Logistique antsirabe
+      - logistique Antsirabe
+      - logistique antsirabe
+      - Logi Antsirabe
+      - logi Antsirabe
+      - logi antsirabe
+      - Log Antsirabe
+      - log Antsirabe
+      - log antsirabe
+      
+  - synonym: Logistique Diego
+    examples: |
+      - Logistique Diego
+      - Logistique diego
+      - Logistique Antsiranana
+      - Logistique antsiranana
+      - logistique Diego
+      - logistique diego
+      - logistique Antsiranana
+      - logistique antsiranana
+      - Logi Diego
+      - logi Diego
+      - logi diego
+      - Log Diego
+      - log Diego
+      - log diego
+      
+  # REGEX - Patterns pour détecter automatiquement
+  - regex: direction
+    examples: |
+      - \b(DSI|DRH|DMA|DGL|DAF|DIN|DCM|DCO|DLA)\b
+      - \b(dsi|drh|dma|dgl|daf|din|dcm|dco|dla)\b
+      - direction:\s*(DSI|DRH|DMA|DGL|DAF|DIN|DCM|DCO|DLA)
+      - direction\s*:\s*(DSI|DRH|DMA|DGL|DAF|DIN|DCM|DCO|DLA)
+
+  - regex: exploitation
+    examples: |
+      - \b(AG|ag)\d{2}\b
+      - \b(US|us|Us)\d{2}\b
+      - \bUS50\b
+      - \bUs50\b
+      - \bus50\b
+      - \b00\s+(S|s)i(è|e)ge\s+(S|s)ocial\b
+      - \b(S|s)i(è|e)ge\s+(S|s)ocial\b
+      
+  # LOOKUP - Listes de référence
+  - lookup: direction
+    examples: |
+      - DSI
+      - DRH
+      - DMA
+      - DGL
+      - DAF
+      - DIN
+      - DCM
+      - DCO
+      - DLA
+
+  - lookup: exploitation
+    examples: |
+      - 00 Siège Social
+      - 00 siege social
+      - Siège Social
+      - siege social
+      - AG01 Agence Tanjombato
+      - AG04 Agence Tuléar
+      - AG05 Agence Fianarantsoa
+      - AG06 Agence Ihosy
+      - AG07 Agence Majunga
+      - AG08 Agence Manakara
+      - AG09 Agence Tamatave
+      - AG11 Agence Andranomahery
+      - AG12 Agence Antsirabe
+      - AG18 Agence Ambanja
+      - AG19 Agence Sambava
+      - AG21 Agence Nosy Be
+      - AG23 Agence Morondava
+      - AG24 Agence Fort dauphin
+      - US02 Usine Antsirabe
+      - US03 Usine Diego
+      - US50 Usine Ambatolampy
+      - US65 Usine Andranovelona
+      - US68 Malto Antsirabe
+      - Logistique Antsirabe
+      - Logistique Diego

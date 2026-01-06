@@ -1,0 +1,202 @@
+version: "3.1"
+
+nlu:
+  - intent: modifier_objectif
+    examples: |
+      - je veux modifier l'objectif 2
+      - modifie l'objectif 3
+      - change le poids de l'objectif 1 à 25%
+      - édite l'objectif numéro 4
+      - correction objectif 2
+      - modifier le deuxième objectif
+      - je veux changer l'objectif 3
+      - modifie le résultat de l'objectif 1
+      - remplace l'objectif 4 par un nouveau
+      - corrige le troisième objectif
+      - éditer objectif 5
+      - change la description de l'objectif 2
+      - modifier le poids de l'objectif 1
+      - ajuste l'objectif 3
+      - met à jour l'objectif 2
+      - rectifie l'objectif 1
+      - révise l'objectif 4
+      - je souhaite modifier l'objectif 2
+      - peux-tu changer l'objectif 1
+      - il faut corriger l'objectif 3
+      - on doit ajuster l'objectif 2
+      - faut modifier l'objectif 1
+      - voudrais changer l'objectif 3
+      - besoin de modifier l'objectif 2
+      - objectif 2 à modifier
+      - correction sur objectif 3
+      - changement objectif 1
+      - mise à jour objectif 4
+      - ajustement objectif 2
+      - change uniquement le poids de l'objectif 1
+      - modifie seulement la description de l'objectif 2
+      - ajuste juste le résultat de l'objectif 3
+      - corrige le poids du premier objectif
+      - change la description du deuxième objectif
+      - modifier le resultat dans l'objectif 1 pour avoir une application capable de gerer une grande masse de données avec une temps d'execution inferieur a 10 seconde
+
+  - intent: modifier_objectifs_multiples
+    examples: |
+      - change l'objectif 1 à 25% et l'objectif 2 à 35%
+      - modifie l'objectif 1 poids 20% et l'objectif 2 poids 30%
+      - je veux changer l'objectif 1 et l'objectif 2
+      - modifier l'objectif 1 à 30% et l'objectif 3 à 40%
+      - change l'objectif 2 et l'objectif 3
+      - ajuste l'objectif 1 et l'objectif 2
+      - édite l'objectif 2 et l'objectif 4
+      - corrige l'objectif 1 et l'objectif 3
+      - révise l'objectif 2 et l'objectif 3
+      - modifie l'objectif 3 avec le poids 20% et l'objectif 2 avec la description Test
+      - change l'objectif 1 avec poids 25% et l'objectif 3 avec poids 35%
+      - je veux modifier l'objectif 2 avec description nouvelle et l'objectif 1 avec poids 30%
+      - ajuste l'objectif 1 avec 20% et l'objectif 2 avec 40%
+      - modifie l'objectif 3 avec le poids 15% et l'objectif 1 avec comme résultat atteindre 95%
+      - change l'objectif 2 avec description Test et l'objectif 3 avec poids 25%
+      - change l'objectif 1 pour 25% et l'objectif 2 pour 35%
+      - modifie l'objectif 1 pour améliorer qualité et l'objectif 2 pour 30%
+      - ajuste l'objectif 3 pour 20% et l'objectif 1 pour nouvelle description
+      - édite l'objectif 1 pour 30% et l'objectif 2 pour Test
+      - objectif 1 poids 25%, objectif 2 poids 35%, objectif 3 poids 40%
+      - objectif 1: 20%, objectif 2: 30%, objectif 3: 50%
+      - objectif 1: description A, objectif 2: description B
+      - objectif 1 à 25%, objectif 2 à 35%
+      - objectif 1 devient 20%, objectif 2 devient 30%
+      - objectif 1 = 25%, objectif 2 = 35%, objectif 3 = 40%
+      - obj 1: 25%, obj 2: 35%, obj 3: 40%
+      - obj1 20%, obj2 30%, obj3 50%
+      - change le premier objectif à 25% et le deuxième à 35%
+      - modifie le 1er à 20% et le 2ème à 30%
+      - ajuste le premier objectif et le troisième objectif
+      - le premier devient 25% et le deuxième devient 35%
+      - 1er objectif poids 20% et 2ème objectif poids 30%
+      - premier objectif à 25% et second objectif à 35%
+      - modifie le deuxième objectif et le quatrième objectif
+      - modifie l'objectif 1 avec comme description Améliorer la qualité des produits et l'objectif 2 avec comme description Réduire les délais
+      - change l'objectif 3 avec la description Test de tous les produits et l'objectif 1 avec la description Contrôle qualité
+      - je veux modifier l'objectif 2 avec description Sortir des résultats fiables et l'objectif 3 avec description Respecter la sécurité
+      - ajuste l'objectif 1 avec description Optimiser processus et l'objectif 2 avec description Garantir qualité
+      - objectif 1: Améliorer satisfaction client, objectif 2: Réduire coûts de 15%
+      - objectif 1: description nouvelle qualité, objectif 2: description test produits
+      - objectif 3: Garantir sécurité au travail, objectif 1: Optimiser processus
+      - change l'objectif 1 à 25% et modifie la description de l'objectif 2 en Test produits
+      - modifie le poids de l'objectif 3 à 20% et la description de l'objectif 2
+      - objectif 1 poids 30%, objectif 2 description Améliorer qualité
+      - l'objectif 1 devient 25% et l'objectif 2 devient Nouvelle description
+      - poids de l'objectif 1 à 30% et description de l'objectif 2 changée
+      - objectif 1: poids 20% description A, objectif 2: poids 30% description B
+      - modifie objectif 1 poids 25% résultat X et objectif 2 poids 35% résultat Y
+      - change objectif 3 description Test poids 15% et objectif 1 description Qualité poids 35%
+      - je souhaite modifier l'objectif 1 et l'objectif 2
+      - peux-tu changer l'objectif 1 à 25% et l'objectif 3 à 40%
+      - il faut ajuster l'objectif 1 et l'objectif 2
+      - on doit corriger l'objectif 2 et l'objectif 3
+      - faut modifier l'objectif 1 avec poids 20% et l'objectif 2 avec description X
+      - voudrais changer l'objectif 1 et l'objectif 3
+      - besoin de modifier l'objectif 2 et l'objectif 4
+      - pour l'objectif 1 met 25% et pour l'objectif 2 met 35%
+      - sur l'objectif 1 change à 20% et sur l'objectif 2 à 30%
+      - dans l'objectif 1 modifie poids 25% et dans l'objectif 2 description Test
+      - change l'objectif 1 à 25% puis l'objectif 2 à 35%
+      - modifie l'objectif 1 puis l'objectif 2
+      - ajuste l'objectif 1 puis aussi l'objectif 3
+      - change l'objectif 1 à 25% et aussi l'objectif 2 à 35%
+      - modifie l'objectif 1 et également l'objectif 2
+      - ajuste l'objectif 1 ainsi que l'objectif 3
+      - change l'objectif 1 à 25%, l'objectif 2 à 35% et l'objectif 3 à 40%
+      - modifie l'objectif 1 description A, l'objectif 2 description B et l'objectif 3 description C
+      - modifie les objectifs 1, 2 et 3
+      - change les objectifs 1 et 2
+      - ajuste plusieurs objectifs: 1, 2 et 3
+      - édite les objectifs numéro 1, 2 et 3
+      - corrige les objectifs 2 et 3
+
+  - intent: supprimer_objectif
+    examples: |
+      - supprime l'objectif 2
+      - retire l'objectif 1
+      - efface l'objectif 3
+      - enlève l'objectif 4
+      - supprime le premier objectif
+      - retire le deuxième objectif
+      - efface le troisième objectif
+      - enlève le quatrième objectif
+      - supprime le 1er objectif
+      - retire le 2ème objectif
+      - efface le 3ème objectif
+      - je veux supprimer l'objectif 4
+      - peux-tu retirer l'objectif 5
+      - il faut effacer l'objectif 2
+      - on doit enlever l'objectif 3
+      - faut supprimer l'objectif 1
+      - voudrais retirer l'objectif 2
+      - besoin de supprimer l'objectif 3
+      - supprime seulement l'objectif 2
+      - retire uniquement l'objectif 1
+      - efface juste l'objectif 3
+      - enlève simplement l'objectif 4
+      - objectif 2 à supprimer
+      - suppression objectif 3
+      - retrait objectif 1
+      - effacement objectif 4
+      - supprime le 2
+      - retire le 1
+      - efface le 3
+      - enlève le 4
+
+  - intent: supprimer_objectifs_multiples
+    examples: |
+      - supprimer l'objectif 2 et 3
+      - supprimer l'objectif 1 et 2
+      - supprimer l'objectif 1 et 3
+      - supprimer l'objectif 2 et 4
+      - supprimer l'objectif 3 et 4
+      - supprimer l'objectif 1 et 4
+      - supprimer l'objectif 2 et 5
+      - supprimer objectif 2 et 3
+      - supprimer objectif 1 et 2
+      - supprimer objectif 1 et 3
+      - supprimer objectif 2 et 4
+      - je veux supprimer l'objectif 2 et 3
+      - je veux supprimer l'objectif 1 et 2
+      - peux-tu supprimer l'objectif 2 et 3
+      - peux-tu supprimer l'objectif 1 et 2
+      - il faut supprimer l'objectif 2 et 4
+      - il faut supprimer l'objectif 1 et 3
+      - supprimer les objectifs 2 et 3
+      - supprimer les objectifs 1 et 2
+      - supprimer les objectifs 1 et 3
+      - supprimer les objectifs 2 et 4
+      - supprime l'objectif 2 et 3
+      - supprime l'objectif 1 et 2
+      - supprime l'objectif 1 et 3
+      - supprime l'objectif 2 et 4
+      - retire l'objectif 2 et 3
+      - retire l'objectif 1 et 2
+      - retire l'objectif 1 et 3
+      - efface l'objectif 2 et 3
+      - efface l'objectif 1 et 2
+      - efface l'objectif 1 et 3
+      - enlève l'objectif 2 et 3
+      - enlève l'objectif 1 et 2
+      - enlève l'objectif 1 et 3
+      - supprime le 2 et le 3
+      - supprimer le 1 et le 2
+      - supprimer le 1 et le 3
+      - supprime le 2 et le 3
+      - supprime le 1 et le 2
+      - retire le 2 et le 3
+      - retire le 1 et le 2
+      - efface le 2 et le 3
+      - efface le 1 et le 2
+      - supprime l'objectif 1 et l'objectif 3
+      - retire l'objectif 2 et l'objectif 4
+      - efface l'objectif 1 et l'objectif 2
+      - enlève l'objectif 2 et l'objectif 3
+      - supprime le premier objectif et le troisième objectif
+      - retire le deuxième objectif et le quatrième objectif
+      - efface le 1er objectif et le 3ème objectif
+      - enlève le premier et le deuxième objectif

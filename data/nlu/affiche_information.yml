@@ -1,0 +1,100 @@
+version: "3.1"
+
+nlu:
+  - intent: afficher_informations
+    examples: |
+      - affiche moi les informations
+      - montre moi les détails
+      - je veux voir les informations
+      - affiche les données
+      - montre les infos
+
+      - montre moi tout
+      - affiche moi le récapitulatif
+      - je veux voir le récap
+      - affiche moi ce que j'ai saisi
+      - montre ce que j'ai rempli
+      - résumé de la demande
+      - affiche le résumé
+      - affiche les [objectifs](info_type)
+      - montre moi les [objectifs](info_type)
+      - je veux voir les [objectifs](info_type)
+      - affiche les [dotations](info_type)
+      - montre les [dotations](info_type)
+      - affiche les [pièces jointes](info_type)
+      - montre moi les [fichiers](info_type)
+      - affiche le [poste](info_type)
+      - montre moi le [poste](info_type)
+      - affiche l'[encadreur](info_type)
+      - montre l'[encadreur](info_type)
+      - affiche la [direction](info_type)
+      - montre la [direction](info_type)
+      - affiche l'[exploitation](info_type)
+      - affiche le [contrat](info_type)
+      - montre le [contrat](info_type)
+      - affiche le [motif](info_type)
+      - montre le [motif](info_type)
+      - affiche la [justification](info_type)
+      - montre la [justification](info_type)
+      - affiche les [objectifs](info_type) et les [dotations](info_type)
+      - montre moi les [objectifs](info_type), [dotations](info_type) et [pièces jointes](info_type)
+      - je veux voir le [poste](info_type) et l'[encadreur](info_type)
+      - affiche la [direction](info_type), l'[exploitation](info_type) et le [motif](info_type)
+      - montre les [objectifs](info_type) et les [fichiers](info_type)
+      - affiche tout sauf les [objectifs](info_type)
+      - montre tout sauf les [pièces jointes](info_type)
+      - affiche uniquement les [objectifs](info_type)
+      - seulement les [dotations](info_type)
+      - juste le [poste](info_type)
+      - affiche moi les infos du [poste](info_type)
+      - détails sur le [contrat](info_type)
+      - informations sur l'[encadreur](info_type)
+      - affiche toutes les informations
+      - affiche toutes les infos
+      - montre moi toutes les données
+      - récapitulatif complet
+      - résumé complet
+      - affiche données du poste
+      - infos organisation
+      - détails contrat
+      - affiche objectifs dotations et fichiers
+      - Donne moi le résumé de ma demande
+      - Donne moi le récapitulatif de ma demande
+      - Donne moi tous les informations déjà entrer
+      - Tous les informations
+
+  # ==================== ENTITÉ : TYPE D'INFORMATION ====================
+  - lookup: info_type
+    examples: |
+      - objectifs
+      - objectif
+      - dotations
+      - dotation
+      - pièces jointes
+      - pièce jointe
+      - fichiers
+      - fichier
+      - documents
+      - document
+      - poste
+      - encadreur
+      - direction
+      - exploitation
+      - contrat
+      - nature contrat
+      - durée
+      - effectif
+      - motif
+      - justification
+      - budget
+      - situation budget
+      - date
+      - date de service
+      - organisation
+      - infos générales
+      - tout
+      - tous
+      - toutes
+      - complet
+      - récapitulatif
+      - résumé

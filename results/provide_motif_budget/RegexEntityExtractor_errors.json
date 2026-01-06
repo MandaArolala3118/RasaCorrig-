@@ -1,0 +1,1062 @@
+[
+  {
+    "text": "Demande liée à la Relation école (stage/alternance)",
+    "entities": [
+      {
+        "start": 18,
+        "end": 32,
+        "value": "Relation école",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 18,
+        "end": 32,
+        "confidence_entity": 0.9970014691352844,
+        "value": "Relation école",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 34,
+        "end": 39,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 18,
+        "end": 32,
+        "value": "Relation école",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Poste temporaire en Intérim pour remplacement maladie",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "Intérim",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 20,
+        "end": 27,
+        "confidence_entity": 0.9964087605476379,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "motif Intérim",
+    "entities": [
+      {
+        "start": 6,
+        "end": 13,
+        "value": "Intérim",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.9957603812217712,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est budgétisé",
+    "entities": [
+      {
+        "start": 6,
+        "end": 15,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 6,
+        "end": 15,
+        "confidence_entity": 0.9980955719947815,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est budgetisé",
+    "entities": [
+      {
+        "start": 6,
+        "end": 15,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 6,
+        "end": 15,
+        "confidence_entity": 0.9995200634002686,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "poste budgétisé",
+    "entities": [
+      {
+        "start": 6,
+        "end": 15,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 6,
+        "end": 15,
+        "confidence_entity": 0.9976171851158142,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "budgetisé",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "budgetisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.999259889125824,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est hors budget",
+    "entities": [
+      {
+        "start": 6,
+        "end": 17,
+        "value": "hors budget",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 6,
+        "end": 17,
+        "confidence_entity": 0.9927311539649963,
+        "value": "Hors budget",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "hors budget",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "hors budget",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9909027218818665,
+        "value": "Hors budget",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "non budgétisé",
+    "entities": [
+      {
+        "start": 4,
+        "end": 13,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 4,
+        "end": 13,
+        "confidence_entity": 0.9915645122528076,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pas budgétisé",
+    "entities": [
+      {
+        "start": 4,
+        "end": 13,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 4,
+        "end": 13,
+        "confidence_entity": 0.9955735206604004,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "la situation budgétaire est budgétisée",
+    "entities": [
+      {
+        "start": 28,
+        "end": 38,
+        "value": "budgétisée",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 28,
+        "end": 38,
+        "confidence_entity": 0.999363362789154,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "avec une situation budgétaire budgétisée",
+    "entities": [
+      {
+        "start": 30,
+        "end": 40,
+        "value": "budgétisée",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 30,
+        "end": 40,
+        "confidence_entity": 0.9995325803756714,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "situation budgétaire budgétisée",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "budgétisée",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.9995081424713135,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "le poste est budgétisé",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9968607425689697,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "budget validé",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "validé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.9705845713615417,
+        "value": "validé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "budget approuvé",
+    "entities": [
+      {
+        "start": 7,
+        "end": 15,
+        "value": "approuvé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9994890689849854,
+        "value": "approuvé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Non applicable (intérim)",
+    "entities": [
+      {
+        "start": 0,
+        "end": 24,
+        "value": "Non applicable (intérim)",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "non applicable",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "non applicable",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.9661962985992432,
+        "value": "Non applicable (intérim)",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le motif est Remplacement et c'est budgétisé",
+    "entities": [
+      {
+        "start": 13,
+        "end": 25,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 35,
+        "end": 44,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 13,
+        "end": 25,
+        "confidence_entity": 0.9998210072517395,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 35,
+        "end": 44,
+        "confidence_entity": 0.9938514232635498,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 13,
+        "end": 25,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Remplacement avec budget validé",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 18,
+        "end": 31,
+        "value": "budget validé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9995545744895935,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 18,
+        "end": 31,
+        "confidence_entity": 0.9194474220275879,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Remplacement hors budget",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 13,
+        "end": 24,
+        "value": "hors budget",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9991626739501953,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 13,
+        "end": 24,
+        "confidence_entity": 0.9920415282249451,
+        "value": "Hors budget",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est un Remplacement qui est budgétisé",
+    "entities": [
+      {
+        "start": 9,
+        "end": 21,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 30,
+        "end": 39,
+        "value": "budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 9,
+        "end": 21,
+        "confidence_entity": 0.9998044371604919,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.991860568523407,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 9,
+        "end": 21,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Création de poste budgetisée",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "Création de poste",
+        "entity": "motif"
+      },
+      {
+        "start": 18,
+        "end": 28,
+        "value": "budgetisée",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 17,
+        "confidence_entity": 0.9926268458366394,
+        "value": "Création de poste",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 18,
+        "end": 28,
+        "confidence_entity": 0.9980059266090393,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 17,
+        "value": "Création de poste",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le motif est Remplacement. La justification : Ce renfort permettra d'améliorer",
+    "entities": [
+      {
+        "start": 13,
+        "end": 25,
+        "value": "Remplacement",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 13,
+        "end": 25,
+        "confidence_entity": 0.999854326248169,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "justification",
+        "start": 30,
+        "end": 78,
+        "value": "justification : Ce renfort permettra d'améliorer",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "motif",
+        "start": 13,
+        "end": 25,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "motif Intérim pour un remplacement court terme",
+    "entities": [
+      {
+        "start": 6,
+        "end": 13,
+        "value": "Intérim",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.9981154203414917,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Le motif est Remplacement, avec une situation budgétaire budgétisée",
+    "entities": [
+      {
+        "start": 13,
+        "end": 25,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 57,
+        "end": 67,
+        "value": "budgétisée",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 13,
+        "end": 25,
+        "confidence_entity": 0.9998615980148315,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 57,
+        "end": 67,
+        "confidence_entity": 0.9993184804916382,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 13,
+        "end": 25,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Remplacement, situation budgétisée, justifié par l'augmentation de la charge",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 24,
+        "end": 34,
+        "value": "budgétisée",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9993492960929871,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 24,
+        "end": 34,
+        "confidence_entity": 0.996218740940094,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "justification",
+        "start": 36,
+        "end": 76,
+        "value": "justifié par l'augmentation de la charge",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "motif remplacement budgétisé",
+    "entities": [
+      {
+        "start": 6,
+        "end": 18,
+        "value": "remplacement",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 6,
+        "end": 18,
+        "confidence_entity": 0.9991186261177063,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "REMPLACEMENT BUDGETISE",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "REMPLACEMENT",
+        "entity": "motif"
+      },
+      {
+        "start": 13,
+        "end": 22,
+        "value": "BUDGETISE",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.999821126461029,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.9974825978279114,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Remplacement - Budgétisé",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 15,
+        "end": 24,
+        "value": "Budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9996458292007446,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 15,
+        "end": 24,
+        "confidence_entity": 0.9786605834960938,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Remplacement / Budgétisé",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "entity": "motif"
+      },
+      {
+        "start": 15,
+        "end": 24,
+        "value": "Budgétisé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9996458292007446,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 15,
+        "end": 24,
+        "confidence_entity": 0.9786605834960938,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 0,
+        "end": 12,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

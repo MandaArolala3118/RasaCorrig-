@@ -1,0 +1,37 @@
+[
+  {
+    "text": "je souhaite ajouter un DDR dans la direction informatique",
+    "entities": [
+      {
+        "start": 35,
+        "end": 57,
+        "value": "direction informatique",
+        "entity": "direction"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "type_demande",
+        "start": 23,
+        "end": 26,
+        "confidence_entity": 0.6793299913406372,
+        "value": "DDR",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 35,
+        "end": 57,
+        "confidence_entity": 0.9979879856109619,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

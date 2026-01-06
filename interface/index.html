@@ -1,0 +1,1327 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Rasa avec Upload Multiple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 1400px;
+            height: 90vh;
+            min-height: 600px;
+        }
+
+        /* 🎯 Correction principale : proportions flexibles */
+        .chat-container {
+            flex: 1 1 60%; /* Prend 60% de l'espace disponible */
+            min-width: 350px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .terminal-container {
+            flex: 1 1 40%; /* Prend 40% de l'espace disponible */
+            min-width: 300px;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* 📱 Media query pour tablettes */
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                min-height: auto;
+            }
+
+            .chat-container,
+            .terminal-container {
+                flex: 1 1 100%;
+                min-width: 100%;
+                height: 50vh;
+                min-height: 400px;
+            }
+        }
+
+        /* 📱 Media query pour mobiles */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                gap: 10px;
+            }
+
+            .chat-container,
+            .terminal-container {
+                height: 45vh;
+                min-height: 350px;
+            }
+
+            .chat-header h1 {
+                font-size: 18px;
+            }
+
+            .terminal-title {
+                font-size: 12px;
+            }
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .chat-header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .status {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .status.connected {
+            color: #4ade80;
+        }
+
+        .status.disconnected {
+            color: #fca5a5;
+        }
+
+        .chat-messages {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .file-attachments-container {
+            margin-top: 8px;
+        }
+
+        .file-attachment {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            margin-top: 6px;
+            font-size: 12px;
+        }
+
+        .file-attachment-icon {
+            font-size: 16px;
+        }
+
+        .file-attachment-info {
+            flex: 1;
+        }
+
+        .file-attachment-name {
+            font-weight: 600;
+        }
+
+        .file-attachment-size {
+            opacity: 0.8;
+            font-size: 11px;
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            flex-shrink: 0;
+        }
+
+        .files-preview {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .files-preview.active {
+            display: flex;
+        }
+
+        .file-preview-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .file-preview-icon {
+            font-size: 20px;
+        }
+
+        .file-preview-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .file-preview-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .file-preview-size {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .remove-file-button {
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 11px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .remove-file-button:hover {
+            background: #dc2626;
+        }
+
+        .files-preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 8px;
+        }
+
+        .files-count {
+            font-size: 12px;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .clear-all-button {
+            background: #6b7280;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 4px 10px;
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .clear-all-button:hover {
+            background: #4b5563;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+            resize: none;
+            max-height: 120px;
+        }
+
+        .chat-input:focus {
+            border-color: #667eea;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-button {
+            background: #f3f4f6;
+            color: #667eea;
+            border: 2px solid #e5e7eb;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+        }
+
+        .file-button:hover {
+            background: #e5e7eb;
+            transform: scale(1.05);
+        }
+
+        .send-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .send-button:hover {
+            transform: scale(1.05);
+        }
+
+        .send-button:active {
+            transform: scale(0.95);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .terminal-header {
+            background: #323232;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-dot.red { background: #ff5f56; }
+        .terminal-dot.yellow { background: #ffbd2e; }
+        .terminal-dot.green { background: #27c93f; }
+
+        .terminal-title {
+            color: #ffffff;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .terminal-content {
+            flex: 1 1 auto;
+            overflow-y: auto;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #d4d4d4;
+        }
+
+        .terminal-line {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .terminal-line.info { color: #4ec9b0; }
+        .terminal-line.intent { color: #dcdcaa; font-weight: bold; }
+        .terminal-line.slot { color: #ce9178; }
+        .terminal-line.confidence { color: #569cd6; }
+        .terminal-line.action { color: #c586c0; font-weight: bold; }
+        .terminal-line.bot-message { color: #9cdcfe; }
+        .terminal-line.error { color: #f48771; }
+        .terminal-line.success { color: #4ade80; }
+        .terminal-line.separator { color: #666; }
+        .terminal-line.section-title { color: #f0f0f0; font-weight: bold; }
+        .terminal-line.file { color: #ffd700; font-weight: bold; }
+
+        .terminal-timestamp {
+            color: #858585;
+            margin-right: 10px;
+        }
+
+        .indent-1 { margin-left: 15px; }
+        .indent-2 { margin-left: 30px; }
+        .indent-3 { margin-left: 45px; }
+
+        .clear-button {
+            background: #323232;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 5px 15px;
+            font-size: 11px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .clear-button:hover {
+            background: #404040;
+        }
+
+        .config-section {
+            padding: 15px 20px;
+            background: #2d2d2d;
+            border-top: 1px solid #404040;
+            flex-shrink: 0;
+        }
+
+        .config-input {
+            width: 100%;
+            padding: 8px 12px;
+            background: #1e1e1e;
+            border: 1px solid #404040;
+            border-radius: 5px;
+            color: #d4d4d4;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .config-label {
+            color: #858585;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .suggestion-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            padding: 12px 16px;
+            margin: 10px 0;
+            background: rgba(231, 231, 231, 0.5);
+            color: rgb(32, 32, 32);
+            border: 1px solid rgba(128, 0, 128, 0.2);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 12px rgba(128, 0, 128, 0.1);
+            font-size: 16px;
+            cursor: pointer;
+            transition: 
+                background 0.3s ease,
+                transform 0.2s ease,
+                border 0.3s ease,
+                box-shadow 0.3s ease;
+            opacity: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .suggestion-button:hover {
+            background: rgba(231, 231, 231, 0.7);
+            transform: translateX(4px);
+            border: 1px solid rgba(128, 0, 128, 0.5);
+            box-shadow: 0 6px 16px rgba(128, 0, 128, 0.2);
+        }
+
+        .suggestion-button:active {
+            transform: scale(0.98);
+        }
+
+        .suggestion-button:disabled {
+            opacity: 0.4;
+            background: rgba(200, 200, 200, 0.3);
+            border: 1px solid rgba(128, 0, 128, 0.1);
+            cursor: not-allowed;
+        }
+
+        .suggestion-button.clicked {
+            background: rgba(128, 0, 128, 0.2);
+            border: 1px solid rgba(128, 0, 128, 0.8);
+            opacity: 0.8;
+        }
+
+        .suggestion-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.3) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: skewX(-20deg);
+            transition: all 0.5s ease;
+        }
+
+        .suggestion-button:hover::before {
+            left: 125%;
+        }
+
+        .suggestion-button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        @keyframes fadeInSlide {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .suggestion-button-container .suggestion-button {
+            animation: fadeInSlide 0.5s ease forwards;
+        }
+
+        .suggestion-button-container .suggestion-button:nth-child(1) { animation-delay: 0s; }
+        .suggestion-button-container .suggestion-button:nth-child(2) { animation-delay: 0.05s; }
+        .suggestion-button-container .suggestion-button:nth-child(3) { animation-delay: 0.1s; }
+
+        .suggestion-button i {
+            opacity: 0.8;
+        }
+
+        /* 📱 Responsive pour les boutons de suggestion */
+        @media (max-width: 768px) {
+            .suggestion-button {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1>💬 Chat Rasa - Upload Multiple</h1>
+                <div class="status" id="status">● Déconnecté</div>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input-container">
+                <div class="files-preview" id="filesPreview">
+                    <div class="files-preview-header">
+                        <span class="files-count" id="filesCount">0 fichier(s)</span>
+                        <button class="clear-all-button" id="clearAllFiles">Tout retirer</button>
+                    </div>
+                    <div id="filesList"></div>
+                </div>
+                <div class="chat-input-wrapper">
+                    <input type="file" class="file-input" id="fileInput" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" multiple>
+                    <label for="fileInput" class="file-button">
+                        <span>📎</span>
+                        <span>Fichiers</span>
+                    </label>
+                    <textarea 
+                        class="chat-input" 
+                        id="messageInput" 
+                        placeholder="Écrivez votre message..."
+                        rows="1"
+                        autocomplete="off"
+                    ></textarea>
+                    <button class="send-button" id="sendButton">Envoyer</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">Terminal de Debug</span>
+                <button class="clear-button" id="clearTerminal">Effacer</button>
+                <button class="clear-button" id="copyTerminal" style="margin-left: 10px;">📋 Copier</button>
+            </div>
+            <div class="config-section">
+                <div class="config-label">URL Rasa Server:</div>
+                <input 
+                    type="text" 
+                    class="config-input" 
+                    id="rasaUrl" 
+                    value="http://localhost:5005"
+                    placeholder="http://localhost:5005"
+                >
+            </div>
+            <div class="terminal-content" id="terminal"></div>
+        </div>
+    </div>
+
+    <script>
+        class RasaChat {
+            constructor() {
+                this.rasaUrl = 'http://localhost:5005';
+                this.sender = 'mand700500';
+                this.chatMessages = document.getElementById('chatMessages');
+                this.terminal = document.getElementById('terminal');
+                this.messageInput = document.getElementById('messageInput');
+                this.sendButton = document.getElementById('sendButton');
+                this.status = document.getElementById('status');
+                this.rasaUrlInput = document.getElementById('rasaUrl');
+                this.clearTerminalBtn = document.getElementById('clearTerminal');
+                this.fileInput = document.getElementById('fileInput');
+                this.filesPreview = document.getElementById('filesPreview');
+                this.filesList = document.getElementById('filesList');
+                this.filesCount = document.getElementById('filesCount');
+                this.clearAllFilesBtn = document.getElementById('clearAllFiles');
+                this.copyTerminalBtn = document.getElementById('copyTerminal');
+
+                this.selectedFiles = [];
+
+                this.init();
+            }
+
+            init() {
+                this.sendButton.addEventListener('click', () => this.sendMessage());
+                this.messageInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+                this.rasaUrlInput.addEventListener('change', (e) => {
+                    this.rasaUrl = e.target.value;
+                    this.logTerminal('info', `URL Rasa mise à jour: ${this.rasaUrl}`);
+                });
+                this.clearTerminalBtn.addEventListener('click', () => {
+                    this.terminal.innerHTML = '';
+                });
+                this.fileInput.addEventListener('change', (e) => {
+                    this.handleFileSelection(e);
+                });
+                this.clearAllFilesBtn.addEventListener('click', () => {
+                    this.clearAllFiles();
+                });
+
+                // Auto-resize textarea
+                this.messageInput.addEventListener('input', () => {
+                    this.messageInput.style.height = 'auto';
+                    this.messageInput.style.height = this.messageInput.scrollHeight + 'px';
+                });
+                this.copyTerminalBtn.addEventListener('click', () => {
+                    this.copyTerminalContent();
+                });
+                this.checkConnection();
+                this.logTerminal('info', 'Interface de chat initialisée');
+                this.logTerminal('info', `Sender ID: ${this.sender}`);
+            }
+
+            async checkConnection() {
+                try {
+                    const response = await fetch(`${this.rasaUrl}/status`);
+                    if (response.ok) {
+                        this.updateStatus(true);
+                        this.logTerminal('success', 'Connexion au serveur Rasa réussie');
+                    } else {
+                        this.updateStatus(false);
+                        this.logTerminal('error', 'Impossible de se connecter au serveur Rasa');
+                    }
+                } catch (error) {
+                    this.updateStatus(false);
+                    this.logTerminal('error', `Erreur de connexion: ${error.message}`);
+                }
+            }
+
+            updateStatus(connected) {
+                if (connected) {
+                    this.status.textContent = '● Connecté';
+                    this.status.className = 'status connected';
+                } else {
+                    this.status.textContent = '● Déconnecté';
+                    this.status.className = 'status disconnected';
+                }
+            }
+
+            handleFileSelection(event) {
+                const files = Array.from(event.target.files);
+                const maxSize = 10 * 1024 * 1024; // 10MB par fichier
+
+                for (const file of files) {
+                    // Vérifier la taille
+                    if (file.size > maxSize) {
+                        alert(`Le fichier "${file.name}" est trop volumineux (max 10 MB)`);
+                        continue;
+                    }
+
+                    // Éviter les doublons
+                    const existe = this.selectedFiles.some(f => f.name === file.name && f.size === file.size);
+                    if (existe) {
+                        this.logTerminal('info', `Fichier déjà ajouté: ${file.name}`);
+                        continue;
+                    }
+
+                    this.selectedFiles.push(file);
+                    this.logTerminal('file', `📎 Fichier ajouté: ${file.name}`);
+                    this.logTerminal('info', `   Taille: ${this.formatFileSize(file.size)}`);
+                    this.logTerminal('info', `   Type: ${file.type}`);
+                }
+
+                this.updateFilesPreview();
+                this.fileInput.value = ''; // Reset input
+            }
+
+            updateFilesPreview() {
+                if (this.selectedFiles.length === 0) {
+                    this.filesPreview.classList.remove('active');
+                    return;
+                }
+
+                this.filesPreview.classList.add('active');
+                this.filesCount.textContent = `${this.selectedFiles.length} fichier(s)`;
+
+                this.filesList.innerHTML = '';
+                this.selectedFiles.forEach((file, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'file-preview-item';
+                    item.innerHTML = `
+                        <span class="file-preview-icon">📄</span>
+                        <div class="file-preview-info">
+                            <div class="file-preview-name">${file.name}</div>
+                            <div class="file-preview-size">${this.formatFileSize(file.size)}</div>
+                        </div>
+                        <button class="remove-file-button" data-index="${index}">✕</button>
+                    `;
+
+                    const removeBtn = item.querySelector('.remove-file-button');
+                    removeBtn.addEventListener('click', () => {
+                        this.removeFile(index);
+                    });
+
+                    this.filesList.appendChild(item);
+                });
+            }
+
+            removeFile(index) {
+                const file = this.selectedFiles[index];
+                this.selectedFiles.splice(index, 1);
+                this.logTerminal('info', `Fichier retiré: ${file.name}`);
+                this.updateFilesPreview();
+            }
+
+            clearAllFiles() {
+                this.selectedFiles = [];
+                this.logTerminal('info', 'Tous les fichiers retirés');
+                this.updateFilesPreview();
+            }
+
+            formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
+            }
+
+            async fileToBase64(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = error => reject(error);
+                });
+            }
+
+            addMessage(text, isUser, filesInfo = null) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+                
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'message-content';
+                
+                // 🆕 DÉTECTION DES PROPOSITIONS AVEC PATTERN [options](fonction)
+                const propositionPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+                let hasPropositions = false;
+                let matches = [];
+                let match;
+                
+                while ((match = propositionPattern.exec(text)) !== null) {
+                    matches.push({
+                        fullMatch: match[0],
+                        options: match[1],
+                        fonction: match[2]
+                    });
+                    hasPropositions = true;
+                }
+                
+                if (hasPropositions && !isUser) {
+                    // Extraire le texte sans les propositions
+                    let texteSansBoutons = text;
+                    matches.forEach(m => {
+                        texteSansBoutons = texteSansBoutons.replace(m.fullMatch, '');
+                    });
+                    
+                    // Nettoyer les doubles sauts de ligne
+                    texteSansBoutons = texteSansBoutons.replace(/\n{3,}/g, '\n\n').trim();
+                    
+                    // Afficher le texte
+                    contentDiv.innerHTML = this.formatMarkdown(texteSansBoutons);
+                    
+                    // Créer les boutons pour chaque groupe de propositions
+                    matches.forEach(propositionGroup => {
+                        const buttonsContainer = document.createElement('div');
+                        buttonsContainer.className = 'suggestions-buttons';
+                        
+                        // Split les options par virgule
+                        const options = propositionGroup.options.split(',').map(opt => opt.trim());
+                        const fonction = propositionGroup.fonction.trim();
+                        
+                        options.forEach(option => {
+                            const button = document.createElement('button');
+                            button.className = 'suggestion-button';
+                            
+                            // Ajouter une icône selon le type
+                            const icon = this.getIconForFunction(fonction);
+                            button.innerHTML = `<span class="button-icon">${icon}</span><span>${option}</span>`;
+                            
+                            // 🆕 Envoyer directement le message au clic
+                            button.addEventListener('click', async () => {
+                                // 🆕 DÉSACTIVER TOUS LES BOUTONS DU GROUPE
+                                const allButtons = buttonsContainer.querySelectorAll('.suggestion-button');
+                                allButtons.forEach(btn => {
+                                    btn.disabled = true;
+                                    btn.style.opacity = '0.5';
+                                    btn.style.cursor = 'not-allowed';
+                                });
+                                
+                                // Ajouter une classe visuelle au bouton cliqué
+                                button.classList.add('clicked');
+                                button.style.opacity = '0.7';
+                                
+                                const message = this.generatePrewrittenMessage(option, fonction);
+                                
+                                // Afficher le message de l'utilisateur
+                                this.addMessage(message, true);
+                                
+                                // Envoyer directement à Rasa
+                                try {
+                                    const payload = {
+                                        sender: this.sender,
+                                        message: message,
+                                        metadata: {
+                                            role: 'EV'
+                                        }
+                                    };
+
+                                    const response = await fetch(`${this.rasaUrl}/webhooks/rest/webhook`, {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                        },
+                                        body: JSON.stringify(payload)
+                                    });
+
+                                    if (!response.ok) {
+                                        throw new Error(`HTTP error! status: ${response.status}`);
+                                    }
+
+                                    const data = await response.json();
+                                    
+                                    // Log chronologique
+                                    await this.logChronologicalDebugInfo(message);
+
+                                    // Afficher les réponses
+                                    if (data && data.length > 0) {
+                                        const allTexts = data
+                                            .filter(msg => msg.text)
+                                            .map(msg => msg.text)
+                                            .join('\n\n');
+                                        
+                                        if (allTexts) {
+                                            this.addMessage(allTexts, false);
+                                        }
+                                    }
+
+                                } catch (error) {
+                                    this.logTerminal('error', `Erreur: ${error.message}`);
+                                    this.addMessage('Désolé, une erreur est survenue.', false);
+                                }
+                            });
+                            
+                            buttonsContainer.appendChild(button);
+                        });
+                        
+                        contentDiv.appendChild(buttonsContainer);
+                    });
+                } else {
+                    // Message normal sans propositions
+                    contentDiv.innerHTML = this.formatMarkdown(text);
+                }
+
+                // Ajouter les infos des fichiers si présents
+                if (filesInfo && filesInfo.length > 0) {
+                    const filesContainer = document.createElement('div');
+                    filesContainer.className = 'file-attachments-container';
+                    
+                    filesInfo.forEach(fileInfo => {
+                        const fileAttachment = document.createElement('div');
+                        fileAttachment.className = 'file-attachment';
+                        fileAttachment.innerHTML = `
+                            <span class="file-attachment-icon">📎</span>
+                            <div class="file-attachment-info">
+                                <div class="file-attachment-name">${fileInfo.name}</div>
+                                <div class="file-attachment-size">${fileInfo.size}</div>
+                            </div>
+                        `;
+                        filesContainer.appendChild(fileAttachment);
+                    });
+                    
+                    contentDiv.appendChild(filesContainer);
+                }
+                
+                messageDiv.appendChild(contentDiv);
+                this.chatMessages.appendChild(messageDiv);
+                this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+            }
+            
+            formatMarkdown(text) {
+                // Convertir le markdown basique en HTML
+                return text
+                    // Gras **texte**
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    // Italique *texte*
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                    // Sauts de ligne
+                    .replace(/\n/g, '<br>');
+            }
+            
+            generatePrewrittenMessage(option, fonction) {
+                // Mapping des fonctions vers leur template de message
+                const templates = {
+                    'verification_poste': `Le poste est ${option}`,
+                    'verification_encadreur': `L'encadreur est ${option}`,
+                    'verification_hierarchie_direction': `La direction est ${option}`,
+                    'verification_hierarchie_exploitation': `L'exploitation est ${option}`,
+                    'verification_hierarchie': `La direction est ${option}`,
+                    'verification_motif': `Le motif est ${option}`,
+                    'verification_situation_budget': `La situation budgétaire est ${option}`,
+                    'verification_dotation': `La dotation est ${option}`,
+                    'verification_nature_contrat': `La nature du contrat est ${option}`,
+                    'confirmation': `${option}`,
+                    'action_supprimer_toutes_dotations': `${option}`,
+                    'action_supprimer_tous_objectifs': `${option}`,
+                    'action_supprimer_toutes_pieces_jointes': `${option}`,
+                    'aide_ddr_confirm': `${option}`,
+                    'demande_type_demande': `${option}`,
+                     'Liste_nom_flux': `Le nom de flux est ${option}`,
+                     'Liste_RH_possible': `Le responsable est ${option}`,
+                    // Ajouter d'autres templates si nécessaire
+                };
+                
+                // Si template spécifique existe, l'utiliser, sinon juste renvoyer l'option
+                return templates[fonction] || option;
+            }
+            
+            getIconForFunction(fonction) {
+                // Mapping des fonctions vers leurs icônes
+                const icons = {
+                    'verification_poste': '💼',
+                    'verification_encadreur': '👤',
+                    'verification_hierarchie_direction': '🏢',
+                    'verification_hierarchie_exploitation': '🏭',
+                    'verification_hierarchie': '🏢',
+                    'verification_motif': '📝',
+                    'verification_situation_budget': '💰',
+                    'verification_dotation': '🎁',
+                    'verification_nature_contrat': '📄',
+                    'confirmation': '',
+                    'action_supprimer_toutes_dotations': '',
+                    'action_supprimer_tous_objectifs': '',
+                    'action_supprimer_toutes_pieces_jointes': '',
+                    'aide_ddr_confirm':'',
+                    'demande_type_demande': '',
+                     'Liste_nom_flux': '🔄',
+                     'Liste_RH_possible': '👥',
+                };
+                
+                return icons[fonction];
+            }
+
+            logTerminal(type, message, indent = 0) {
+                const timestamp = new Date().toLocaleTimeString();
+                const line = document.createElement('div');
+                line.className = `terminal-line ${type}`;
+                if (indent > 0) {
+                    line.classList.add(`indent-${indent}`);
+                }
+                line.innerHTML = `<span class="terminal-timestamp">[${timestamp}]</span>${message}`;
+                this.terminal.appendChild(line);
+                this.terminal.scrollTop = this.terminal.scrollHeight;
+            }
+
+            async sendMessage() {
+                const message = this.messageInput.value.trim();
+                const hasFiles = this.selectedFiles.length > 0;
+
+                if (!message && !hasFiles) return;
+
+                // Désactiver le bouton pendant l'envoi
+                this.sendButton.disabled = true;
+
+                // Message par défaut si seulement des fichiers
+                const textToSend = message || `Voici ${this.selectedFiles.length} fichier(s)`;
+
+                // Préparer les infos des fichiers pour l'affichage
+                const filesInfo = this.selectedFiles.map(file => ({
+                    name: file.name,
+                    size: this.formatFileSize(file.size)
+                }));
+
+                // Afficher le message dans le chat
+                this.addMessage(textToSend, true, hasFiles ? filesInfo : null);
+
+                this.messageInput.value = '';
+                this.messageInput.style.height = 'auto';
+
+                this.logTerminal('info', `→ Envoi du message: "${textToSend}"`);
+
+                try {
+                    // Construire le payload
+                    const payload = {
+                        sender: this.sender,
+                        message: textToSend,
+                        metadata: {
+                            role: 'EV'
+                        }
+                    };
+
+                    // Encoder les fichiers si présents
+                    if (hasFiles) {
+                        this.logTerminal('file', `📤 Encodage de ${this.selectedFiles.length} fichier(s) en base64...`);
+                        
+                        const attachments = [];
+                        for (const file of this.selectedFiles) {
+                            this.logTerminal('info', `   Encodage: ${file.name}...`);
+                            const base64Data = await this.fileToBase64(file);
+                            attachments.push({
+                                name: file.name,
+                                type: file.type,
+                                size: file.size,
+                                url: base64Data,
+                                date_upload: new Date().toISOString()
+                            });
+                            this.logTerminal('success', `   ✓ ${file.name} encodé`);
+                        }
+
+                        payload.metadata.attachments = attachments;
+                        this.logTerminal('success', `✓ ${this.selectedFiles.length} fichier(s) encodé(s) et ajouté(s) au payload`);
+                        this.logTerminal('info', `📦 Taille payload metadata: ${JSON.stringify(payload.metadata).length} caractères`);
+                    }
+
+                    // Envoyer à Rasa
+                    const response = await fetch(`${this.rasaUrl}/webhooks/rest/webhook`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    
+                    // Log chronologique des événements
+                    await this.logChronologicalDebugInfo(textToSend);
+
+                    // ✨ MODIFICATION: Concaténer tous les messages en un seul
+                    if (data && data.length > 0) {
+                        const allTexts = data
+                            .filter(msg => msg.text)
+                            .map(msg => msg.text)
+                            .join('\n\n'); // Double saut de ligne entre les messages
+                        
+                        if (allTexts) {
+                            this.addMessage(allTexts, false);
+                        }
+                    } else {
+                        this.logTerminal('error', 'Aucune réponse reçue du bot');
+                    }
+
+                    // Nettoyer les fichiers après envoi réussi
+                    if (hasFiles) {
+                        this.clearAllFiles();
+                    }
+
+                } catch (error) {
+                    this.logTerminal('error', `Erreur: ${error.message}`);
+                    this.addMessage('Désolé, une erreur est survenue.', false);
+                } finally {
+                    this.sendButton.disabled = false;
+                }
+            }
+            copyTerminalContent() {
+                try {
+                    // Récupérer toutes les lignes du terminal
+                    const lines = this.terminal.querySelectorAll('.terminal-line');
+                    let textContent = '';
+                    
+                    lines.forEach(line => {
+                        // Extraire le texte brut
+                        let lineText = line.textContent;
+                        
+                        // Détecter et raccourcir les données base64 (commencent par data:)
+                        if (lineText.includes('data:')) {
+                            lineText = lineText.replace(
+                                /data:[^,]+;base64,[A-Za-z0-9+/=]{100,}/g, 
+                                'data:...[BASE64_DATA_TRUNCATED]...'
+                            );
+                        }
+                        
+                        // Détecter et raccourcir les longues chaînes base64 sans préfixe
+                        lineText = lineText.replace(
+                            /\b[A-Za-z0-9+/]{200,}={0,2}\b/g,
+                            '[BASE64_DATA_TRUNCATED]'
+                        );
+                        
+                        textContent += lineText + '\n';
+                    });
+                    
+                    // Copier dans le presse-papiers
+                    navigator.clipboard.writeText(textContent).then(() => {
+                        // Feedback visuel
+                        const originalText = this.copyTerminalBtn.textContent;
+                        this.copyTerminalBtn.textContent = '✓ Copié !';
+                        this.copyTerminalBtn.style.background = '#4ade80';
+                        
+                        setTimeout(() => {
+                            this.copyTerminalBtn.textContent = originalText;
+                            this.copyTerminalBtn.style.background = '#323232';
+                        }, 2000);
+                        
+                        this.logTerminal('success', '✓ Contenu du terminal copié dans le presse-papiers');
+                    }).catch(err => {
+                        this.logTerminal('error', `Erreur lors de la copie: ${err.message}`);
+                        alert('Impossible de copier dans le presse-papiers');
+                    });
+                    
+                } catch (error) {
+                    this.logTerminal('error', `Erreur lors de la copie: ${error.message}`);
+                }
+            }
+            async logChronologicalDebugInfo(userMessage) {
+                try {
+                    this.logTerminal('separator', '═══════════════════════════════════════════════════════════════');
+                    
+                    const trackerResponse = await fetch(`${this.rasaUrl}/conversations/${this.sender}/tracker`);
+                    
+                    if (!trackerResponse.ok) {
+                        this.logTerminal('error', 'Impossible de récupérer le tracker');
+                        return;
+                    }
+
+                    const trackerData = await trackerResponse.json();
+                    
+                    const events = trackerData.events || [];
+                    const lastUserMsgIndex = events.map(e => e.event).lastIndexOf('user');
+                    const relevantEvents = events.slice(lastUserMsgIndex);
+
+                    this.logTerminal('section-title', '📊 FLUX D\'EXÉCUTION CHRONOLOGIQUE');
+                    this.logTerminal('info', '');
+
+                    let eventNumber = 1;
+                    for (const event of relevantEvents) {
+                        if (event.event === 'user') {
+                            this.logTerminal('info', `[${eventNumber}] 👤 MESSAGE UTILISATEUR`);
+                            this.logTerminal('info', `    Texte: "${event.text || event.parse_data?.text}"`, 1);
+                            
+                            // Vérifier si des fichiers étaient attachés
+                            if (event.metadata?.attachments?.length > 0) {
+                                this.logTerminal('file', `    📎 ${event.metadata.attachments.length} FICHIER(S) JOINT(S):`, 1);
+                                event.metadata.attachments.forEach((attachment, idx) => {
+                                    this.logTerminal('file', `       [${idx + 1}] ${attachment.name}`, 1);
+                                    this.logTerminal('file', `           Type: ${attachment.type}`, 1);
+                                    this.logTerminal('file', `           Taille: ${this.formatFileSize(attachment.size)}`, 1);
+                                });
+                            }
+                            
+                            if (event.parse_data?.intent) {
+                                this.logTerminal('intent', `    🎯 Intent détecté: ${event.parse_data.intent.name}`, 1);
+                                this.logTerminal('confidence', `       Confiance: ${(event.parse_data.intent.confidence * 100).toFixed(2)}%`, 1);
+                                
+                                if (event.parse_data.intent_ranking?.length > 1) {
+                                    this.logTerminal('info', `       Alternatives:`, 1);
+                                    event.parse_data.intent_ranking.slice(1, 4).forEach(intent => {
+                                        this.logTerminal('info', `         • ${intent.name}: ${(intent.confidence * 100).toFixed(2)}%`, 1);
+                                    });
+                                }
+                            }
+
+                            if (event.parse_data?.entities?.length > 0) {
+                                this.logTerminal('slot', `    📝 Entités extraites (${event.parse_data.entities.length}):`, 1);
+                                event.parse_data.entities.forEach(entity => {
+                                    const confidence = entity.confidence_entity ? ` [${(entity.confidence_entity * 100).toFixed(2)}%]` : '';
+                                    this.logTerminal('slot', `       ✓ ${entity.entity} = "${entity.value}"${confidence}`, 1);
+                                });
+                            } else {
+                                this.logTerminal('info', `    📝 Aucune entité extraite`, 1);
+                            }
+                            this.logTerminal('info', '');
+                            eventNumber++;
+                        }
+                        else if (event.event === 'action') {
+                            this.logTerminal('action', `[${eventNumber}] ⚡ ACTION EXÉCUTÉE: ${event.name}`);
+                            eventNumber++;
+                        }
+                        else if (event.event === 'slot') {
+                            this.logTerminal('slot', `[${eventNumber}] 💾 SLOT MIS À JOUR`);
+                            const displayValue = typeof event.value === 'object' ? JSON.stringify(event.value) : event.value;
+                            this.logTerminal('slot', `    Nom: ${event.name}`, 1);
+                            this.logTerminal('slot', `    Valeur: ${displayValue}`, 1);
+                            this.logTerminal('info', '');
+                            eventNumber++;
+                        }
+                        else if (event.event === 'bot') {
+                            this.logTerminal('bot-message', `[${eventNumber}] 🤖 MESSAGE BOT`);
+                            if (event.text) {
+                                this.logTerminal('bot-message', `    "${event.text}"`, 1);
+                            }
+                            if (event.data) {
+                                this.logTerminal('info', `    Data: ${JSON.stringify(event.data)}`, 1);
+                            }
+                            this.logTerminal('info', '');
+                            eventNumber++;
+                        }
+                    }
+
+                    this.logTerminal('separator', '───────────────────────────────────────────────────────────────');
+                    this.logTerminal('section-title', '💾 ÉTAT FINAL DES SLOTS');
+                    this.logTerminal('info', '');
+                    
+                    if (trackerData.slots) {
+                        const allSlots = Object.entries(trackerData.slots);
+                        const filledSlots = allSlots.filter(([_, value]) => 
+                            value !== null && value !== undefined && value !== ''
+                        );
+                        const emptySlots = allSlots.filter(([_, value]) => 
+                            value === null || value === undefined || value === ''
+                        );
+                        
+                        if (filledSlots.length > 0) {
+                            this.logTerminal('success', `✓ Slots remplis (${filledSlots.length}):`);
+                            filledSlots.forEach(([key, value]) => {
+                                const displayValue = typeof value === 'object' ? JSON.stringify(value) : value;
+                                this.logTerminal('success', `  • ${key}: ${displayValue}`, 1);
+                            });
+                        } else {
+                            this.logTerminal('info', 'Aucun slot rempli');
+                        }
+                        
+                        this.logTerminal('info', '');
+                        
+                        if (emptySlots.length > 0) {
+                            this.logTerminal('info', `○ Slots vides (${emptySlots.length}):`);
+                            emptySlots.forEach(([key, _]) => {
+                                this.logTerminal('info', `  • ${key}`, 1);
+                            });
+                        }
+                    }
+
+                    this.logTerminal('info', '');
+                    this.logTerminal('success', '✓ Analyse complète terminée');
+                    this.logTerminal('separator', '═══════════════════════════════════════════════════════════════');
+                    this.logTerminal('info', '');
+
+                } catch (error) {
+                    this.logTerminal('error', `❌ Erreur lors de la récupération des infos de debug: ${error.message}`);
+                    this.logTerminal('separator', '═══════════════════════════════════════════════════════════════');
+                }
+            }
+        }
+
+        // Initialisation du chat
+        const chat = new RasaChat();
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+surface,targets,files
+"annuler","rejet|supprimer","identification_demande.yml|validation_recrutement.yml"
+"com","DCM|DCO","provide_hierarchie_organisation.yml"
+"démarrer","ajouter|lancer","flux_recrutement.yml|identification_demande.yml"
+"initier","ajouter|lancer","flux_recrutement.yml|identification_demande.yml"
+"portable","ordinateur portable|smartphone","provide_dotation_info.yml"
+"poste fixe","ordinateur de bureau|téléphone fixe","provide_dotation_info.yml"
+"validation","flux|validation","flux_recrutement.yml|validation_recrutement.yml"

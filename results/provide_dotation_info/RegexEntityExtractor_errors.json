@@ -1,0 +1,2041 @@
+[
+  {
+    "text": "il faut une blouse",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "blouse",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9996538162231445,
+        "value": "blouse",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "j'ai besoin d'un casque",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "casque",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.9994276165962219,
+        "value": "casque",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dotation : ceinture lombaire",
+    "entities": [
+      {
+        "start": 11,
+        "end": 28,
+        "value": "ceinture lombaire",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 11,
+        "end": 28,
+        "confidence_entity": 0.9996615648269653,
+        "value": "ceinture lombaire",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "combinaison nécessaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "combinaison",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9998822212219238,
+        "value": "combinaison",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "prévoir un gilet",
+    "entities": [
+      {
+        "start": 11,
+        "end": 16,
+        "value": "gilet",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 11,
+        "end": 16,
+        "confidence_entity": 0.9998193383216858,
+        "value": "gilet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "il faut des bottes",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "bottes",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.9998377561569214,
+        "value": "botte",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "casquette requise",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "casquette",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9998598098754883,
+        "value": "casquette",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "besoin de chaussures",
+    "entities": [
+      {
+        "start": 10,
+        "end": 20,
+        "value": "chaussures",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 10,
+        "end": 20,
+        "confidence_entity": 0.9949811100959778,
+        "value": "chaussures",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gants obligatoires",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "gants",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9997065663337708,
+        "value": "gants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "imperméables pour le terrain",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "imperméables",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9986714124679565,
+        "value": "imperméables",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "accès public",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "accès public",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9989824891090393,
+        "value": "accès public",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "inscription à l'annuaire listing",
+    "entities": [
+      {
+        "start": 16,
+        "end": 32,
+        "value": "annuaire listing",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 16,
+        "end": 32,
+        "confidence_entity": 0.999377429485321,
+        "value": "annuaire listing",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Mouvapps (BC - PT)",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "Mouvapps (BC - PT)",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ordinateur de bureau",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "ordinateur de bureau",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 20,
+        "confidence_entity": 0.9960646033287048,
+        "value": "ordinateur de bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ordinateur portable",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "ordinateur portable",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 19,
+        "confidence_entity": 0.999876856803894,
+        "value": "ordinateur portable",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quota impression",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "quota impression",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 16,
+        "confidence_entity": 0.9996030926704407,
+        "value": "quota impression",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "session windows",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "session windows",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 15,
+        "confidence_entity": 0.9994545578956604,
+        "value": "session windows",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "smartphone",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "smartphone",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9998499155044556,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "téléphone fixe",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "téléphone fixe",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.9986336827278137,
+        "value": "téléphone fixe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "bureau",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "bureau",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9991666078567505,
+        "value": "bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "chaise",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "chaise",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9999439716339111,
+        "value": "chaise",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "clé bleue",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "clé bleue",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9989629983901978,
+        "value": "clé bleue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "moto",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "moto",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.999911904335022,
+        "value": "moto",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "véhicule de service",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "véhicule de service",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 19,
+        "confidence_entity": 0.9951502680778503,
+        "value": "véhicule de service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ajout annuaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "ajout annuaire",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.9985052347183228,
+        "value": "ajout annuaire",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "assurance",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "assurance",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9972797632217407,
+        "value": "assurance",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "badge",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "badge",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9985997080802917,
+        "value": "badge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "fiche de poste",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "fiche de poste",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.9878399968147278,
+        "value": "fiche de poste",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "organigramme",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "organigramme",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9998573064804077,
+        "value": "organigramme",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "planning d'intégration",
+    "entities": [
+      {
+        "start": 0,
+        "end": 22,
+        "value": "planning d'intégration",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 22,
+        "confidence_entity": 0.9967691898345947,
+        "value": "planning d'intégration",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pouvoir de signature",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "pouvoir de signature",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 20,
+        "confidence_entity": 0.9985062479972839,
+        "value": "pouvoir de signature",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "lettre d'engagement",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "lettre d'engagement",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 19,
+        "confidence_entity": 0.9956817626953125,
+        "value": "lettre d'engagement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "il me faut un PC portable",
+    "entities": [
+      {
+        "start": 14,
+        "end": 25,
+        "value": "ordinateur portable",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 14,
+        "end": 25,
+        "confidence_entity": 0.9996067881584167,
+        "value": "ordinateur portable",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "besoin d'un laptop",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "ordinateur portable",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 12,
+        "end": 18,
+        "confidence_entity": 0.999286949634552,
+        "value": "ordinateur portable",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "j'ai besoin d'un téléphone",
+    "entities": [
+      {
+        "start": 17,
+        "end": 26,
+        "value": "smartphone",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.9989080429077148,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "il faut un mobile",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "smartphone",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9998235106468201,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "prévoir un portable",
+    "entities": [
+      {
+        "start": 11,
+        "end": 19,
+        "value": "smartphone",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.973042368888855,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "téléphone portable",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "smartphone",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.999289870262146,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "fixe",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "téléphone fixe",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9527672529220581,
+        "value": "téléphone fixe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "un poste fixe",
+    "entities": [
+      {
+        "start": 3,
+        "end": 13,
+        "value": "téléphone fixe",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 3,
+        "end": 13,
+        "confidence_entity": 0.9979128241539001,
+        "value": "téléphone fixe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 0,
+        "end": 2,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "PC fixe",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "ordinateur de bureau",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9997641444206238,
+        "value": "ordinateur de bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ordinateur fixe",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "ordinateur de bureau",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 15,
+        "confidence_entity": 0.9996135830879211,
+        "value": "ordinateur de bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "voiture de service",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "véhicule de service",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.9928960204124451,
+        "value": "véhicule de service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "véhicule",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "véhicule de service",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9853611588478088,
+        "value": "véhicule de service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "voiture",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "véhicule de service",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9984534978866577,
+        "value": "véhicule de service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "EPI",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "blouse",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9988299012184143,
+        "value": "blouse",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "chaussures de sécurité",
+    "entities": [
+      {
+        "start": 0,
+        "end": 22,
+        "value": "chaussures",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 22,
+        "confidence_entity": 0.9923499226570129,
+        "value": "chaussures",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "bottines",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "botte",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9999525547027588,
+        "value": "botte",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gant de protection",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "gants",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.9948273301124573,
+        "value": "gants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "imperméable",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "imperméables",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9996577501296997,
+        "value": "imperméables",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "vêtement de pluie",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "imperméables",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 17,
+        "confidence_entity": 0.9956067204475403,
+        "value": "imperméables",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "accès au back office",
+    "entities": [
+      {
+        "start": 9,
+        "end": 20,
+        "value": "BO",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 9,
+        "end": 20,
+        "confidence_entity": 0.9996745586395264,
+        "value": "BO",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "GED documentaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "GED",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 16,
+        "confidence_entity": 0.9984834790229797,
+        "value": "GED",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 3,
+        "value": "GED",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "gestion documentaire",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "GED",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 20,
+        "confidence_entity": 0.9995107650756836,
+        "value": "GED",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "téléphone GSM",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "GSM",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.9852377772331238,
+        "value": "GSM",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 10,
+        "end": 13,
+        "value": "smartphone",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "un GSM pro",
+    "entities": [
+      {
+        "start": 3,
+        "end": 10,
+        "value": "GSM",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 3,
+        "end": 10,
+        "confidence_entity": 0.9979027509689331,
+        "value": "GSM",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 3,
+        "end": 6,
+        "value": "smartphone",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "accès intranet",
+    "entities": [
+      {
+        "start": 6,
+        "end": 14,
+        "value": "Intranet - Avance",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 6,
+        "end": 14,
+        "confidence_entity": 0.9965527057647705,
+        "value": "Intranet - Avance",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "passe",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "badge",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9999338388442993,
+        "value": "badge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "carte d'accès",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "badge",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.9971880316734314,
+        "value": "badge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "badge d'accès",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "badge",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.9650391936302185,
+        "value": "badge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "siège",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "chaise",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.998695433139801,
+        "value": "chaise",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "fauteuil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "chaise",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9999085664749146,
+        "value": "chaise",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "espace de travail",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "bureau",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 17,
+        "confidence_entity": 0.9949605464935303,
+        "value": "bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "poste de travail",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "bureau",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 16,
+        "confidence_entity": 0.9932571649551392,
+        "value": "bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "clef bleue",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "clé bleue",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9998181462287903,
+        "value": "clé bleue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "deux roues",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "moto",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9981708526611328,
+        "value": "moto",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "scooter",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "moto",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9999090433120728,
+        "value": "moto",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "contrat d'assurance",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "assurance",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 19,
+        "confidence_entity": 0.9943389296531677,
+        "value": "assurance",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "délégation de signature",
+    "entities": [
+      {
+        "start": 0,
+        "end": 23,
+        "value": "pouvoir de signature",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 23,
+        "confidence_entity": 0.9975420236587524,
+        "value": "pouvoir de signature",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "procuration",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "pouvoir de signature",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9997707009315491,
+        "value": "pouvoir de signature",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "les dotations sont : ordinateur portable, smartphone et badge",
+    "entities": [
+      {
+        "start": 21,
+        "end": 40,
+        "value": "ordinateur portable",
+        "entity": "dotation"
+      },
+      {
+        "start": 42,
+        "end": 52,
+        "value": "smartphone",
+        "entity": "dotation"
+      },
+      {
+        "start": 56,
+        "end": 61,
+        "value": "badge",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 21,
+        "end": 40,
+        "confidence_entity": 0.9979313611984253,
+        "value": "ordinateur portable",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 42,
+        "end": 52,
+        "confidence_entity": 0.9995580315589905,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 56,
+        "end": 61,
+        "confidence_entity": 0.9987248778343201,
+        "value": "badge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "il faut prévoir chaussures de sécurité, casque et gants",
+    "entities": [
+      {
+        "start": 16,
+        "end": 38,
+        "value": "chaussures",
+        "entity": "dotation"
+      },
+      {
+        "start": 40,
+        "end": 46,
+        "value": "casque",
+        "entity": "dotation"
+      },
+      {
+        "start": 50,
+        "end": 55,
+        "value": "gants",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 16,
+        "end": 38,
+        "confidence_entity": 0.9622710943222046,
+        "value": "chaussures",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 40,
+        "end": 46,
+        "confidence_entity": 0.9955319166183472,
+        "value": "casque",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 50,
+        "end": 55,
+        "confidence_entity": 0.9997765421867371,
+        "value": "gants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "dotations informatiques : PC, téléphone, session windows",
+    "entities": [
+      {
+        "start": 26,
+        "end": 28,
+        "value": "ordinateur portable",
+        "entity": "dotation"
+      },
+      {
+        "start": 30,
+        "end": 39,
+        "value": "smartphone",
+        "entity": "dotation"
+      },
+      {
+        "start": 41,
+        "end": 56,
+        "value": "session windows",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 26,
+        "end": 28,
+        "confidence_entity": 0.9927306771278381,
+        "value": "ordinateur portable",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9854943752288818,
+        "value": "smartphone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 41,
+        "end": 56,
+        "confidence_entity": 0.9975002408027649,
+        "value": "session windows",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "pour les EPI : blouse, gants, bottes",
+    "entities": [
+      {
+        "start": 15,
+        "end": 21,
+        "value": "blouse",
+        "entity": "dotation"
+      },
+      {
+        "start": 23,
+        "end": 28,
+        "value": "gants",
+        "entity": "dotation"
+      },
+      {
+        "start": 30,
+        "end": 36,
+        "value": "bottes",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.9994608759880066,
+        "value": "blouse",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 23,
+        "end": 28,
+        "confidence_entity": 0.9998786449432373,
+        "value": "gants",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 30,
+        "end": 36,
+        "confidence_entity": 0.9997593760490417,
+        "value": "botte",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "matériel : bureau, chaise, téléphone fixe",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "bureau",
+        "entity": "dotation"
+      },
+      {
+        "start": 19,
+        "end": 25,
+        "value": "chaise",
+        "entity": "dotation"
+      },
+      {
+        "start": 27,
+        "end": 41,
+        "value": "téléphone fixe",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.995776355266571,
+        "value": "bureau",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 19,
+        "end": 25,
+        "confidence_entity": 0.9987284541130066,
+        "value": "chaise",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 27,
+        "end": 41,
+        "confidence_entity": 0.9335249662399292,
+        "value": "téléphone fixe",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "véhicule : voiture de service ou moto",
+    "entities": [
+      {
+        "start": 11,
+        "end": 29,
+        "value": "véhicule de service",
+        "entity": "dotation"
+      },
+      {
+        "start": 33,
+        "end": 37,
+        "value": "moto",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "dotation",
+        "start": 11,
+        "end": 29,
+        "confidence_entity": 0.9808986783027649,
+        "value": "véhicule de service",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "dotation",
+        "start": 33,
+        "end": 37,
+        "confidence_entity": 0.9996447563171387,
+        "value": "moto",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

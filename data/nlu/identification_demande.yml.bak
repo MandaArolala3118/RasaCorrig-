@@ -1,0 +1,163 @@
+version: "3.1"
+
+nlu:
+  - intent: identification_demande
+    examples: |
+      # ===== EXEMPLES SIMPLES (originaux) =====
+      - Je voudrais faire une [DDR](type_demande) pour [ajouter](intention_demande) un nouveau poste
+      - Je veux [créer](intention_demande) une [DDR](type_demande)
+      - [Ajouter](intention_demande) une nouvelle [DDR](type_demande)
+      - [Enregistrer](intention_demande) une [DDR](type_demande)
+      - [Modifier](intention_demande) ma [DDR](type_demande)
+      - [Mettre à jour](intention_demande) une [demande de recrutement](type_demande)
+      - [Supprimer](intention_demande) ma [DDR](type_demande)
+      - nouvelle [DDR](type_demande)
+      - [ajouter](intention_demande) [DDR](type_demande)
+      - je souhaite [ajouter](intention_demande) un [DDR](type_demande)
+      
+      # ===== NOUVEAUX: Avec POSTE + DIRECTION =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction)
+      - Je veux [créer](intention_demande) une [DDR](type_demande) pour un [développeur web](nom_poste) dans la [DSI](direction)
+      - [Ajouter](intention_demande) [DDR](type_demande) pour [développeur web](nom_poste) [direction informatique](direction)
+      - Je souhaite [faire](intention_demande) une [DDR](type_demande) pour [Admin et Dev web](nom_poste) à la [DSI](direction)
+      - [Créer](intention_demande) [demande de recrutement](type_demande) [webmaster](nom_poste) [direction IT](direction)
+      
+      # ===== NOUVEAUX: Avec POSTE + DIRECTION + CONTRAT =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat)
+      - Je veux [créer](intention_demande) une [DDR](type_demande) pour un [développeur web](nom_poste) [DSI](direction) en [CDD](nature_contrat)
+      - [Ajouter](intention_demande) [DDR](type_demande) [webmaster](nom_poste) [direction informatique](direction) [stage](nature_contrat)
+      - Je souhaite [faire](intention_demande) [demande de recrutement](type_demande) [Admin et Dev web](nom_poste) [DSI](direction) contrat [CDI](nature_contrat)
+      
+      # ===== NOUVEAUX: Avec POSTE + DIRECTION + CONTRAT + LIEU =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 Siège Social](exploitation)
+      - Je veux [créer](intention_demande) [DDR](type_demande) [développeur web](nom_poste) [DSI](direction) [stage](nature_contrat) basé à [00 siege social](exploitation)
+      - [Ajouter](intention_demande) [DDR](type_demande) [webmaster](nom_poste) [direction informatique](direction) [CDD](nature_contrat) à [00 Siège Social](exploitation)
+      - Je souhaite [faire](intention_demande) [demande de recrutement](type_demande) [Admin et Dev web](nom_poste) [DSI](direction) [stage](nature_contrat) situé à [00 siege social](exploitation)
+      
+      # ===== NOUVEAUX: Avec POSTE + DIRECTION + CONTRAT + LIEU + DURÉE =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 siege social](exploitation), pour une durée de [six mois](duree_contrat)
+      - Je veux [créer](intention_demande) [DDR](type_demande) [développeur web](nom_poste) [DSI](direction) [stage](nature_contrat) [00 Siège Social](exploitation) durée [6 mois](duree_contrat)
+      - [Ajouter](intention_demande) [DDR](type_demande) [webmaster](nom_poste) [direction informatique](direction) [CDD](nature_contrat) à [00 siege social](exploitation) pour [12 mois](duree_contrat)
+      
+      # ===== NOUVEAUX: AVEC ENCADREUR (ajout critique) =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 siege social](exploitation), pour une durée de [six mois](duree_contrat). L'encadreur sera [Jean Dupont](nom_encadreur)
+      - Je veux [créer](intention_demande) [DDR](type_demande) [développeur web](nom_poste) [DSI](direction) [stage](nature_contrat) [00 Siège Social](exploitation) [6 mois](duree_contrat) encadreur [Marie Martin](nom_encadreur)
+      - [Ajouter](intention_demande) [DDR](type_demande) [webmaster](nom_poste) [direction informatique](direction) [CDD](nature_contrat) [00 siege social](exploitation) supervisé par [Paul Bernard](nom_encadreur)
+      
+      # ===== NOUVEAUX: AVEC DATE MISE EN SERVICE =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 siege social](exploitation), pour une durée de [six mois](duree_contrat). La mise en service est prévue pour le [01/11/2025](date_mise_en_service)
+      - Je veux [créer](intention_demande) [DDR](type_demande) [développeur web](nom_poste) [DSI](direction) [stage](nature_contrat) [00 Siège Social](exploitation) [6 mois](duree_contrat) début [01/12/2025](date_mise_en_service)
+      
+      # ===== NOUVEAUX: AVEC MOTIF =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 siege social](exploitation). Le motif est [remplacement](motif)
+      - Je veux [créer](intention_demande) [DDR](type_demande) [développeur web](nom_poste) [DSI](direction) [CDD](nature_contrat) [00 Siège Social](exploitation) motif [remplacement](motif)
+      
+      # ===== NOUVEAUX: AVEC SITUATION BUDGÉTAIRE =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 siege social](exploitation). Situation budgétaire [budgetisé](situation_budget)
+      - Je veux [créer](intention_demande) [DDR](type_demande) [développeur web](nom_poste) [DSI](direction) [stage](nature_contrat) budget [budgetisé](situation_budget)
+      
+      # ===== NOUVEAUX: MESSAGE COMPLET (comme le vôtre) =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) dans la [direction informatique](direction). Le contrat est un [stage](nature_contrat), basé à [00 siege social](exploitation), pour une durée de [six mois](duree_contrat). L'encadreur sera [Andrianantenaina Esperant RAVELOARIJAONA](nom_encadreur), qui occupe le poste de responsable technique. La mise en service est prévue pour le [01/11/2025](date_mise_en_service). Le motif est [remplacement](motif), avec une situation budgétaire [budgetisé](situation_budget)
+      
+      - Je veux [créer](intention_demande) une [DDR](type_demande) pour un [développeur web](nom_poste) à la [DSI](direction) en [stage](nature_contrat) au [00 Siège Social](exploitation) pour [6 mois](duree_contrat) avec encadreur [Jean Martin](nom_encadreur) début [15/11/2025](date_mise_en_service) motif [Complément d'effectif](motif) budget [budgetisé](situation_budget)
+      
+      - Bonjour [ajouter](intention_demande) [DDR](type_demande) [webmaster](nom_poste) [direction informatique](direction) [CDD](nature_contrat) [00 siege social](exploitation) durée [12 mois](duree_contrat) superviseur [Marie Dubois](nom_encadreur) responsable projet mise en service [01/12/2025](date_mise_en_service) [remplacement](motif) [budgetisé](situation_budget) justification accélérer développement
+      
+      - Je souhaite [créer](intention_demande) [demande de recrutement](type_demande) [Admin et Dev web](nom_poste) [DSI](direction) contrat [stage](nature_contrat) basé [00 Siège Social](exploitation) [six mois](duree_contrat) encadré par [Paul Richard](nom_encadreur) chef technique service [01/11/2025](date_mise_en_service) motif [remplacement](motif) situation [budgetisé](situation_budget) pour développement modules internes formation jeune talent
+      
+      # ===== NOUVEAUX: Variantes avec justification mentionnée =====
+      - Bonjour, je souhaite [ajouter](intention_demande) un [DDR](type_demande) pour un [développeur web](nom_poste) [direction informatique](direction) [stage](nature_contrat) [00 siege social](exploitation) [6 mois](duree_contrat). La justification est la suivante : renfort équipe
+      
+      - Je veux [créer](intention_demande) [DDR](type_demande) [webmaster](nom_poste) [DSI](direction) [CDD](nature_contrat) [00 Siège Social](exploitation). Justification : développement nouveaux modules
+      
+      - [Ajouter](intention_demande) [demande de recrutement](type_demande) [développeur web](nom_poste) [direction IT](direction) [stage](nature_contrat) [siege social](exploitation). La justification : accélérer le développement tout en formant un jeune talent
+      
+      # ===== AUTRES POSTES (pour généralisation) =====
+      - Je souhaite [ajouter](intention_demande) [DDR](type_demande) [Agent de sécurité](nom_poste) [DRH](direction) [CDD](nature_contrat) [AG01 Agence Tanjombato](exploitation)
+      - [Créer](intention_demande) [DDR](type_demande) [Manœuvre logistique](nom_poste) [DLA](direction) [stage](nature_contrat) [US50 Usine Ambatolampy](exploitation)
+      - Bonjour [ajouter](intention_demande) [demande de recrutement](type_demande) [Agent administration](nom_poste) [direction RH](direction) [CDI](nature_contrat) [00 siege social](exploitation)
+      - Je veux [faire](intention_demande) [DDR](type_demande) [Manœuvre nettoyage](nom_poste) [DGL](direction) [journalier](nature_contrat) [AG04 Agence Tuléar](exploitation)
+      
+      # ===== AVEC LISTE DE DOTATIONS =====
+      - je veux [ajouter](intention_demande) un [DDR](type_demande) avec comme dotation 1. BO 2. Accès public 3. Ordinateur portable
+      - [créer](intention_demande) [DDR](type_demande) dotations: 1. [smartphone](dotation) 2. [badge](dotation) 3. [ordinateur portable](dotation)
+      - [ajouter](intention_demande) [demande de recrutement](type_demande) avec dotations liste: [BO](dotation), [accès public](dotation), [badge](dotation)
+      - je souhaite [faire](intention_demande) [DDR](type_demande) dotation 1. [ordinateur portable](dotation) 2. [smartphone](dotation) 3. [badge](dotation) 4. [fiche de poste](dotation)
+  
+  - synonym: ajouter
+    examples: |
+      - créer
+      - enregistrer
+      - soumettre
+      - faire
+      - initier
+      - démarrer
+      - remplir
+      - nouvelle
+      - nouveau
+      - ajoute
+      - création
+      - ajout
+
+  - synonym: modifier
+    examples: |
+      - mettre à jour
+      - changer
+      - corriger
+      - éditer
+      - actualiser
+      - réviser
+      - update
+      - modifie
+      - modification
+      - changement
+
+  - synonym: supprimer
+    examples: |
+      - annuler
+      - retirer
+      - effacer
+      - enlever
+      - delete
+      - supprime
+      - suppression
+      - annulation
+      - retrait
+
+  - synonym: voir
+    examples: |
+      - afficher
+      - consulter
+      - lister
+      - visualiser
+      - montre
+      - montrer
+      - vérifier
+      - check
+      - liste
+      - historique
+      - affichage
+      - consultation
+
+  - synonym: DDR
+    examples: |
+      - demande de recrutement
+      - demande recrutement
+      - formulaire de recrutement
+      - ddr
+      - DDR
+      
+  - lookup: type_demande
+    examples: |
+      - DDR
+      - DRI
+      - DMOE
+      - DMI
+  - lookup: intention_demande
+    examples: |
+      - ajouter
+      - modifier
+      - supprimer
+      - flux
+      - validation
+      - rejet

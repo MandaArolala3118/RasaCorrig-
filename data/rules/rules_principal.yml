@@ -1,0 +1,230 @@
+version: "3.1"
+
+rules:
+  # ==================== CONFIRMATION/REFUS AJOUT DDR ====================
+  
+  - rule: Si l'utilisateur confirme l'ajout DDR
+    steps:
+      - action: action_confirmer_enregistrement_ddr
+      - intent: confirm
+      - action: action_submit_form_add_ddr
+
+  - rule: Si l'utilisateur annule l'ajout DDR
+    steps:
+      - action: action_confirmer_enregistrement_ddr
+      - intent: refus
+      - action: utter_annulation_ajout_ddr
+  
+  # ==================== VALIDATION SIMPLE APRÈS utter_ask_que_faire ====================
+  
+  - rule: Valider simplement provide_poste_info après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_poste_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_encadreur_info après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_encadreur_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_contrat_info après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_contrat_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_hierarchie_organisation après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_hierarchie_organisation
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_justification après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_justification
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_objectifs après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_objectifs
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_dotation_info après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_dotation_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement upload_piece_jointe après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: upload_piece_jointe
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  - rule: Valider simplement provide_motif_budget après que_faire
+    steps:
+      - action: utter_ask_que_faire
+      - intent: provide_motif_budget
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+      - action: utter_ask_que_faire
+
+  # ==================== VALIDATION SIMPLE Au milieux DE CONVERSATION ====================
+  
+  - rule: Valider provide_poste_info hors contexte au début
+    steps:
+      - intent: provide_poste_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_encadreur_info hors contexte au début
+    steps:
+      - intent: provide_encadreur_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_contrat_info hors contexte au début
+    steps:
+      - intent: provide_contrat_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_hierarchie_organisation hors contexte au début
+    steps:
+      - intent: provide_hierarchie_organisation
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_justification hors contexte au début
+    steps:
+      - intent: provide_justification
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_objectifs hors contexte au début
+    steps:
+      - intent: provide_objectifs
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_dotation_info hors contexte au début
+    steps:
+      - intent: provide_dotation_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider upload_piece_jointe hors contexte au début
+    steps:
+      - intent: upload_piece_jointe
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+  - rule: Valider provide_motif_budget hors contexte au début
+    steps:
+      - intent: provide_motif_budget
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours 
+    wait_for_user_input: false
+
+
+  # ==================== RÈGLES POUR SUPPRESSION DE PIÈCES JOINTES ====================
+
+  - rule: Supprimer plusieurs pièces jointes après demande de fichiers
+    steps:
+      - intent: supprimer_plusieurs_pieces_jointes
+      - action: action_supprimer_pieces_jointes_multiples
+
+  - rule: Supprimer une seule pièce jointe après demande de fichier
+    steps:
+      - intent: suppression_piece_jointe
+      - action: action_supprimer_piece_jointe
+
+  - rule: Supprimer toutes les pièces jointes
+    steps:
+      - intent: suppression_toutes_pieces_jointes
+      - action: action_supprimer_toutes_pieces_jointes
+
+  # ==================== RÈGLES POUR MODIFICATION DE PIÈCES JOINTES ====================
+
+  - rule: Modifier les pièces jointes
+    steps:
+      - intent: Update_piece_jointe
+      - action: action_remplacer_piece_jointe
+
+  # ==================== RÈGLES POUR SUPPRESSION D'OBJECTIFS ====================
+
+  - rule: Supprimer tous les objectifs
+    steps:
+      - intent: supprimer_tous_objectifs
+      - action: action_supprimer_tous_objectifs
+
+  - rule: Supprimer plusieurs objectifs
+    steps:
+      - intent: supprimer_objectifs_multiples
+      - action: action_supprimer_objectifs_multiples
+
+  - rule: Supprimer un objectif
+    steps:
+      - intent: supprimer_objectif
+      - action: action_supprimer_objectif
+
+  # ==================== RÈGLES POUR MODIFICATION D'OBJECTIFS ====================
+  - rule: Modifier un objectif
+    steps:
+      - intent: modifier_objectif
+      - action: action_modifier_objectif
+  
+  - rule: Modifier plusieurs objectifs
+    steps:
+      - intent: modifier_objectifs_multiples
+      - action: action_modifier_multiple_objectifs
+  # ==================== RÈGLES POUR AFFICHAGE D'INFORMATION ====================
+  - rule: Afficher une informations
+    steps:
+      - intent: afficher_informations
+      - action: action_afficher_informations  
+  # ==================== RÈGLES POUR LA DOTATION ====================
+  - rule: Supprimer une dotation
+    steps:
+      - intent: supprimer_dotation
+      - action: action_supprimer_dotation
+  - rule: Supprimer plusieurs dotations
+    steps:
+      - intent: supprimer_dotation_multiple
+      - action: action_supprimer_dotations_multiples
+  - rule: Supprimer toutes les dotations
+    steps:
+      - intent: supprimer_tous_dotations
+      - action: action_supprimer_toutes_dotations
+  - rule: Modifier une dotation
+    steps:
+      - intent: modifier_dotation
+      - action: action_remplacer_dotation

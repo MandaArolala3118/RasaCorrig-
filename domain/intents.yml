@@ -1,0 +1,38 @@
+version: "3.1"
+
+intents:
+  - identification_demande
+  - provide_poste_info
+  - provide_encadreur_info
+  - provide_contrat_info
+  - provide_hierarchie_organisation
+  - provide_motif_budget
+  - provide_justification
+  - provide_objectifs
+  - provide_dotation_info
+  - upload_piece_jointe
+  - confirm
+  - refus
+  - salutation
+  - remerciement
+  - modifier_objectif
+  - modifier_objectifs_multiples
+  - supprimer_objectif
+  - supprimer_objectifs_multiples
+  - supprimer_tous_objectifs
+  - Update_piece_jointe
+  - suppression_piece_jointe
+  - suppression_toutes_pieces_jointes
+  - supprimmer_dotation
+  - supprimer_tous_dotations
+  - supprimer_dotation_multiple
+  - modifier_dotation
+  - afficher_informations
+  - supprimer_plusieurs_pieces_jointes
+  - demande_aide_generale      
+  - demande_aide_action 
+  - lancer_flux_recrutement
+  - inform
+  - validation_recrutement
+  - inform_validation
+  - rejection_recrutement

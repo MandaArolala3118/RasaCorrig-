@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Mouvapps (BC - PT)",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "Mouvapps (BC - PT)",
+        "entity": "dotation"
+      }
+    ],
+    "predicted_entities": []
+  }
+]
