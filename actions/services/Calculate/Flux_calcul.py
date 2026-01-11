@@ -1050,6 +1050,43 @@ class FluxSearchService:
     À ajouter dans la classe FluxSearchService
     """
 
+    def _convert_fullnames_to_usernames(self, full_names: List[str]) -> List[str]:
+        """
+        Convertit une liste de noms complets en usernames
+        Utilise UserSearchService pour chercher les utilisateurs correspondants
+        
+        Args:
+            full_names (List[str]): Liste des noms complets
+            
+        Returns:
+            List[str]: Liste des usernames correspondants (ou noms originaux si pas trouvés)
+        """
+        try:
+            from actions.services.Calculate.RechercheNom import UserSearchService
+            user_service = UserSearchService()
+            converted = []
+            
+            for full_name in full_names:
+                results = user_service.search_user_by_name(full_name, max_results=1)
+                if results and len(results) > 0:
+                    username = results[0].get('UserName')
+                    if username:
+                        print(f"   ✓ Conversion : '{full_name}' → '{username}'")
+                        converted.append(username)
+                    else:
+                        print(f"   ⚠️ Pas de username pour '{full_name}'")
+                        converted.append(full_name)
+                else:
+                    print(f"   ⚠️ Utilisateur '{full_name}' non trouvé")
+                    converted.append(full_name)
+            
+            return converted
+        except Exception as e:
+            print(f"❌ Erreur lors de la conversion des noms: {e}")
+            import traceback
+            traceback.print_exc()
+            return full_names
+
     def search_by_strict_validator_sequence(
         self,
         validators: List[str],
@@ -1100,15 +1137,25 @@ class FluxSearchService:
             if not all_flux:
                 return None
             
-            validators_normalized = [self.normalize_text(str(v)) for v in validators]
-            num_validators = len(validators)
+            # ⭐ CONVERSION IMPORTANTE : Si search_type='full_name', convertir les noms complets en usernames
+            # Car la base de données stocke les usernames dans les champs V1, V2, etc.
+            if search_type == 'full_name':
+                print(f"🔄 Conversion des noms complets en usernames...")
+                converted_validators = self._convert_fullnames_to_usernames(validators)
+                # Utiliser 'username' pour la recherche après conversion
+                search_type = 'username'
+            else:
+                converted_validators = validators
+            
+            validators_normalized = [self.normalize_text(str(v)) for v in converted_validators]
+            num_validators = len(converted_validators)
             
             if search_type not in ['username', 'full_name', 'matricule']:
-                print(f"⚠️ Type de recherche invalide: {search_type}. Utilisation de 'full_name'")
-                search_type = 'full_name'
+                print(f"⚠️ Type de recherche invalide: {search_type}. Utilisation de 'username'")
+                search_type = 'username'
             
             print(f"🔍 Recherche STRICTE par séquence de validateurs ({search_type}):")
-            for idx, val in enumerate(validators, 1):
+            for idx, val in enumerate(converted_validators, 1):
                 print(f"   V{idx} = '{val}' (doit correspondre)")
             print(f"   V{num_validators + 1} à V5 = VIDE (obligatoire)")
             print(f"📊 Total flux dans la base: {len(all_flux)}")
@@ -1140,7 +1187,8 @@ class FluxSearchService:
                         field_key = f'V{v_index}'
                         
                     else:
-                        field_key = f'V{v_index}' if search_type == 'username' else f'V{v_index}UserName'
+                        # Toujours chercher dans V{v_index} (username)
+                        field_key = f'V{v_index}'
                         flux_value = flux.get(field_key)
                         
                         if not flux_value:

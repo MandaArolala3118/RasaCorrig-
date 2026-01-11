@@ -28,6 +28,11 @@ nlu:
       - C'est un [CDD](nature_contrat) qui commence le [15 mars 2026](date_debut)
       - On cherche [un](effectif) développeur en [CDI](nature_contrat) dès le [premier février](date_mise_en_service)
       - Mise en service prévue le [12 décembre](date_mise_en_service)
+      - l'encadreur est Esperant Andrianantenaina pour [2](effectif) personnes pour une [stage](nature_contrat) qui commence le [15 mars](date_mise_en_service)
+      - pour [6 mois](duree_contrat)
+      - pour [12 mois](duree_contrat)
+      - pour [un an](duree_contrat)
+
 
   - lookup: nature_contrat
     examples: |

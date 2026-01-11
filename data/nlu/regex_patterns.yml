@@ -10,10 +10,20 @@ nlu:
 
   - regex: date_mise_en_service
     examples: |
-      # more precise: allow optional 'le' or surrounding words; match full day+month+year when present
-      - \b(?:le\s+)?\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}\b
-      - \b(?:le\s+)?\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}\b
-      - \b(?:le\s+)?\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
+      # Enhanced date detection with better precision
+      # Format: DD/MM/YYYY or DD-MM-YYYY
+      - \b\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}\b
+      # Format: YYYY/MM/DD or YYYY-MM-DD
+      - \b\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}\b
+      # Format: day month year (e.g., "20 février 2026")
+      - \b\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
+      # Format: "le day month year" (e.g., "le 20 février 2026")
+      - \ble\s+\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
+      # Format: "le day month" (e.g., "le 20 février" - assumes current or next year)
+      - \ble\s+\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
+      # Format: day month without "le" (e.g., "20 février" or "20 fevrier")
+      - \b\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
+      # Format: "en month year" (e.g., "en février 2026")
       - \b(?:en\s+)?(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
 
   - regex: effectif

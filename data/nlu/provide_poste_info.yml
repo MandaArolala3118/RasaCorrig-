@@ -42,6 +42,7 @@ nlu:
       - Besoin d'un [DLA](nom_poste) expérimenté
       - Pour le poste [Manœuvre magasin vulgarisation](nom_poste)
       - Recruter [Manœuvre magasin Event](nom_poste)
+      - poste en [dev web](nom_poste)
 
   # Synonymes améliorés avec priorité
   - synonym: Administrateur et Developpeur web

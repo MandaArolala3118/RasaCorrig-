@@ -1,6 +1,15 @@
 version: "3.1"
 
 rules:
+  # ==================== Permission refusée ====================
+  - rule: Permission refusée pour ajout DDR
+    condition:
+      - slot_was_set:
+          - intention_demande: "ajouter"
+          - permission: false
+    steps:
+      - action: utter_non_autoriser_add_ddr
+
   # ==================== Senario d'ajout DDR ====================
   - rule: Senario ADD DDR
     condition:

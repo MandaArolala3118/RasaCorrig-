@@ -1,6 +1,20 @@
 version: "3.1"
 
 stories:
+  # ==================== GESTION DES PERMISSIONS ====================
+  
+  - story: Ajout DDR - Permission refusée
+    steps:
+      - intent: identification_demande
+        entities:
+          - type_demande: "DDR"
+          - intention_demande: "ajouter"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: false
+          - intention_demande: "ajouter"
+      - action: utter_non_autoriser_add_ddr
+
   # ==================== FLUX PRINCIPAL ADD DDR ====================
   
   - story: Ajout DDR - Démarrage identification_demande

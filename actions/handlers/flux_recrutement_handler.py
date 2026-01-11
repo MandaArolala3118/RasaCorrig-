@@ -170,7 +170,8 @@ def extract_and_validate_validateurs(
                 # Afficher les validateurs correspondants
                 for i in range(1, len(validateurs_valides) + 1):
                     username = flux.get(f'V{i}')
-                    full_name = flux.get(f'V{i}UserName')
+                    # Utiliser le nom complet que nous avons dans validateurs_mis_a_jour
+                    full_name = validateurs_valides[i-1] if (i-1) < len(validateurs_valides) else None
                     if username and username != 'None':
                         message += f"   ✓ **V{i}** : {full_name} ({username})\n"
                 
@@ -207,7 +208,8 @@ def extract_and_validate_validateurs(
                     
                     for i in range(1, len(validateurs_valides) + 1):
                         username = flux.get(f'V{i}')
-                        full_name = flux.get(f'V{i}UserName')
+                        # Utiliser le nom complet que nous avons dans validateurs_valides
+                        full_name = validateurs_valides[i-1] if (i-1) < len(validateurs_valides) else None
                         if username and username != 'None':
                             message += f"   ✓ **V{i}** : {full_name} ({username})\n"
                     
@@ -238,7 +240,8 @@ def extract_and_validate_validateurs(
                         validateurs_flux = []
                         for i in range(1, len(validateurs_valides) + 1):
                             username = flux.get(f'V{i}')
-                            full_name = flux.get(f'V{i}UserName')
+                            # Utiliser le nom complet de validateurs_valides
+                            full_name = validateurs_valides[i-1] if (i-1) < len(validateurs_valides) else None
                             if username and username != 'None':
                                 validateurs_flux.append(f"V{i}: {full_name}")
                         
@@ -370,6 +373,32 @@ class ActionVerifyIfAllInformationFluxIsComplet(Action):
             dispatcher=dispatcher
         )
         
+        logger.info(f"📊 validateur_slots retourné: {validateur_slots}")
+        logger.info(f"📊 Nombre de slots: {len(validateur_slots)}")
+        
+        # ⭐ EXTRACTION DES SLOTS RETOURNÉS PAR extract_and_validate_validateurs
+        # Récupérer nom_flux et nom_flux_id depuis les slots retournés (si présents)
+        nom_flux_from_slots = None
+        nom_flux_id_from_slots = None
+        for slot_event in validateur_slots:
+            # Vérifier si c'est un dictionnaire (SlotSet sérialisé) ou un objet SlotSet
+            if isinstance(slot_event, dict):
+                # C'est un dictionnaire avec 'name' et 'value'
+                if slot_event.get('name') == "nom_flux":
+                    nom_flux_from_slots = slot_event.get('value')
+                    logger.info(f"✅ Slot dict nom_flux trouvé: {nom_flux_from_slots}")
+                elif slot_event.get('name') == "nom_flux_id":
+                    nom_flux_id_from_slots = slot_event.get('value')
+                    logger.info(f"✅ Slot dict nom_flux_id trouvé: {nom_flux_id_from_slots}")
+            elif hasattr(slot_event, 'key') and hasattr(slot_event, 'value'):
+                # C'est un objet SlotSet avec .key et .value
+                if slot_event.key == "nom_flux":
+                    nom_flux_from_slots = slot_event.value
+                    logger.info(f"✅ SlotSet objet nom_flux trouvé: {nom_flux_from_slots}")
+                elif slot_event.key == "nom_flux_id":
+                    nom_flux_id_from_slots = slot_event.value
+                    logger.info(f"✅ SlotSet objet nom_flux_id trouvé: {nom_flux_id_from_slots}")
+        
         # Mapper les entités vers des variables
         extracted_data = {}
         for entity in entities:
@@ -385,12 +414,15 @@ class ActionVerifyIfAllInformationFluxIsComplet(Action):
             extracted_data['responsable_rh'] = responsable_rh_extracted
         
         # ⭐ CORRECTION PRINCIPALE : Récupérer d'abord depuis le tracker (slots persistants)
+        # puis depuis les slots retournés par extract_and_validate_validateurs
         # puis depuis extracted_data (nouvelles entités du message actuel)
         id_demande = tracker.get_slot("id_demande") or extracted_data.get('id_demande')
         type_demande = tracker.get_slot("type_demande") or extracted_data.get('type_demande')
-        nom_flux = tracker.get_slot("nom_flux") or extracted_data.get('nom_flux')
-        nom_flux_id = tracker.get_slot("nom_flux_id")
+        nom_flux = nom_flux_from_slots or tracker.get_slot("nom_flux") or extracted_data.get('nom_flux')
+        nom_flux_id = nom_flux_id_from_slots or tracker.get_slot("nom_flux_id")
         responsable_rh = tracker.get_slot("responsable_rh") or extracted_data.get('responsable_rh')
+        
+        logger.info(f"🔍 Valeurs après synchronisation - nom_flux_from_slots: {nom_flux_from_slots}, nom_flux: {nom_flux}, nom_flux_id: {nom_flux_id}")
         
         logger.info(f"Valeurs finales - ID: {id_demande}, Type: {type_demande}, Flux: {nom_flux}, Flux ID: {nom_flux_id}, RH: {responsable_rh}")
         logger.info(f"Validateurs: {validateurs_mis_a_jour}")
@@ -594,7 +626,23 @@ class ActionVerifyIfAllInformationFluxIsComplet(Action):
         }
         
         missing_slots = []
-        slots_to_set = list(validateur_slots)  # Commencer avec les slots des validateurs
+        slots_to_set = []
+        
+        # Convertir les dictionnaires de validateur_slots en SlotSet objects
+        for slot_item in validateur_slots:
+            if isinstance(slot_item, dict):
+                # Convertir le dictionnaire en SlotSet
+                slot_name = slot_item.get('name')
+                slot_value = slot_item.get('value')
+                if slot_name:
+                    slots_to_set.append(SlotSet(slot_name, slot_value))
+                    logger.info(f"✅ Slot dict converti en SlotSet: {slot_name} = {slot_value}")
+            elif isinstance(slot_item, SlotSet):
+                # C'est déjà un SlotSet, l'ajouter directement
+                slots_to_set.append(slot_item)
+            else:
+                # Cas inattendu
+                logger.warning(f"⚠️ Type de slot inattendu: {type(slot_item)}")
         
         # Vérifier les slots manquants et mettre à jour ceux qui sont valides
         for slot_name, slot_value in required_slots.items():
@@ -683,7 +731,13 @@ class ActionDemanderConfirmationFlux(Action):
         
         dispatcher.utter_message(text=message)
         
-        return []
+        # ⭐ IMPORTANT: Retourner les slots pour qu'ils restent disponibles pour l'action suivante
+        return [
+            SlotSet("id_demande", id_demande),
+            SlotSet("nom_flux", nom_flux),
+            SlotSet("responsable_rh", responsable_rh),
+            SlotSet("nom_validateur_list", validateurs)
+        ]
 
 
 class ActionSoumettreFluxRecrutement(Action):

@@ -2,14 +2,11 @@
 version: "3.1"
 
 rules:
-  - rule: Flux lancement après vérification permission (false)
+  - rule: Flux lancement après vérification permission (false) - tout rôle
     condition:
       - slot_was_set:
           - permission: false
           - intention_demande: "flux"
-          - role: "ERM"
-          - lancement_flux_intent: true
-          - type_demande : "DDR"
     steps:
       - action: utter_non_autoriser_flux
 
