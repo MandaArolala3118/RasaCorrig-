@@ -2,6 +2,8 @@
 version: "3.1"
 
 rules:
+  # ========== PERMISSIONS ==========
+  
   - rule: Flux lancement après vérification permission (false) - tout rôle
     condition:
       - slot_was_set:
@@ -11,6 +13,8 @@ rules:
       - action: utter_non_autoriser_flux
 
 
+  # ========== FLUX LANCEMENT STRICTEMENT ERM ==========
+  
   - rule: Vérification complétude flux après inform (sans proposition active)
     condition:
       - slot_was_set:
@@ -34,6 +38,7 @@ rules:
           - verify_flux: true
           - intention_demande: "flux"
           - lancement_flux_intent: true
+          - role: "ERM"
     steps:
       - intent: refus
       - action: utter_annuler_operation
@@ -44,6 +49,7 @@ rules:
           - verify_flux: true
           - intention_demande: "flux"
           - lancement_flux_intent: true
+          - role: "ERM"
     steps:
       - intent: confirm
       - action: action_soumettre_flux_recrutement
@@ -58,6 +64,7 @@ rules:
           - permission: true
           - intention_demande: "flux"
           - lancement_flux_intent: true
+          - role: "ERM"
       - action: action_verify_if_all_information_flux_is_complet
     wait_for_user_input: false
 

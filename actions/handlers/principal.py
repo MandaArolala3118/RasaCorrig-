@@ -35,7 +35,89 @@ class ActionVerifierPermission(Action):
         role = metadata.get('role', 'Unknown')
         print("-------------------------------------------------------Role dans action_verifier_permission : ", role)
         print("-------------------------------------------------------meta data : ", metadata)
-        if type_demande == "DDR" and intention_demande == "ajouter" :
+        
+        # ========== GESTION DES PERMISSIONS - STRICTEMENT ==========
+        
+        # ✅ Seul ERM peut lancer un flux de recrutement
+        if intention_demande == "flux":
+            if role == "ERM":
+                return [
+                    SlotSet("role", role),
+                    SlotSet("permission", True),
+                    SlotSet("type_demande", type_demande),
+                    SlotSet("intention_demande", intention_demande),
+                    SlotSet("validation_intent", None),
+                    SlotSet("rejection_intent", None),
+                    SlotSet("lancement_flux_intent", True),
+                    SlotSet("ajout_ddr_intent", None)
+                ]
+            else:
+                # EV et autres rôles ne peuvent pas lancer un flux
+                return [
+                    SlotSet("role", role),
+                    SlotSet("permission", False),
+                    SlotSet("type_demande", type_demande),
+                    SlotSet("intention_demande", intention_demande),
+                    SlotSet("validation_intent", None),
+                    SlotSet("rejection_intent", None),
+                    SlotSet("lancement_flux_intent", False),
+                    SlotSet("ajout_ddr_intent", None)
+                ]
+        
+        # ✅ Seul EV peut valider une demande
+        if intention_demande == "validation":
+            if role == "EV":
+                return [
+                    SlotSet("role", role),
+                    SlotSet("permission", True),
+                    SlotSet("type_demande", type_demande),
+                    SlotSet("intention_demande", intention_demande),
+                    SlotSet("validation_intent", True),
+                    SlotSet("rejection_intent", None),
+                    SlotSet("lancement_flux_intent", None),
+                    SlotSet("ajout_ddr_intent", None)
+                ]
+            else:
+                # ERM et autres rôles ne peuvent pas valider
+                return [
+                    SlotSet("role", role),
+                    SlotSet("permission", False),
+                    SlotSet("type_demande", type_demande),
+                    SlotSet("intention_demande", intention_demande),
+                    SlotSet("validation_intent", False),
+                    SlotSet("rejection_intent", None),
+                    SlotSet("lancement_flux_intent", None),
+                    SlotSet("ajout_ddr_intent", None)
+                ]
+        
+        # ✅ Seul EV peut rejeter une demande
+        if intention_demande == "rejet":
+            if role == "EV":
+                return [
+                    SlotSet("role", role),
+                    SlotSet("permission", True),
+                    SlotSet("type_demande", type_demande),
+                    SlotSet("intention_demande", intention_demande),
+                    SlotSet("validation_intent", None),
+                    SlotSet("rejection_intent", True),
+                    SlotSet("lancement_flux_intent", None),
+                    SlotSet("ajout_ddr_intent", None)
+                ]
+            else:
+                # ERM et autres rôles ne peuvent pas rejeter
+                return [
+                    SlotSet("role", role),
+                    SlotSet("permission", False),
+                    SlotSet("type_demande", type_demande),
+                    SlotSet("intention_demande", intention_demande),
+                    SlotSet("validation_intent", None),
+                    SlotSet("rejection_intent", False),
+                    SlotSet("lancement_flux_intent", None),
+                    SlotSet("ajout_ddr_intent", None)
+                ]
+        
+        # DDR - Ajout de demande de recrutement (tous les rôles qui le demandent)
+        if type_demande == "DDR" and intention_demande == "ajouter":
             return [
                 SlotSet("role", role),
                 SlotSet("permission", True),
@@ -46,47 +128,16 @@ class ActionVerifierPermission(Action):
                 SlotSet("lancement_flux_intent", None),
                 SlotSet("ajout_ddr_intent", True)
             ]
-        if intention_demande == "flux" and role == "ERM" :
-            return [
-                SlotSet("role", role),
-                SlotSet("permission", True),
-                SlotSet("type_demande", type_demande),
-                SlotSet("intention_demande", intention_demande),
-                SlotSet("validation_intent", None),
-                SlotSet("rejection_intent", None),
-                SlotSet("lancement_flux_intent", True),
-                SlotSet("ajout_ddr_intent", None)
-            ]
-        if intention_demande == "rejet" and role == "EV" :
-            return [
-                SlotSet("role", role),
-                SlotSet("permission", True),
-                SlotSet("type_demande", type_demande),
-                SlotSet("intention_demande", intention_demande),
-                SlotSet("validation_intent", None),
-                SlotSet("rejection_intent", True),
-                SlotSet("lancement_flux_intent", None),
-                SlotSet("ajout_ddr_intent", None)
-            ]
-        if intention_demande == "validation" and role == "EV" :
-            return [
-                SlotSet("role", role),
-                SlotSet("permission", True),
-                SlotSet("type_demande", type_demande),
-                SlotSet("intention_demande", intention_demande),
-                SlotSet("validation_intent", True),
-                SlotSet("rejection_intent", None),
-                SlotSet("lancement_flux_intent", None),
-                SlotSet("ajout_ddr_intent", None)
-            ]
+        
+        # ❌ Aucune permission par défaut
         return [
             SlotSet("role", role),
             SlotSet("permission", False),
             SlotSet("type_demande", type_demande),
             SlotSet("intention_demande", intention_demande),
-            SlotSet("validation_intent", None),
-            SlotSet("rejection_intent", None),
-            SlotSet("lancement_flux_intent", None),
+            SlotSet("validation_intent", False),
+            SlotSet("rejection_intent", False),
+            SlotSet("lancement_flux_intent", False),
             SlotSet("ajout_ddr_intent", None)
         ]
 class ActionAfficherInformations(Action):

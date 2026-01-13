@@ -485,15 +485,15 @@ responses:
     - text: "Quel est le type de la demande associée à ce flux ? [DDR, DRI, DMI, DMOE](demande_type_demande)"
     - text: "Veuillez indiquer le type de la demande associée à ce flux.  [DDR, DRI, DMI, DMOE](demande_type_demande)"
   utter_non_autoriser_flux:
-    - text: "Désolé, vous n'avez pas les permissions nécessaires pour lancer ce flux de recrutement."
-    - text: "Accès refusé. Vous n'êtes pas autorisé à lancer ce flux de recrutement. Veuillez contacter votre administrateur."
+    - text: "🚫 **Accès refusé.** Seuls les **ERM (Gestionnaires de Recrutement)** sont autorisés à lancer un flux de recrutement. Vous êtes **EV (Validateur)** et ne pouvez que valider les demandes existantes."
+    - text: "❌ Vous ne disposez pas des permissions nécessaires pour lancer un flux de recrutement. Cette action est réservée aux **ERM**. En tant que **EV**, vous pouvez consulter et **valider** les demandes qui vous sont assignées."
   utter_flux_creation_forwarded:
     - text: "📨 Votre demande de création de flux a été transmise avec succès !"
   
   #validation recrutement
   utter_non_autoriser_validation:
-    - text: "Désolé, vous n'avez pas les permissions nécessaires pour valider cette demande de recrutement."
-    - text: "Accès refusé. Vous n'êtes pas autorisé à valider cette demande de recrutement. Veuillez contacter votre administrateur."
+    - text: "🚫 **Accès refusé.** Seuls les **EV (Validateurs)** sont autorisés à valider les demandes. Vous êtes **ERM (Gestionnaire de Recrutement)** et êtes en charge de **lancer les flux de recrutement**."
+    - text: "❌ Vous ne disposez pas des permissions nécessaires pour valider une demande. Cette action est réservée aux **EV**. En tant que **ERM**, vous êtes autorisé à **lancer les flux de recrutement**."
 
   utter_demander_id_demande:
   - text: "Quel est le numéro de la demande que vous souhaitez consulter ?"
