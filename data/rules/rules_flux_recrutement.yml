@@ -32,12 +32,9 @@ rules:
     condition:
       - slot_was_set:
           - verify_flux: true
-          - role: "ERM"
           - intention_demande: "flux"
           - lancement_flux_intent: true
-          - type_demande : "DDR"
     steps:
-      - action: action_verify_if_all_information_flux_is_complet
       - intent: refus
       - action: utter_annuler_operation
 
@@ -45,12 +42,9 @@ rules:
     condition:
       - slot_was_set:
           - verify_flux: true
-          - role: "ERM"
           - intention_demande: "flux"
           - lancement_flux_intent: true
-          - type_demande : "DDR"
     steps:
-      - action: action_verify_if_all_information_flux_is_complet
       - intent: confirm
       - action: action_soumettre_flux_recrutement
 
@@ -63,9 +57,7 @@ rules:
       - slot_was_set:
           - permission: true
           - intention_demande: "flux"
-          - role: "ERM"
           - lancement_flux_intent: true
-          - type_demande : "DDR"
       - action: action_verify_if_all_information_flux_is_complet
     wait_for_user_input: false
 

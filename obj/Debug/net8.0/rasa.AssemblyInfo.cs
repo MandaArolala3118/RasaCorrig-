@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rasa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4acdb7ab7b20925ecb0f00e51083b3d501e1290")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03887d0df00556c3d041b14f6e4aaf4c889851ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("rasa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rasa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -57,6 +57,7 @@ slots:
     type: text
     influence_conversation: false
     mappings:
+      - type: custom  
       - type: from_entity
         entity: responsable_rh
 
@@ -340,6 +341,7 @@ slots:
     type: text
     influence_conversation: false
     mappings:
+      - type: custom
       - type: from_entity
         entity: nom_flux
 

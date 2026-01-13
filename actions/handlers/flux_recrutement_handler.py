@@ -711,10 +711,12 @@ class ActionDemanderConfirmationFlux(Action):
         """Demander confirmation avant de soumettre le flux"""
         
         id_demande = tracker.get_slot("id_demande")
+        type_demande = tracker.get_slot("type_demande")
         nom_flux = tracker.get_slot("nom_flux")
+        nom_flux_id = tracker.get_slot("nom_flux_id")
         responsable_rh = tracker.get_slot("responsable_rh")
         validateurs = tracker.get_slot("nom_validateur_list") or []
-        
+        logger.info(f"Demande de confirmation - ID: {id_demande}, Type: {type_demande}, Flux: {nom_flux}, RH: {responsable_rh}, Validateurs: {validateurs}")
         message = f"""
 📋 **Récapitulatif du flux de recrutement**
 
@@ -731,13 +733,9 @@ class ActionDemanderConfirmationFlux(Action):
         
         dispatcher.utter_message(text=message)
         
-        # ⭐ IMPORTANT: Retourner les slots pour qu'ils restent disponibles pour l'action suivante
-        return [
-            SlotSet("id_demande", id_demande),
-            SlotSet("nom_flux", nom_flux),
-            SlotSet("responsable_rh", responsable_rh),
-            SlotSet("nom_validateur_list", validateurs)
-        ]
+        # ⭐ IMPORTANT: NE PAS retourner de slots ici - laisser Rasa gérer la persistance
+        # Les slots sont déjà enregistrés par l'action précédente
+        return []
 
 
 class ActionSoumettreFluxRecrutement(Action):
@@ -754,12 +752,26 @@ class ActionSoumettreFluxRecrutement(Action):
         """Soumettre le flux de recrutement en appelant l'API create_flux"""
         
         try:
+            # Récupérer TOUS les slots depuis le tracker
             id_demande = tracker.get_slot("id_demande")
             nom_flux_id = tracker.get_slot("nom_flux_id")
             nom_flux = tracker.get_slot("nom_flux")
             responsable_rh = tracker.get_slot("responsable_rh")
             type_demande = tracker.get_slot("type_demande")
             validateurs = tracker.get_slot("nom_validateur_list") or []
+            
+            # 🔍 Debug détaillé pour identifier le problème
+            logger.info("=" * 80)
+            logger.info("🔍 DEBUG SOUMISSION FLUX - État des slots:")
+            logger.info(f"   • id_demande: {id_demande} (type: {type(id_demande)})")
+            logger.info(f"   • nom_flux_id: {nom_flux_id} (type: {type(nom_flux_id)})")
+            logger.info(f"   • nom_flux: {nom_flux} (type: {type(nom_flux)})")
+            logger.info(f"   • responsable_rh: {responsable_rh} (type: {type(responsable_rh)})")
+            logger.info(f"   • type_demande: {type_demande} (type: {type(type_demande)})")
+            logger.info(f"   • validateurs: {validateurs} (type: {type(validateurs)})")
+            logger.info("=" * 80)
+            
+            logger.info(f"Préparation soumission flux - ID: {id_demande}, Flux ID: {nom_flux_id}, RH: {responsable_rh}, Validateurs: {validateurs}")
             
             if not all([id_demande, nom_flux_id, responsable_rh]):
                 dispatcher.utter_message(

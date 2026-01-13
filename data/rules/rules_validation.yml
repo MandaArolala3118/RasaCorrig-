@@ -138,14 +138,8 @@ rules:
       - action: action_verifier_permission
       - slot_was_set:
           - permission: true
-      - slot_was_set:
           - intention_demande: "validation"
-      - slot_was_set:
-          - role: "EV"
-      - slot_was_set:
           - validation_intent: true
-      - slot_was_set:
-          - type_demande: "DDR"
       - action: action_verify_if_all_information_validation_is_complet
     wait_for_user_input: false
 
@@ -158,14 +152,8 @@ rules:
       - action: action_verifier_permission
       - slot_was_set:
           - permission: true
-      - slot_was_set:
           - intention_demande: "rejet"
-      - slot_was_set:
-          - role: "EV"
-      - slot_was_set:
           - rejection_intent: true
-      - slot_was_set:
-          - type_demande: "DDR"
       - action: action_verify_if_all_information_rejection_is_complet
     wait_for_user_input: false
     

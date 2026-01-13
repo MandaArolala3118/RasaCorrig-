@@ -295,14 +295,18 @@ class ActionSubmitFormAddDdr(Action):
             print("------------------------------------------------------------------------------------------------Response de la base : ", response)
             demande_id = 'N/A'
 
-            if response and isinstance(response, dict):
-                demande = response.get('demande', {})
-
-                if isinstance(demande, dict):
-                    for key, value in demande.items():
-                        if key.lower() == 'idddr':
-                            demande_id = value
-                            break
+            if response and isinstance(response, dict): 
+                # Vérifier d'abord au niveau racine du response
+                if 'IdDdr' in response:
+                    demande_id = response['IdDdr']
+                else:
+                    # Sinon vérifier dans le nested 'demande' key (pour compatibilité rétroactive)
+                    demande = response.get('demande', {})
+                    if isinstance(demande, dict):
+                        for key, value in demande.items():
+                            if key.lower() == 'idddr':
+                                demande_id = value
+                                break
 
 
                 # ============================================

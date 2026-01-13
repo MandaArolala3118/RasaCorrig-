@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\manda\\rasa\\RasaCorrig-\\rasa.csproj": {}
+    "C:\\manda\\rasa\\RasaCorrig-\\rasa.csproj": {}
   },
   "projects": {
-    "E:\\manda\\rasa\\RasaCorrig-\\rasa.csproj": {
+    "C:\\manda\\rasa\\RasaCorrig-\\rasa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\manda\\rasa\\RasaCorrig-\\rasa.csproj",
+        "projectUniqueName": "C:\\manda\\rasa\\RasaCorrig-\\rasa.csproj",
         "projectName": "rasa",
-        "projectPath": "E:\\manda\\rasa\\RasaCorrig-\\rasa.csproj",
+        "projectPath": "C:\\manda\\rasa\\RasaCorrig-\\rasa.csproj",
         "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
-        "outputPath": "E:\\manda\\rasa\\RasaCorrig-\\obj\\",
+        "outputPath": "C:\\manda\\rasa\\RasaCorrig-\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
