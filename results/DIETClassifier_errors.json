@@ -1,15 +1,83 @@
 [
   {
-    "text": "détails contrat",
+    "text": "affiche données du poste",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "info_type",
+        "start": 19,
+        "end": 24,
+        "confidence_entity": 0.8731020092964172,
+        "value": "poste",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 19,
+        "end": 24,
+        "value": "poste",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "affiche objectifs dotations et fichiers",
     "entities": [],
     "predicted_entities": [
       {
         "entity": "info_type",
         "start": 8,
-        "end": 15,
-        "confidence_entity": 0.6645585298538208,
-        "value": "contrat",
+        "end": 17,
+        "confidence_entity": 0.545470654964447,
+        "value": "objectifs",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 18,
+        "end": 27,
+        "confidence_entity": 0.6514332890510559,
+        "value": "dotations",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 8,
+        "end": 17,
+        "value": "objectifs",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 18,
+        "end": 27,
+        "value": "dotations",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 31,
+        "end": 39,
+        "value": "fichiers",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -61,9 +129,19 @@
         "entity": "type_demande",
         "start": 7,
         "end": 10,
-        "confidence_entity": 0.9999324083328247,
+        "confidence_entity": 0.9998738765716553,
         "value": "DDR",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 7,
+        "end": 10,
+        "value": "DDR",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -91,9 +169,19 @@
         "entity": "type_demande",
         "start": 5,
         "end": 8,
-        "confidence_entity": 0.9999127388000488,
+        "confidence_entity": 0.999817430973053,
         "value": "DMI",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 5,
+        "end": 8,
+        "value": "DMI",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -121,9 +209,19 @@
         "entity": "type_demande",
         "start": 7,
         "end": 10,
-        "confidence_entity": 0.9999406337738037,
+        "confidence_entity": 0.9998738765716553,
         "value": "DRI",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 7,
+        "end": 10,
+        "value": "DRI",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -151,449 +249,7 @@
         "entity": "type_demande",
         "start": 11,
         "end": 15,
-        "confidence_entity": 0.9999213218688965,
-        "value": "DMOE",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Démarrer le processus de validation de la DRI 002",
-    "entities": [
-      {
-        "start": 12,
-        "end": 35,
-        "value": "processus de validation",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 42,
-        "end": 45,
-        "value": "DRI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 46,
-        "end": 49,
-        "value": "002",
-        "entity": "id_demande"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 12,
-        "end": 38,
-        "confidence_entity": 0.565579891204834,
-        "value": "processus de validation de",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "type_demande",
-        "start": 42,
-        "end": 45,
-        "confidence_entity": 0.9999370574951172,
-        "value": "DRI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 46,
-        "end": 49,
-        "confidence_entity": 0.9999582767486572,
-        "value": "002",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Démarrer processus demande DRI 022 avec Paul Bernard comme validateur et Sophie Durand pour la RH",
-    "entities": [
-      {
-        "start": 9,
-        "end": 18,
-        "value": "processus",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 27,
-        "end": 30,
-        "value": "DRI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 31,
-        "end": 34,
-        "value": "022",
-        "entity": "id_demande"
-      },
-      {
-        "start": 40,
-        "end": 52,
-        "value": "Paul Bernard",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 73,
-        "end": 86,
-        "value": "Sophie Durand",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 9,
-        "end": 18,
-        "confidence_entity": 0.9978964328765869,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 27,
-        "end": 30,
-        "confidence_entity": 0.9994636178016663,
-        "value": "DRI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 31,
-        "end": 34,
-        "confidence_entity": 0.9999125003814697,
-        "value": "022",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 40,
-        "end": 52,
-        "confidence_entity": 0.8116640448570251,
-        "value": "Paul Bernard",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 73,
-        "end": 86,
-        "confidence_entity": 0.9815545082092285,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Initier procédure demande de mobilité interne 024 validé par Paul Bernard responsable ressources humaines Marie Martin",
-    "entities": [
-      {
-        "start": 8,
-        "end": 17,
-        "value": "procédure",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 18,
-        "end": 45,
-        "value": "DMI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 46,
-        "end": 49,
-        "value": "024",
-        "entity": "id_demande"
-      },
-      {
-        "start": 61,
-        "end": 73,
-        "value": "Paul Bernard",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 106,
-        "end": 118,
-        "value": "Marie Martin",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 8,
-        "end": 17,
-        "confidence_entity": 0.9433946013450623,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 18,
-        "end": 45,
-        "confidence_entity": 0.9684014320373535,
-        "value": "DMI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 46,
-        "end": 49,
-        "confidence_entity": 0.9981841444969177,
-        "value": "024",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 61,
-        "end": 73,
-        "confidence_entity": 0.8733012080192566,
-        "value": "Paul Bernard",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 106,
-        "end": 118,
-        "confidence_entity": 0.987547755241394,
-        "value": "Marie Martin",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Démarrer processus DRI 072 avec Sophie Durand, Luc Moreau et Pierre Martin RH Jean Rakoto",
-    "entities": [
-      {
-        "start": 9,
-        "end": 18,
-        "value": "processus",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 19,
-        "end": 22,
-        "value": "DRI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 23,
-        "end": 26,
-        "value": "072",
-        "entity": "id_demande"
-      },
-      {
-        "start": 32,
-        "end": 45,
-        "value": "Sophie Durand",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 47,
-        "end": 57,
-        "value": "Luc Moreau",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 61,
-        "end": 74,
-        "value": "Pierre Martin",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 78,
-        "end": 89,
-        "value": "Jean Rakoto",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 9,
-        "end": 18,
-        "confidence_entity": 0.9981181621551514,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 19,
-        "end": 22,
-        "confidence_entity": 0.9993513226509094,
-        "value": "DRI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 23,
-        "end": 26,
-        "confidence_entity": 0.9990229606628418,
-        "value": "072",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 32,
-        "end": 45,
-        "confidence_entity": 0.9128884673118591,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 47,
-        "end": 57,
-        "confidence_entity": 0.6506584286689758,
-        "value": "Luc Moreau",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 61,
-        "end": 74,
-        "confidence_entity": 0.5547531247138977,
-        "value": "Pierre Martin",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 78,
-        "end": 89,
-        "confidence_entity": 0.9930765628814697,
-        "value": "Jean Rakoto",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Lancer flux de recrutement DMOE 073 validation Jean Dupont, Marie Martin, Paul Bernard et Sophie Durand responsable ressources humaines ANDRIANINA Manda",
-    "entities": [
-      {
-        "start": 7,
-        "end": 26,
-        "value": "flux de recrutement",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 27,
-        "end": 31,
-        "value": "DMOE",
-        "entity": "type_demande"
-      },
-      {
-        "start": 32,
-        "end": 35,
-        "value": "073",
-        "entity": "id_demande"
-      },
-      {
-        "start": 47,
-        "end": 58,
-        "value": "Jean Dupont",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 60,
-        "end": 72,
-        "value": "Marie Martin",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 74,
-        "end": 86,
-        "value": "Paul Bernard",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 90,
-        "end": 103,
-        "value": "Sophie Durand",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 136,
-        "end": 152,
-        "value": "ANDRIANINA Manda",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 7,
-        "end": 26,
-        "confidence_entity": 0.9560773372650146,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 27,
-        "end": 31,
-        "confidence_entity": 0.9989190101623535,
+        "confidence_entity": 0.9998589754104614,
         "value": "DMOE",
         "extractor": "DIETClassifier",
         "processors": [
@@ -601,613 +257,11 @@
         ]
       },
       {
-        "entity": "id_demande",
-        "start": 32,
-        "end": 35,
-        "confidence_entity": 0.99919193983078,
-        "value": "073",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 47,
-        "end": 58,
-        "confidence_entity": 0.8874198794364929,
-        "value": "Jean Dupont",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 60,
-        "end": 72,
-        "confidence_entity": 0.7408950328826904,
-        "value": "Marie Martin",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 74,
-        "end": 86,
-        "confidence_entity": 0.8423731327056885,
-        "value": "Paul Bernard",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 90,
-        "end": 103,
-        "confidence_entity": 0.591166079044342,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 136,
-        "end": 152,
-        "confidence_entity": 0.9920527935028076,
-        "value": "ANDRIANINA Manda",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Démarrer processus Circuit validation hiérarchique demande DRI 030 avec Paul Bernard et Sophie Durand RH Luc Moreau",
-    "entities": [
-      {
-        "start": 9,
-        "end": 18,
-        "value": "processus",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 19,
-        "end": 50,
-        "value": "Circuit validation hiérarchique",
-        "entity": "nom_flux"
-      },
-      {
-        "start": 59,
-        "end": 62,
-        "value": "DRI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 63,
-        "end": 66,
-        "value": "030",
-        "entity": "id_demande"
-      },
-      {
-        "start": 72,
-        "end": 84,
-        "value": "Paul Bernard",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 88,
-        "end": 101,
-        "value": "Sophie Durand",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 105,
-        "end": 115,
-        "value": "Luc Moreau",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 9,
-        "end": 18,
-        "confidence_entity": 0.9986554384231567,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_flux",
-        "start": 19,
-        "end": 50,
-        "confidence_entity": 0.9520720839500427,
-        "value": "Circuit validation hiérarchique",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
         "entity": "type_demande",
-        "start": 59,
-        "end": 62,
-        "confidence_entity": 0.9991150498390198,
-        "value": "DRI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 63,
-        "end": 66,
-        "confidence_entity": 0.9995697140693665,
-        "value": "030",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 72,
-        "end": 84,
-        "confidence_entity": 0.6419830322265625,
-        "value": "Paul Bernard",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 88,
-        "end": 101,
-        "confidence_entity": 0.7840786576271057,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 105,
-        "end": 115,
-        "confidence_entity": 0.9956632256507874,
-        "value": "Luc Moreau",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Lancer flux Test - DSI demande de recrutement interne 034 validateurs Jean Dupont, Marie Martin, Paul Bernard et Sophie Durand RH Luc Moreau",
-    "entities": [
-      {
-        "start": 7,
-        "end": 11,
-        "value": "flux",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 12,
-        "end": 22,
-        "value": "Test - DSI",
-        "entity": "nom_flux"
-      },
-      {
-        "start": 23,
-        "end": 53,
-        "value": "DRI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 54,
-        "end": 57,
-        "value": "034",
-        "entity": "id_demande"
-      },
-      {
-        "start": 70,
-        "end": 81,
-        "value": "Jean Dupont",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 83,
-        "end": 95,
-        "value": "Marie Martin",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 97,
-        "end": 109,
-        "value": "Paul Bernard",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 113,
-        "end": 126,
-        "value": "Sophie Durand",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 130,
-        "end": 140,
-        "value": "Luc Moreau",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 7,
-        "end": 11,
-        "confidence_entity": 0.9795497059822083,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_flux",
-        "start": 12,
-        "end": 16,
-        "confidence_entity": 0.9942353367805481,
-        "value": "Test",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "nom_flux",
-        "start": 19,
-        "end": 22,
-        "confidence_entity": 0.9503079652786255,
-        "value": "DSI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 23,
-        "end": 53,
-        "confidence_entity": 0.687817394733429,
-        "value": "DRI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 54,
-        "end": 57,
-        "confidence_entity": 0.9937877655029297,
-        "value": "034",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 70,
-        "end": 81,
-        "confidence_entity": 0.9815381765365601,
-        "value": "Jean Dupont",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 83,
-        "end": 95,
-        "confidence_entity": 0.7394511103630066,
-        "value": "Marie Martin",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 97,
-        "end": 109,
-        "confidence_entity": 0.7056956887245178,
-        "value": "Paul Bernard",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 113,
-        "end": 126,
-        "confidence_entity": 0.5390175580978394,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 130,
-        "end": 140,
-        "confidence_entity": 0.9956796765327454,
-        "value": "Luc Moreau",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Démarrer processus demande DDR 041 RH Sophie Durand validateurs Jean Dupont et Marie Martin",
-    "entities": [
-      {
-        "start": 9,
-        "end": 18,
-        "value": "processus",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 27,
-        "end": 30,
-        "value": "DDR",
-        "entity": "type_demande"
-      },
-      {
-        "start": 31,
-        "end": 34,
-        "value": "041",
-        "entity": "id_demande"
-      },
-      {
-        "start": 38,
-        "end": 51,
-        "value": "Sophie Durand",
-        "entity": "responsable_rh"
-      },
-      {
-        "start": 64,
-        "end": 75,
-        "value": "Jean Dupont",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 79,
-        "end": 91,
-        "value": "Marie Martin",
-        "entity": "nom_validateur"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 9,
-        "end": 18,
-        "confidence_entity": 0.9964035749435425,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 27,
-        "end": 30,
-        "confidence_entity": 0.9997296929359436,
-        "value": "DDR",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 31,
-        "end": 34,
-        "confidence_entity": 0.9997983574867249,
-        "value": "041",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 38,
-        "end": 51,
-        "confidence_entity": 0.9773243069648743,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 64,
-        "end": 75,
-        "confidence_entity": 0.7789390683174133,
-        "value": "Jean Dupont",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 79,
-        "end": 91,
-        "confidence_entity": 0.7210140824317932,
-        "value": "Marie Martin",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Lancer flux Workflow RH 2024 DRI 111 avec Paul Bernard, Sophie Durand et Luc Moreau DRH Pierre Martin",
-    "entities": [
-      {
-        "start": 7,
-        "end": 11,
-        "value": "flux",
-        "entity": "intention_demande"
-      },
-      {
-        "start": 12,
-        "end": 28,
-        "value": "Workflow RH 2024",
-        "entity": "nom_flux"
-      },
-      {
-        "start": 29,
-        "end": 32,
-        "value": "DRI",
-        "entity": "type_demande"
-      },
-      {
-        "start": 33,
-        "end": 36,
-        "value": "111",
-        "entity": "id_demande"
-      },
-      {
-        "start": 42,
-        "end": 54,
-        "value": "Paul Bernard",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 56,
-        "end": 69,
-        "value": "Sophie Durand",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 73,
-        "end": 83,
-        "value": "Luc Moreau",
-        "entity": "nom_validateur"
-      },
-      {
-        "start": 88,
-        "end": 101,
-        "value": "Pierre Martin",
-        "entity": "responsable_rh"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
-        "start": 7,
-        "end": 11,
-        "confidence_entity": 0.9977381229400635,
-        "value": "flux",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_flux",
-        "start": 12,
-        "end": 28,
-        "confidence_entity": 0.6908546090126038,
-        "value": "Workflow RH 2024",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 29,
-        "end": 32,
-        "confidence_entity": 0.9990403056144714,
-        "value": "DRI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 33,
-        "end": 36,
-        "confidence_entity": 0.9928616881370544,
-        "value": "111",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 42,
-        "end": 54,
-        "confidence_entity": 0.7375645637512207,
-        "value": "Paul Bernard",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 56,
-        "end": 69,
-        "confidence_entity": 0.7851737141609192,
-        "value": "Sophie Durand",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "nom_validateur",
-        "start": 73,
-        "end": 83,
-        "confidence_entity": 0.6759665012359619,
-        "value": "Luc Moreau",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "responsable_rh",
-        "start": 88,
-        "end": 101,
-        "confidence_entity": 0.9792338609695435,
-        "value": "Pierre Martin",
-        "extractor": "DIETClassifier",
+        "start": 11,
+        "end": 15,
+        "value": "DMOE",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -1265,7 +319,7 @@
         "entity": "intention_demande",
         "start": 15,
         "end": 25,
-        "confidence_entity": 0.9986377358436584,
+        "confidence_entity": 0.9651950597763062,
         "value": "validation",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1276,7 +330,7 @@
         "entity": "type_demande",
         "start": 26,
         "end": 29,
-        "confidence_entity": 0.8711509704589844,
+        "confidence_entity": 0.7310798764228821,
         "value": "DDR",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1287,7 +341,7 @@
         "entity": "type_demande",
         "start": 42,
         "end": 45,
-        "confidence_entity": 0.46186336874961853,
+        "confidence_entity": 0.5269522070884705,
         "value": "DDR",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1298,7 +352,7 @@
         "entity": "id_demande",
         "start": 46,
         "end": 51,
-        "confidence_entity": 0.7831035256385803,
+        "confidence_entity": 0.8755078911781311,
         "value": "12352",
         "extractor": "DIETClassifier"
       },
@@ -1306,7 +360,7 @@
         "entity": "nom_validateur",
         "start": 57,
         "end": 68,
-        "confidence_entity": 0.9958710074424744,
+        "confidence_entity": 0.9944550395011902,
         "value": "Jean Dupont",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1317,7 +371,7 @@
         "entity": "nom_validateur",
         "start": 70,
         "end": 82,
-        "confidence_entity": 0.9515866041183472,
+        "confidence_entity": 0.9480897188186646,
         "value": "Marie Martin",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1328,7 +382,7 @@
         "entity": "nom_validateur",
         "start": 84,
         "end": 96,
-        "confidence_entity": 0.9848524928092957,
+        "confidence_entity": 0.9742384552955627,
         "value": "Paul Bernard",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1339,9 +393,129 @@
         "entity": "nom_validateur",
         "start": 100,
         "end": 113,
-        "confidence_entity": 0.9968018531799316,
+        "confidence_entity": 0.9971244931221008,
         "value": "Sophie Durand",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 26,
+        "end": 29,
+        "value": "DDR",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 42,
+        "end": 45,
+        "value": "DDR",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "intention_demande",
+        "start": 15,
+        "end": 25,
+        "value": "validation",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 70,
+        "end": 82,
+        "value": "Marie Martin",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 84,
+        "end": 96,
+        "value": "Paul Bernard",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_validateur",
+        "start": 100,
+        "end": 113,
+        "value": "Sophie Durand",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 70,
+        "end": 82,
+        "value": "Marie Martin",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "responsable_rh",
+        "start": 100,
+        "end": 113,
+        "value": "Sophie Durand",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 57,
+        "end": 68,
+        "value": "Jean Dupont",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 70,
+        "end": 82,
+        "value": "Marie Martin",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 84,
+        "end": 96,
+        "value": "Paul Bernard",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 100,
+        "end": 113,
+        "value": "Sophie Durand",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -1349,27 +523,27 @@
     ]
   },
   {
-    "text": "Démarrer un flux DDR avec nom de flux : Circuit DSI",
+    "text": "flux nommé Workflow RH 2024 DRI",
     "entities": [
       {
-        "start": 17,
-        "end": 20,
-        "value": "DDR",
-        "entity": "type_demande"
+        "start": 11,
+        "end": 27,
+        "value": "Workflow RH 2024",
+        "entity": "nom_flux"
       },
       {
-        "start": 40,
-        "end": 51,
-        "value": "Circuit DSI",
-        "entity": "nom_flux"
+        "start": 28,
+        "end": 31,
+        "value": "DRI",
+        "entity": "type_demande"
       }
     ],
     "predicted_entities": [
       {
         "entity": "intention_demande",
-        "start": 12,
-        "end": 16,
-        "confidence_entity": 0.5967614054679871,
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.3848138749599457,
         "value": "flux",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1377,215 +551,90 @@
         ]
       },
       {
-        "entity": "type_demande",
-        "start": 17,
-        "end": 20,
-        "confidence_entity": 0.9990876913070679,
-        "value": "DDR",
+        "entity": "nom_flux",
+        "start": 11,
+        "end": 27,
+        "confidence_entity": 0.9425659775733948,
+        "value": "Workflow RH 2024",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 28,
+        "end": 31,
+        "confidence_entity": 0.9985931515693665,
+        "value": "DRI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 28,
+        "end": 31,
+        "value": "DRI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 4,
+        "value": "flux",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
       },
       {
         "entity": "nom_flux",
-        "start": 40,
-        "end": 51,
-        "confidence_entity": 0.9859382510185242,
-        "value": "Circuit DSI",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "start": 11,
+        "end": 22,
+        "value": "Workflow RH",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
   {
-    "text": "Je voudrais faire une DDR pour ajouter un nouveau poste",
+    "text": "1 stagiaire",
     "entities": [
       {
-        "start": 22,
-        "end": 25,
-        "value": "DDR",
-        "entity": "type_demande"
+        "start": 0,
+        "end": 1,
+        "value": "1",
+        "entity": "effectif"
       },
       {
-        "start": 31,
-        "end": 38,
-        "value": "ajouter",
-        "entity": "intention_demande"
+        "start": 2,
+        "end": 11,
+        "value": "stagiaire",
+        "entity": "nature_contrat"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "intention_demande",
-        "start": 12,
-        "end": 17,
-        "confidence_entity": 0.5266889929771423,
-        "value": "ajouter",
+        "entity": "effectif",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9945124387741089,
+        "value": "1",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
       },
       {
-        "entity": "type_demande",
-        "start": 22,
-        "end": 25,
-        "confidence_entity": 0.9993728995323181,
-        "value": "DDR",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "intention_demande",
-        "start": 31,
-        "end": 38,
-        "confidence_entity": 0.9991239905357361,
-        "value": "ajouter",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Début le 12 décembre 2026",
-    "entities": [
-      {
-        "start": 9,
-        "end": 25,
-        "value": "12 décembre 2026",
-        "entity": "date_debut"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "date_mise_en_service",
-        "start": 9,
-        "end": 25,
-        "confidence_entity": 0.958325982093811,
-        "value": "12 décembre 2026",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Du 1er février 2025 au 31 juillet 2025",
-    "entities": [
-      {
-        "start": 3,
-        "end": 19,
-        "value": "1er février 2025",
-        "entity": "date_debut"
-      },
-      {
-        "start": 23,
-        "end": 38,
-        "value": "31 juillet 2025",
-        "entity": "date_fin"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "date_mise_en_service",
-        "start": 3,
-        "end": 19,
-        "confidence_entity": 0.3801950216293335,
-        "value": "1er février 2025",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "date_fin",
-        "start": 23,
-        "end": 38,
-        "confidence_entity": 0.6599735021591187,
-        "value": "31 juillet 2025",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Commence le vingt janvier 2026",
-    "entities": [
-      {
-        "start": 12,
-        "end": 30,
-        "value": "vingt janvier 2026",
-        "entity": "date_debut"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "date_mise_en_service",
-        "start": 12,
-        "end": 30,
-        "confidence_entity": 0.9644820690155029,
-        "value": "vingt janvier 2026",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Début le 12 décembre",
-    "entities": [
-      {
-        "start": 9,
-        "end": 20,
-        "value": "12 décembre",
-        "entity": "date_debut"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "date_mise_en_service",
-        "start": 9,
-        "end": 20,
-        "confidence_entity": 0.9907234311103821,
-        "value": "12 décembre",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Commence le 20 mai",
-    "entities": [
-      {
-        "start": 12,
-        "end": 18,
-        "value": "20 mai",
-        "entity": "date_debut"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "date_mise_en_service",
-        "start": 12,
-        "end": 18,
-        "confidence_entity": 0.9890921115875244,
-        "value": "20 mai",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "entity": "effectif",
+        "start": 0,
+        "end": 11,
+        "value": "1 stagiaire",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -1610,7 +659,7 @@
         "entity": "nature_contrat",
         "start": 18,
         "end": 23,
-        "confidence_entity": 0.9994182586669922,
+        "confidence_entity": 0.9971585273742676,
         "value": "Stage",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1621,7 +670,7 @@
         "entity": "duree_contrat",
         "start": 42,
         "end": 50,
-        "confidence_entity": 0.9667389988899231,
+        "confidence_entity": 0.6736147403717041,
         "value": "six mois",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1632,9 +681,76 @@
         "entity": "date_mise_en_service",
         "start": 64,
         "end": 79,
-        "confidence_entity": 0.9880641102790833,
+        "confidence_entity": 0.9946662187576294,
         "value": "premier janvier",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 64,
+        "end": 79,
+        "value": "premier janvier",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 64,
+        "end": 79,
+        "value": "premier janvier",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 64,
+        "end": 79,
+        "value": "premier janvier",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 42,
+        "end": 50,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 3,
+        "end": 10,
+        "value": "contrat",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 33,
+        "end": 38,
+        "value": "durée",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 18,
+        "end": 23,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -1642,28 +758,56 @@
     ]
   },
   {
-    "text": "C'est un CDD qui commence le 15 mars 2026",
+    "text": "l'encadreur est Esperant Andrianantenaina pour 2 personnes pour une stage qui commence le 15 mars",
     "entities": [
       {
-        "start": 9,
-        "end": 12,
-        "value": "CDD",
+        "start": 47,
+        "end": 48,
+        "value": "2",
+        "entity": "effectif"
+      },
+      {
+        "start": 68,
+        "end": 73,
+        "value": "stage",
         "entity": "nature_contrat"
       },
       {
-        "start": 29,
-        "end": 41,
-        "value": "15 mars 2026",
-        "entity": "date_debut"
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "entity": "date_mise_en_service"
       }
     ],
     "predicted_entities": [
       {
+        "entity": "nom_encadreur",
+        "start": 16,
+        "end": 41,
+        "confidence_entity": 0.4877585470676422,
+        "value": "Esperant Andrianantenaina",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 47,
+        "end": 48,
+        "confidence_entity": 0.7762646675109863,
+        "value": "2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
         "entity": "nature_contrat",
-        "start": 9,
-        "end": 12,
-        "confidence_entity": 0.9980770349502563,
-        "value": "CDD",
+        "start": 68,
+        "end": 73,
+        "confidence_entity": 0.9393087029457092,
+        "value": "Stage",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1671,11 +815,109 @@
       },
       {
         "entity": "date_mise_en_service",
-        "start": 29,
-        "end": 41,
-        "confidence_entity": 0.9820576906204224,
-        "value": "15 mars 2026",
+        "start": 90,
+        "end": 97,
+        "confidence_entity": 0.989391028881073,
+        "value": "15 mars",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 87,
+        "end": 97,
+        "value": "le 15 mars",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "effectif",
+        "start": 47,
+        "end": 58,
+        "value": "2 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "effectif",
+        "start": 47,
+        "end": 58,
+        "value": "2 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "effectif",
+        "start": 42,
+        "end": 58,
+        "value": "pour 2 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 2,
+        "end": 11,
+        "value": "encadreur",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 16,
+        "end": 41,
+        "value": "Esperant Andrianantenaina",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 68,
+        "end": 73,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -1695,35 +937,419 @@
     "predicted_entities": []
   },
   {
-    "text": "développeur web DSI basé à 00 siege social encadreur responsable technique",
+    "text": "encadreur Manda Arolala pour une mise en service le 20 février",
+    "entities": [
+      {
+        "start": 10,
+        "end": 23,
+        "value": "Manda Arolala",
+        "entity": "nom_encadreur"
+      },
+      {
+        "start": 52,
+        "end": 62,
+        "value": "20 février",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nom_encadreur",
+        "start": 10,
+        "end": 23,
+        "confidence_entity": 0.9856705069541931,
+        "value": "Manda Arolala",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 49,
+        "end": 51,
+        "confidence_entity": 0.5007055997848511,
+        "value": "le",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 52,
+        "end": 62,
+        "confidence_entity": 0.760299801826477,
+        "value": "20 février",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 52,
+        "end": 62,
+        "value": "20 février",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 52,
+        "end": 62,
+        "value": "20 février",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 52,
+        "end": 62,
+        "value": "20 février",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 52,
+        "end": 62,
+        "value": "20 février",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 49,
+        "end": 62,
+        "value": "le 20 février",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 9,
+        "value": "encadreur",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "l'encadreur est Esperant Andrianantenaina pour 2 personnes pour une stage qui commence le 15 mars",
     "entities": [
       {
         "start": 16,
-        "end": 19,
-        "value": "DSI",
+        "end": 41,
+        "value": "Esperant Andrianantenaina",
+        "entity": "nom_encadreur"
+      },
+      {
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "entity": "date_mise_en_service"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nom_encadreur",
+        "start": 16,
+        "end": 41,
+        "confidence_entity": 0.4877585470676422,
+        "value": "Esperant Andrianantenaina",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 47,
+        "end": 48,
+        "confidence_entity": 0.7762646675109863,
+        "value": "2",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 68,
+        "end": 73,
+        "confidence_entity": 0.9393087029457092,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 90,
+        "end": 97,
+        "confidence_entity": 0.989391028881073,
+        "value": "15 mars",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_debut",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_fin",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 90,
+        "end": 97,
+        "value": "15 mars",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_mise_en_service",
+        "start": 87,
+        "end": 97,
+        "value": "le 15 mars",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "effectif",
+        "start": 47,
+        "end": 58,
+        "value": "2 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "effectif",
+        "start": 47,
+        "end": 58,
+        "value": "2 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "effectif",
+        "start": 42,
+        "end": 58,
+        "value": "pour 2 personnes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 2,
+        "end": 11,
+        "value": "encadreur",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nom_encadreur",
+        "start": 16,
+        "end": 41,
+        "value": "Esperant Andrianantenaina",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 68,
+        "end": 73,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "DDR pour un développeur web dans la direction informatique stage basé à 00 siege social",
+    "entities": [
+      {
+        "start": 36,
+        "end": 58,
+        "value": "direction informatique",
         "entity": "direction"
       },
       {
-        "start": 27,
-        "end": 42,
+        "start": 72,
+        "end": 87,
         "value": "00 siege social",
         "entity": "exploitation"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "nom_poste",
-        "start": 12,
-        "end": 15,
-        "confidence_entity": 0.7123953104019165,
-        "value": "web",
-        "extractor": "DIETClassifier"
+        "entity": "direction",
+        "start": 36,
+        "end": 58,
+        "confidence_entity": 0.9926747679710388,
+        "value": "DSI",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       },
       {
+        "entity": "nature_contrat",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.5398642420768738,
+        "value": "Stage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 72,
+        "end": 87,
+        "confidence_entity": 0.9911280870437622,
+        "value": "00 Siège Social",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 9,
+        "end": 11,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 75,
+        "end": 87,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 72,
+        "end": 87,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 36,
+        "end": 45,
+        "value": "direction",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "type_demande",
+        "start": 0,
+        "end": 3,
+        "value": "DDR",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 59,
+        "end": 64,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 72,
+        "end": 87,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "développeur dans la DSI contrat stage basé à 00 Siège Social durée six mois",
+    "entities": [
+      {
+        "start": 20,
+        "end": 23,
+        "value": "DSI",
+        "entity": "direction"
+      },
+      {
+        "start": 45,
+        "end": 60,
+        "value": "00 Siège Social",
+        "entity": "exploitation"
+      }
+    ],
+    "predicted_entities": [
+      {
         "entity": "direction",
-        "start": 16,
-        "end": 19,
-        "confidence_entity": 0.9991199374198914,
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9983419179916382,
         "value": "DSI",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1732,11 +1358,119 @@
       },
       {
         "entity": "exploitation",
-        "start": 27,
-        "end": 42,
-        "confidence_entity": 0.9777913689613342,
+        "start": 45,
+        "end": 60,
+        "confidence_entity": 0.9912193417549133,
         "value": "00 Siège Social",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 67,
+        "end": 75,
+        "confidence_entity": 0.6172173619270325,
+        "value": "six mois",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 20,
+        "end": 23,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 20,
+        "end": 23,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duree_contrat",
+        "start": 67,
+        "end": 75,
+        "value": "six mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 48,
+        "end": 60,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 45,
+        "end": 60,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 24,
+        "end": 31,
+        "value": "contrat",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 61,
+        "end": 66,
+        "value": "durée",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 32,
+        "end": 37,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "direction",
+        "start": 20,
+        "end": 23,
+        "value": "DSI",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "exploitation",
+        "start": 45,
+        "end": 60,
+        "value": "00 Siège Social",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -1744,22 +1478,22 @@
     ]
   },
   {
-    "text": "1 stagiaire",
+    "text": "pour un développeur dans la direction informatique le contrat est un stage",
     "entities": [
       {
-        "start": 0,
-        "end": 1,
-        "value": "1",
-        "entity": "effectif"
+        "start": 28,
+        "end": 50,
+        "value": "direction informatique",
+        "entity": "direction"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "effectif",
-        "start": 0,
-        "end": 1,
-        "confidence_entity": 0.9852418303489685,
-        "value": "1",
+        "entity": "direction",
+        "start": 28,
+        "end": 50,
+        "confidence_entity": 0.9941529631614685,
+        "value": "DSI",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -1767,11 +1501,51 @@
       },
       {
         "entity": "nature_contrat",
-        "start": 2,
-        "end": 11,
-        "confidence_entity": 0.9644901752471924,
+        "start": 69,
+        "end": 74,
+        "confidence_entity": 0.8108258247375488,
         "value": "Stage",
         "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "effectif",
+        "start": 5,
+        "end": 7,
+        "value": "un",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 28,
+        "end": 37,
+        "value": "direction",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 54,
+        "end": 61,
+        "value": "contrat",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 69,
+        "end": 74,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -1791,6 +1565,45 @@
     "predicted_entities": []
   },
   {
+    "text": "budget validé",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "validé",
+        "entity": "situation_budget"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "situation_budget",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.48836496472358704,
+        "value": "budget",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "situation_budget",
+        "start": 7,
+        "end": 13,
+        "confidence_entity": 0.8510368466377258,
+        "value": "validé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 6,
+        "value": "budget",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
     "text": "Non applicable (intérim)",
     "entities": [
       {
@@ -1801,6 +1614,61 @@
       }
     ],
     "predicted_entities": []
+  },
+  {
+    "text": "motif remplacement budgétisé",
+    "entities": [
+      {
+        "start": 6,
+        "end": 18,
+        "value": "remplacement",
+        "entity": "motif"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "motif",
+        "start": 6,
+        "end": 18,
+        "confidence_entity": 0.9995197057723999,
+        "value": "Remplacement",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "situation_budget",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.5999802947044373,
+        "value": "Budgetisé",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 5,
+        "value": "motif",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "motif",
+        "start": 6,
+        "end": 18,
+        "value": "Remplacement",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
   },
   {
     "text": "L'objectif est d'avoir un code de qualité, pour un poids de 30% taux de bugs inférieur à 2%",
@@ -1829,7 +1697,7 @@
         "entity": "objectif",
         "start": 15,
         "end": 41,
-        "confidence_entity": 0.8993265628814697,
+        "confidence_entity": 0.5421667695045471,
         "value": "d'avoir un code de qualité",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1840,12 +1708,19 @@
         "entity": "poids",
         "start": 60,
         "end": 62,
-        "confidence_entity": 0.9984936714172363,
+        "confidence_entity": 0.9986711740493774,
         "value": "30",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "info_type",
+        "start": 2,
+        "end": 10,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -1876,7 +1751,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 44,
-        "confidence_entity": 0.9314359426498413,
+        "confidence_entity": 0.936635434627533,
         "value": "Optimiser la gestion des stocks",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1887,12 +1762,75 @@
         "entity": "poids",
         "start": 53,
         "end": 55,
-        "confidence_entity": 0.9994606375694275,
+        "confidence_entity": 0.9987590312957764,
         "value": "25",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 44,
+        "value": "Objectif 5 : Optimiser la gestion des stocks",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 44,
+        "value": "Objectif 5 : Optimiser la gestion des stocks",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 45,
+        "end": 55,
+        "value": "Poids : 25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 45,
+        "end": 55,
+        "value": "Poids : 25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 58,
+        "end": 113,
+        "value": "Résultat attendu : Réduire les ruptures de stock de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 58,
+        "end": 113,
+        "value": "Résultat attendu : Réduire les ruptures de stock de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 58,
+        "end": 113,
+        "value": "Résultat attendu : Réduire les ruptures de stock de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 58,
+        "end": 113,
+        "value": "Résultat attendu : Réduire les ruptures de stock de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -1923,7 +1861,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 51,
-        "confidence_entity": 0.6525938510894775,
+        "confidence_entity": 0.6105179190635681,
         "value": "Maintenir la traçabilité des documents",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1934,12 +1872,82 @@
         "entity": "poids",
         "start": 60,
         "end": 62,
-        "confidence_entity": 0.9994527697563171,
+        "confidence_entity": 0.9990130662918091,
         "value": "30",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 51,
+        "value": "Objectif 2 : Maintenir la traçabilité des documents",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 51,
+        "value": "Objectif 2 : Maintenir la traçabilité des documents",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 52,
+        "end": 62,
+        "value": "Poids : 30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 52,
+        "end": 62,
+        "value": "Poids : 30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 65,
+        "end": 140,
+        "value": "Résultat attendu : Audit mensuel des dossiers : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 65,
+        "end": 140,
+        "value": "Résultat attendu : Audit mensuel des dossiers : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 65,
+        "end": 140,
+        "value": "Résultat attendu : Audit mensuel des dossiers : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 65,
+        "end": 140,
+        "value": "Résultat attendu : Audit mensuel des dossiers : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 42,
+        "end": 51,
+        "value": "documents",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -1970,7 +1978,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 45,
-        "confidence_entity": 0.9620124101638794,
+        "confidence_entity": 0.9039198756217957,
         "value": "Améliorer la satisfaction client",
         "extractor": "DIETClassifier",
         "processors": [
@@ -1981,12 +1989,75 @@
         "entity": "poids",
         "start": 54,
         "end": 56,
-        "confidence_entity": 0.9996824264526367,
+        "confidence_entity": 0.9995074272155762,
         "value": "20",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 45,
+        "value": "Objectif 4 : Améliorer la satisfaction client",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 45,
+        "value": "Objectif 4 : Améliorer la satisfaction client",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 46,
+        "end": 56,
+        "value": "Poids : 20",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 46,
+        "end": 56,
+        "value": "Poids : 20",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 59,
+        "end": 119,
+        "value": "Résultat attendu : Atteindre un score de satisfaction de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 59,
+        "end": 119,
+        "value": "Résultat attendu : Atteindre un score de satisfaction de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 59,
+        "end": 119,
+        "value": "Résultat attendu : Atteindre un score de satisfaction de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 59,
+        "end": 119,
+        "value": "Résultat attendu : Atteindre un score de satisfaction de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2012,7 +2083,71 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 50,
+        "value": "Objectif 1:Sortir des résultats d'analyses fiables",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 50,
+        "value": "Objectif 1:Sortir des résultats d'analyses fiables",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 51,
+        "end": 59,
+        "value": "Poids:30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 51,
+        "end": 59,
+        "value": "Poids:30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 61,
+        "end": 105,
+        "value": "Résultat attendu:atteindre 100% de fiabilité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 22,
+        "end": 105,
+        "value": "résultats d'analyses fiables Poids:30% Résultat attendu:atteindre 100% de fiabilité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 61,
+        "end": 105,
+        "value": "Résultat attendu:atteindre 100% de fiabilité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 22,
+        "end": 105,
+        "value": "résultats d'analyses fiables Poids:30% Résultat attendu:atteindre 100% de fiabilité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 2:Déclarer tous les produits non-conformes Poids:50% Résultat attendu:100% des produits déclarés",
@@ -2036,7 +2171,78 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 51,
+        "value": "Objectif 2:Déclarer tous les produits non-conformes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 51,
+        "value": "Objectif 2:Déclarer tous les produits non-conformes",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 52,
+        "end": 60,
+        "value": "Poids:50",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 52,
+        "end": 60,
+        "value": "Poids:50",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 62,
+        "end": 105,
+        "value": "Résultat attendu:100% des produits déclarés",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 62,
+        "end": 105,
+        "value": "Résultat attendu:100% des produits déclarés",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 62,
+        "end": 105,
+        "value": "Résultat attendu:100% des produits déclarés",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 62,
+        "end": 105,
+        "value": "Résultat attendu:100% des produits déclarés",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 20,
+        "end": 24,
+        "value": "tous",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 3:Respecter les règles de sécurité Poids:40% Résultat attendu:zéro accident durant le stage",
@@ -2060,7 +2266,81 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 43,
+        "value": "Objectif 3:Respecter les règles de sécurité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 43,
+        "value": "Objectif 3:Respecter les règles de sécurité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 44,
+        "end": 52,
+        "value": "Poids:40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 44,
+        "end": 52,
+        "value": "Poids:40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 54,
+        "end": 100,
+        "value": "Résultat attendu:zéro accident durant le stage",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 54,
+        "end": 100,
+        "value": "Résultat attendu:zéro accident durant le stage",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 54,
+        "end": 100,
+        "value": "Résultat attendu:zéro accident durant le stage",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 54,
+        "end": 100,
+        "value": "Résultat attendu:zéro accident durant le stage",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "nature_contrat",
+        "start": 95,
+        "end": 100,
+        "value": "Stage",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
   },
   {
     "text": "Objectif 4:Tester tous les produits Poids:40% Résultat attendu:Ecouler tous les stock",
@@ -2084,7 +2364,85 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 35,
+        "value": "Objectif 4:Tester tous les produits",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 35,
+        "value": "Objectif 4:Tester tous les produits",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 36,
+        "end": 44,
+        "value": "Poids:40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 36,
+        "end": 44,
+        "value": "Poids:40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 85,
+        "value": "Résultat attendu:Ecouler tous les stock",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 85,
+        "value": "Résultat attendu:Ecouler tous les stock",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 85,
+        "value": "Résultat attendu:Ecouler tous les stock",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 85,
+        "value": "Résultat attendu:Ecouler tous les stock",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 18,
+        "end": 22,
+        "value": "tous",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 71,
+        "end": 75,
+        "value": "tous",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 5:Optimiser les processus Poids:25% Résultat attendu:Réduction de 20% des délais",
@@ -2108,7 +2466,71 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 34,
+        "value": "Objectif 5:Optimiser les processus",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 34,
+        "value": "Objectif 5:Optimiser les processus",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 35,
+        "end": 43,
+        "value": "Poids:25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 35,
+        "end": 43,
+        "value": "Poids:25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 45,
+        "end": 89,
+        "value": "Résultat attendu:Réduction de 20% des délais",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 45,
+        "end": 89,
+        "value": "Résultat attendu:Réduction de 20% des délais",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 45,
+        "end": 89,
+        "value": "Résultat attendu:Réduction de 20% des délais",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 45,
+        "end": 89,
+        "value": "Résultat attendu:Réduction de 20% des délais",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 1:Produire analyses fiables Poids:30% Résultat:100% précision",
@@ -2132,7 +2554,57 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 36,
+        "value": "Objectif 1:Produire analyses fiables",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 36,
+        "value": "Objectif 1:Produire analyses fiables",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 37,
+        "end": 45,
+        "value": "Poids:30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 37,
+        "end": 45,
+        "value": "Poids:30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 47,
+        "end": 70,
+        "value": "Résultat:100% précision",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 47,
+        "end": 70,
+        "value": "Résultat:100% précision",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 2:Respecter sécurité Poids:40% Résultat:0 accident",
@@ -2156,7 +2628,57 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 29,
+        "value": "Objectif 2:Respecter sécurité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 29,
+        "value": "Objectif 2:Respecter sécurité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 30,
+        "end": 38,
+        "value": "Poids:40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 30,
+        "end": 38,
+        "value": "Poids:40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 40,
+        "end": 59,
+        "value": "Résultat:0 accident",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 40,
+        "end": 59,
+        "value": "Résultat:0 accident",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 3:Optimiser stocks Poids:25% Résultat:Réduire coûts 15%",
@@ -2180,7 +2702,57 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 27,
+        "value": "Objectif 3:Optimiser stocks",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 27,
+        "value": "Objectif 3:Optimiser stocks",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 28,
+        "end": 36,
+        "value": "Poids:25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 28,
+        "end": 36,
+        "value": "Poids:25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 38,
+        "end": 64,
+        "value": "Résultat:Réduire coûts 15%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 38,
+        "end": 64,
+        "value": "Résultat:Réduire coûts 15%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Objectif 4 : Ameliorer la qualité Poids : 35% Résultat attendu : Taux de defauts inferieur à 2%",
@@ -2209,7 +2781,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 33,
-        "confidence_entity": 0.9294206500053406,
+        "confidence_entity": 0.9872544407844543,
         "value": "Ameliorer la qualité",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2220,12 +2792,75 @@
         "entity": "poids",
         "start": 42,
         "end": 44,
-        "confidence_entity": 0.9996535778045654,
+        "confidence_entity": 0.999334990978241,
         "value": "35",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 33,
+        "value": "Objectif 4 : Ameliorer la qualité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 33,
+        "value": "Objectif 4 : Ameliorer la qualité",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 34,
+        "end": 44,
+        "value": "Poids : 35",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 34,
+        "end": 44,
+        "value": "Poids : 35",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 95,
+        "value": "Résultat attendu : Taux de defauts inferieur à 2%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 95,
+        "value": "Résultat attendu : Taux de defauts inferieur à 2%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 95,
+        "value": "Résultat attendu : Taux de defauts inferieur à 2%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 46,
+        "end": 95,
+        "value": "Résultat attendu : Taux de defauts inferieur à 2%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2256,7 +2891,7 @@
         "entity": "objectif",
         "start": 11,
         "end": 48,
-        "confidence_entity": 0.6920192837715149,
+        "confidence_entity": 0.5850411057472229,
         "value": "Maintenir la traçabilité des analyses",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2267,12 +2902,82 @@
         "entity": "poids",
         "start": 58,
         "end": 60,
-        "confidence_entity": 0.999478280544281,
+        "confidence_entity": 0.9993471503257751,
         "value": "35",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "poids",
+        "start": 58,
+        "end": 69,
+        "value": "35 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 50,
+        "end": 69,
+        "value": "Poids : 35 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 50,
+        "end": 69,
+        "value": "Poids : 35 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 71,
+        "end": 215,
+        "value": "Indicateurs pour mesurer les résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 100,
+        "end": 215,
+        "value": "résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 100,
+        "end": 215,
+        "value": "résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 71,
+        "end": 215,
+        "value": "Indicateurs pour mesurer les résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 100,
+        "end": 215,
+        "value": "résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 100,
+        "end": 215,
+        "value": "résultats attendus : Audit mensuel des dossiers, vérification des signatures et dates : taux de traçabilité de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2303,7 +3008,7 @@
         "entity": "objectif",
         "start": 11,
         "end": 77,
-        "confidence_entity": 0.8495789766311646,
+        "confidence_entity": 0.9667046070098877,
         "value": "Déclarer systématiquement tous les produits non conformes détectés",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2314,12 +3019,89 @@
         "entity": "poids",
         "start": 86,
         "end": 88,
-        "confidence_entity": 0.9986593723297119,
+        "confidence_entity": 0.9985117316246033,
         "value": "30",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "poids",
+        "start": 86,
+        "end": 97,
+        "value": "30 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 78,
+        "end": 97,
+        "value": "Poids : 30 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 78,
+        "end": 97,
+        "value": "Poids : 30 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 98,
+        "end": 256,
+        "value": "Indicateurs pour mesurer les résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 127,
+        "end": 256,
+        "value": "résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 127,
+        "end": 256,
+        "value": "résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 98,
+        "end": 256,
+        "value": "Indicateurs pour mesurer les résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 127,
+        "end": 256,
+        "value": "résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 127,
+        "end": 256,
+        "value": "résultats attendus : Nombre de déclarations effectuées vs anomalies détectées, délai de déclaration : taux de déclaration de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 37,
+        "end": 41,
+        "value": "tous",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2350,7 +3132,7 @@
         "entity": "objectif",
         "start": 0,
         "end": 43,
-        "confidence_entity": 0.7688119411468506,
+        "confidence_entity": 0.7474942207336426,
         "value": "Produire des analyses fiables et répétables",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2361,12 +3143,40 @@
         "entity": "poids",
         "start": 50,
         "end": 52,
-        "confidence_entity": 0.9998363256454468,
+        "confidence_entity": 0.9991029500961304,
         "value": "32",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "poids",
+        "start": 44,
+        "end": 52,
+        "value": "poids 32",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 44,
+        "end": 52,
+        "value": "poids 32",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 54,
+        "end": 203,
+        "value": "Indicateurs : Tests de répétabilité mensuels, contrôle de la reproductibilité, suivi des cartes de contrôle : coefficient de variation inférieur à 2%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 54,
+        "end": 203,
+        "value": "Indicateurs : Tests de répétabilité mensuels, contrôle de la reproductibilité, suivi des cartes de contrôle : coefficient de variation inférieur à 2%",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2397,7 +3207,7 @@
         "entity": "objectif",
         "start": 0,
         "end": 38,
-        "confidence_entity": 0.8812929391860962,
+        "confidence_entity": 0.9465617537498474,
         "value": "Gérer efficacement les non-conformités",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2408,12 +3218,33 @@
         "entity": "poids",
         "start": 39,
         "end": 41,
-        "confidence_entity": 0.9991620779037476,
+        "confidence_entity": 0.993222713470459,
         "value": "28",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "poids",
+        "start": 39,
+        "end": 50,
+        "value": "28 pourcent",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 51,
+        "end": 184,
+        "value": "Indicateurs : Délai de traitement des NC, efficacité des actions correctives, prévention des récurrences : taux de traitement de 100%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 51,
+        "end": 184,
+        "value": "Indicateurs : Délai de traitement des NC, efficacité des actions correctives, prévention des récurrences : taux de traitement de 100%",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2444,7 +3275,7 @@
         "entity": "objectif",
         "start": 0,
         "end": 32,
-        "confidence_entity": 0.5456206202507019,
+        "confidence_entity": 0.5139220952987671,
         "value": "Garantir la qualité des analyses",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2455,12 +3286,40 @@
         "entity": "poids",
         "start": 39,
         "end": 41,
-        "confidence_entity": 0.9990102052688599,
+        "confidence_entity": 0.9955969452857971,
         "value": "40",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "poids",
+        "start": 33,
+        "end": 41,
+        "value": "poids 40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 33,
+        "end": 41,
+        "value": "poids 40",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 43,
+        "end": 68,
+        "value": "résultat précision de 98%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 43,
+        "end": 68,
+        "value": "résultat précision de 98%",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2486,7 +3345,29 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 9,
+        "end": 108,
+        "value": "objectif 3. La description doit indiquer : renforcer la communication interne entre les équipes. Le",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 9,
+        "end": 108,
+        "value": "objectif 3. La description doit indiquer : renforcer la communication interne entre les équipes. Le",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 9,
+        "end": 17,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "ajoute objectif 4 avec la description : Atteindre une KPI superieur a l'année derniere avec un poids de 20%, résultats attendus : Augmenter la productivité de 200%",
@@ -2515,7 +3396,7 @@
         "entity": "objectif",
         "start": 40,
         "end": 86,
-        "confidence_entity": 0.8398970365524292,
+        "confidence_entity": 0.5546453595161438,
         "value": "Atteindre une KPI superieur a l'année derniere",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2526,12 +3407,68 @@
         "entity": "poids",
         "start": 104,
         "end": 106,
-        "confidence_entity": 0.9995136260986328,
+        "confidence_entity": 0.9991353154182434,
         "value": "20",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 7,
+        "end": 94,
+        "value": "objectif 4 avec la description : Atteindre une KPI superieur a l'année derniere avec un",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 7,
+        "end": 94,
+        "value": "objectif 4 avec la description : Atteindre une KPI superieur a l'année derniere avec un",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 87,
+        "end": 106,
+        "value": "avec un poids de 20",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 109,
+        "end": 163,
+        "value": "résultats attendus : Augmenter la productivité de 200%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 109,
+        "end": 163,
+        "value": "résultats attendus : Augmenter la productivité de 200%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 109,
+        "end": 163,
+        "value": "résultats attendus : Augmenter la productivité de 200%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 109,
+        "end": 163,
+        "value": "résultats attendus : Augmenter la productivité de 200%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 7,
+        "end": 15,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2562,7 +3499,7 @@
         "entity": "objectif",
         "start": 40,
         "end": 72,
-        "confidence_entity": 0.9720683693885803,
+        "confidence_entity": 0.9224469661712646,
         "value": "Améliorer la satisfaction client",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2573,12 +3510,68 @@
         "entity": "poids",
         "start": 90,
         "end": 92,
-        "confidence_entity": 0.9986097812652588,
+        "confidence_entity": 0.9992589354515076,
         "value": "15",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 7,
+        "end": 80,
+        "value": "objectif 5 avec la description : Améliorer la satisfaction client avec un",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 7,
+        "end": 80,
+        "value": "objectif 5 avec la description : Améliorer la satisfaction client avec un",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 73,
+        "end": 92,
+        "value": "avec un poids de 15",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 95,
+        "end": 141,
+        "value": "résultats attendus : Atteindre un score de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 95,
+        "end": 141,
+        "value": "résultats attendus : Atteindre un score de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 95,
+        "end": 141,
+        "value": "résultats attendus : Atteindre un score de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 95,
+        "end": 141,
+        "value": "résultats attendus : Atteindre un score de 90%",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 7,
+        "end": 15,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2604,7 +3597,91 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "duree_contrat",
+        "start": 156,
+        "end": 162,
+        "value": "6 mois",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "objectif",
+        "start": 10,
+        "end": 73,
+        "value": "objectif 4 : développer les compétences techniques de l'équipe.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 10,
+        "end": 73,
+        "value": "objectif 4 : développer les compétences techniques de l'équipe.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 74,
+        "end": 84,
+        "value": "Poids : 15",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 74,
+        "end": 84,
+        "value": "Poids : 15",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 87,
+        "end": 163,
+        "value": "Résultat attendu : formation complétée pour 100 % des employés d'ici 6 mois.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 87,
+        "end": 163,
+        "value": "Résultat attendu : formation complétée pour 100 % des employés d'ici 6 mois.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 87,
+        "end": 163,
+        "value": "Résultat attendu : formation complétée pour 100 % des employés d'ici 6 mois.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 87,
+        "end": 163,
+        "value": "Résultat attendu : formation complétée pour 100 % des employés d'ici 6 mois.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 10,
+        "end": 18,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "value": "ajouter",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
   },
   {
     "text": "Créer l'objectif 6 décrit comme suit : réduire l'empreinte carbone de l'entreprise. Pondération : 12 % Indicateur : diminution de 20 % des émissions CO2 d'ici fin d'année.",
@@ -2628,7 +3705,43 @@
         "entity": "resultat"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "objectif",
+        "start": 8,
+        "end": 171,
+        "value": "objectif 6 décrit comme suit : réduire l'empreinte carbone de l'entreprise. Pondération : 12 % Indicateur : diminution de 20 % des émissions CO2 d'ici fin d'année.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 8,
+        "end": 171,
+        "value": "objectif 6 décrit comme suit : réduire l'empreinte carbone de l'entreprise. Pondération : 12 % Indicateur : diminution de 20 % des émissions CO2 d'ici fin d'année.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 103,
+        "end": 171,
+        "value": "Indicateur : diminution de 20 % des émissions CO2 d'ici fin d'année.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 103,
+        "end": 171,
+        "value": "Indicateur : diminution de 20 % des émissions CO2 d'ici fin d'année.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 8,
+        "end": 16,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
   },
   {
     "text": "Ajouter un objectif : garantir la qualité des produits finis. Poids : 30 % Résultat : taux de défauts inférieur à 1 % sur l'année.",
@@ -2655,11 +3768,45 @@
     "predicted_entities": [
       {
         "entity": "poids",
-        "start": 70,
+        "start": 62,
         "end": 72,
-        "confidence_entity": 0.5172574520111084,
-        "value": "30",
-        "extractor": "DIETClassifier",
+        "value": "Poids : 30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 62,
+        "end": 72,
+        "value": "Poids : 30",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 75,
+        "end": 130,
+        "value": "Résultat : taux de défauts inférieur à 1 % sur l'année.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "resultat",
+        "start": 75,
+        "end": 130,
+        "value": "Résultat : taux de défauts inférieur à 1 % sur l'année.",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 11,
+        "end": 19,
+        "value": "objectif",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "intention_demande",
+        "start": 0,
+        "end": 7,
+        "value": "ajouter",
+        "extractor": "RegexEntityExtractor",
         "processors": [
           "EntitySynonymMapper"
         ]
@@ -2693,7 +3840,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 41,
-        "confidence_entity": 0.6760027408599854,
+        "confidence_entity": 0.5404601693153381,
         "value": "Améliorer la qualité du code",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2704,12 +3851,47 @@
         "entity": "poids",
         "start": 59,
         "end": 61,
-        "confidence_entity": 0.9994811415672302,
+        "confidence_entity": 0.9991700649261475,
         "value": "25",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 52,
+        "value": "Objectif 2 : Améliorer la qualité du code avec comme",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 52,
+        "value": "Objectif 2 : Améliorer la qualité du code avec comme",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 53,
+        "end": 61,
+        "value": "poids 25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 53,
+        "end": 61,
+        "value": "poids 25",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2740,7 +3922,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 38,
-        "confidence_entity": 0.7754000425338745,
+        "confidence_entity": 0.7627711892127991,
         "value": "Documenter le code source",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2751,12 +3933,47 @@
         "entity": "poids",
         "start": 56,
         "end": 58,
-        "confidence_entity": 0.9995532631874084,
+        "confidence_entity": 0.9985532164573669,
         "value": "10",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 49,
+        "value": "Objectif 5 : Documenter le code source avec comme",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 49,
+        "value": "Objectif 5 : Documenter le code source avec comme",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 50,
+        "end": 58,
+        "value": "poids 10",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 50,
+        "end": 58,
+        "value": "poids 10",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2787,7 +4004,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 46,
-        "confidence_entity": 0.9010339379310608,
+        "confidence_entity": 0.9557269811630249,
         "value": "Réduire les erreurs de production",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2798,12 +4015,40 @@
         "entity": "poids",
         "start": 64,
         "end": 66,
-        "confidence_entity": 0.999460756778717,
+        "confidence_entity": 0.9984167814254761,
         "value": "35",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 54,
+        "value": "Objectif 1 : Réduire les erreurs de production avec un",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "objectif",
+        "start": 0,
+        "end": 54,
+        "value": "Objectif 1 : Réduire les erreurs de production avec un",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "poids",
+        "start": 47,
+        "end": 66,
+        "value": "avec un poids de 35",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "info_type",
+        "start": 0,
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   },
@@ -2834,7 +4079,7 @@
         "entity": "objectif",
         "start": 13,
         "end": 42,
-        "confidence_entity": 0.8524898886680603,
+        "confidence_entity": 0.7601988315582275,
         "value": "Ameliorer la qualitée du code",
         "extractor": "DIETClassifier",
         "processors": [
@@ -2845,148 +4090,47 @@
         "entity": "poids",
         "start": 60,
         "end": 62,
-        "confidence_entity": 0.9995319843292236,
+        "confidence_entity": 0.9989663362503052,
         "value": "25",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
-      }
-    ]
-  },
-  {
-    "text": "DDR pour un développeur web en stage de six mois",
-    "entities": [
-      {
-        "start": 12,
-        "end": 27,
-        "value": "développeur web",
-        "entity": "nom_poste"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "nom_poste",
-        "start": 12,
-        "end": 27,
-        "confidence_entity": 0.9837839007377625,
-        "value": "Administrateur et Developpeur web",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
       },
       {
-        "entity": "nature_contrat",
-        "start": 31,
-        "end": 36,
-        "confidence_entity": 0.49310925602912903,
-        "value": "Stage",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      }
-    ]
-  },
-  {
-    "text": "Valide le recrutement pour moi",
-    "entities": [
-      {
+        "entity": "objectif",
         "start": 0,
-        "end": 6,
-        "value": "Valide",
-        "entity": "intention_demande"
-      }
-    ],
-    "predicted_entities": [
+        "end": 53,
+        "value": "Objectif 2 : Ameliorer la qualitée du code avec comme",
+        "extractor": "RegexEntityExtractor"
+      },
       {
-        "entity": "intention_demande",
+        "entity": "objectif",
         "start": 0,
-        "end": 6,
-        "confidence_entity": 0.9998928308486938,
-        "value": "validation",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "end": 53,
+        "value": "Objectif 2 : Ameliorer la qualitée du code avec comme",
+        "extractor": "RegexEntityExtractor"
       },
       {
-        "entity": "intention_demande",
-        "start": 10,
-        "end": 21,
-        "confidence_entity": 0.5272425413131714,
-        "value": "recrutement",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "Valide le DDR 67890 avec le commentaire suivant : Prêt à être soumis",
-    "entities": [
-      {
-        "start": 10,
-        "end": 13,
-        "value": "DDR",
-        "entity": "type_demande"
+        "entity": "poids",
+        "start": 54,
+        "end": 62,
+        "value": "poids 25",
+        "extractor": "RegexEntityExtractor"
       },
       {
-        "start": 14,
-        "end": 19,
-        "value": "67890",
-        "entity": "id_demande"
+        "entity": "poids",
+        "start": 54,
+        "end": 62,
+        "value": "poids 25",
+        "extractor": "RegexEntityExtractor"
       },
       {
-        "start": 50,
-        "end": 68,
-        "value": "Prêt à être soumis",
-        "entity": "commentaire"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "intention_demande",
+        "entity": "info_type",
         "start": 0,
-        "end": 6,
-        "confidence_entity": 0.8496353030204773,
-        "value": "validation",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "type_demande",
-        "start": 10,
-        "end": 13,
-        "confidence_entity": 0.9985780715942383,
-        "value": "DDR",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "id_demande",
-        "start": 14,
-        "end": 19,
-        "confidence_entity": 0.9997127652168274,
-        "value": "67890",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
-      },
-      {
-        "entity": "commentaire",
-        "start": 50,
-        "end": 68,
-        "confidence_entity": 0.9700020551681519,
-        "value": "Prêt à être soumis",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "end": 8,
+        "value": "Objectif",
+        "extractor": "RegexEntityExtractor"
       }
     ]
   }
