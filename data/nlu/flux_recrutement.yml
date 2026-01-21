@@ -140,7 +140,6 @@ nlu:
 
   - intent: inform
     examples: |
-
       - [Jean Dupont](nom_validateur)
       - [Marie Martin](nom_validateur)
       - [Paul Bernard](nom_validateur)
@@ -171,12 +170,10 @@ nlu:
       - [RAKOTO Jean Pierre Marie](responsable_rh)
       - [DDR](type_demande) [123123](id_demande)
       - [1307](id_demande)
-
       - [DRI](type_demande) [12346](id_demande)
       - [DMOE](type_demande) [12347](id_demande)
       - [DMI](type_demande) [12348](id_demande)
       - [DDR](type_demande) [1313](id_demande). Le nom de flux est [Test 4](nom_flux). Le responsable RH : [Rakotoharisoa Maminiaina Lucas Feliace](responsable_rh).
-      
       - [Jean Dupont](nom_validateur)
       - [Marie Martin](nom_validateur)
       - [Paul Bernard](nom_validateur)
@@ -190,7 +187,6 @@ nlu:
       - [RANDRIANASOLO Tahina Aimée](nom_validateur)
       - [Manda Arolala](nom_validateur)
       - [Esperant Andrianantenaina](nom_validateur)
-      
       - validateur [Paul Bernard](nom_validateur)
       - le validateur [Jean Dupont](nom_validateur)
       - le validateur est [Marie Martin](nom_validateur)
@@ -198,7 +194,6 @@ nlu:
       - [Luc Moreau](nom_validateur) comme validateur
       - avec [Pierre Martin](nom_validateur) comme validateur
       - par le validateur [Jean Rakoto](nom_validateur)
-      
       - validé par [Jean Dupont](nom_validateur)
       - validation par [Marie Martin](nom_validateur)
       - approuvé par [Paul Bernard](nom_validateur)
@@ -206,7 +201,6 @@ nlu:
       - avec validation de [Luc Moreau](nom_validateur)
       - avec approbation de [Pierre Martin](nom_validateur)
       - par [Jean Rakoto](nom_validateur)
-      
       - [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
       - validateurs [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
       - les validateurs sont [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
@@ -215,29 +209,131 @@ nlu:
       - validé par [RAKOTO Haja](nom_validateur) et [RASOLOFO Nirina](nom_validateur)
       - validation par [Jean Dupont](nom_validateur) puis [Marie Martin](nom_validateur)
       - [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur) comme validateurs
-      
       - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur) et [Paul Bernard](nom_validateur)
       - validateurs [Sophie Durand](nom_validateur), [Luc Moreau](nom_validateur) et [Pierre Martin](nom_validateur)
       - les validateurs : [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur) et [RAKOTO Haja](nom_validateur)
       - avec [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur) et [Jean Dupont](nom_validateur)
       - validation [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
-      
       - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur) et [Sophie Durand](nom_validateur)
       - validateurs [Luc Moreau](nom_validateur), [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur) et [ANDRIANINA Manda](nom_validateur)
       - les validateurs sont [RAKOTO Haja](nom_validateur), [RASOLOFO Nirina](nom_validateur), [RANDRIANASOLO Tahina](nom_validateur) et [Jean Dupont](nom_validateur)
-      
       - [Jean Dupont](nom_validateur), [Marie Martin](nom_validateur), [Paul Bernard](nom_validateur), [Sophie Durand](nom_validateur) et [Luc Moreau](nom_validateur)
       - validateurs [Pierre Martin](nom_validateur), [Jean Rakoto](nom_validateur), [ANDRIANINA Manda](nom_validateur), [RAKOTO Haja](nom_validateur) et [RASOLOFO Nirina](nom_validateur)
-      
       - Oui, [Jean Dupont](nom_validateur)
       - C'est [Marie Martin](nom_validateur)
       - [Paul Bernard](nom_validateur)
       - Les validateurs sont [Jean Dupont](nom_validateur) et [Marie Martin](nom_validateur)
       - Ce sera [Sophie Durand](nom_validateur)
       - Ça sera validé par [Luc Moreau](nom_validateur)
-
       - RH [Sophie Durand](responsable_rh)
       - responsable RH [Haja Razafy](responsable_rh)
+
+  - intent: nlu_fallback
+    examples: |
+      - Je ne comprends pas ce que tu veux dire
+      - Peux-tu répéter autrement
+      - Je ne sais pas faire ça
+      - Quelle est la météo aujourd'hui
+      - Raconte-moi une blague
+      - Qui est le président
+      - Quelle heure est-il
+      - J'ai besoin d'aide pour autre chose
+      - Peux-tu m'aider avec mes devoirs
+      - Je veux commander une pizza
+      - Réserve-moi une table au restaurant
+      - Je ne comprends pas ta question
+      - Peux-tu expliquer autrement
+      - Je n'ai pas compris
+      - Cette phrase n'a aucun sens
+      - Tu peux reformuler
+      - Je ne sais pas quoi répondre
+      - Changeons de sujet
+      - Parlons d'autre chose
+      - Je préfère arrêter là
+      - Annule tout ça
+      - Oublie ce que j'ai dit
+      - Revenons en arrière
+      - Je me suis trompé
+      - Ce n'est pas ce que je voulais dire
+      - Laisse tomber
+      - Pas la peine de continuer
+      - Je change d'avis
+      - Fais autre chose à la place
+      - Je ne veux plus continuer
+      - Stoppe tout
+      - Je renonce
+      - C'est trop compliqué
+      - Je suis perdu
+      - Aide-moi plutôt
+      - Je suis bloqué
+      - Je ne sais pas comment faire
+      - Tu peux me guider
+      - Montre-moi comment faire
+      - Explique-moi étape par étape
+      - Je suis débutant
+      - Je n'y connais rien
+      - C'est la première fois
+      - Je découvre le système
+      - Comment ça marche
+      - Tu peux m'apprendre
+      - Enseigne-moi
+      - Formation disponible
+      - Tutoriel svp
+      - Mode d'emploi
+      - Manuel d'utilisation
+      - Aide contextuelle
+      - Besoin d'assistance
+      - Support technique
+      - Contacter l'aide
+      - Appeler un expert
+      - Parler à un humain
+      - Transférer à un conseiller
+      - Je veux parler à quelqu'un
+      - Mise en relation avec un conseiller
+      - Service client disponible
+      - Contacter le support
+      - Problème technique
+      - Bug détecté
+      - Erreur système
+      - Ne fonctionne pas
+      - Problème de connexion
+      - Site inaccessible
+      - Page ne se charge pas
+      - Temps de réponse trop long
+      - Performance dégradée
+      - Service lent
+      - Plantage fréquent
+      - Redémarrage nécessaire
+      - Maintenance en cours
+      - Indisponibilité service
+      - Panne générale
+      - Incident majeur
+      - Urgence détectée
+      - Alerte sécurité
+      - Risque identifié
+      - Vulnérabilité trouvée
+      - Mise à jour requise
+      - Patch à installer
+      - Sécuriser le système
+      - Protéger les données
+      - Sauvegarde nécessaire
+      - Backup à faire
+      - Récupération de données
+      - Restauration système
+      - Point de restauration
+      - Retour à la normale
+      - Service rétabli
+      - Incident résolu
+      - Problème corrigé
+      - Panne terminée
+      - Maintenance terminée
+      - Service de nouveau disponible
+      - Retour à la normale
+      - Tout est réparé
+      - Fonctionnement rétabli
+      - Opérationnel à nouveau
+      - Système stabilisé
+      - Situation normale rétablie
   - synonym: lancer
     examples: |
       - démarrer

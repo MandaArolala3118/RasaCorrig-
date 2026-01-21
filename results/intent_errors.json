@@ -1,18 +1,106 @@
 [
   {
-    "text": "Responsable RH Manda Arolala Andrianina",
-    "intent": "inform",
+    "text": "validé par Jean Rakoto",
+    "intent": "lancer_flux_recrutement",
     "intent_prediction": {
-      "name": "lancer_flux_recrutement",
-      "confidence": 0.9007884860038757
+      "name": "inform",
+      "confidence": 0.9966603517532349
     }
   },
   {
-    "text": "validé par Jean Dupont",
-    "intent": "inform",
+    "text": "Je ne comprends pas ce que tu veux dire",
+    "intent": "nlu_fallback",
     "intent_prediction": {
-      "name": "lancer_flux_recrutement",
-      "confidence": 0.7122501730918884
+      "name": "demande_aide_generale",
+      "confidence": 0.0031795864924788475
+    }
+  },
+  {
+    "text": "Peux-tu répéter autrement",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "confirm",
+      "confidence": 0.0027793515473604202
+    }
+  },
+  {
+    "text": "Je ne sais pas faire ça",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "modifier_dotation",
+      "confidence": 0.004163083154708147
+    }
+  },
+  {
+    "text": "Quelle est la météo aujourd'hui",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "modifier_dotation",
+      "confidence": 0.0013764171162620187
+    }
+  },
+  {
+    "text": "Raconte-moi une blague",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "demande_aide_generale",
+      "confidence": 0.0006352488417178392
+    }
+  },
+  {
+    "text": "Qui est le président",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "confirm",
+      "confidence": 0.0013142398092895746
+    }
+  },
+  {
+    "text": "Quelle heure est-il",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "confirm",
+      "confidence": 0.0012200125493109226
+    }
+  },
+  {
+    "text": "J'ai besoin d'aide pour autre chose",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "demande_aide_generale",
+      "confidence": 0.002044938737526536
+    }
+  },
+  {
+    "text": "Peux-tu m'aider avec mes devoirs",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "demande_aide_generale",
+      "confidence": 0.004838563036173582
+    }
+  },
+  {
+    "text": "Je veux commander une pizza",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "demande_aide_generale",
+      "confidence": 0.0013338259886950254
+    }
+  },
+  {
+    "text": "Réserve-moi une table au restaurant",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "modifier_dotation",
+      "confidence": 0.0031322715803980827
+    }
+  },
+  {
+    "text": "1 stagiaire",
+    "intent": "provide_contrat_info",
+    "intent_prediction": {
+      "name": "provide_hierarchie_organisation",
+      "confidence": 0.988861620426178
     }
   },
   {
@@ -20,15 +108,7 @@
     "intent": "provide_encadreur_info",
     "intent_prediction": {
       "name": "provide_contrat_info",
-      "confidence": 0.8286208510398865
-    }
-  },
-  {
-    "text": "1 stagiaire",
-    "intent": "provide_hierarchie_organisation",
-    "intent_prediction": {
-      "name": "provide_contrat_info",
-      "confidence": 0.885352611541748
+      "confidence": 0.6673513054847717
     }
   },
   {
@@ -36,7 +116,7 @@
     "intent": "inform_validation",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.8372058868408203
+      "confidence": 0.8515757918357849
     }
   },
   {
@@ -44,7 +124,7 @@
     "intent": "inform_validation",
     "intent_prediction": {
       "name": "inform",
-      "confidence": 0.680933952331543
+      "confidence": 0.7546241879463196
     }
   }
 ]

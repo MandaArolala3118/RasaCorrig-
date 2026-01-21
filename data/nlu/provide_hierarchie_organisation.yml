@@ -356,10 +356,8 @@ nlu:
       - Communication corporate
       - Communication interne
       - Communication externe
-      - com
       - comm
-      - relations presse
-      - rel publiques
+      - comm_interneunication
 
   - synonym: DCO
     examples: |

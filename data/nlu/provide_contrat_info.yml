@@ -3,12 +3,9 @@ version: "3.1"
 nlu:
   - intent: provide_contrat_info
     examples: |
-
       - [un](effectif) [stagiaire](nature_contrat)
-
       - [1](effectif) [stagiaire](nature_contrat)
       - [3](effectif) [stagiaires](nature_contrat)
-
       - Mise en service le [15 janvier 2025](date_mise_en_service)
       - Démarrage le [premier mars 2026](date_mise_en_service)
       - Début le [12 décembre 2026](date_debut)
@@ -16,14 +13,12 @@ nlu:
       - Du [1er février 2025](date_debut) au [31 juillet 2025](date_fin)
       - Mise en service [25 avril 2025](date_mise_en_service)
       - Commence le [vingt janvier 2026](date_debut)
-      
       - Mise en service le [15 janvier](date_mise_en_service)
       - Démarrage le [premier mars](date_mise_en_service)
       - Début le [12 décembre](date_debut)
       - Fin le [31 décembre](date_fin)
       - Mise en service [premier avril](date_mise_en_service)
       - Commence le [20 mai](date_debut)
-
       - Le contrat est un [stage](nature_contrat) pour une durée de six mois démarrant le [premier janvier](date_mise_en_service)
       - C'est un [CDD](nature_contrat) qui commence le [15 mars 2026](date_debut)
       - On cherche [un](effectif) développeur en [CDI](nature_contrat) dès le [premier février](date_mise_en_service)
@@ -32,6 +27,25 @@ nlu:
       - pour [6 mois](duree_contrat)
       - pour [12 mois](duree_contrat)
       - pour [un an](duree_contrat)
+      - [1](effectif) [stagiaire](nature_contrat) uniquement
+      - [2](effectif) [personnes](effectif) en [CDD](nature_contrat)
+      - [3](effectif) [collaborateurs](effectif) pour un [stage](nature_contrat)
+      - Contrat [CDI](nature_contrat) pour [1](effectif) personne
+      - [Stage](nature_contrat) de [6 mois](duree_contrat)
+      - [CDD](nature_contrat) renouvelable de [12 mois](duree_contrat)
+      - [Externalisé](nature_contrat) pour [3](effectif) mois
+      - [Journalier](nature_contrat) pour [2](effectif) personnes
+      - Durée du contrat : [6 mois](duree_contrat)
+      - Type de contrat : [CDI](nature_contrat)
+      - Nature du contrat : [Stage](nature_contrat)
+      - Nombre de personnes : [4](effectif)
+      - Effectif requis : [2](effectif) personnes
+      - Période d'essai : [3 mois](duree_contrat)
+      - Contrat à durée déterminée de [1 an](duree_contrat)
+      - Embauche en [CDI](nature_contrat) pour [1](effectif) poste
+      - Recrutement en [stage](nature_contrat) pour [6 mois](duree_contrat)
+      - Personnel temporaire pour [3 mois](duree_contrat)
+      - Prestataire externe pour [6 mois](duree_contrat)
 
 
   - lookup: nature_contrat

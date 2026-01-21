@@ -77,8 +77,8 @@ nlu:
       - enregistrer
       - soumettre
       - faire
-      - initier
-      - démarrer
+      - initier_ajout
+      - démarrer_ajout
       - remplir
       - nouvelle
       - nouveau
@@ -101,15 +101,14 @@ nlu:
 
   - synonym: supprimer
     examples: |
-      - annuler
       - retirer
       - effacer
       - enlever
       - delete
       - supprime
       - suppression
-      - annulation
       - retrait
+      - annuler_suppression
 
   - synonym: voir
     examples: |

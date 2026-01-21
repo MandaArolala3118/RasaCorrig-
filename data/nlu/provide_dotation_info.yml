@@ -252,7 +252,7 @@ nlu:
     examples: |
       - PC portable
       - laptop
-      - portable
+      - portable_info
       - notebook
       - PC
       - ordi portable
@@ -269,10 +269,10 @@ nlu:
     examples: |
       - téléphone
       - mobile
-
       - téléphone portable
       - GSM
       - tel
+      - portable_phone
 
   - synonym: téléphone fixe
     examples: |
