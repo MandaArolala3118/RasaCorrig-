@@ -58,13 +58,13 @@ nlu:
     examples: |
       - \b(?:date\s+de\s+début|début|démarrage|commence)\s*[:\-]?\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
       - \b(?:à\s+partir\s+du|dès\s+le)\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
+      - \b(?:début|démarrage|commence)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
 
   - regex: date_fin
     examples: |
       - \b(?:date\s+de\s+fin|fin|terme|échéance)\s*[:\-]?\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:jusqu'au|jusqu'au|au)\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
+      - \b(?:jusqu'au|au)\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
+      - \b(?:fin|terme|échéance)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
       - \bfin\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
       - \b(?:jusqu'au|au)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
 
@@ -109,10 +109,9 @@ nlu:
 
   - regex: id_demande
     examples: |
-      - \b(?:DDR|DRI|DMOE|DMI)?\s*\d{3,6}\b
-      - \b#\d{3,6}\b
-      - \bID\s*[:#]?\s*\d{3,6}\b
-      - \bnum(?:ero|éro)?\s*(?:de\s*)?\d{3,6}\b
+      - \b(?:DDR|DRI|DMOE|DMI)\s*\d{3,6}\b
+      - \b(?:demande|dossier)\s*(?:n°|no|num(?:ero|éro)?|#|id)\s*\d{3,6}\b
+      - \bID\s*demande\s*[:#]?\s*\d{3,6}\b
 
   - regex: poste_encadreur
     examples: |
@@ -187,3 +186,41 @@ nlu:
       - \b(?:je\s+demande\s+de|je\s+veux\s+que|il\s+faut|il\s+est\s+demandé\s+de)\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \baction\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \btâche\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
+
+  - regex: id_embauche
+    examples: |
+      - \b(?:EB|EMB)\s*\d{3,6}\b
+      - \bID\s*embauche\s*[:#]?\s*\d{3,6}\b
+      - \bembauche\s*(?:n°|no|num(?:ero|éro)?|#|id)\s*\d{3,6}\b
+      - \bEB-\d{4}-\d{4}\b
+
+  - regex: nom_et_prenoms
+    examples: |
+      - \b(?:embaucher|embauche\s+de|recruter)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})(?=\s+(?:au\s+service|comme|sous\s+la\s+direction|à\s+partir|jusqu'|jusqu’|,))
+      - \bnom\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\b
+
+  - regex: service
+    examples: |
+      - \bservice\s*[:\-]?\s*([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})(?=\s+(?:comme|sous\s+la\s+direction|à\s+partir|jusqu'|jusqu’|,|$))
+      - \bau\s+service\s+([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})(?=\s+(?:comme|sous\s+la\s+direction|à\s+partir|jusqu'|jusqu’|,|$))
+
+  - regex: superieur
+    examples: |
+      - \b(?:supérieur|superieur)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \b(?:manager|responsable)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+
+  - regex: taille
+    examples: |
+      - \btaille\s*[:\-]?\s*([XSML]{1,3}|\d{2,3})\b
+      - \btaille\s*[:\-]?\s*(\d{2,3})\s*(?:cm|centimètres|centimetres)\b
+      - \btaille\s*[:\-]?\s*(\d{1})\s*m\s*(\d{1,2})\b
+      - \btaille\s*[:\-]?\s*(\d(?:[\.,]\d{1,2})?)\s*m\b
+
+  - regex: pointure
+    examples: |
+      - \bpointure\s*[:\-]?\s*(\d{1,2})\b
+
+  - regex: demande_id
+    examples: |
+      - \b(?:DDR|DRI|DMOE|DMI)\d{3,6}\b
+      - \b(?:demande|dossier)\s*[:#]?\s*(\d{3,6})\b

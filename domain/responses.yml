@@ -510,6 +510,10 @@ responses:
   - text: "Validation effectuée. La demande a été approuvée."
   - text: "Demande confirmée et validée."
 
+  utter_embauche_confirmee:
+  - text: "✅ Embauche enregistrée. Voulez-vous ajouter d'autres informations ?"
+  - text: "Embauche prise en compte. N'hésitez pas à fournir des détails supplémentaires."
+
   utter_demande_rejetee:
   - text: "La demande a été rejetée."
   - text: "Demande rejetée avec succès."

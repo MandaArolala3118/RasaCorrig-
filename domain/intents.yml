@@ -36,3 +36,4 @@ intents:
   - validation_recrutement
   - inform_validation
   - rejection_recrutement
+  - embaucher

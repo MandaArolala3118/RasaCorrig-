@@ -67,3 +67,11 @@ entities:
   
   #validation recrutement
   - commentaire
+  # embauche
+  - id_embauche
+  - nom_et_prenoms
+  - service
+  - superieur
+  - taille
+  - pointure
+  - demande_id

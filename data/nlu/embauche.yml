@@ -1,0 +1,29 @@
+version: "3.1"
+
+nlu:
+  - intent: embaucher
+    examples: |
+      - embaucher [Jean Dupont](nom_et_prenoms) au service [Informatique](service)
+      - je veux embaucher [Marie Randrianasolo](nom_et_prenoms) au service [DSI](service)
+      - embaucher [Sophie Rakoto](nom_et_prenoms) avec matricule [MAT-2024-001](matricule)
+      - embauche pour la demande [DDR12345](demande_id)
+      - embauche validée pour [DRI67890](demande_id)
+      - dossier embauche [EB-2026-0001](id_embauche)
+      - id embauche [EMB2026-15](id_embauche)
+      - date d'entrée [21/01/2026](date_debut)
+      - entrée prévue le [15-02-2026](date_debut)
+      - date de fin [30/06/2026](date_fin)
+      - entrée le [01/02/2026](date_debut) et fin le [01/02/2027](date_fin)
+      - date d'entrée : [01/03/2026](date_debut), date de fin : [01/03/2027](date_fin)
+      - supérieure [Nadia Rasolofoniaina](superieur)
+      - service [Ressources humaines](service)
+      - taille [L](taille) et pointure [42](pointure)
+      - pointure [38](pointure) taille [M](taille)
+      - taille [165 cm](taille) et pointure [38](pointure)
+      - matricule [EMP-7788](matricule)
+      - embaucher [Luc Rakoto](nom_et_prenoms) au service [Comptabilité](service) avec le matricule [EMP-5544](matricule)
+      - la demande [DMOE1234](demande_id) est prête pour embauche
+      - embaucher [Mamy Rasolo](nom_et_prenoms) avec entrée le [01/03/2026](date_debut)
+      - embaucher [Hery Tiana](nom_et_prenoms) fin le [31/12/2026](date_fin)
+      - embauche [EB2026-102](id_embauche) pour [Jean Ramaroson](nom_et_prenoms)
+      - embauche de [Dina Razafimandimby](nom_et_prenoms) superieur [Haja Raharimanana](superieur)

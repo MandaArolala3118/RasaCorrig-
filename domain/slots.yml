@@ -60,6 +60,7 @@ slots:
       - type: custom  
       - type: from_entity
         entity: responsable_rh
+        not_intent: embaucher
 
   poste_id:
     type: text
@@ -357,6 +358,7 @@ slots:
     mappings:
       - type: from_entity
         entity: nom_validateur
+        not_intent: embaucher
   nom_validateur_list:
     type: list
     influence_conversation: false
@@ -449,3 +451,53 @@ slots:
     influence_conversation: false
     mappings:
       - type: custom
+
+  id_embauche:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: id_embauche
+
+  nom_et_prenoms:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: nom_et_prenoms
+
+  service:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: service
+
+
+  superieur:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: superieur
+
+  taille:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: taille
+
+  pointure:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: pointure
+
+  demande_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: demande_id
