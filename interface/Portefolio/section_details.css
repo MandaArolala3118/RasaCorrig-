@@ -1,0 +1,406 @@
+#about_me .section-content{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#about_me .IDo {
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+}
+
+#about_me .IDo img{
+  height: 100px;
+}
+
+#about_me .content-details {
+    position: relative;
+    margin-top: 0px;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    padding: 40px;
+    overflow: hidden;
+}
+#about_me .source_lumiere {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.966), rgba(255, 255, 255, 0.678));
+    filter: blur(20px);
+    z-index: 1;
+}
+#about_me .expertise {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    z-index: 2;
+}
+
+#about_me .expertise span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+#about_me .nom {
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    color: #fff;
+    z-index: 2;
+    text-align: left;
+    width: 450px;
+}
+
+#about_me .nom span {
+    font-weight: bold;
+    color: #fff;
+}
+#about_me .profile {
+    position: absolute;
+    bottom: 0px;
+    left: -50px;
+    z-index: 2;
+}
+
+#about_me .profile img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+#about_me .appropos {
+    position: absolute;
+    top: 42%;
+    left: 55%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+    max-width: 450px;
+    width: 450px;
+}
+
+#about_me .quote_gauche {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+#about_me .quote_droite {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+    align-items: flex-end;
+    align-self: flex-end;
+    transform: rotate(180deg);
+}
+
+#about_me .quote_gauche img,
+#about_me .quote_droite img {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    display: block;
+}
+
+#about_me .contenut_apropos {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #fff;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    #about_me .content-details {
+        height: calc(100vh - 140px);
+        padding: 0;
+        overflow: visible;
+        max-width: 100vw;
+    }
+
+    #about_me .IDo {
+        height: calc(100vh - 140px);
+        max-width: 100vw;
+    }
+
+    #about_me .source_lumiere {
+        width: 140px;
+        height: 140px;
+        top: 15px;
+        right: 0px;
+        filter: blur(15px);
+    }
+
+    #about_me .expertise {
+        top: 80px;
+        left: 80%;
+        right: auto;
+        transform: translateX(-50%);
+        text-align: center;
+        width: auto;
+        max-width: 50%;
+    }
+
+    #about_me .expertise span {
+        font-size: 2rem;
+        display: block;
+        line-height: 1.4;
+    }
+
+    #about_me .nom {
+        top: 250px;
+        right: 20px;
+        left: auto;
+        transform: none;
+        text-align: right;
+        font-size: 1.6rem;
+        white-space: nowrap;
+    }
+
+    #about_me .profile {
+        bottom: 0px;
+        left: -80px;
+        z-index: 1;
+    }
+
+    #about_me .profile img {
+        width: 450px;
+        height: auto;
+        max-width: none;
+    }
+
+    #about_me .appropos {
+        position: absolute;
+        top: auto;
+        bottom: 80px;
+        left: 450px;
+        right: 20px;
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100vw - 400px);
+        width: auto;
+        transform: none;
+    }
+
+    #about_me .quote_gauche {
+        align-self: flex-start;
+    }
+
+    #about_me .quote_droite {
+        align-self: flex-end;
+    }
+
+    #about_me .quote_gauche img,
+    #about_me .quote_droite img {
+        width: 24px;
+        height: 24px;
+    }
+
+    #about_me .contenut_apropos {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: justify;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 700px) {
+    #about_me .content-details {
+        height: calc(100vh - 50px);
+        padding: 0;
+        overflow: visible;
+        max-width: 100vw;
+    }
+
+    #about_me .IDo {
+        height: calc(100vh - 50px);
+        max-width: 100vw;
+    }
+
+    #about_me .source_lumiere {
+        width: 120px;
+        height: 120px;
+        top: 12px;
+        right: 0px;
+        filter: blur(12px);
+    }
+
+    #about_me .expertise {
+        top: 65px;
+        left: 67%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: auto;
+        max-width: 48%;
+        right: auto;
+    }
+
+    #about_me .expertise span {
+        font-size: 1.6rem;
+        display: block;
+        line-height: 1.4;
+    }
+
+    #about_me .nom {
+        top: 210px;
+        right: 15px;
+        left: auto;
+        transform: none;
+        text-align: right;
+        font-size: 1.4rem;
+        white-space: nowrap;
+    }
+
+    #about_me .profile {
+        bottom: 0px;
+        left: -100px;
+        z-index: 1;
+    }
+
+    #about_me .profile img {
+        width: 380px;
+        height: auto;
+        max-width: none;
+    }
+
+    #about_me .appropos {
+        position: absolute;
+        top: auto;
+        bottom: 65px;
+        left: 290px;
+        right: 15px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100vw - 305px);
+        width: auto;
+        transform: none;
+    }
+
+    #about_me .quote_gauche {
+        align-self: flex-start;
+    }
+
+    #about_me .quote_droite {
+        align-self: flex-end;
+    }
+
+    #about_me .quote_gauche img,
+    #about_me .quote_droite img {
+        width: 22px;
+        height: 22px;
+    }
+
+    #about_me .contenut_apropos {
+        font-size: 0.78rem;
+        line-height: 1.45;
+        text-align: justify;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    #about_me .content-details {
+        height: calc(100vh - 140px);
+        padding: 0;
+        overflow: visible;
+        max-width: 100vw;
+    }
+
+    #about_me .IDo {
+        height: calc(100vh - 140px);
+        max-width: 100vw;
+    }
+
+    #about_me .source_lumiere {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        right: 0px;
+        filter: blur(10px);
+    }
+
+    #about_me .expertise {
+        top: 50px;
+        left: 70%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: auto;
+        max-width: 45%;
+        right: auto;
+    }
+
+    #about_me .expertise span {
+        font-size: 1.3rem;
+        display: block;
+        line-height: 1.4;
+    }
+
+    #about_me .nom {
+        top: 180px;
+        right: 10px;
+        left: auto;
+        transform: none;
+        text-align: right;
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+
+    #about_me .profile {
+        bottom: 0px;
+        left: -120px;
+        z-index: 1;
+    }
+
+    #about_me .profile img {
+        width: 300px;
+        height: auto;
+        max-width: none;
+    }
+
+    #about_me .appropos {
+        position: absolute;
+        top: auto;
+        bottom: 50px;
+        left: 200px;
+        right: 10px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        max-width: calc(100vw - 190px);
+        width: auto;
+        transform: none;
+    }
+
+    #about_me .quote_gauche {
+        align-self: flex-start;
+    }
+
+    #about_me .quote_droite {
+        align-self: flex-end;
+    }
+
+    #about_me .quote_gauche img,
+    #about_me .quote_droite img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #about_me .contenut_apropos {
+        font-size: 0.65rem;
+        line-height: 1.4;
+        text-align: justify;
+        word-wrap: break-word;
+    }
+}

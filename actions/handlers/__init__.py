@@ -6,3 +6,4 @@ from ..validation.dotation import *
 from .helper_handler import *
 from .flux_recrutement_handler import *
 from .consultation_demande import *
+from .embauch_handler import *

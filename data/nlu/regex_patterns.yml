@@ -1,37 +1,83 @@
 version: "3.1"
 
 nlu:
+  # ============================================================================
+  # CORRECTED REGEX PATTERNS FOR ENTITY EXTRACTION
+  # ============================================================================
+  
+  # Request/Demand ID - with explicit prefix requirement
   - regex: id_demande
     examples: |
-      # require an explicit prefix (#, ID, or 'num') to avoid matching plain numbers like '20' or '2026'
+      # Require explicit prefix to avoid matching plain numbers
       - \b#\d{2,6}\b
       - \bID\s*[:#]?\s*\d{2,6}\b
       - \bnum(?:ero|éro)?\s*(?:de\s*)?\d{2,6}\b
+      - \b(?:DDR|DRI|DMOE|DMI)\s*\d{3,6}\b
+      - \b(?:demande|dossier)\s*(?:n°|no|num(?:ero|éro)?|#|id)\s*\d{3,6}\b
 
+  # Hire ID
+  - regex: id_embauche
+    examples: |
+      - \b(?:EB|EMB)\s*\d{3,6}\b
+      - \bID\s*embauche\s*[:#]?\s*\d{3,6}\b
+      - \bembauche\s*(?:n°|no|num(?:ero|éro)?|#|id)\s*\d{3,6}\b
+      - \bEB-\d{4}-\d{4}\b
+
+  # Demand ID (generic)
+  - regex: demande_id
+    examples: |
+      - \b(?:DDR|DRI|DMOE|DMI)\d{3,6}\b
+      - \b(?:demande|dossier)\s*[:#]?\s*(\d{3,6})\b
+
+  # Service start date - FIXED: Now captures dates based on context
   - regex: date_mise_en_service
     examples: |
-      # Enhanced date detection with better precision
       # Format: DD/MM/YYYY or DD-MM-YYYY
       - \b\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}\b
       # Format: YYYY/MM/DD or YYYY-MM-DD
       - \b\d{4}[\/\-]\d{1,2}[\/\-]\d{1,2}\b
       # Format: day month year (e.g., "20 février 2026")
       - \b\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
-      # Format: "le day month year" (e.g., "le 20 février 2026")
+      # Format: "le day month year"
       - \ble\s+\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
-      # Format: "le day month" (e.g., "le 20 février" - assumes current or next year)
+      # Format: "le day month" (assumes current/next year)
       - \ble\s+\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
-      # Format: day month without "le" (e.g., "20 février" or "20 fevrier")
+      # Format: day month without "le"
       - \b\d{1,2}\s+(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
-      # Format: "en month year" (e.g., "en février 2026")
+      # Format: "en month year"
       - \b(?:en\s+)?(?:janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+\d{4}\b
 
+  # Start date - FIXED: Context-aware extraction
+  - regex: date_debut
+    examples: |
+      # Explicit start date patterns with context keywords
+      - \b(?:à\s+partir\s+du|à\s+partir\s+de|début|démarrage|commence|entrée|date\s+de\s+début|date\s+d'entrée)\s*(?:le\s+|:\s*)?(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
+      - \b(?:début|démarrage|entrée)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
+      - \bdu\s+(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
+
+  # End date - FIXED: Context-aware extraction
+  - regex: date_fin
+    examples: |
+      # Explicit end date patterns with context keywords
+      - \b(?:jusqu'au|jusqu'à|au|fin|terme|échéance|date\s+de\s+fin)\s*(?:le\s+|:\s*)?(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
+      - \b(?:fin|terme|échéance)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
+      - \bfin\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
+
+  # Contract duration
+  - regex: duree_contrat
+    examples: |
+      - \b(?:durée|période)\s*(?:du\s+contrat)?\s*[:\-]?\s*(\d+)\s*(mois|an|ans|année|années)\b
+      - \b(?:pour|pendant)\s+(\d+)\s*(mois|an|ans|année|années)\b
+      - \b(?:six|douze|trois|quatre|cinq|sept|huit|neuf|dix|onze)\s+(mois|an|ans|année|années)\b
+
+  # HR Manager - FIXED: Better name extraction
   - regex: responsable_rh
     examples: |
-      - \b(?:responsable\s+RH|DRH|directeur\s+RH|gestionnaire\s+RH|coordinateur\s+RH|chargé\s+RH)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:RH|DRH)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:responsable\s+ressources\s+humaines)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
+      - \b(?:responsable\s+RH|DRH|directeur\s+RH|gestionnaire\s+RH|coordinateur\s+RH|chargé\s+RH)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \b(?:RH|DRH)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \b(?:responsable\s+ressources\s+humaines)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
 
+  # Action type
   - regex: action_type
     examples: |
       - \b(?:validation|approbation|rejet|refus|signature|accord|autorisation)\b
@@ -39,62 +85,58 @@ nlu:
       - \baction\s*[:\-]?\s*(validation|approbation|rejet|refus|signature|accord|autorisation)\b
       - \btype\s*[:\-]?\s*(validation|approbation|rejet|refus|signature|accord|autorisation)\b
 
+  # Supervisor/Manager name - FIXED: Proper capture group
   - regex: nom_encadreur
     examples: |
-      - \b(?:encadreur|superviseur|tuteur|responsable|manager)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:sous\s+la\s+direction\s+de|avec\s+comme\s+encadreur)\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
+      - \b(?:encadreur|superviseur|tuteur|responsable|manager)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \b(?:sous\s+la\s+direction\s+de|avec\s+comme\s+encadreur|direction\s+de)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
 
+  # Validator name
   - regex: nom_validateur
     examples: |
-      - \b(?:validateur|approbateur|signataire)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:validation\s+par|approuvé\s+par|signé\s+par)\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
+      - \b(?:validateur|approbateur|signataire)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \b(?:validation\s+par|approuvé\s+par|signé\s+par)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
 
+  # Position/Job title - FIXED: Better extraction
   - regex: nom_poste
     examples: |
-      - \b(?:poste|position|fonction)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:emploi|job|role)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
+      - \b(?:poste|position|fonction)\s*[:\-]?\s*([A-Z][a-zA-Z\s]+?)(?=\s*,|\s+sous|\s+à|\s+du|\s+au|$)
+      - \b(?:comme|en\s+tant\s+que)\s+([A-Z][a-zA-Z\s]+?)(?=\s*,|\s+sous|\s+à|\s+du|\s+au|$)
+      - \b(?:emploi|job|role)\s*[:\-]?\s*([A-Z][a-zA-Z\s]+?)(?=\s*,|\s+sous|\s+à|\s+du|\s+au|$)
 
-  - regex: date_debut
+  # Supervisor position
+  - regex: poste_encadreur
     examples: |
-      - \b(?:date\s+de\s+début|début|démarrage|commence)\s*[:\-]?\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:à\s+partir\s+du|dès\s+le)\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:début|démarrage|commence)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
+      - \b(?:poste|position|fonction)\s*(?:de\s+l')?encadreur\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
+      - \b(?:occupant\s+le\s+poste\s+de)\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
+      - \bencadreur\s+(?:poste|position|fonction)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
 
-  - regex: date_fin
-    examples: |
-      - \b(?:date\s+de\s+fin|fin|terme|échéance)\s*[:\-]?\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:jusqu'au|au)\s*(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})\b
-      - \b(?:fin|terme|échéance)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\s+(\d{4})\b
-      - \bfin\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
-      - \b(?:jusqu'au|au)\s+(?:le\s+)?(\d{1,2})\s+(janvier|février|fevrier|mars|avril|mai|juin|juillet|août|aout|septembre|octobre|novembre|décembre|decembre)\b
-
-  - regex: duree_contrat
-    examples: |
-      - \b(?:durée|période)\s*(?:du\s+contrat)?\s*[:\-]?\s*(\d+)\s*(mois|an|ans|année|années)\b
-      - \b(?:pour|pendant)\s+(\d+)\s*(mois|an|ans|année|années)\b
-      - \b(?:six|douze|trois|quatre|cinq|sept|huit|neuf|dix|onze)\s+(mois|an|ans|année|années)\b
-
+  # Contract type
   - regex: nature_contrat
     examples: |
       - \b(?:CDI|CDD|Stage|stage|externalisé|journalier|freelance|prestataire|consultant)\b
       - \b(?:contrat\s+(?:à\s+durée\s+(?:indéterminée|déterminée)|permanent|fixe))\b
       - \b(?:stage\s+(?:conventionné|en\s+entreprise|pratique|professionnel|de\s+fin\s+d'études))\b
 
+  # Budget status
   - regex: situation_budget
     examples: |
       - \b(?:budgetisé|non\s+budgetisé|budget\s+disponible|pas\s+de\s+budget|financé|non\s+financé)\b
       - \b(?:situation\s+budgétaire)\s*[:\-]?\s*(budgetisé|non\s+budgetisé)\b
 
+  # Workflow name
   - regex: nom_flux
     examples: |
       - \b(?:flux|workflow|circuit|processus)\s*(?:nommé|appelé|dénommé)\s*[:\-]?\s*([A-Z][a-zA-Z0-9\s]+)\b
       - \b(?:nom\s+du\s+flux|flux\s*[:\-])\s*([A-Z][a-zA-Z0-9\s]+)\b
 
+  # Request type
   - regex: type_demande
     examples: |
       - \b(?:DDR|DRI|DMOE|DMI)\b
-      - \b(?:demande\s+(?:de\s+recrutement|de\s+mobilité\s+(?:interne|externe)|d'\s+objectif))\b
+      - \b(?:demande\s+(?:de\s+recrutement|de\s+mobilité\s+(?:interne|externe)|d'\s*objectif))\b
 
+  # Exploitation/Site
   - regex: exploitation
     examples: |
       - \b(?:AG|ag)\d{2}\b
@@ -102,40 +144,32 @@ nlu:
       - \b(?:00\s+Siège\s+Social|Siège\s+Social|siège\s+social)\b
       - \b(?:Tuléar|Tulear|Toliara|Fianarantsoa|Majunga|Mahajanga|Tamatave|Toamasina|Ihosy|Andranomahery|Manakara|Antsirabe|Diego|Antsiranana)\b
 
+  # Direction/Department code
   - regex: direction
     examples: |
       - \b(?:DSI|DRH|DMA|DGL|DAF|DIN|DCM|DCO|DLA)\b
       - \b(?:direction\s+(?:des\s+systèmes\s+d'information|des\s+ressources\s+humaines|marketing\s+et\s+administration|générale\s+de\s+logistique|administratif\s+et\s+financier|de\s+l'innovation|de\s+la\s+communication|commerciale|logistique\s+et\s+approvisionnement))\b
 
-  - regex: id_demande
-    examples: |
-      - \b(?:DDR|DRI|DMOE|DMI)\s*\d{3,6}\b
-      - \b(?:demande|dossier)\s*(?:n°|no|num(?:ero|éro)?|#|id)\s*\d{3,6}\b
-      - \bID\s*demande\s*[:#]?\s*\d{3,6}\b
-
-  - regex: poste_encadreur
-    examples: |
-      - \b(?:poste|position|fonction)\s*(?:de\s+l')?encadreur\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:occupant\s+le\s+poste\s+de)\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \bencadreur\s+(?:poste|position|fonction)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-      - \b(?:tuteur|superviseur|responsable)\s+(?:technique|de\s+stage|de\s+projet)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b
-
+  # Result/Outcome
   - regex: resultat
     examples: |
       - \b(?:résultat|resultat|outcome|conclusion)\s*[:\-]?\s*([a-zA-Z]+)\b
       - \b(?:statut|état)\s*[:\-]?\s*([a-zA-Z]+)\b
 
+  # Reason/Motive
   - regex: motif
     examples: |
       - \b(?:motif|raison|cause|justification)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \b(?:pour|car|parce\s+que)\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
 
+  # Headcount
   - regex: effectif
     examples: |
       - \b(\d+)\s*(?:personne|personnes|poste|postes|pers|collaborateur|collaborateurs|stagiaire|stagiaires|consultant|consultants|prestataire|prestataires|travailleur|travailleurs)\b
       - \b(?:pour|avec)\s+(\d+)\s*(?:personne|personnes|poste|postes)\b
       - \b(?:un|une|deux|trois|quatre|cinq|six|sept|huit|neuf|dix)\s*(?:personne|personnes|poste|postes|employés|collaborateurs)\b
 
+  # Equipment/Dotation
   - regex: dotation
     examples: |
       - \b(?:ordinateur\s+portable|PC\s+portable|laptop|notebook)\b
@@ -145,82 +179,82 @@ nlu:
       - \b(?:badge|carte\s+d'accès|passe)\b
       - \b(?:assurance|contrat\s+d'assurance)\b
 
+  # Information type
   - regex: info_type
     examples: |
       - \b(?:type|nature|catégorie|classe)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \b(?:information|info|détail|détails)\s*(?:de\s+type|de\s+nature)?\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
-      - \b(?:type\s+d'info|nature\s+d'info|catégorie\s+d'info)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
 
+  # Justification
   - regex: justification
     examples: |
       - \b(?:justification|raison|motif|cause|explication)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \b(?:car|parce\s+que|pour|afin\s+de|étant\s+donné|vu\s+que)\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \bjustif\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
-      - \braison\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
 
+  # Intent/Action requested
   - regex: intention_demande
     examples: |
       - \b(?:intention|action|objectif|but)\s*(?:de\s+la\s+demande)?\s*[:\-]?\s*(ajouter|modifier|supprimer|lancer|valider|rejeter|consulter|voir)\b
       - \b(?:je\s+veux|je\s+souhaite|je\s+voudrais)\s*(ajouter|modifier|supprimer|lancer|valider|rejeter|consulter|voir)\b
 
+  # Weight (for objectives)
   - regex: poids
     examples: |
-      - \b(\d+)\s*(?:kg|kilo|kilogramme|gramme|g|tonne|t)\b
-      - \b(?:poids|masse)\s*[:\-]?\s*(\d+)\s*(kg|kilo|kilogramme|gramme|g|tonne|t)\b
+      - \b(\d+)\s*(?:kg|kilo|kilogramme|gramme|g|tonne|t|%|pourcent)\b
+      - \b(?:poids|masse)\s*[:\-]?\s*(\d+)\s*(?:kg|kilo|%)\b
 
+  # Objective
   - regex: objectif
     examples: |
       - \b(?:objectif|but|goal|cible)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \b(?:pour|afin\s+de|dans\s+le\s+but\s+de|avec\s+pour\s+objectif\s+de)\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
-      - \bobjectif\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
-      - \bbut\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
 
+  # Comment
   - regex: commentaire
     examples: |
       - \b(?:commentaire|remarque|note|observation)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \b(?:avec\s+comme\s+commentaire|avec\s+la\s+remarque)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
 
+  # Requested action
   - regex: action_demandee
     examples: |
       - \b(?:action\s+demandée|action\s+requise|tâche\s+demandée)\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
       - \b(?:je\s+demande\s+de|je\s+veux\s+que|il\s+faut|il\s+est\s+demandé\s+de)\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
-      - \baction\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
-      - \btâche\s*[:\-]?\s*([a-zA-Z]+(?:\s+[a-zA-Z]+)*)\b
 
-  - regex: id_embauche
-    examples: |
-      - \b(?:EB|EMB)\s*\d{3,6}\b
-      - \bID\s*embauche\s*[:#]?\s*\d{3,6}\b
-      - \bembauche\s*(?:n°|no|num(?:ero|éro)?|#|id)\s*\d{3,6}\b
-      - \bEB-\d{4}-\d{4}\b
+  # ============================================================================
+  # CORRECTED HIRE-SPECIFIC PATTERNS
+  # ============================================================================
 
+  # Full name - FIXED: Lookahead to stop at context words
   - regex: nom_et_prenoms
     examples: |
-      - \b(?:embaucher|embauche\s+de|recruter)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})(?=\s+(?:au\s+service|comme|sous\s+la\s+direction|à\s+partir|jusqu'|jusqu’|,))
-      - \bnom\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\b
+      - \b(?:embaucher|embauche\s+de|recruter)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)(?=\s+(?:au|à|avec|comme|pour|sous|,))
+      - \bnom\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \bcandidat\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \bpersonne\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
 
+  # Service/Department - FIXED: Extract only the service name
   - regex: service
     examples: |
-      - \bservice\s*[:\-]?\s*([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})(?=\s+(?:comme|sous\s+la\s+direction|à\s+partir|jusqu'|jusqu’|,|$))
-      - \bau\s+service\s+([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,2})(?=\s+(?:comme|sous\s+la\s+direction|à\s+partir|jusqu'|jusqu’|,|$))
+      - \b(?:service|au\s+service)\s+(?:de\s+|d')?([A-Z][a-zA-Z]+)(?=\s+(?:comme|en|pour|sous|,|avec|à))
+      - \bservice\s*[:\-]?\s*([A-Z][a-zA-Z]+)\b
+      - \bdépartement\s*[:\-]?\s*([A-Z][a-zA-Z]+)\b
 
+  # Superior/Manager - FIXED: Proper name extraction
   - regex: superieur
     examples: |
-      - \b(?:supérieur|superieur)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
-      - \b(?:manager|responsable)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      - \b(?:supérieur|superieur|manager|responsable)\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
 
+  # Size - FIXED: Extract only the value, not the label
   - regex: taille
     examples: |
-      - \btaille\s*[:\-]?\s*([XSML]{1,3}|\d{2,3})\b
-      - \btaille\s*[:\-]?\s*(\d{2,3})\s*(?:cm|centimètres|centimetres)\b
+      - \btaille\s*[:\-]?\s*([XSML]{1,3})\b
+      - \btaille\s*[:\-]?\s*(\d{2,3})(?:\s*cm)?\b
       - \btaille\s*[:\-]?\s*(\d{1})\s*m\s*(\d{1,2})\b
       - \btaille\s*[:\-]?\s*(\d(?:[\.,]\d{1,2})?)\s*m\b
 
+  # Shoe size - FIXED: Extract only the number
   - regex: pointure
     examples: |
-      - \bpointure\s*[:\-]?\s*(\d{1,2})\b
-
-  - regex: demande_id
-    examples: |
-      - \b(?:DDR|DRI|DMOE|DMI)\d{3,6}\b
-      - \b(?:demande|dossier)\s*[:#]?\s*(\d{3,6})\b
+      - \bpointure\s*[:\-]?\s*(\d{1,2})\b(?!\s*\d)

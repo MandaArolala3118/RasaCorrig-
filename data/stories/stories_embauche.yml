@@ -1,7 +1,18 @@
 version: "3.1"
 
 stories:
-  - story: embaucher apres validation
+  - story: embaucher avec nettoyage des entités
     steps:
       - intent: embaucher
+        entities:
+          - nom_et_prenoms
+          - service
+          - nom_poste
+          - nom_encadreur
+          - date_debut
+          - date_fin
+          - taille
+          - pointure
+      - action: action_clean_hire_entities
       - action: utter_embauche_confirmee
+      

@@ -1,7 +1,9 @@
 version: "3.1"
 
 rules:
-  - rule: Enregistrer une embauche
+  - rule: Nettoyer les entités après embaucher
     steps:
       - intent: embaucher
+      - action: action_clean_hire_entities
       - action: utter_embauche_confirmee
+      

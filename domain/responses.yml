@@ -527,3 +527,13 @@ responses:
   - text: "Vous n'avez aucune demande à traiter pour le moment."
   - text: "Aucune demande en attente de votre validation."
   - text: "Toutes vos demandes sont à jour !"
+
+  utter_embauche_confirmee_with_details:
+    - text: |
+        ✅ Embauche enregistrée :
+        👤 Nom: {nom_et_prenoms}
+        🏢 Service: {service}
+        💼 Poste: {nom_poste}
+        📅 Du {date_debut} au {date_fin}
+        
+        Voulez-vous ajouter d'autres informations ?
