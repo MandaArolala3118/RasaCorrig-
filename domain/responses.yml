@@ -537,3 +537,15 @@ responses:
         📅 Du {date_debut} au {date_fin}
         
         Voulez-vous ajouter d'autres informations ?
+  
+  utter_demander_confirmation_embauche:
+    - text: "Les informations sont-elles correctes ?"
+  
+  utter_embauche_enregistree:
+    - text: "✅ L'embauche a été enregistrée avec succès !"
+  
+  utter_embauche_annulee:
+    - text: "❌ L'embauche a été annulée."
+  
+  utter_permission_refusee:
+    - text: "❌ Vous n'avez pas les permissions nécessaires pour effectuer cette action."

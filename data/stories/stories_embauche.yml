@@ -1,18 +1,247 @@
 version: "3.1"
 
 stories:
-  - story: embaucher avec nettoyage des entités
+  
+  # ============================================
+  # STORY 1: Embauche complète réussie (chemin heureux)
+  # ============================================
+  - story: embauche_complete_avec_validation
     steps:
       - intent: embaucher
         entities:
-          - nom_et_prenoms
-          - service
-          - nom_poste
-          - nom_encadreur
-          - date_debut
-          - date_fin
-          - taille
-          - pointure
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "01/03/2026"
+          - date_fin: "31/12/2026"
+          - taille: "170"
+          - pointure: "42"
       - action: action_clean_hire_entities
-      - action: utter_embauche_confirmee
-      
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: true
+      - action: action_afficher_recapitulatif_embauche
+      - intent: affirm
+      - action: action_enregistrer_embauche
+  
+  # ============================================
+  # STORY 2: Permission refusée (rôle non-ERM)
+  # ============================================
+  - story: embauche_permission_refusee
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "01/03/2026"
+          - date_fin: "31/12/2026"
+          - taille: "170"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: false
+      # Le flux s'arrête ici car permission refusée
+  
+  # ============================================
+  # STORY 3: Données incomplètes - demande manuelle
+  # ============================================
+  - story: embauche_donnees_incompletes
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: false
+      # L'utilisateur doit refournir les infos complètes
+  
+  # ============================================
+  # STORY 4: Confirmation puis annulation
+  # ============================================
+  - story: embauche_annulation_apres_recap
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "01/03/2026"
+          - date_fin: "31/12/2026"
+          - taille: "170"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: true
+      - action: action_afficher_recapitulatif_embauche
+      - intent: deny
+      - action: action_annuler_embauche
+  
+  # ============================================
+  # STORY 5: Dates invalides (fin avant début)
+  # ============================================
+  - story: embauche_dates_invalides
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "31/12/2026"
+          - date_fin: "01/03/2026"
+          - taille: "170"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: false
+        - champs_invalides_embauche: ["Les dates (la date de début doit être avant la date de fin)"]
+  
+  # ============================================
+  # STORY 6: Nom invalide (un seul mot)
+  # ============================================
+  - story: embauche_nom_invalide
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Marie"
+          - date_debut: "01/03/2026"
+          - date_fin: "31/12/2026"
+          - taille: "170"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: false
+        - champs_invalides_embauche: ["Nom et prénoms (doit contenir au moins 2 mots)", "Nom de l'encadreur (doit contenir au moins 2 mots)"]
+  
+  # ============================================
+  # STORY 7: Embauche avec entités sales (avant nettoyage)
+  # ============================================
+  - story: embauche_avec_entites_sales
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "embaucher Rakoto Jean au service"
+          - service: "au service DSI comme"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "du 01/03/2026"
+          - date_fin: "au 31/12/2026"
+          - taille: "taille 170 cm"
+          - pointure: "pointure 42"
+      - action: action_clean_hire_entities
+      # Après nettoyage, les entités sont propres
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: true
+      - action: action_afficher_recapitulatif_embauche
+      - intent: affirm
+      - action: action_enregistrer_embauche
+  
+  # ============================================
+  # STORY 8: Format de date alternatif (avec tirets)
+  # ============================================
+  - story: embauche_avec_dates_tirets
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "01-03-2026"
+          - date_fin: "31-12-2026"
+          - taille: "170"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: true
+      - action: action_afficher_recapitulatif_embauche
+      - intent: affirm
+      - action: action_enregistrer_embauche
+  
+  # ============================================
+  # STORY 9: Taille en format métrique (1m70)
+  # ============================================
+  - story: embauche_taille_metrique
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "01/03/2026"
+          - date_fin: "31/12/2026"
+          - taille: "1m70"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: true
+      - action: action_afficher_recapitulatif_embauche
+      - intent: affirm
+      - action: action_enregistrer_embauche
+  
+  # ============================================
+  # STORY 10: Taille avec code (L, XL, etc.)
+  # ============================================
+  - story: embauche_taille_code
+    steps:
+      - intent: embaucher
+        entities:
+          - nom_et_prenoms: "Rakoto Jean"
+          - service: "DSI"
+          - nom_poste: "Développeur"
+          - nom_encadreur: "Rasoa Marie"
+          - date_debut: "01/03/2026"
+          - date_fin: "31/12/2026"
+          - taille: "L"
+          - pointure: "42"
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+      - slot_was_set:
+        - permission_embauche: true
+      - action: action_valider_donnees_embauche
+      - slot_was_set:
+        - validation_embauche_ok: true
+      - action: action_afficher_recapitulatif_embauche
+      - intent: affirm
+      - action: action_enregistrer_embauche

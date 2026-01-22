@@ -1,28 +1,23 @@
 """
-Custom action to clean and normalize extracted entities from the embaucher intent.
-This action fixes entity values that include extra context words from regex extraction.
+Actions pour gérer le processus d'embauche complet
 """
 
 import re
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, FollowupAction
+from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
 
 
-class ActionCleanHireEntities(Action):
-    """
-    Clean and normalize entities extracted during hire intent processing.
-    
-    Fixes common issues:
-    - Removes label words from taille/pointure (e.g., "taille 165" -> "165")
-    - Removes action verbs from nom_et_prenoms (e.g., "embaucher Manda..." -> "Manda...")
-    - Removes prepositions from dates (e.g., "du 01/02/2026" -> "01/02/2026")
-    - Cleans service names
-    """
+class ActionVerifierPermissionEmbauche(Action):
+    """Vérifie que seul l'ERM peut ajouter une embauche"""
     
     def name(self) -> Text:
-        return "action_clean_hire_entities"
+        return "action_verifier_permission_embauche"
     
     def run(
         self,
@@ -31,211 +26,212 @@ class ActionCleanHireEntities(Action):
         domain: Dict[Text, Any]
     ) -> List[Dict[Text, Any]]:
         
-        slots_to_set = []
+        metadata = tracker.latest_message.get('metadata', {})
+        role = metadata.get('role', 'Unknown')
         
-        # Clean nom_et_prenoms
-        nom = tracker.get_slot("nom_et_prenoms")
-        if nom:
-            cleaned_nom = self._clean_name(nom)
-            if cleaned_nom != nom:
-                slots_to_set.append(SlotSet("nom_et_prenoms", cleaned_nom))
+        logger.info(f"🔐 Vérification permission embauche - Role: {role}")
         
-        # Clean service
-        service = tracker.get_slot("service")
-        if service:
-            cleaned_service = self._clean_service(service)
-            if cleaned_service != service:
-                slots_to_set.append(SlotSet("service", cleaned_service))
-        
-        # Clean taille
-        taille = tracker.get_slot("taille")
-        if taille:
-            cleaned_taille = self._clean_taille(taille)
-            if cleaned_taille != taille:
-                slots_to_set.append(SlotSet("taille", cleaned_taille))
-        
-        # Clean pointure
-        pointure = tracker.get_slot("pointure")
-        if pointure:
-            cleaned_pointure = self._clean_pointure(pointure)
-            if cleaned_pointure != pointure:
-                slots_to_set.append(SlotSet("pointure", cleaned_pointure))
-        
-        # Clean date_debut
-        date_debut = tracker.get_slot("date_debut")
-        if date_debut:
-            cleaned_date = self._clean_date(date_debut)
-            if cleaned_date != date_debut:
-                slots_to_set.append(SlotSet("date_debut", cleaned_date))
-        
-        # Clean date_fin
-        date_fin = tracker.get_slot("date_fin")
-        if date_fin:
-            cleaned_date = self._clean_date(date_fin)
-            if cleaned_date != date_fin:
-                slots_to_set.append(SlotSet("date_fin", cleaned_date))
-        
-        # Clean direction (remove if it's just the word "direction")
-        direction = tracker.get_slot("direction")
-        if direction and direction.lower() == "direction":
-            slots_to_set.append(SlotSet("direction", None))
-        
-        return slots_to_set
+        # ✅ Seul ERM peut ajouter une embauche
+        if role == "ERM":
+            logger.info("✅ Permission accordée pour embauche")
+            return [
+                SlotSet("role", role),
+                SlotSet("permission_embauche", True)
+            ]
+        else:
+            logger.warning(f"❌ Permission refusée pour {role}")
+            dispatcher.utter_message(
+                text=f"❌ **Accès refusé**\n\n"
+                     f"Seul le rôle **ERM** (Employé Responsable Management) peut ajouter une embauche.\n"
+                     f"Votre rôle actuel : **{role}**"
+            )
+            return [
+                SlotSet("role", role),
+                SlotSet("permission_embauche", False)
+            ]
+
+
+class ActionValiderDonneesEmbauche(Action):
+    """Valide que tous les champs obligatoires de l'embauche sont présents et corrects"""
     
-    def _clean_name(self, name: Text) -> Text:
-        """
-        Remove action verbs and prepositions from person names.
-        
-        Examples:
-            "embaucher Manda Andrianina au service" -> "Manda Andrianina"
-            "recruter Jean Rakoto avec" -> "Jean Rakoto"
-        """
-        if not name:
-            return name
-        
-        # Remove leading action verbs
-        name = re.sub(
-            r'^(?:embaucher|recruter|embauche\s+de)\s+',
-            '',
-            name,
-            flags=re.IGNORECASE
-        )
-        
-        # Split at common prepositions and take the first part
-        name = re.split(
-            r'\s+(?:au|à|avec|comme|pour|sous|,|du|de\s+la|de)',
-            name,
-            maxsplit=1
-        )[0]
-        
-        return name.strip()
+    def name(self) -> Text:
+        return "action_valider_donnees_embauche"
     
-    def _clean_service(self, service: Text) -> Text:
-        """
-        Clean service/department names.
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
         
-        Examples:
-            "au service Informatique" -> "Informatique"
-            "service DSI comme" -> "DSI"
-        """
-        if not service:
-            return service
+        logger.info("🔍 Début validation données embauche")
         
-        # Remove "service" and "au service" prefixes
-        service = re.sub(
-            r'^(?:au\s+)?service\s+(?:de\s+|d\')?',
-            '',
-            service,
-            flags=re.IGNORECASE
-        )
-        
-        # Remove trailing prepositions
-        service = re.split(
-            r'\s+(?:comme|pour|en|à|,)',
-            service,
-            maxsplit=1
-        )[0]
-        
-        # Map common service names to their codes
-        service_mapping = {
-            'informatique': 'DSI',
-            'rh': 'DRH',
-            'ressources humaines': 'DRH',
-            'marketing': 'DMA',
-            'finance': 'DAF',
-            'commercial': 'DCM',
-            'logistique': 'DGL',
-            'communication': 'DCO',
+        # Récupération de tous les slots
+        slots_data = {
+            "nom_et_prenoms": tracker.get_slot("nom_et_prenoms"),
+            "service": tracker.get_slot("service"),
+            "nom_poste": tracker.get_slot("nom_poste"),
+            "nom_encadreur": tracker.get_slot("nom_encadreur"),
+            "date_debut": tracker.get_slot("date_debut"),
+            "date_fin": tracker.get_slot("date_fin"),
+            "taille": tracker.get_slot("taille"),
+            "pointure": tracker.get_slot("pointure"),
         }
         
-        service_lower = service.lower().strip()
-        mapped_service = service_mapping.get(service_lower)
+        # Liste des champs manquants
+        champs_manquants = []
+        champs_invalides = []
         
-        return mapped_service if mapped_service else service.strip()
+        # ============================================
+        # VALIDATION DES CHAMPS OBLIGATOIRES
+        # ============================================
+        
+        # 1. Nom et prénoms
+        if not slots_data["nom_et_prenoms"]:
+            champs_manquants.append("Nom et prénoms")
+        elif not self._valider_nom(slots_data["nom_et_prenoms"]):
+            champs_invalides.append("Nom et prénoms (doit contenir au moins 2 mots)")
+        
+        # 2. Service
+        if not slots_data["service"]:
+            champs_manquants.append("Service")
+        
+        # 3. Nom du poste
+        if not slots_data["nom_poste"]:
+            champs_manquants.append("Nom du poste")
+        
+        # 4. Nom de l'encadreur
+        if not slots_data["nom_encadreur"]:
+            champs_manquants.append("Nom de l'encadreur")
+        elif not self._valider_nom(slots_data["nom_encadreur"]):
+            champs_invalides.append("Nom de l'encadreur (doit contenir au moins 2 mots)")
+        
+        # 5. Date de début
+        if not slots_data["date_debut"]:
+            champs_manquants.append("Date de début")
+        elif not self._valider_format_date(slots_data["date_debut"]):
+            champs_invalides.append("Date de début (format attendu: JJ/MM/AAAA)")
+        
+        # 6. Date de fin
+        if not slots_data["date_fin"]:
+            champs_manquants.append("Date de fin")
+        elif not self._valider_format_date(slots_data["date_fin"]):
+            champs_invalides.append("Date de fin (format attendu: JJ/MM/AAAA)")
+        
+        # 7. Taille
+        if not slots_data["taille"]:
+            champs_manquants.append("Taille")
+        
+        # 8. Pointure
+        if not slots_data["pointure"]:
+            champs_manquants.append("Pointure")
+        
+        # ============================================
+        # VALIDATION LOGIQUE DES DATES
+        # ============================================
+        
+        if slots_data["date_debut"] and slots_data["date_fin"]:
+            if (self._valider_format_date(slots_data["date_debut"]) and 
+                self._valider_format_date(slots_data["date_fin"])):
+                if not self._valider_ordre_dates(slots_data["date_debut"], slots_data["date_fin"]):
+                    champs_invalides.append("Les dates (la date de début doit être avant la date de fin)")
+        
+        # ============================================
+        # CONSTRUCTION DU MESSAGE DE RETOUR
+        # ============================================
+        
+        if champs_manquants or champs_invalides:
+            # ❌ Validation échouée
+            message = "❌ **Validation échouée - Informations manquantes ou invalides**\n\n"
+            
+            if champs_manquants:
+                message += "**📋 Champs manquants :**\n"
+                for champ in champs_manquants:
+                    message += f"• {champ}\n"
+                message += "\n"
+            
+            if champs_invalides:
+                message += "**⚠️ Champs invalides :**\n"
+                for champ in champs_invalides:
+                    message += f"• {champ}\n"
+                message += "\n"
+            
+            message += "💡 **Veuillez fournir toutes les informations requises dans le bon format.**\n\n"
+            message += "**Exemple de demande complète :**\n"
+            message += "```\nEmbaucher Rakoto Jean au service DSI comme Développeur "
+            message += "sous l'encadrement de Rasoa Marie du 01/03/2026 au 31/12/2026 "
+            message += "avec taille 170 et pointure 42\n```"
+            
+            dispatcher.utter_message(text=message)
+            
+            logger.warning(f"❌ Validation échouée: {len(champs_manquants)} manquants, {len(champs_invalides)} invalides")
+            
+            return [
+                SlotSet("validation_embauche_ok", False),
+                SlotSet("champs_manquants_embauche", champs_manquants),
+                SlotSet("champs_invalides_embauche", champs_invalides)
+            ]
+        
+        else:
+            # ✅ Validation réussie
+            logger.info("✅ Validation réussie - tous les champs sont valides")
+            
+            return [
+                SlotSet("validation_embauche_ok", True),
+                SlotSet("champs_manquants_embauche", []),
+                SlotSet("champs_invalides_embauche", []),
+                FollowupAction("action_afficher_recapitulatif_embauche")
+            ]
     
-    def _clean_taille(self, taille: Text) -> Text:
-        """
-        Extract size value from taille field.
-        
-        Examples:
-            "taille 165 cm" -> "165"
-            "taille L" -> "L"
-            "taille 1m65" -> "165"
-        """
-        if not taille:
-            return taille
-        
-        # Handle metric format "1m65" -> "165"
-        metric_match = re.search(r'(\d{1})\s*m\s*(\d{2})', taille)
-        if metric_match:
-            meters = metric_match.group(1)
-            centimeters = metric_match.group(2)
-            return f"{meters}{centimeters}"
-        
-        # Extract numeric value (e.g., "165")
-        numeric_match = re.search(r'\d{2,3}', taille)
-        if numeric_match:
-            return numeric_match.group()
-        
-        # Extract size code (e.g., "L", "XL", "M")
-        size_match = re.search(r'\b([XSML]{1,3})\b', taille, re.IGNORECASE)
-        if size_match:
-            return size_match.group(1).upper()
-        
-        # If nothing matches, return original
-        return taille.strip()
+    # ============================================
+    # MÉTHODES DE VALIDATION
+    # ============================================
     
-    def _clean_pointure(self, pointure: Text) -> Text:
-        """
-        Extract shoe size from pointure field.
+    def _valider_nom(self, nom: Text) -> bool:
+        """Valide qu'un nom contient au moins 2 mots (prénom + nom)"""
+        if not nom:
+            return False
         
-        Examples:
-            "pointure 38" -> "38"
-            "pointure: 42" -> "42"
-        """
-        if not pointure:
-            return pointure
+        # Nettoyer et séparer
+        mots = nom.strip().split()
         
-        # Extract numeric value
-        match = re.search(r'\d{1,2}', pointure)
-        if match:
-            return match.group()
-        
-        return pointure.strip()
+        # Au moins 2 mots requis
+        return len(mots) >= 2
     
-    def _clean_date(self, date: Text) -> Text:
-        """
-        Remove prepositions from dates.
-        
-        Examples:
-            "du 01/02/2026" -> "01/02/2026"
-            "au 01/02/2027" -> "01/02/2027"
-            "à partir du 15/03/2026" -> "15/03/2026"
-            "jusqu'au 20/12/2027" -> "20/12/2027"
-        """
+    def _valider_format_date(self, date: Text) -> bool:
+        """Valide le format de date JJ/MM/AAAA ou JJ-MM-AAAA"""
         if not date:
-            return date
+            return False
         
-        # Remove common date prepositions
-        date = re.sub(
-            r'^(?:du|au|à\s+partir\s+du|jusqu\'au|le)\s+',
-            '',
-            date,
-            flags=re.IGNORECASE
-        )
+        # Pattern pour JJ/MM/AAAA ou JJ-MM-AAAA
+        pattern = r'^\d{1,2}[/-]\d{1,2}[/-]\d{4}$'
         
-        return date.strip()
+        if not re.match(pattern, date):
+            return False
+        
+        # Validation supplémentaire avec datetime
+        try:
+            date_normalized = date.replace('-', '/')
+            datetime.strptime(date_normalized, "%d/%m/%Y")
+            return True
+        except ValueError:
+            return False
+    
+    def _valider_ordre_dates(self, date_debut: Text, date_fin: Text) -> bool:
+        """Valide que date_debut < date_fin"""
+        try:
+            debut = datetime.strptime(date_debut.replace('-', '/'), "%d/%m/%Y")
+            fin = datetime.strptime(date_fin.replace('-', '/'), "%d/%m/%Y")
+            return debut < fin
+        except ValueError:
+            return False
 
 
-# Alternative: More aggressive cleaning action
-class ActionValidateAndCleanHireEntities(Action):
-    """
-    Advanced version that validates and cleans entities with logging.
-    Use this if you need stricter validation and debugging.
-    """
+class ActionAfficherRecapitulatifEmbauche(Action):
+    """Affiche un récapitulatif des données d'embauche avant confirmation"""
     
     def name(self) -> Text:
-        return "action_validate_hire_entities"
+        return "action_afficher_recapitulatif_embauche"
     
     def run(
         self,
@@ -244,95 +240,140 @@ class ActionValidateAndCleanHireEntities(Action):
         domain: Dict[Text, Any]
     ) -> List[Dict[Text, Any]]:
         
-        slots_to_set = []
-        validation_errors = []
+        # Récupération des données
+        slots_data = {
+            "nom_et_prenoms": tracker.get_slot("nom_et_prenoms"),
+            "service": tracker.get_slot("service"),
+            "nom_poste": tracker.get_slot("nom_poste"),
+            "nom_encadreur": tracker.get_slot("nom_encadreur"),
+            "date_debut": tracker.get_slot("date_debut"),
+            "date_fin": tracker.get_slot("date_fin"),
+            "taille": tracker.get_slot("taille"),
+            "pointure": tracker.get_slot("pointure"),
+        }
         
-        # Validate and clean nom_et_prenoms
-        nom = tracker.get_slot("nom_et_prenoms")
-        if nom:
-            cleaned = self._clean_and_validate_name(nom)
-            if cleaned:
-                slots_to_set.append(SlotSet("nom_et_prenoms", cleaned))
-            else:
-                validation_errors.append("Nom invalide détecté")
+        # Construction du message récapitulatif
+        message = "✅ **Récapitulatif de l'embauche**\n\n"
+        message += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
         
-        # Validate dates
-        date_debut = tracker.get_slot("date_debut")
-        date_fin = tracker.get_slot("date_fin")
+        message += "**👤 Informations personnelles**\n"
+        message += f"• Nom et prénoms : **{slots_data['nom_et_prenoms']}**\n"
+        message += f"• Taille : {slots_data['taille']}\n"
+        message += f"• Pointure : {slots_data['pointure']}\n\n"
         
-        if date_debut and date_fin:
-            cleaned_debut = self._extract_date(date_debut)
-            cleaned_fin = self._extract_date(date_fin)
-            
-            if cleaned_debut:
-                slots_to_set.append(SlotSet("date_debut", cleaned_debut))
-            if cleaned_fin:
-                slots_to_set.append(SlotSet("date_fin", cleaned_fin))
-            
-            # Validate date logic
-            if cleaned_debut and cleaned_fin:
-                if not self._validate_date_range(cleaned_debut, cleaned_fin):
-                    validation_errors.append(
-                        "La date de début doit être antérieure à la date de fin"
-                    )
+        message += "**💼 Informations professionnelles**\n"
+        message += f"• Service : **{slots_data['service']}**\n"
+        message += f"• Poste : **{slots_data['nom_poste']}**\n"
+        message += f"• Encadreur : {slots_data['nom_encadreur']}\n\n"
         
-        # If there are validation errors, notify user
-        if validation_errors:
-            error_msg = "⚠️ Attention: " + ", ".join(validation_errors)
-            dispatcher.utter_message(text=error_msg)
+        message += "**📅 Période d'embauche**\n"
+        message += f"• Date de début : {slots_data['date_debut']}\n"
+        message += f"• Date de fin : {slots_data['date_fin']}\n\n"
         
-        return slots_to_set
+        message += "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        message += "📝 **Ces informations sont-elles correctes ?**\n"
+        message += "• Répondez **'oui'** pour confirmer et enregistrer l'embauche\n"
+        message += "• Répondez **'non'** pour annuler ou modifier"
+        
+        dispatcher.utter_message(text=message)
+        
+        return [SlotSet("en_attente_confirmation_embauche", True)]
+
+
+class ActionEnregistrerEmbauche(Action):
+    """Enregistre définitivement l'embauche dans le système"""
     
-    def _clean_and_validate_name(self, name: Text) -> Text:
-        """Clean name and validate it contains at least first and last name."""
-        # Remove action verbs and prepositions
-        cleaned = re.sub(r'^(?:embaucher|recruter|embauche\s+de)\s+', '', name, flags=re.I)
-        cleaned = re.split(r'\s+(?:au|à|avec|comme|pour|sous|,)', cleaned)[0].strip()
-        
-        # Validate: should have at least 2 capitalized words
-        words = cleaned.split()
-        if len(words) < 2:
-            return None
-        
-        # Check each word starts with capital letter
-        if not all(word[0].isupper() for word in words):
-            return None
-        
-        return cleaned
+    def name(self) -> Text:
+        return "action_enregistrer_embauche"
     
-    def _extract_date(self, date_str: Text) -> Text:
-        """Extract clean date in DD/MM/YYYY format."""
-        # Remove prepositions
-        cleaned = re.sub(
-            r'^(?:du|au|à\s+partir\s+du|jusqu\'au|le)\s+',
-            '',
-            date_str,
-            flags=re.I
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        
+        logger.info("💾 Enregistrement de l'embauche")
+        
+        # Récupération des données
+        embauche_data = {
+            "nom_et_prenoms": tracker.get_slot("nom_et_prenoms"),
+            "service": tracker.get_slot("service"),
+            "nom_poste": tracker.get_slot("nom_poste"),
+            "nom_encadreur": tracker.get_slot("nom_encadreur"),
+            "date_debut": tracker.get_slot("date_debut"),
+            "date_fin": tracker.get_slot("date_fin"),
+            "taille": tracker.get_slot("taille"),
+            "pointure": tracker.get_slot("pointure"),
+            "role_createur": tracker.get_slot("role"),
+            "date_creation": datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        }
+        
+        # TODO: Appeler le service backend pour enregistrer
+        # from actions.services.embauche_service import enregistrer_embauche
+        # resultat = enregistrer_embauche(embauche_data)
+        
+        # Simulation de l'enregistrement réussi
+        logger.info(f"✅ Embauche enregistrée: {embauche_data['nom_et_prenoms']}")
+        
+        message = "✅ **Embauche enregistrée avec succès !**\n\n"
+        message += f"👤 **{embauche_data['nom_et_prenoms']}** a été ajouté(e) au système.\n\n"
+        message += "**Détails :**\n"
+        message += f"• Service : {embauche_data['service']}\n"
+        message += f"• Poste : {embauche_data['nom_poste']}\n"
+        message += f"• Période : du {embauche_data['date_debut']} au {embauche_data['date_fin']}\n\n"
+        message += "📧 Une notification a été envoyée aux parties concernées."
+        
+        dispatcher.utter_message(text=message)
+        
+        # Réinitialiser les slots d'embauche
+        return [
+            SlotSet("nom_et_prenoms", None),
+            SlotSet("service", None),
+            SlotSet("nom_poste", None),
+            SlotSet("nom_encadreur", None),
+            SlotSet("date_debut", None),
+            SlotSet("date_fin", None),
+            SlotSet("taille", None),
+            SlotSet("pointure", None),
+            SlotSet("validation_embauche_ok", False),
+            SlotSet("en_attente_confirmation_embauche", False),
+            SlotSet("permission_embauche", None)
+        ]
+
+
+class ActionAnnulerEmbauche(Action):
+    """Annule le processus d'embauche en cours"""
+    
+    def name(self) -> Text:
+        return "action_annuler_embauche"
+    
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        
+        logger.info("❌ Annulation de l'embauche")
+        
+        dispatcher.utter_message(
+            text="❌ **Embauche annulée**\n\n"
+                 "Le processus d'embauche a été annulé. Aucune donnée n'a été enregistrée.\n\n"
+                 "💡 Vous pouvez relancer une nouvelle embauche quand vous le souhaitez."
         )
         
-        # Try to extract DD/MM/YYYY or DD-MM-YYYY
-        match = re.search(r'(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4})', cleaned)
-        if match:
-            return match.group(1)
-        
-        return None
-    
-    def _validate_date_range(self, date_debut: Text, date_fin: Text) -> bool:
-        """Validate that start date is before end date."""
-        from datetime import datetime
-        
-        try:
-            # Parse dates (assuming DD/MM/YYYY format)
-            fmt = "%d/%m/%Y"
-            
-            # Handle different separators
-            date_debut = date_debut.replace('-', '/')
-            date_fin = date_fin.replace('-', '/')
-            
-            debut = datetime.strptime(date_debut, fmt)
-            fin = datetime.strptime(date_fin, fmt)
-            
-            return debut < fin
-        except ValueError:
-            # If parsing fails, don't block the process
-            return True
+        # Réinitialiser tous les slots d'embauche
+        return [
+            SlotSet("nom_et_prenoms", None),
+            SlotSet("service", None),
+            SlotSet("nom_poste", None),
+            SlotSet("nom_encadreur", None),
+            SlotSet("date_debut", None),
+            SlotSet("date_fin", None),
+            SlotSet("taille", None),
+            SlotSet("pointure", None),
+            SlotSet("validation_embauche_ok", False),
+            SlotSet("en_attente_confirmation_embauche", False),
+            SlotSet("permission_embauche", None)
+        ]

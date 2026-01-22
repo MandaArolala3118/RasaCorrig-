@@ -164,6 +164,7 @@ body {
 /* Sections */
 .section {
     min-height: 100vh;
+    height: auto;
     padding: 0;
     display: flex;
     position: relative;
@@ -220,6 +221,8 @@ body {
     justify-content: center;
     max-width: 100%; /* Empêcher le dépassement */
     overflow-x: hidden; /* Masquer tout débordement horizontal */
+    height: auto;
+    
 }
 
 .content-wrapper {

@@ -73,9 +73,14 @@ actions:
   - action_afficher_liste_demandes
   - action_afficher_demandes_a_traiter
   #Embauche
-  - action_clean_hire_entities
   - action_validate_hire_entities  
   - utter_embauche_confirmee
+  - action_clean_hire_entities
+  - action_verifier_permission_embauche
+  - action_valider_donnees_embauche
+  - action_afficher_recapitulatif_embauche
+  - action_enregistrer_embauche
+  - action_annuler_embauche
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false

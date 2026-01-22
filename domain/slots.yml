@@ -503,3 +503,32 @@ slots:
         entity: demande_id
   
   
+  permission_embauche:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  
+  validation_embauche_ok:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  
+  en_attente_confirmation_embauche:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  
+  champs_manquants_embauche:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+  
+  champs_invalides_embauche:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom

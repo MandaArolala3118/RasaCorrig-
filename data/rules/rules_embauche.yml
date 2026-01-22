@@ -1,9 +1,83 @@
 version: "3.1"
 
 rules:
-  - rule: Nettoyer les entités après embaucher
+  
+  # ============================================
+  # RULE 1: Nettoyer les entités dès réception
+  # ============================================
+  - rule: Nettoyer les entités embauche
     steps:
       - intent: embaucher
       - action: action_clean_hire_entities
-      - action: utter_embauche_confirmee
-      
+  
+  # ============================================
+  # RULE 2: Vérifier permission après nettoyage
+  # ============================================
+  - rule: Vérifier permission embauche après nettoyage
+    steps:
+      - intent: embaucher
+      - action: action_clean_hire_entities
+      - action: action_verifier_permission_embauche
+  
+  # ============================================
+  # RULE 3: Valider données si permission accordée
+  # ============================================
+  - rule: Valider données embauche si permission OK
+    condition:
+      - slot_was_set:
+        - permission_embauche: true
+    steps:
+      - action: action_verifier_permission_embauche
+      - action: action_valider_donnees_embauche
+  
+  # ============================================
+  # RULE 4: Afficher récapitulatif si validation OK
+  # ============================================
+  - rule: Afficher récapitulatif si validation OK
+    condition:
+      - slot_was_set:
+        - validation_embauche_ok: true
+    steps:
+      - action: action_valider_donnees_embauche
+      - action: action_afficher_recapitulatif_embauche
+  
+  # ============================================
+  # RULE 5: Enregistrer si confirmation positive
+  # ============================================
+  - rule: Enregistrer embauche sur confirmation
+    condition:
+      - slot_was_set:
+        - en_attente_confirmation_embauche: true
+    steps:
+      - intent: affirm
+      - action: action_enregistrer_embauche
+  
+  # ============================================
+  # RULE 6: Annuler si refus de confirmation
+  # ============================================
+  - rule: Annuler embauche sur refus
+    condition:
+      - slot_was_set:
+        - en_attente_confirmation_embauche: true
+    steps:
+      - intent: deny
+      - action: action_annuler_embauche
+  
+  # ============================================
+  # RULE 7: Annuler embauche si demandé explicitement
+  # ============================================
+  - rule: Annuler embauche sur demande explicite
+    steps:
+      - intent: annuler_embauche
+      - action: action_annuler_embauche
+  
+  # ============================================
+  # RULE 8: Stopper le processus si permission refusée
+  # ============================================
+  - rule: Stopper si permission refusée
+    condition:
+      - slot_was_set:
+        - permission_embauche: false
+    steps:
+      - action: action_verifier_permission_embauche
+      # Aucune action supplémentaire - le flux s'arrête
