@@ -187,6 +187,59 @@ class ActionValiderDonneesEmbauche(Action):
     # MÉTHODES DE VALIDATION
     # ============================================
     
+    def _nettoyer_nom(self, nom_text: Text) -> Text:
+        """Nettoie un nom en supprimant les mots parasites et préfixes"""
+        if not nom_text:
+            return nom_text
+        
+        logger.info(f"👤 Nom brut à nettoyer: '{nom_text}'")
+        
+        # Patterns pour extraire les noms propres
+        patterns = [
+            # "embaucher Manda Andrianina au service" -> "Manda Andrianina"
+            r'embaucher\s+([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+            # "Manda Andrianina au service" -> "Manda Andrianina"  
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s+au\s+service',
+            # "sous l'encadrement de Rasoa Marie" -> "Rasoa Marie"
+            r'sous\s+l[\'']?encadrement\s+de\s+([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+            # Pattern général: 2+ mots avec majuscules
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+            # Pattern fallback: 2+ mots quelconques
+            r'([a-zA-Z]+\s+[a-zA-Z]+(?:\s+[a-zA-Z]+)*)'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, nom_text, re.IGNORECASE)
+            if match:
+                nom_extracted = match.group(1).strip()
+                # Validation: au moins 2 mots
+                if len(nom_extracted.split()) >= 2:
+                    logger.info(f"✅ Nom nettoyé: '{nom_text}' -> '{nom_extracted}'")
+                    return nom_extracted
+        
+        # Si aucun pattern ne correspond, nettoyer manuellement
+        mots_parasites = [
+            'embaucher', 'au', 'service', 'comme', 'sous', 'l\'encadrement', 'encadrement', 
+            'de', 'la', 'le', 'les', 'et', 'à', 'avec', 'taille', 'pointure', 'du', 'pour'
+        ]
+        
+        nom_nettoye = nom_text.strip()
+        for parasite in mots_parasites:
+            nom_nettoye = re.sub(r'\b' + re.escape(parasite) + r'\b', '', nom_nettoye, flags=re.IGNORECASE)
+        
+        # Nettoyage des espaces multiples
+        nom_nettoye = re.sub(r'\s+', ' ', nom_nettoye).strip()
+        
+        # Garder seulement si au moins 2 mots
+        mots = nom_nettoye.split()
+        if len(mots) >= 2:
+            nom_nettoye = ' '.join(mots[:3])  # Limiter à 3 mots maximum
+            logger.info(f"🔧 Nom nettoyé manuellement: '{nom_text}' -> '{nom_nettoye}'")
+            return nom_nettoye
+        
+        logger.warning(f"⚠️ Nom non reconnu: '{nom_text}'")
+        return nom_text
+    
     def _valider_nom(self, nom: Text) -> bool:
         """Valide qu'un nom contient au moins 2 mots (prénom + nom)"""
         if not nom:

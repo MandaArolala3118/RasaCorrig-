@@ -229,10 +229,18 @@ nlu:
   # Full name - FIXED: Lookahead to stop at context words
   - regex: nom_et_prenoms
     examples: |
-      - \b(?:embaucher|embauche\s+de|recruter)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)(?=\s+(?:au|à|avec|comme|pour|sous|,))
+      # "embaucher Manda Andrianina au service" -> "Manda Andrianina"
+      - \b(?:embaucher|embauche\s+de|recruter)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)(?=\s+(?:au|à|avec|comme|pour|sous|,|$))
+      # "Manda Andrianina au service" -> "Manda Andrianina"
+      - \b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\s+(?:au|à|avec|comme|pour|sous)\s+(?:service|département|direction)
+      # "sous l'encadrement de Rasoa Marie" -> "Rasoa Marie"
+      - \bsous\s+l[\'']?encadrement\s+de\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)
+      # Standard patterns
       - \bnom\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
       - \bcandidat\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
       - \bpersonne\s*[:\-]?\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b
+      # Fallback: 2+ words with capital letters
+      - \b([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b(?=\s+(?:au|à|avec|comme|pour|sous|,|$))
 
   # Service/Department - FIXED: Extract only the service name
   - regex: service

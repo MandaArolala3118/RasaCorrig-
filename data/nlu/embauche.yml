@@ -3,27 +3,72 @@ version: "3.1"
 nlu:
   - intent: embaucher
     examples: |
+      # Basic patterns
       - embaucher [Jean Dupont](nom_et_prenoms) au service [Informatique](service)
       - je veux embaucher [Marie Randrianasolo](nom_et_prenoms) au service [DSI](service)
       - embaucher [Sophie Rakoto](nom_et_prenoms) avec matricule [MAT-2024-001](matricule)
+      
+      # Complex name patterns with prefixes
+      - embaucher [Manda Andrianina](nom_et_prenoms) au service [Informatique](service)
+      - embaucher [Jean Pierre Paul](nom_et_prenoms) au service [Comptabilité](service)
+      - embaucher [Rasoa Marie Lucie](nom_et_prenoms) avec le matricule [EMP-5544](matricule)
+      - recruter [Hery Tiana](nom_et_prenoms) pour le service [Marketing](service)
+      - embauche de [Dina Razafimandimby](nom_et_prenoms) superieur [Haja Raharimanana](superieur)
+      
+      # Names before "au service"
+      - [Luc Rakoto](nom_et_prenoms) au service [Comptabilité](service)
+      - [Mamy Rasolo](nom_et_prenoms) au service [Ressources humaines](service)
+      - [Nadia Rasolofoniaina](nom_et_prenoms) au service [DSI](service)
+      
+      # Names with "sous l'encadrement"
+      - embaucher [Jean Dupont](nom_et_prenoms) sous l'encadrement de [Paul Razafy](nom_encadreur)
+      - recruter [Marie Randrianasolo](nom_et_prenoms) sous encadrement de [Sophie Rakoto](nom_encadreur)
+      
+      # Date patterns with prefixes
+      - embaucher [Jean Dupont](nom_et_prenoms) du [01/02/2026](date_debut) au [01/02/2027](date_fin)
+      - recruter [Marie Randrianasolo](nom_et_prenoms) du [15-03-2026](date_debut) au [15-03-2027](date_fin)
+      - [Sophie Rakoto](nom_et_prenoms) entrée le [21/01/2026](date_debut) fin le [30/06/2026](date_fin)
+      - embauche pour [Luc Rakoto](nom_et_prenoms) début [01/02/2026](date_debut) terme [31/12/2026](date_fin)
+      
+      # Complete examples with all entities
+      - embaucher [Rakoto Jean](nom_et_prenoms) au service [DSI](service) comme [Développeur](nom_poste) sous l'encadrement de [Rasoa Marie](nom_encadreur) du [01/03/2026](date_debut) au [31/12/2026](date_fin) avec taille [170](taille) et pointure [42](pointure)
+      - je veux embaucher [Manda Andrianina](nom_et_prenoms) au service [Informatique](service) en tant que [Technicien](nom_poste) sous [Paul Razafy](nom_encadreur) du [15/02/2026](date_debut) au [15/02/2027](date_fin) taille [175](taille) pointure [43](pointure)
+      - recruter [Jean Pierre Paul](nom_et_prenoms) pour le service [Comptabilité](service) poste [Comptable](nom_poste) encadreur [Marie Randrianasolo](nom_encadreur) du [01/04/2026](date_debut) au [01/04/2027](date_fin) taille [L](taille) pointure [41](pointure)
+      
+      # IDs and references
       - embauche pour la demande [DDR12345](demande_id)
       - embauche validée pour [DRI67890](demande_id)
       - dossier embauche [EB-2026-0001](id_embauche)
       - id embauche [EMB2026-15](id_embauche)
+      - embauche [EB2026-102](id_embauche) pour [Jean Ramaroson](nom_et_prenoms)
+      
+      # Various date formats
       - date d'entrée [21/01/2026](date_debut)
       - entrée prévue le [15-02-2026](date_debut)
       - date de fin [30/06/2026](date_fin)
       - entrée le [01/02/2026](date_debut) et fin le [01/02/2027](date_fin)
       - date d'entrée : [01/03/2026](date_debut), date de fin : [01/03/2027](date_fin)
+      
+      # Supervisor and manager info
       - supérieure [Nadia Rasolofoniaina](superieur)
       - service [Ressources humaines](service)
+      - manager [Jean Claude Rabe](superieur)
+      
+      # Equipment and sizes
       - taille [L](taille) et pointure [42](pointure)
       - pointure [38](pointure) taille [M](taille)
       - taille [165 cm](taille) et pointure [38](pointure)
+      - taille [1m70](taille) pointure [43](pointure)
+      - pointure [40](pointure) taille [XL](taille)
+      
+      # Contract and position info
+      - contrat [CDI](nature_contrat) pour [Jean Dupont](nom_et_prenoms)
+      - poste [Développeur Senior](nom_poste) avec [Marie Randrianasolo](nom_encadreur)
       - matricule [EMP-7788](matricule)
       - embaucher [Luc Rakoto](nom_et_prenoms) au service [Comptabilité](service) avec le matricule [EMP-5544](matricule)
+      
+      # Action and status
       - la demande [DMOE1234](demande_id) est prête pour embauche
       - embaucher [Mamy Rasolo](nom_et_prenoms) avec entrée le [01/03/2026](date_debut)
       - embaucher [Hery Tiana](nom_et_prenoms) fin le [31/12/2026](date_fin)
-      - embauche [EB2026-102](id_embauche) pour [Jean Ramaroson](nom_et_prenoms)
-      - embauche de [Dina Razafimandimby](nom_et_prenoms) superieur [Haja Raharimanana](superieur)
+      - validation embauche pour [Rakoto Jean](nom_et_prenoms)

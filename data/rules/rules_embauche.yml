@@ -3,21 +3,15 @@ version: "3.1"
 rules:
   
   # ============================================
-  # RULE 1: Nettoyer les entités dès réception
-  # ============================================
-  - rule: Nettoyer les entités embauche
-    steps:
-      - intent: embaucher
-      - action: action_clean_hire_entities
-  
-  # ============================================
   # RULE 2: Vérifier permission après nettoyage
   # ============================================
   - rule: Vérifier permission embauche après nettoyage
+    condition:
+      - slot_was_set:
+        - permission_embauche: null
     steps:
-      - intent: embaucher
-      - action: action_clean_hire_entities
       - action: action_verifier_permission_embauche
+      - action: action_listen
   
   # ============================================
   # RULE 3: Valider données si permission accordée
@@ -26,9 +20,10 @@ rules:
     condition:
       - slot_was_set:
         - permission_embauche: true
+        - validation_embauche_ok: null
     steps:
-      - action: action_verifier_permission_embauche
       - action: action_valider_donnees_embauche
+      - action: action_listen
   
   # ============================================
   # RULE 4: Afficher récapitulatif si validation OK
@@ -37,9 +32,10 @@ rules:
     condition:
       - slot_was_set:
         - validation_embauche_ok: true
+        - en_attente_confirmation_embauche: null
     steps:
-      - action: action_valider_donnees_embauche
       - action: action_afficher_recapitulatif_embauche
+      - action: action_listen
   
   # ============================================
   # RULE 5: Enregistrer si confirmation positive
