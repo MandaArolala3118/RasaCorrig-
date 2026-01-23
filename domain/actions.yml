@@ -17,12 +17,14 @@ actions:
   
   # Actions de soumission et traitement
   - action_submit_form_add_ddr
+  - action_submit_form_add_dmoe
   - action_traiter_ddr
   
   # Actions de collecte et validation
   - action_collect_objectifs
   - action_validate_slots
   - verify_if_all_information_is_complet_add_ddr
+  - verify_if_all_information_is_complet_add_dmoe
   - action_verifier_permission
   - action_confirmer_enregistrement_ddr
   
@@ -157,6 +159,7 @@ actions:
   - utter_demander_confirmation_embauche
   - utter_embauche_enregistree
   - utter_embauche_annulee
+  - utter_fonctionnalite_en_construction_dmi_dri
   
   - action_extract_dotations_secours 
   #flux

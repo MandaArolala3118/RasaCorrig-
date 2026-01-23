@@ -532,3 +532,10 @@ slots:
     influence_conversation: false
     mappings:
       - type: custom
+  
+  choix_heure_tonnage:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: choix_heure_tonnage

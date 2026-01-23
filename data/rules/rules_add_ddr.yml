@@ -10,6 +10,22 @@ rules:
     steps:
       - action: utter_non_autoriser_add_ddr
 
+  # ==================== GESTION DES TYPES DE DEMANDES ====================
+  
+  - rule: Gestion DMI - Fonctionnalité en construction
+    condition:
+      - slot_was_set:
+          - type_demande: "DMI"
+    steps:
+      - action: utter_fonctionnalite_en_construction_dmi_dri
+
+  - rule: Gestion DRI - Fonctionnalité en construction
+    condition:
+      - slot_was_set:
+          - type_demande: "DRI"
+    steps:
+      - action: utter_fonctionnalite_en_construction_dmi_dri
+
   # ==================== Senario d'ajout DDR ====================
   - rule: Senario ADD DDR
     condition:

@@ -266,3 +266,21 @@ nlu:
   - regex: pointure
     examples: |
       - \bpointure\s*[:\-]?\s*(\d{1,2})\b(?!\s*\d)
+
+  # ============================================================================
+  # MOE-SPECIFIC PATTERNS
+  # ============================================================================
+
+  # Choice hour/tonnage - MOE specific
+  - regex: choix_heure_tonnage
+    examples: |
+      # Hours format
+      - \b(?:heure|heures|h)\s*[:\-]?\s*(\d+(?:[.,]\d{1,2})?)\b
+      - \b(\d+(?:[.,]\d{1,2})?)\s*(?:heure|heures|h)\b
+      - \b(?:durée|temps)\s*[:\-]?\s*(\d+(?:[.,]\d{1,2})?)\s*heures?\b
+      # Tonnage format
+      - \b(?:tonnage|tonne|tonnes|t)\s*[:\-]?\s*(\d+(?:[.,]\d{1,2})?)\b
+      - \b(\d+(?:[.,]\d{1,2})?)\s*(?:tonne|tonnes|t|tonnage)\b
+      - \b(?:poids|masse)\s*[:\-]?\s*(\d+(?:[.,]\d{1,2})?)\s*tonnes?\b
+      # Generic format
+      - \bchoix\s*[:\-]?\s*(\d+(?:[.,]\d{1,2})?)\s*(?:heures?|tonnes?|t|h)\b

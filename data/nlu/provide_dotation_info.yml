@@ -252,7 +252,7 @@ nlu:
     examples: |
       - PC portable
       - laptop
-      - portable_info
+      - portable
       - notebook
       - PC
       - ordi portable

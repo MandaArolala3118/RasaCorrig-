@@ -75,3 +75,5 @@ entities:
   - taille
   - pointure
   - demande_id
+  #DMO
+  - choix_heure_tonnage
