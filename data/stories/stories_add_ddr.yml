@@ -3,7 +3,7 @@ version: "3.1"
 stories:
   # ==================== GESTION DES PERMISSIONS ====================
   
-  - story: Ajout DDR - Permission refusée
+  - story: Ajout demande - Permission refusée
     steps:
       - intent: identification_demande
         entities:
@@ -15,21 +15,9 @@ stories:
           - intention_demande: "ajouter"
       - action: utter_non_autoriser_add_ddr
 
-  - story: Ajout DMOE - Permission refusée
-    steps:
-      - intent: identification_demande
-        entities:
-          - type_demande: "DMOE"
-          - intention_demande: "ajouter"
-      - action: action_verifier_permission
-      - slot_was_set:
-          - permission: false
-          - intention_demande: "ajouter"
-      - action: utter_non_autoriser_add_ddr
-
-  # ==================== FLUX PRINCIPAL ADD DDR/DMOE ====================
+  # ==================== FLUX PRINCIPAL ADD DEMANDE ====================
   
-  - story: Ajout DDR - Démarrage identification_demande
+  - story: Ajout demande - Démarrage identification_demande
     steps:
       - intent: identification_demande
         entities:
@@ -47,40 +35,11 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Ajout DMOE - Démarrage identification_demande
-    steps:
-      - intent: identification_demande
-        entities:
-          - type_demande: "DMOE"
-          - intention_demande: "ajouter"
-      - action: action_verifier_permission
-      - slot_was_set:
-          - permission: true
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Ajout DDR - Démarrage provide_poste_info
+  - story: Ajout demande - Démarrage provide_poste_info
     steps:
       - intent: provide_poste_info
         entities:
           - type_demande: "DDR"
-          - intention_demande: "ajouter"
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Ajout DMOE - Démarrage provide_poste_info
-    steps:
-      - intent: provide_poste_info
-        entities:
-          - type_demande: "DMOE"
           - intention_demande: "ajouter"
       - action: action_validate_slots
       - action: action_extract_dotations_secours
@@ -89,37 +48,23 @@ stories:
 
   # ==================== GESTION DE LA COMPLÉTUDE ====================
   
-  - story: ADD DDR - Données incomplètes
+  - story: ADD demande - Données incomplètes
     steps:
       - checkpoint: traitement_completude_add_ddr
       - slot_was_set:
           - add_ddr_is_complet: false
       - checkpoint: collecte_info_add_ddr
 
-  - story: ADD DMOE - Données incomplètes
-    steps:
-      - checkpoint: traitement_completude_add_ddr
-      - slot_was_set:
-          - add_ddr_is_complet: false
-      - checkpoint: collecte_info_add_ddr
-
-  - story: ADD DDR - Données complètes
+  - story: ADD demande - Données complètes
     steps:
       - checkpoint: traitement_completude_add_ddr
       - slot_was_set:
           - add_ddr_is_complet: true
       - action: action_confirmer_enregistrement_ddr
 
-  - story: ADD DMOE - Données complètes
-    steps:
-      - checkpoint: traitement_completude_add_ddr
-      - slot_was_set:
-          - add_ddr_is_complet: true
-      - action: action_confirmer_enregistrement_ddr
-
-  # ==================== COLLECTE D'INFORMATIONS (SCOPE: ADD DDR/DMOE) ====================
+  # ==================== COLLECTE D'INFORMATIONS ====================
   
-  - story: Collecte ADD DDR - provide_poste_info
+  - story: Collecte ADD demande - provide_poste_info
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -132,20 +77,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_poste_info
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_poste_info
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_encadreur_info
+  - story: Collecte ADD demande - provide_encadreur_info
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -158,20 +90,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_encadreur_info
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_encadreur_info
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_contrat_info
+  - story: Collecte ADD demande - provide_contrat_info
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -184,20 +103,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_contrat_info
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_contrat_info
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_hierarchie_organisation
+  - story: Collecte ADD demande - provide_hierarchie_organisation
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -210,20 +116,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_hierarchie_organisation
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_hierarchie_organisation
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_justification
+  - story: Collecte ADD demande - provide_justification
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -236,20 +129,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_justification
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_justification
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_objectifs
+  - story: Collecte ADD demande - provide_objectifs
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -262,20 +142,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_objectifs
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_objectifs
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_dotation_info
+  - story: Collecte ADD demande - provide_dotation_info
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -288,20 +155,7 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - provide_dotation_info
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_dotation_info
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - upload_piece_jointe
+  - story: Collecte ADD demande - upload_piece_jointe
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
@@ -314,37 +168,11 @@ stories:
       - action: verify_if_all_information_is_complet_add_ddr
       - checkpoint: traitement_completude_add_ddr
 
-  - story: Collecte ADD DMOE - upload_piece_jointe
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: upload_piece_jointe
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DDR - provide_motif_budget
+  - story: Collecte ADD demande - provide_motif_budget
     steps:
       - checkpoint: collecte_info_add_ddr
       - slot_was_set:
           - type_demande: "DDR"
-      - slot_was_set:
-          - intention_demande: "ajouter"
-      - intent: provide_motif_budget
-      - action: action_validate_slots
-      - action: action_extract_dotations_secours
-      - action: verify_if_all_information_is_complet_add_ddr
-      - checkpoint: traitement_completude_add_ddr
-
-  - story: Collecte ADD DMOE - provide_motif_budget
-    steps:
-      - checkpoint: collecte_info_add_ddr
-      - slot_was_set:
-          - type_demande: "DMOE"
       - slot_was_set:
           - intention_demande: "ajouter"
       - intent: provide_motif_budget
