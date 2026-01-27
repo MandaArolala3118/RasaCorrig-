@@ -15,26 +15,30 @@ pipeline:
   
   - name: LexicalSyntacticFeaturizer
   
+  # 🔥 GARDER char_wb (important pour les entities)
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
+    max_features: 512  # 🔥 Limite mais garde une bonne capacité
   
+  # 🔥 GARDER word (important pour les intents)
   - name: CountVectorsFeaturizer
     analyzer: word
     min_ngram: 1
     max_ngram: 2
+    max_features: 512  # 🔥 Limite mais garde une bonne capacité
   
   # ========================================
   # INTENT & ENTITY CLASSIFICATION
   # ========================================
   - name: DIETClassifier
-    epochs: 200                    # ✅ GARDER (ne change pas la RAM !)
-    batch_size: 16                 # 🔥 RÉDUIRE (économise 75% RAM)
-    embedding_dimension: 30        # ✅ GARDER (qualité max)
-    number_of_transformer_layers: 2  # ✅ GARDER (qualité max)
-    transformer_size: 256          # ✅ GARDER (qualité max)
-    use_masked_language_model: true
+    epochs: 100                    # 🎯 Compromis (était 200, minimum 50)
+    batch_size: 8                  # 🔥 CRITIQUE pour RAM
+    embedding_dimension: 24        # 🎯 Compromis (était 30, minimum 16)
+    number_of_transformer_layers: 2  # ✅ GARDÉ (important pour qualité)
+    transformer_size: 128          # 🎯 Compromis (était 256)
+    use_masked_language_model: false  # 🔥 Désactivé (économise beaucoup)
     drop_rate: 0.3
     weight_sparsity: 0.9
     ranking_length: 5
@@ -42,9 +46,11 @@ pipeline:
     constrain_similarities: true
     loss_type: cross_entropy
     similarity_type: inner
-    BILOU_flag: true
+    BILOU_flag: true              # ✅ GARDÉ (important pour entities)
     model_confidence: softmax
     entity_recognition_threshold: 0.6
+    evaluate_on_num_examples: 0   # 🔥 Désactive évaluation (économise RAM)
+    evaluate_every_number_of_epochs: -1
   
   # ========================================
   # REGEX pour nom_encadreur
@@ -57,25 +63,30 @@ pipeline:
   - name: EntitySynonymMapper
   
   - name: ResponseSelector
-    epochs: 100                    # ✅ OK
+    epochs: 50                     # 🎯 Compromis (était 100)
+    batch_size: 8                  # 🔥 CRITIQUE pour RAM
     retrieval_intent: faq
     constrain_similarities: true
+    evaluate_on_num_examples: 0
+    evaluate_every_number_of_epochs: -1
 
 # ========================================
 # POLICIES
 # ========================================
 policies:
   - name: MemoizationPolicy
-    max_history: 5
+    max_history: 4                 # 🎯 Compromis (était 5, minimum 2)
   
   - name: TEDPolicy
-    max_history: 5
-    epochs: 150                    # ✅ GARDER
-    batch_size: 16                 # 🔥 RÉDUIRE (économise RAM)
+    max_history: 4                 # 🎯 Compromis (était 5)
+    epochs: 80                     # 🎯 Compromis (était 150)
+    batch_size: 8                  # 🔥 CRITIQUE pour RAM
     constrain_similarities: true
     model_confidence: softmax
     drop_rate: 0.25
     weight_sparsity: 0.8
+    evaluate_on_num_examples: 0
+    evaluate_every_number_of_epochs: -1
   
   - name: RulePolicy
     core_fallback_threshold: 0.4
