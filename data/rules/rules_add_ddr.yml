@@ -26,7 +26,7 @@ rules:
     steps:
       - action: utter_fonctionnalite_en_construction_dmi_dri
 
-  # ==================== Senario d'ajout DDR ====================
+  # ==================== Senario d'ajout DDR/DMOE ====================
   - rule: Senario ADD DDR
     condition:
       - slot_was_set:
@@ -39,6 +39,27 @@ rules:
       - intent: identification_demande
         entities:
           - type_demande: "DDR"
+          - intention_demande: "ajouter"
+      - action: action_verifier_permission
+      - slot_was_set:
+          - permission: true
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
+
+  - rule: Senario ADD DMOE
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+    steps:
+      - intent: identification_demande
+        entities:
+          - type_demande: "DMOE"
           - intention_demande: "ajouter"
       - action: action_verifier_permission
       - slot_was_set:
@@ -64,6 +85,21 @@ rules:
       - intent: confirm
       - action: action_submit_form_add_ddr
 
+  - rule: Confirmation ajout DMOE
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - add_ddr_is_complet: true
+      - slot_was_set:
+          - ajout_ddr_intent: true
+    steps:
+      - action: action_confirmer_enregistrement_ddr
+      - intent: confirm
+      - action: action_submit_form_add_ddr
+
   - rule: Annulation ajout DDR
     condition:
       - slot_was_set:
@@ -77,12 +113,42 @@ rules:
       - intent: refus
       - action: utter_annulation_ajout_ddr
 
-  # ==================== COLLECTE D'INFORMATIONS (SCOPE: ADD DDR) ====================
+  - rule: Annulation ajout DMOE
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+    steps:
+      - action: action_confirmer_enregistrement_ddr
+      - intent: refus
+      - action: utter_annulation_ajout_ddr
+
+  # ==================== COLLECTE D'INFORMATIONS (SCOPE: ADD DDR/DMOE) ====================
   
   - rule: Collecte ADD DDR - provide_poste_info
     condition:
       - slot_was_set:
           - type_demande: "DDR"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_poste_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_poste_info
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
       - slot_was_set:
           - intention_demande: "ajouter"
       - slot_was_set:
@@ -113,12 +179,46 @@ rules:
       - action: action_extract_dotations_secours
       - action: verify_if_all_information_is_complet_add_ddr
     wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_encadreur_info
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_encadreur_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
       
 
   - rule: Collecte ADD DDR - provide_contrat_info
     condition:
       - slot_was_set:
           - type_demande: "DDR"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_contrat_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_contrat_info
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
       - slot_was_set:
           - intention_demande: "ajouter"
       - slot_was_set:
@@ -149,12 +249,46 @@ rules:
       - action: action_extract_dotations_secours
       - action: verify_if_all_information_is_complet_add_ddr
     wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_hierarchie_organisation
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_hierarchie_organisation
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
       
 
   - rule: Collecte ADD DDR - provide_justification
     condition:
       - slot_was_set:
           - type_demande: "DDR"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_justification
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_justification
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
       - slot_was_set:
           - intention_demande: "ajouter"
       - slot_was_set:
@@ -185,12 +319,46 @@ rules:
       - action: action_extract_dotations_secours
       - action: verify_if_all_information_is_complet_add_ddr
     wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_objectifs
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_objectifs
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
       
 
   - rule: Collecte ADD DDR - provide_dotation_info
     condition:
       - slot_was_set:
           - type_demande: "DDR"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_dotation_info
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_dotation_info
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
       - slot_was_set:
           - intention_demande: "ajouter"
       - slot_was_set:
@@ -221,12 +389,46 @@ rules:
       - action: action_extract_dotations_secours
       - action: verify_if_all_information_is_complet_add_ddr
     wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - upload_piece_jointe
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: upload_piece_jointe
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
       
 
   - rule: Collecte ADD DDR - provide_motif_budget
     condition:
       - slot_was_set:
           - type_demande: "DDR"
+      - slot_was_set:
+          - intention_demande: "ajouter"
+      - slot_was_set:
+          - ajout_ddr_intent: true
+      - slot_was_set:
+          - add_ddr_is_complet: false
+    steps:
+      - intent: provide_motif_budget
+      - action: action_validate_slots
+      - action: action_extract_dotations_secours
+      - action: verify_if_all_information_is_complet_add_ddr
+    wait_for_user_input: false
+
+  - rule: Collecte ADD DMOE - provide_motif_budget
+    condition:
+      - slot_was_set:
+          - type_demande: "DMOE"
       - slot_was_set:
           - intention_demande: "ajouter"
       - slot_was_set:

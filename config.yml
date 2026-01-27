@@ -7,12 +7,11 @@ pipeline:
   # TOKENIZATION
   # ========================================
   - name: WhitespaceTokenizer
-    # case_sensitive moved to featurizers in newer Rasa versions; omitted to avoid warnings
+  
   # ========================================
   # FEATURIZATION
   # ========================================
   - name: RegexFeaturizer
-    # case_sensitive moved to featurizers in newer Rasa versions; omitted to avoid warnings
   
   - name: LexicalSyntacticFeaturizer
   
@@ -27,49 +26,38 @@ pipeline:
     max_ngram: 2
   
   # ========================================
-  # INTENT CLASSIFICATION SEULEMENT
+  # INTENT & ENTITY CLASSIFICATION
   # ========================================
   - name: DIETClassifier
-    epochs: 200
-    batch_size: 64
-    embedding_dimension: 30
-    number_of_transformer_layers: 2
-    transformer_size: 256
+    epochs: 200                    # ✅ GARDER (ne change pas la RAM !)
+    batch_size: 16                 # 🔥 RÉDUIRE (économise 75% RAM)
+    embedding_dimension: 30        # ✅ GARDER (qualité max)
+    number_of_transformer_layers: 2  # ✅ GARDER (qualité max)
+    transformer_size: 256          # ✅ GARDER (qualité max)
     use_masked_language_model: true
     drop_rate: 0.3
     weight_sparsity: 0.9
     ranking_length: 5
-    # DÉSACTIVER l'extraction d'entités pour nom_encadreur
     entity_recognition: true
     constrain_similarities: true
     loss_type: cross_entropy
     similarity_type: inner
     BILOU_flag: true
     model_confidence: softmax
-    # Seuil plus raisonnable pour les entités
     entity_recognition_threshold: 0.6
   
   # ========================================
-  # REGEX UNIQUEMENT pour nom_encadreur
+  # REGEX pour nom_encadreur
   # ========================================
   - name: RegexEntityExtractor
-    # case_sensitive moved; keep extractor defaults. Restrict regexes via data files if needed.
     use_lookup_tables: true
     use_regexes: true
     use_word_boundaries: true
-
-# Optionnel: utiliser Duckling pour améliorer l'extraction des dates et durées
-# - name: DucklingHTTPExtractor
-#   url: http://localhost:8000
-#   dimensions: ["time", "duration"]
   
-  # ========================================
-  # POST-PROCESSING
-  # ========================================
   - name: EntitySynonymMapper
   
   - name: ResponseSelector
-    epochs: 100
+    epochs: 100                    # ✅ OK
     retrieval_intent: faq
     constrain_similarities: true
 
@@ -82,8 +70,8 @@ policies:
   
   - name: TEDPolicy
     max_history: 5
-    epochs: 150
-    batch_size: 64
+    epochs: 150                    # ✅ GARDER
+    batch_size: 16                 # 🔥 RÉDUIRE (économise RAM)
     constrain_similarities: true
     model_confidence: softmax
     drop_rate: 0.25

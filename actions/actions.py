@@ -2,8 +2,7 @@
 Point d'entrée principal pour les actions Rasa
 """
 
-from actions.handlers.embauch_handler import (
-    ActionCleanHireEntities,
+from actions.handlers.embauche_handler import (
     ActionVerifierPermissionEmbauche,
     ActionValiderDonneesEmbauche,
     ActionAfficherRecapitulatifEmbauche,

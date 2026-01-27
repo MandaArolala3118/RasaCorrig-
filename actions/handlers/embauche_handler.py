@@ -201,7 +201,7 @@ class ActionValiderDonneesEmbauche(Action):
             # "Manda Andrianina au service" -> "Manda Andrianina"  
             r'([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s+au\s+service',
             # "sous l'encadrement de Rasoa Marie" -> "Rasoa Marie"
-            r'sous\s+l[\'']?encadrement\s+de\s+([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+            r"sous\s+l['']?encadrement\s+de\s+([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)",
             # Pattern général: 2+ mots avec majuscules
             r'([A-Z][a-z]+\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
             # Pattern fallback: 2+ mots quelconques

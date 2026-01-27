@@ -272,7 +272,7 @@ nlu:
       - téléphone portable
       - GSM
       - tel
-      - portable_phone
+      - portable phone
 
   - synonym: téléphone fixe
     examples: |
